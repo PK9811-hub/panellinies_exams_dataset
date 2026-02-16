@@ -1,0 +1,2 @@
+Description
+Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.

@@ -1,0 +1,2 @@
+Description
+Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i) The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii) The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii) The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.

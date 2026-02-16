@@ -1,0 +1,2 @@
+Description
+Graph of Magnetic Field B(T) versus time t(s). The graph starts at (0,0), increases linearly to (0.1, 0.5), and then remains constant at B=0.5 T from t=0.1 s to t=0.2 s.

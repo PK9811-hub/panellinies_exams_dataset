@@ -1,0 +1,299 @@
+[
+  {
+    "id": "A1",
+    "question": "Η ένταση του ρεύματος που διαρρέει ένα πηνίο μεταβάλλεται από την τιμή $I$ στην τιμή $2I$. Η ηλεκτρεγερτική δύναμη από αυτεπαγωγή που αναπτύσσεται στο πηνίο",
+    "input": "",
+    "choices": [
+      "α. είναι μεγαλύτερη, αν η μεταβολή της έντασης του ρεύματος γίνει γρήγορα.",
+      "β. δεν εξαρτάται από τον χρόνο, στον οποίο γίνεται η μεταβολή αλλά μόνο από την αρχική και τελική τιμή της έντασης του ρεύματος.",
+      "γ. εξαρτάται από την ωμική αντίσταση που υπάρχει στο κύκλωμα.",
+      "δ. εξαρτάται από την πηγή που τροφοδοτεί το κύκλωμα."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A2",
+    "question": "Μια μικρή σφαίρα προσκρούει ελαστικά στην επίπεδη επιφάνεια ενός κατακόρυφου τοίχου. Αν η σφαίρα χτυπήσει πλάγια στην επιφάνεια, τότε",
+    "input": "",
+    "choices": [
+      "α. η ορμή της διατηρείται.",
+      "β. η κινητική της ενέργεια διατηρείται.",
+      "γ. η ταχύτητά της διατηρείται.",
+      "δ. οι γωνίες πρόσπτωσης και ανάκλασης δεν είναι ίσες."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A3",
+    "question": "Η δύναμη $\\vec{F}$ που ασκεί το μαγνητικό πεδίο $\\vec{B}$ σε ηλεκτρικό φορτίο $q$ που κινείται με ταχύτητα $\\vec{\\upsilon}$ έχει",
+    "input": "",
+    "choices": [
+      "α. την κατεύθυνση των δυναμικών γραμμών, αν πρόκειται για θετικό φορτίο, και αντίθετη, αν πρόκειται για αρνητικό.",
+      "β. τη διεύθυνση της ταχύτητας $\\vec{\\upsilon}$.",
+      "γ. διεύθυνση που σχηματίζει με τις δυναμικές γραμμές γωνία $\\varphi$ με $\\eta\\mu\\varphi = \\frac{F}{B|q|\\upsilon}$.",
+      "δ. διεύθυνση κάθετη στο επίπεδο που ορίζεται από το $\\vec{B}$ και την ταχύτητα $\\vec{\\upsilon}$."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A4",
+    "question": "Σε μια εξαναγκασμένη μηχανική ταλάντωση το πλάτος της ταλάντωσης",
+    "input": "",
+    "choices": [
+      "α. μεταβάλλεται, όταν μεταβάλλεται η συχνότητα του διεγέρτη.",
+      "β. παραμένει σταθερό, όταν μεταβάλλεται η συχνότητα του διεγέρτη.",
+      "γ. είναι ανεξάρτητο από τη σταθερά απόσβεσης $b$.",
+      "δ. ελαχιστοποιείται στην κατάσταση συντονισμού."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A5.α",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη. \nΣύμφωνα με την αρχή της επαλληλίας, όταν σε ένα ελαστικό μέσο διαδίδονται δύο ή περισσότερα κύματα, το πλάτος της ταλάντωσης ενός σημείου είναι πάντα ίσο με το άθροισμα των πλατών των δύο κυμάτων που συμβάλλουν.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.β",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη. \nΗ Αρχή της Αβεβαιότητας αναφέρει ότι δεν είναι δυνατόν να μετρήσουμε ταυτόχρονα και τη θέση και την ορμή ενός σωματιδίου με απεριόριστη ακρίβεια.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.γ",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη. \nΣε οποιαδήποτε θερμοκρασία και αν βρίσκεται ένα μέλαν σώμα, εκπέμπει ενέργεια με μορφή ηλεκτρομαγνητικής ακτινοβολίας σε όλο το φάσμα της.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.δ",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη. \nΤα ηλεκτρομαγνητικά κύματα είναι διαμήκη κύματα.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.ε",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη. \nΤο έργο εξαγωγής φωτοηλεκτρονίων από το μέταλλο της καθόδου εξαρτάται από την συχνότητα της προσπίπτουσας ακτινοβολίας.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "B1",
+    "question": "Σώμα μάζας $m_1 = m$ κινούμενο με ταχύτητα $\\vec{\\upsilon}_0$, συγκρούεται κεντρικά και πλαστικά με ακίνητο σώμα μάζας $m_2 = 3 m$. Ο λόγος της κινητικής ενέργειας του συσσωματώματος προς την αρχική κινητική ενέργεια του σώματος $m_1$ είναι:\n\n i) $1/2$ \n ii) $1/3$ \n iii) $1/4$ \n\n α) Να επιλέξετε τη σωστή απάντηση.\n β) Να δικαιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [
+        "i. 1/2",
+        "ii. 1/3",
+        "iii. 1/4"
+        ],
+    "images": [],
+    "mark": [
+        "Μονάδες 8"
+    ]
+  },
+  {
+    "id": "B2",
+    "question": "Εγκάρσιο κύμα διαδίδεται σε νήμα κατά τη διεύθυνση του άξονα $x'x$ του Σχήματος 1. Τα διαδοχικά σημεία Κ, Λ, Μ, Ν απέχουν από τα γειτονικά τους απόσταση $\\lambda/4$. Τη χρονική στιγμή $t_1$, που το κύμα έχει ήδη διαδοθεί στην περιοχή ΚΝ, το σημείο Μ βρίσκεται στη θέση ισορροπίας και η ταχύτητά του $\\vec{\\upsilon}_M$ είναι αρνητική, έχοντας φάση $\\varphi_M < \\varphi_\\Lambda$. Τη χρονική στιγμή $t_1 + 3T/2$ το στιγμιότυπο του κύματος στην περιοχή ΚΝ σε ποια από τις παρακάτω απεικονίσεις του Σχήματος 2 αντιστοιχεί;\n\n α) Να επιλέξετε τη σωστή απάντηση.\n β) Να δικαιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [
+        "i)",
+        "ii)",
+        "iii)"
+    ],
+    "images": [
+        {
+        "path": "images/them_fysiki_gel_2025/img1/them_fysiki_gel_2025_img1.png",
+        "description": "Figure 1: Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).",
+        "transcription": []
+        },
+        {
+        "path": "images/them_fysiki_gel_2025/img2/them_fysiki_gel_2025_img2.png",
+        "description": "Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i) The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii) The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii) The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
+        "transcription": []
+        }
+    ],
+    "mark": [
+        "Μονάδες 8"
+    ]
+   },
+   {
+    "id": "Γ1",
+    "question": "Στο κύκλωμα του Σχήματος 3 το τετράγωνο αγώγιμο συρμάτινο πλαίσιο $\\Gamma\\Delta HZ\\Gamma$, αμελητέας ωμικής αντίστασης, έχει εμβαδόν $A = 2 \\cdot 10^{-2} \\text{ m}^2$, αποτελείται από $N = 100$ σπείρες και βρίσκεται εξ ολοκλήρου μέσα σε κατακόρυφο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$, του οποίου οι μαγνητικές γραμμές έχουν φορά από κάτω προς τα πάνω. Το πλαίσιο μπορεί να περιστρέφεται γύρω από οριζόντιο νοητό άξονα. Τα άκρα του πλαισίου βρίσκονται σε επαφή με τους δακτυλίους $\\Delta_1$ και $\\Delta_2$, οι οποίοι συνδέονται μέσω ενός διακόπτη ($\\delta_1$) με ευθύγραμμο μεταλλικό αγωγό $K\\Lambda$ μήκους $\\ell = 1 \\text{ m}$ και ωμικής αντίστασης $R = 10 \\ \\Omega$. Με το πλαίσιο να είναι αρχικά ακίνητο σε οριζόντια θέση μεταβάλλουμε την αλγεβρική τιμή της έντασης $B$ του μαγνητικού πεδίου σε συνάρτηση με τον χρόνο, όπως φαίνεται στο διπλανό διάγραμμα. Να σχεδιάσετε τη γραφική παράσταση της απόλυτης τιμής της ηλεκτρεγερτικής δύναμης από επαγωγή που αναπτύσσεται στα άκρα του πλαισίου σε συνάρτηση με το χρόνο για το χρονικό διάστημα από $0$ έως $0,2 \\text{ s}$.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
+        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": []
+      },
+      {
+        "path": "images/them_fysiki_gel_2025/img4/them_fysiki_gel_2025_img4.png",
+        "description": "Graph of Magnetic Field B(T) versus time t(s). The graph starts at (0,0), increases linearly to (0.1, 0.5), and then remains constant at B=0.5 T from t=0.1 s to t=0.2 s.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 8"
+    ]
+  },
+  {
+    "id": "Γ2",
+    "question": "Στο κύκλωμα του Σχήματος 3 το τετράγωνο αγώγιμο συρμάτινο πλαίσιο $\\Gamma\\Delta HZ\\Gamma$, αμελητέας ωμικής αντίστασης, έχει εμβαδόν $A = 2 \\cdot 10^{-2} \\text{ m}^2$, αποτελείται από $N = 100$ σπείρες και βρίσκεται εξ ολοκλήρου μέσα σε κατακόρυφο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$. Τα άκρα του πλαισίου συνδέονται μέσω διακόπτη ($\\delta_1$) με αγωγό $K\\Lambda$ αντίστασης $R = 10 \\ \\Omega$. Διατηρώντας την ένταση του μαγνητικού πεδίου σταθερή και ίση με $B = 0,5 \\text{ T}$, αρχίζουμε να περιστρέφουμε το πλαίσιο γύρω από τον άξονα περιστροφής του. Όταν το πλαίσιο αποκτήσει σταθερή γωνιακή ταχύτητα $\\omega = 50 \\cdot \\pi \\text{ rad/s}$, κλείνουμε τον διακόπτη ($\\delta_1$). Να υπολογίσετε τη θερμότητα $Q$ που εκλύεται στον αγωγό $K\\Lambda$ σε μια πλήρη περιστροφή του πλαισίου.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
+        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Γ3",
+    "question": "Στο κύκλωμα του Σχήματος 3 το τετράγωνο αγώγιμο συρμάτινο πλαίσιο $\\Gamma\\Delta HZ\\Gamma$, αμελητέας ωμικής αντίστασης, έχει εμβαδόν $A = 2 \\cdot 10^{-2} \\text{ m}^2$, αποτελείται από $N = 100$ σπείρες και βρίσκεται εξ ολοκλήρου μέσα σε κατακόρυφο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$. Τα άκρα του πλαισίου συνδέονται με αγωγό $K\\Lambda$ αντίστασης $R = 10 \\ \\Omega$. Το πλαίσιο περιστρέφεται με σταθερή γωνιακή ταχύτητα. Να υπολογίσετε το ποσοστό μεταβολής της εκλυόμενης θερμότητας στον αγωγό $K\\Lambda$ ανά περιστροφή, αν το πλαίσιο περιστρεφόταν με διπλάσια γωνιακή ταχύτητα.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
+        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Γ4",
+    "question": "Στο κύκλωμα του Σχήματος 3 δίνεται ότι $A = 2 \\cdot 10^{-2} \\text{ m}^2$, $N = 100$, και ο αγωγός $K\\Lambda$ έχει μήκος $\\ell = 1 \\text{ m}$ και αντίσταση $R = 10 \\ \\Omega$. Στο κατακόρυφο επίπεδο, στο οποίο βρίσκεται ο αγωγός $K\\Lambda$, παράλληλα με αυτόν και σε απόσταση $d = 2 \\cdot 10^{-2} \\text{ m}$, έχει στερεωθεί ένας άλλος ευθύγραμμος αγωγός $XY$ μεγάλου μήκους που διαρρέεται από ρεύμα σταθερής έντασης $I_1 = 5 \\text{ A}$. Κάποια χρονική στιγμή ανοίγουμε τον διακόπτη ($\\delta_1$) και ταυτόχρονα κλείνουμε τον διακόπτη ($\\delta_2$), συνδέοντας πηγή $E=20\\text{ V}$. Να σχεδιάσετε στο μέσο του αγωγού $K\\Lambda$ τη δύναμη που του ασκεί ο αγωγός $XY$ και να υπολογίσετε το μέτρο της. \nΔίνονται: $\\pi^2 \\approx 10$.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
+        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ1",
+    "question": "Κυκλική στεφάνη μάζας $M = 4 \\text{ kg}$ και ακτίνας $R = \\frac{9}{8\\pi} \\text{ m}$ είναι ακίνητη πάνω σε ομογενή δοκό μάζας $m_\\delta = 1 \\text{ kg}$ και μήκους $\\ell = 4 \\text{ m}$. Το άνω άκρο της δοκού συνδέεται με άρθρωση σε κατακόρυφο τοίχο, ενώ το κάτω άκρο της ακουμπά σε λείο οριζόντιο δάπεδο σχηματίζοντας γωνία $\\theta$ με αυτό, όπου $\\eta\\mu\\theta = 0,6$ και $\\sigma\\upsilon\\nu\\theta = 0,8$. Η ισορροπία της στεφάνης εξασφαλίζεται από κατακόρυφο νήμα που εφάπτεται στη στεφάνη. Το άνω άκρο του νήματος συνδέεται σε σώμα $\\Sigma_1$ μάζας $m_1 = 1,5 \\text{ kg}$, το οποίο ισορροπεί με τη βοήθεια ελατηρίου σταθεράς $k = 60 \\text{ N/m}$ που κρέμεται από οροφή, όπως στο παρακάτω σχήμα. Στο άνω άκρο της, κάθετης στη δοκό, διαμέτρου $PZ$ της στεφάνης υπάρχει υλικό σημείο $Z$. Να δείξετε ότι η επιμήκυνση του ελατηρίου είναι $0,5 \\text{ m}$.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
+        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ2",
+    "question": "Κυκλική στεφάνη μάζας $M = 4 \\text{ kg}$ και ακτίνας $R = \\frac{9}{8\\pi} \\text{ m}$ είναι ακίνητη πάνω σε ομογενή δοκό μάζας $m_\\delta = 1 \\text{ kg}$ και μήκους $\\ell = 4 \\text{ m}$. [...] (Περιγραφή Συστήματος). Τη χρονική στιγμή $t_0 = 0$ κόβουμε το νήμα. Η στεφάνη αρχίζει να κυλίεται χωρίς να ολισθαίνει με σταθερή γωνιακή επιτάχυνση, ενώ το $\\Sigma_1$ εκτελεί απλή αρμονική ταλάντωση σταθεράς $D = k$. \nα) Τη χρονική στιγμή $t_1$, όταν η ταχύτητα του σημείου $Z$ μηδενιστεί για δεύτερη φορά, να υπολογίσετε τη μετατόπιση του κέντρου μάζας της στεφάνης (μονάδες 3).\nβ) Αν $t_1 = 1,5 \\text{ s}$, να υπολογίσετε το μέτρο της ταχύτητας των σημείων της περιφέρειας της στεφάνης, η απόσταση των οποίων από τη δοκό είναι ίση με την ακτίνα της στεφάνης (μονάδες 4).",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
+        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 7"
+    ]
+  },
+  {
+    "id": "Δ3",
+    "question": "Κυκλική στεφάνη μάζας $M = 4 \\text{ kg}$ και ακτίνας $R = \\frac{9}{8\\pi} \\text{ m}$ είναι ακίνητη πάνω σε ομογενή δοκό μάζας $m_\\delta = 1 \\text{ kg}$ και μήκους $\\ell = 4 \\text{ m}$. [...] (Περιγραφή Συστήματος). Τη χρονική στιγμή $t_0 = 0$ κόβουμε το νήμα. Η στεφάνη αρχίζει να κυλίεται χωρίς να ολισθαίνει με σταθερή γωνιακή επιτάχυνση, ενώ το $\\Sigma_1$ εκτελεί απλή αρμονική ταλάντωση σταθεράς $D = k$. Να υπολογίσετε το έργο της δύναμης του ελατηρίου για το χρονικό διάστημα από $t_0$ έως $t_1$. Δίνεται ότι $\\sqrt{40} \\approx 2\\pi$.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
+        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ4",
+    "question": "Κυκλική στεφάνη μάζας $M = 4 \\text{ kg}$ και ακτίνας $R = \\frac{9}{8\\pi} \\text{ m}$ είναι ακίνητη πάνω σε ομογενή δοκό μάζας $m_\\delta = 1 \\text{ kg}$ και μήκους $\\ell = 4 \\text{ m}$. [...] (Περιγραφή Συστήματος). Τη χρονική στιγμή $t_0 = 0$ κόβουμε το νήμα. Η στεφάνη αρχίζει να κυλίεται χωρίς να ολισθαίνει με σταθερή γωνιακή επιτάχυνση. Να σχεδιάσετε τη γραφική παράσταση του μέτρου της δύναμης $\\vec{F}$ που δέχεται η δοκός από το οριζόντιο δάπεδο σε συνάρτηση με την απόσταση $x$ του σημείου επαφής της στεφάνης με την δοκό από την αρχική θέση του σημείου $P$ και μέχρι $x = 3 \\text{ m}$. \nΝα θεωρήσετε ότι: \n• Όλα τα σώματα της διάταξης βρίσκονται στο ίδιο κατακόρυφο επίπεδο. \n• $g = 10 \\text{ m/s}^2$. \n• Το σχήμα δεν είναι υπό κλίμακα.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
+        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  }
+]
