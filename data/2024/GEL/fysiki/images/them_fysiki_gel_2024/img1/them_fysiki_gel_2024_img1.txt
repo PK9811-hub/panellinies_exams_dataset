@@ -1,0 +1,2 @@
+Description
+A diagram showing a bar magnet on the left with poles S (left) and N (right) moving to the right towards a solenoid (coil). The solenoid is located on the right with terminals A (left end) and B (right end). The circuit of the solenoid is open. The magnet's axis is aligned with the solenoid's axis.

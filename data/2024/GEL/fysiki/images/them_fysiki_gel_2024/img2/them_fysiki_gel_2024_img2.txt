@@ -1,0 +1,2 @@
+Description
+A diagram depicting a homogeneous disc resting on a smooth horizontal surface. A horizontal force vector F is applied to the center of the disc, pointing to the right. Point A is marked at the very top of the disc, diametrically opposite to the contact point with the ground. A dashed line indicates the vertical diameter.

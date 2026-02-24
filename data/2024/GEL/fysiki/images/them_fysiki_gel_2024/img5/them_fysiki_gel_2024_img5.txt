@@ -1,0 +1,2 @@
+Description
+A diagram showing a transverse wave coordinate system. The vertical axis is labeled y and y'. The horizontal axis is labeled x. The origin is O at x=0. A point labelled Δ is marked on the positive x-axis to the right of the origin.
