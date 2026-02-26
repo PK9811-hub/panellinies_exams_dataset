@@ -125,23 +125,37 @@
     ]
   },
   {
-    "id": "B1",
-    "question": "Σώμα μάζας $m_1 = m$ κινούμενο με ταχύτητα $\\vec{\\upsilon}_0$, συγκρούεται κεντρικά και πλαστικά με ακίνητο σώμα μάζας $m_2 = 3 m$. Ο λόγος της κινητικής ενέργειας του συσσωματώματος προς την αρχική κινητική ενέργεια του σώματος $m_1$ είναι:\n\n i) $1/2$ \n ii) $1/3$ \n iii) $1/4$ \n\n α) Να επιλέξετε τη σωστή απάντηση.\n β) Να δικαιολογήσετε την επιλογή σας.",
+    "id": "B1.α",
+    "question": "Σώμα μάζας $m_1 = m$ κινούμενο με ταχύτητα $\\vec{\\upsilon}_0$, συγκρούεται κεντρικά και πλαστικά με ακίνητο σώμα μάζας $m_2 = 3 m$. Ο λόγος της κινητικής ενέργειας του συσσωματώματος προς την αρχική κινητική ενέργεια του σώματος $m_1$ είναι:\n\nΝα επιλέξετε τη σωστή απάντηση.",
+    "input": "",
+    "choices": [
+      "i. 1/2",
+      "ii. 1/3",
+      "iii. 1/4"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B1.β",
+    "question": "Σώμα μάζας $m_1 = m$ κινούμενο με ταχύτητα $\\vec{\\upsilon}_0$, συγκρούεται κεντρικά και πλαστικά με ακίνητο σώμα μάζας $m_2 = 3 m$. Ο λόγος της κινητικής ενέργειας του συσσωματώματος προς την αρχική κινητική ενέργεια του σώματος $m_1$ είναι:\n\n i) 1/2 \n ii) 1/3 \n iii) 1/4 \n\nΝα επιλέξετε τη σωστή απάντηση και να δικαιολογήσετε την επιλογή σας.",
     "input": "",
     "choices": [],
     "images": [],
     "mark": [
-        "Μονάδες 8"
+      "Μονάδες 6"
     ]
   },
   {
-    "id": "B2",
-    "question": "Εγκάρσιο κύμα διαδίδεται σε νήμα κατά τη διεύθυνση του άξονα $x'x$ του Σχήματος 1. Τα διαδοχικά σημεία Κ, Λ, Μ, Ν απέχουν από τα γειτονικά τους απόσταση $\\lambda/4$. Τη χρονική στιγμή $t_1$, που το κύμα έχει ήδη διαδοθεί στην περιοχή ΚΝ, το σημείο Μ βρίσκεται στη θέση ισορροπίας και η ταχύτητά του $\\vec{\\upsilon}_M$ είναι αρνητική, έχοντας φάση $\\varphi_M < \\varphi_\\Lambda$. Τη χρονική στιγμή $t_1 + 3T/2$ το στιγμιότυπο του κύματος στην περιοχή ΚΝ σε ποια από τις παρακάτω απεικονίσεις του Σχήματος 2 αντιστοιχεί;\n\n α) Να επιλέξετε τη σωστή απάντηση.\n β) Να δικαιολογήσετε την επιλογή σας.",
+    "id": "B2.α",
+    "question": "Εγκάρσιο κύμα διαδίδεται σε νήμα κατά τη διεύθυνση του άξονα $x'x$ του Σχήματος 1. Τα διαδοχικά σημεία Κ, Λ, Μ, Ν απέχουν από τα γειτονικά τους απόσταση $\\lambda/4$. Τη χρονική στιγμή $t_1$, που το κύμα έχει ήδη διαδοθεί στην περιοχή ΚΝ, το σημείο Μ βρίσκεται στη θέση ισορροπίας και η ταχύτητά του $\\vec{\\upsilon}_M$ είναι αρνητική, έχοντας φάση $\\varphi_M < \\varphi_\\Lambda$. Τη χρονική στιγμή $t_1 + 3T/2$ το στιγμιότυπο του κύματος στην περιοχή ΚΝ σε ποια από τις παρακάτω απεικονίσεις του Σχήματος 2 αντιστοιχεί;\n\nΝα επιλέξετε τη σωστή απάντηση.",
     "input": "",
     "choices": [
-        "i)",
-        "ii)",
-        "iii)"
+        "i",
+        "ii",
+        "iii"
     ],
     "images": [
         {
@@ -151,22 +165,57 @@
         },
         {
         "path": "images/them_fysiki_gel_2025/img2/them_fysiki_gel_2025_img2.png",
-        "description": "Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i) The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii) The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii) The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
+        "description": "Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i. The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii. The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii. The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
         "transcription": []
         }
       ],
         "mark": [
-            "Μονάδες 8"
+            "Μονάδες 2"
       ]
    },
    {
-      "id": "B3",
-      "question": "Φωτόνιο αρχικής ενέργειας $E_0$ σκεδάζεται από πρακτικώς ακίνητο ηλεκτρόνιο, σύμφωνα με το φαινόμενο Compton σε γωνία $\\phi = 60^\\circ$ ως προς την αρχική διεύθυνση διάδοσης του φωτονίου. Μετά τη σκέδαση η ενέργεια του σκεδαζόμενου φωτονίου είναι ίση με την κινητική ενέργεια του ανακρουόμενου ηλεκτρονίου. Αν $c$ είναι η ταχύτητα του φωτός στο κενό και $m_e$ η μάζα του ηλεκτρονίου, τότε η αρχική ενέργεια του φωτονίου είναι\n\n i) $E_0 = m_e \\cdot c^2$ \n ii) $E_0 = 2 \\cdot m_e \\cdot c^2$ \n iii) $E_0 = 3 \\cdot m_e \\cdot c^2$ \n\n α) Να επιλέξετε τη σωστή απάντηση.\n β) Να δικαιολογήσετε την επιλογή σας.",
+    "id": "B2.β",
+    "question": "Εγκάρσιο κύμα διαδίδεται σε νήμα κατά τη διεύθυνση του άξονα $x'x$ του Σχήματος 1. Τα διαδοχικά σημεία Κ, Λ, Μ, Ν απέχουν από τα γειτονικά τους απόσταση $\\lambda/4$. Τη χρονική στιγμή $t_1$, που το κύμα έχει ήδη διαδοθεί στην περιοχή ΚΝ, το σημείο Μ βρίσκεται στη θέση ισορροπίας και η ταχύτητά του $\\vec{\\upsilon}_M$ είναι αρνητική, έχοντας φάση $\\varphi_M < \\varphi_\\Lambda$. Τη χρονική στιγμή $t_1 + 3T/2$ το στιγμιότυπο του κύματος στην περιοχή ΚΝ σε ποια από τις παρακάτω απεικονίσεις (i, ii, iii) του Σχήματος 2 αντιστοιχεί;\n\nΝα επιλέξετε τη σωστή απάντηση και να δικαιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [],
+    "images": [
+        {
+        "path": "images/them_fysiki_gel_2025/img1/them_fysiki_gel_2025_img1.png",
+        "description": "Figure 1: Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).",
+        "transcription": []
+        },
+        {
+        "path": "images/them_fysiki_gel_2025/img2/them_fysiki_gel_2025_img2.png",
+        "description": "Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i. The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii. The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii. The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
+        "transcription": []
+        }
+      ],
+        "mark": [
+            "Μονάδες 6"
+      ]
+   },
+   {
+      "id": "B3.α",
+      "question": "Φωτόνιο αρχικής ενέργειας $E_0$ σκεδάζεται από πρακτικώς ακίνητο ηλεκτρόνιο, σύμφωνα με το φαινόμενο Compton σε γωνία $\\phi = 60^\\circ$ ως προς την αρχική διεύθυνση διάδοσης του φωτονίου. Μετά τη σκέδαση η ενέργεια του σκεδαζόμενου φωτονίου είναι ίση με την κινητική ενέργεια του ανακρουόμενου ηλεκτρονίου. Αν $c$ είναι η ταχύτητα του φωτός στο κενό και $m_e$ η μάζα του ηλεκτρονίου, τότε η αρχική ενέργεια του φωτονίου είναι:\n\nΝα επιλέξετε τη σωστή απάντηση.",
+      "input": "",
+      "choices": [
+        "i. $E_0 = m_e \\cdot c^2$",
+        "ii. $E_0 = 2 \\cdot m_e \\cdot c^2$",
+        "iii. $E_0 = 3 \\cdot m_e \\cdot c^2$"
+      ],
+      "images": [],
+      "mark": [
+        "Μονάδες 2"
+      ]
+   },
+   {
+      "id": "B3.β",
+      "question": "Φωτόνιο αρχικής ενέργειας $E_0$ σκεδάζεται από πρακτικώς ακίνητο ηλεκτρόνιο, σύμφωνα με το φαινόμενο Compton σε γωνία $\\phi = 60^\\circ$ ως προς την αρχική διεύθυνση διάδοσης του φωτονίου. Μετά τη σκέδαση η ενέργεια του σκεδαζόμενου φωτονίου είναι ίση με την κινητική ενέργεια του ανακρουόμενου ηλεκτρονίου. Αν $c$ είναι η ταχύτητα του φωτός στο κενό και $m_e$ η μάζα του ηλεκτρονίου, τότε η αρχική ενέργεια του φωτονίου είναι:\n\n i. $E_0 = m_e \\cdot c^2$ \n ii. $E_0 = 2 \\cdot m_e \\cdot c^2$ \n iii. $E_0 = 3 \\cdot m_e \\cdot c^2$ \n\nΝα επιλέξετε τη σωστή απάντηση και να δικαιολογήσετε την επιλογή σας.",
       "input": "",
       "choices": [],
       "images": [],
       "mark": [
-          "Μονάδες 9"
+        "Μονάδες 7"
       ]
    },
    {
