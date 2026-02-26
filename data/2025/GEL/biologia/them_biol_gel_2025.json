@@ -1,0 +1,316 @@
+[
+  {
+    "id": "A1",
+    "question": "Με το οπτικό μικροσκόπιο παρατηρούμε:",
+    "input": "",
+    "choices": [
+      "α. τα νουκλεοσώματα.",
+      "β. τα χιάσματα.",
+      "γ. τις θηλιές αντιγραφής.",
+      "δ. το αδρό ενδοπλασματικό δίκτυο."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A2",
+    "question": "Σε ένα υβριδικό μόριο 5΄-ATCGATA-3΄ / 3΄-UAGCUAU-5΄ περιέχονται:",
+    "input": "",
+    "choices": [
+      "α. 8 είδη νουκλεοτιδίων.",
+      "β. 5 είδη νουκλεοτιδίων.",
+      "γ. 4 είδη νουκλεοτιδίων.",
+      "δ. 6 είδη νουκλεοτιδίων."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A3",
+    "question": "Σε cDNA βιβλιοθήκες, που κατασκευάστηκαν από ηπατικά και από παγκρεατικά κύτταρα του ίδιου ατόμου, εντοπίζονται κοινά γονίδια, που κωδικοποιούν:",
+    "input": "",
+    "choices": [
+      "α. DNA πολυμεράση και α1-αντιθρυψίνη.",
+      "β. ιστόνες και απαμινάση της αδενοσίνης.",
+      "γ. RNA πολυμεράση και πρωτεΐνες ριβοσωμάτων.",
+      "δ. ινσουλίνη και DNA δεσμάση."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A4",
+    "question": "Κάποιος άνθρωπος υποβλήθηκε σε in vivo γονιδιακή θεραπεία για την κυστική ίνωση. Αν συμβολίσουμε με Α το φυσιολογικό αλληλόμορφο και με α το αλληλόμορφο που είναι υπεύθυνο για την κυστική ίνωση, ο γονότυπος σε ένα επιθηλιακό κύτταρο του πνεύμονα και σε ένα κύτταρο του παγκρέατος θα είναι αντίστοιχα:",
+    "input": "",
+    "choices": [
+      "α. Ααα και αα.",
+      "β. αα και Ααα.",
+      "γ. Ααα και Ααα.",
+      "δ. Αα και αα."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A5",
+    "question": "Κατά τη δημιουργία του κλωνοποιημένου προβάτου Dolly και του διαγονιδιακού προβάτου Tracy χρησιμοποιήθηκαν, αντίστοιχα:",
+    "input": "",
+    "choices": [
+      "α. γονιμοποιημένο ωάριο και απύρηνο ωάριο.",
+      "β. γονιμοποιημένο ωάριο και γονιμοποιημένο ωάριο.",
+      "γ. απύρηνο ωάριο και απύρηνο ωάριο.",
+      "δ. απύρηνο ωάριο και γονιμοποιημένο ωάριο."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "B1",
+    "question": "Να αντιστοιχίσετε κάθε όρο της στήλης Α του παρακάτω πίνακα με έναν από τους όρους της στήλης Β. Ένας όρος της στήλης Β περισσεύει.",
+    "input": "ΣΤΗΛΗ Α\n1. Πείραμα Griffith\n2. Εντομοκτόνος τοξίνη\n3. Πείραμα Hersey Chase\n4. Γονιδιωματική βιβλιοθήκη\n5. In vivo γονιδιακή θεραπεία κυστικής ίνωσης\n6. Αντιβιοτικά\n7. Εμβόλια\n\nΣΤΗΛΗ Β\nα. Ιός δαμαλίτιδας\nβ. Αδενοϊός\nγ. Βακτήριο του γένους Streptomyces\nδ. Βακτηριοφάγος T2\nε. Βακτηριοφάγος λ\nστ. Πνευμονιόκοκκος\nζ. Βακτήριο του γένους Lactobacillus\nη. Bacillus thuringiensis",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 7"
+    ]
+  },
+  {
+    "id": "B2.α",
+    "question": "Να ορίσετε την παρακάτω έννοια: κυτταρικός κύκλος.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B2.β",
+    "question": "Να ορίσετε την παρακάτω έννοια: σύναψη.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B3",
+    "question": "Να αναφέρετε ποιες θα είναι οι συνέπειες σε ένα κύτταρο αν αφαιρεθεί τεχνητά ο πυρήνας του.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "B4.α",
+    "question": "Να εξηγήσετε αν οι πρωτεΐνες των νέων φάγων θα είναι όμοιες με εκείνες του φάγου Τ2 ή του φάγου Τ4.",
+    "input": "Ερευνητές δημιούργησαν στο εργαστήριο έναν συνθετικό φάγο. Ο φάγος αυτός διαθέτει το DNA του φάγου Τ2 και πρωτεΐνες του φάγου Τ4, οι οποίες είναι σημασμένες με ραδιενεργό $\\^{35}S$. Με τους συνθετικούς φάγους οι επιστήμονες μόλυναν βακτήρια E.coli, τα οποία αναπτύχθηκαν σε περιβάλλον με μη ραδιενεργό S ($\\^{32}S$).",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B4.β",
+    "question": "Να εξηγήσετε αν οι νέοι φάγοι που θα παραχθούν θα έχουν πρωτεΐνες με ραδιενεργό 35S ή με μη ραδιενεργό 32S.",
+    "input": "Ερευνητές δημιούργησαν στο εργαστήριο έναν συνθετικό φάγο. Ο φάγος αυτός διαθέτει το DNA του φάγου Τ2 και πρωτεΐνες του φάγου Τ4, οι οποίες είναι σημασμένες με ραδιενεργό $\\^{35}S$. Με τους συνθετικούς φάγους οι επιστήμονες μόλυναν βακτήρια E.coli, τα οποία αναπτύχθηκαν σε περιβάλλον με μη ραδιενεργό S ($\\^{32}S$).",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "Γ1.α",
+    "question": "Ποιος κλώνος (1 ή 2) είναι ο φυσιολογικός και ποιος ο μεταλλαγμένος;",
+    "input": "Δυο κλώνοι $E.coli$, εκ των οποίων ο ένας είναι φυσιολογικός και ο άλλος μεταλλαγμένος, καλλιεργούνται σε θρεπτικό υλικό που αρχικά περιέχει μόνο γλυκόζη και μετά την κατανάλωσή της (χρονική στιγμή $t_1$) προστίθεται λακτόζη. Κατά τη διάρκεια της διαδικασίας μετράται συνεχώς η συγκέντρωση της $\\beta$-γαλακτοζιδάσης, οπότε κατασκευάζεται η καμπύλη της Εικόνας 1. Δίνεται ότι η $\\beta$-γαλακτοζιδάση και η περμεάση είναι ένζυμα που κωδικοποιούνται από δομικά γονίδια του οπερονίου της λακτόζης.",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_biol_gel_2025/img1/them_biol_gel_2025_img1.png",
+        "description": "Figure 1: Illustration of the concentration of the enzyme $\\beta$-galactosidase over time, $t$, showcasing the classic regulatory response of the lac operon in bacteria. The graph features two distinct curves starting from the origin, with a critical time marker $t_1$ indicated on the x-axis. Curve 1 demonstrates a significant, sigmoidal increase in enzyme concentration following time $t_1$, representing the induction of the operon, which typically occurs when lactose is added to the medium in the absence of glucose. In contrast, Curve 2 remains nearly horizontal and close to the baseline, indicating that the synthesis of $\\beta$-galactosidase remains repressed or at very low basal levels, as would be expected if the inducer were absent or if a preferred carbon source like glucose were available. The vertical dotted line at $t_1$ specifically marks the point of induction where the environmental change triggers the transcription of the structural genes, leading to the rapid accumulation of the enzyme seen in the first curve.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "Γ1.β",
+    "question": "Να εντοπίσετε τρεις διαφορετικές περιοχές του οπερονίου της λακτόζης, που αν υποστούν μετάλλαξη εξηγούν την καμπύλη του μεταλλαγμένου κλώνου.",
+    "input": "Δυο κλώνοι $E.coli$, εκ των οποίων ο ένας είναι φυσιολογικός και ο άλλος μεταλλαγμένος, καλλιεργούνται σε θρεπτικό υλικό που αρχικά περιέχει μόνο γλυκόζη και μετά την κατανάλωσή της (χρονική στιγμή $t_1$) προστίθεται λακτόζη. Κατά τη διάρκεια της διαδικασίας μετράται συνεχώς η συγκέντρωση της $\\beta$-γαλακτοζιδάσης, οπότε κατασκευάζεται η καμπύλη της Εικόνας 1. Δίνεται ότι η $\\beta$-γαλακτοζιδάση και η περμεάση είναι ένζυμα που κωδικοποιούνται από δομικά γονίδια του οπερονίου της λακτόζης.",
+    "images": [
+      {
+        "path": "images/them_biol_gel_2025/img1/them_biol_gel_2025_img1.png",
+        "description": "Figure 1: Illustration of the concentration of the enzyme $\\beta$-galactosidase over time, $t$, showcasing the classic regulatory response of the lac operon in bacteria. The graph features two distinct curves starting from the origin, with a critical time marker $t_1$ indicated on the x-axis. Curve 1 demonstrates a significant, sigmoidal increase in enzyme concentration following time $t_1$, representing the induction of the operon, which typically occurs when lactose is added to the medium in the absence of glucose. In contrast, Curve 2 remains nearly horizontal and close to the baseline, indicating that the synthesis of $\\beta$-galactosidase remains repressed or at very low basal levels, as would be expected if the inducer were absent or if a preferred carbon source like glucose were available. The vertical dotted line at $t_1$ specifically marks the point of induction where the environmental change triggers the transcription of the structural genes, leading to the rapid accumulation of the enzyme seen in the first curve.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "Γ1.γ",
+    "question": "Να εξετάσετε αν οι προτεινόμενες μεταλλάξεις επηρεάζουν με τον ίδιο τρόπο τη συγκέντρωση της περμεάσης.",
+    "input": "Δυο κλώνοι $E.coli$, εκ των οποίων ο ένας είναι φυσιολογικός και ο άλλος μεταλλαγμένος, καλλιεργούνται σε θρεπτικό υλικό που αρχικά περιέχει μόνο γλυκόζη και μετά την κατανάλωσή της (χρονική στιγμή $t_1$) προστίθεται λακτόζη. Κατά τη διάρκεια της διαδικασίας μετράται συνεχώς η συγκέντρωση της $\\beta$-γαλακτοζιδάσης, οπότε κατασκευάζεται η καμπύλη της Εικόνας 1. Δίνεται ότι η $\\beta$-γαλακτοζιδάση και η περμεάση είναι ένζυμα που κωδικοποιούνται από δομικά γονίδια του οπερονίου της λακτόζης.",
+    "images": [
+      {
+        "path": "images/them_biol_gel_2025/img1/them_biol_gel_2025_img1.png",
+        "description": "Figure 1: Illustration of the concentration of the enzyme $\\beta$-galactosidase over time, $t$, showcasing the classic regulatory response of the lac operon in bacteria. The graph features two distinct curves starting from the origin, with a critical time marker $t_1$ indicated on the x-axis. Curve 1 demonstrates a significant, sigmoidal increase in enzyme concentration following time $t_1$, representing the induction of the operon, which typically occurs when lactose is added to the medium in the absence of glucose. In contrast, Curve 2 remains nearly horizontal and close to the baseline, indicating that the synthesis of $\\beta$-galactosidase remains repressed or at very low basal levels, as would be expected if the inducer were absent or if a preferred carbon source like glucose were available. The vertical dotted line at $t_1$ specifically marks the point of induction where the environmental change triggers the transcription of the structural genes, leading to the rapid accumulation of the enzyme seen in the first curve.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "Γ2",
+    "question": "Να αναφέρετε τον τύπο κληρονομικότητας και να υπολογίσετε την πιθανότητα το άτομο $II_2$ να είναι κορίτσι ετερόζυγο.",
+    "input": "Στο γενεαλογικό δέντρο της Εικόνας 2 απεικονίζεται ο τρόπος κληρονόμησης ενός μονογονιδιακού χαρακτήρα.",
+    "choices": [],
+    "images": [
+      {
+        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img2/them_biol_gel_2025_img2.png",
+        "description": "Figure 2: A genealogical pedigree chart displays two generations, labeled with Roman numerals I and II, to track the inheritance of a specific trait. In the first generation, an affected male, represented by a black square (I-1), and an affected female, represented by a black circle (I-2), are joined by a horizontal mating line. Their offspring in the second generation include an unaffected female, indicated by a white circle (II-1), and a second individual marked by a black diamond (II-2), which signifies an affected offspring of unspecified sex. The appearance of an unaffected child from two affected parents strongly suggests that the trait is inherited in an autosomal dominant manner, as both parents must be heterozygous to produce a phenotypically normal daughter.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Γ3.α",
+    "question": "Αν θεωρήσουμε ότι η ασθένεια σε κάθε γονέα προκαλείται από έναν τύπο μετάλλαξης και ότι οι δύο γονείς έχουν διαφορετικό τύπο μετάλλαξης: να εξετάσετε τι είδους παθολογικό γονίδιο μπορεί να είναι η αιτία που πάσχει ο κάθε γονέας, με βάση την ενημέρωση του γενετιστή.",
+    "input": "Στον άνθρωπο υπάρχει ένα είδος τύφλωσης που οφείλεται σε μιτοχονδριακό γονίδιο. Ένα άλλο είδος τύφλωσης οφείλεται σε υπολειπόμενο φυλοσύνδετο γονίδιο. Άνδρας και γυναίκα που πάσχουν από τύφλωση, απευθύνονται σε ειδικό επιστήμονα για γενετική καθοδήγηση. Ο γενετιστής, μετά από έλεγχο των γονοτύπων τους, τους ενημερώνει ότι αν αποκτήσουν κορίτσι δεν υπάρχει πιθανότητα να πάσχει από τη συγκεκριμένη ασθένεια, ενώ αν αποκτήσουν αγόρι θα πάσχει οπωσδήποτε. Θεωρούμε ότι η ασθένεια σε κάθε γονέα προκαλείται από έναν τύπο μετάλλαξης και ότι οι δύο γονείς έχουν διαφορετικό τύπο μετάλλαξης.",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Γ3.β",
+    "question": "Αν θεωρήσουμε ότι η ασθένεια σε κάθε γονέα προκαλείται από έναν τύπο μετάλλαξης και ότι οι δύο γονείς έχουν διαφορετικό τύπο μετάλλαξης: να γράψετε τους γονότυπους των γονέων και των πιθανών αρσενικών και θηλυκών απογόνων.",
+    "input": "Στον άνθρωπο υπάρχει ένα είδος τύφλωσης που οφείλεται σε μιτοχονδριακό γονίδιο. Ένα άλλο είδος τύφλωσης οφείλεται σε υπολειπόμενο φυλοσύνδετο γονίδιο. Άνδρας και γυναίκα που πάσχουν από τύφλωση, απευθύνονται σε ειδικό επιστήμονα για γενετική καθοδήγηση. Ο γενετιστής, μετά από έλεγχο των γονοτύπων τους, τους ενημερώνει ότι αν αποκτήσουν κορίτσι δεν υπάρχει πιθανότητα να πάσχει από τη συγκεκριμένη ασθένεια, ενώ αν αποκτήσουν αγόρι θα πάσχει οπωσδήποτε. Θεωρούμε ότι η ασθένεια σε κάθε γονέα προκαλείται από έναν τύπο μετάλλαξης και ότι οι δύο γονείς έχουν διαφορετικό τύπο μετάλλαξης.",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ1",
+    "question": "Να εντοπίσετε την κωδική αλυσίδα του τμήματος του εξωνίου της Εικόνας 3, να γράψετε τους προσανατολισμούς του $DNA$ και να αιτιολογήσετε την απάντησή σας.",
+    "input": "Στην Εικόνα 3 παρουσιάζεται τμήμα της αλληλουχίας του 2ου εξωνίου ενός γονιδίου Α. Κατά τη μετάφραση του $mRNA$, που παράγεται από τη μεταγραφή του τμήματος της Εικόνας 3, χρησιμοποιείται το $tRNA$ που μεταφέρει το αμινοξύ τρυπτοφάνη.",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.png",
+        "description": "Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence \"TAATTA\" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ2",
+    "question": "Να γράψετε την αλληλουχία του $mRNA$ που προκύπτει και την αλληλουχία των αμινοξέων που προκύπτει από τη μετάφραση του τμήματος $mRNA$.",
+    "input": "Στην Εικόνα 3 παρουσιάζεται τμήμα της αλληλουχίας του 2ου εξωνίου ενός γονιδίου Α. Κατά τη μετάφραση του $mRNA$, που παράγεται από τη μεταγραφή του τμήματος της Εικόνας 3, χρησιμοποιείται το $tRNA$ που μεταφέρει το αμινοξύ τρυπτοφάνη.",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.png",
+        "description": "Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence \"TAATTA\" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.",
+        "transcription": []
+      },
+        {
+        "path": "images/them_biol_gel_2025/img7/them_biol_gel_2025_img7.png",
+        "description": "Figure 7: The image shows a detailed genetic code table written in Greek that maps RNA codons to their corresponding amino acids. The table is organized according to the first, second, and third nucleotide bases of each codon. Along the left side, labeled “Πρώτο γράμμα” (First letter), the rows are grouped by the first base (U, C, A, G). Across the top, labeled “Δεύτερο γράμμα” (Second letter), the columns are divided by the second base (U, C, A, G). On the right side, labeled “Τρίτο γράμμα” (Third letter), the possible third bases (U, C, A, G) are indicated vertically. Each cell of the table lists the four possible codons formed by combining the first and second bases with the four options for the third base, and next to each group of codons the corresponding amino acid is written in Greek along with its three-letter abbreviation in parentheses. For example, UUU and UUC code for Φαινυλαλανίνη (phe), while UUA and UUG code for Λευκίνη (leu). UCU, UCC, UCA, and UCG code for Σερίνη (ser). The codons UAU and UAC code for Τυροσίνη (tyr), whereas UAA and UAG are labeled as stop codons (λήξη). UGU and UGC code for κυστεΐνη (cys), UGA is another stop codon, and UGG codes for Τρυπτοφάνη (trp). Similar groupings are shown for codons beginning with C, A, and G, mapping to amino acids such as Προλίνη (pro), Ιστιδίνη (his), Γλουταμίνη (gln), Αργινίνη (arg), Ισολευκίνη (ile), Μεθειονίνη (met, also marked as the start codon “έναρξη”), Θρεονίνη (thr), Ασπαραγίνη (asn), Λυσίνη (lys), Βαλίνη (val), Αλανίνη (ala), Ασπαρτικό οξύ (asp), Γλουταμινικό οξύ (glu), and Γλυκίνη (gly). Overall, the diagram presents the standard RNA codon table, systematically showing how every possible triplet combination of U, C, A, and G corresponds to a specific amino acid or a translation stop signal.",
+        "transcription": []
+        }
+    ],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "Δ3",
+    "question": "Να προσδιορίσετε τη μετάλλαξη και να γράψετε την αλληλουχία του $DNA$ του μεταλλαγμένου εξωνίου της Εικόνας 3.",
+    "input": "Μετάλλαξη στο τμήμα της αλληλουχίας του εξωνίου της Εικόνας 3 οδηγεί στη δημιουργία του τμήματος πεπτιδίου που απεικονίζεται στην Εικόνα 4. Κατά τη μετάφραση του $mRNA$, που παράγεται από τη μεταγραφή του τμήματος της Εικόνας 3, χρησιμοποιείται το $tRNA$ που μεταφέρει το αμινοξύ τρυπτοφάνη.",
+    "choices": [],
+    "images": [
+      {
+        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.txt",
+        "description": "Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence \"TAATTA\" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.",
+        "transcription": []
+      },
+      {
+        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img4/them_biol_gel_2025_img4.png",
+        "description": "Figure 4: Two complementary DNA strands, labeled \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II), are presented as horizontal sequences of nitrogenous bases reading from left to right. Strand I begins with the sequence ...CAATTGAATGGC... and concludes with ...TTAATTA..., while strand II follows the strict base-pairing rules of the double helix, starting with ...GTTAACTTACCG... and ending with ...AATTAAT.... The presence of ellipses at both ends of the strings indicates that this segment is a snapshot taken from a much larger genomic sequence. By examining the alignment, it is clear that for every Adenine (A) on one strand, there is a Thymine (T) on the other, and every Cytosine (C) is paired with a Guanine (G).",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Δ4",
+    "question": "Ποια ή ποιες περιοριστική/ές ενδονουκλεάση/ες θα χρησιμοποιηθούν για να κόψουν το τμήμα του γονιδίου και ποια ή ποιες για να κόψουν το πλασμίδιο; Να αιτιολογήσετε την απάντησή σας.",
+    "input": "Επιθυμούμε να κλωνοποιήσουμε το τμήμα του εξωνίου της Εικόνας 3 χρησιμοποιώντας ως φορέα κλωνοποίησης το πλασμίδιο της Εικόνας 5. Διαθέτουμε δύο διαφορετικές περιοριστικές ενδονουκλεάσες τις $ΠΕ-Ι$ και $ΠΕ-ΙΙ$. Το πλασμίδιο φέρει γονίδιο ανθεκτικότητας στην αμπικιλίνη, μία θέση έναρξης αντιγραφής και δύο θέσεις αναγνώρισης από τις περιοριστικές ενδονουκλεάσες $ΠΕ-Ι$ και $ΠΕ-ΙΙ$. Παρακάτω δίνονται οι αλληλουχίες έξι ζευγών βάσεων που αναγνωρίζονται από τις $ΠΕ-Ι$ και $ΠΕ-ΙΙ$:\n$ΠΕ-Ι$:\n$5'– C\\ AATTG – 3'$\n$3'– GTTAA\\ C – 5'$\n$ΠΕ-ΙΙ$:\n$5'– T\\ AATTA – 3'$\n$3'– ATTAA\\ T – 5'$\nTα βέλη υποδεικνύουν τη θέση που δρα η κάθε περιοριστική ενδονουκλεάση ($ΠΕ$) στην αλληλουχία αναγνώρισης.",
+    "choices": [],
+    "images": [
+      {
+        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.txt",
+        "description": "Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence \"TAATTA\" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.",
+        "transcription": []
+      },
+      {
+        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img5/them_biol_gel_2025_img5.png",
+        "description": "Figure 5: A single-pane graph depicts the concentration of the enzyme $\\beta$-galactosidase on the vertical axis relative to time, t, on the horizontal axis. Two distinct curves emerge from the origin, with a vertical dashed line marking a specific moment in time labeled $t_1$. Curve 1 remains at a baseline level of zero until $t_1$, after which it rises sharply in a sigmoidal fashion, indicating the induction of the lac operon and the subsequent rapid synthesis of the enzyme. Conversely, Curve 2 continues along the horizontal axis at a constant zero value even after $t_1$, representing a scenario where the enzyme is not produced, likely due to the absence of an inducer or the presence of a repressing factor like glucose.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  [
+  {
+    "id": "Δ5",
+    "question": "Να γράψετε ποια περιοχή αντιγράφεται με συνεχή και ποια με ασυνεχή τρόπο και να εξηγήσετε ποια από τις δύο θέσεις (1 ή 2) μπορεί να αποτελεί θέση έναρξης αντιγραφής.",
+    "input": "Στην Εικόνα 6 απεικονίζεται ο μηχανισμός αντιγραφής του $DNA$ σε δύο περιοχές, την Περιοχή Χ και την Περιοχή Υ, με σημειωμένες δύο πιθανές θέσεις (1 και 2) που σχετίζονται με τη διαδικασία.",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_biol_gel_2025/img6/them_biol_gel_2025_img6.png",
+        "description": "Figure 6: A schematic diagram showing two labeled regions of genetic sequence. At the top, there are two headings in Greek: “Περιοχή Χ” (Region X) on the left and “Περιοχή Υ” (Region Y) on the right. Above each region, there is a circled number with a downward-pointing arrow: a circled 1 near the boundary of Region X and a circled 2 near the end of Region Y. Under Region X, two nucleotide sequences are displayed. The top line resembles a DNA sequence because it contains thymine (T), shown as “…GTGAATTA……ATCA…”, while the bottom line resembles an RNA sequence because it contains uracil (U), shown as “…ACTUAAU……UAGU…”. Under Region Y, two additional sequences are shown, again with dotted sections indicating omitted parts of the sequence: the top line reads “………………CAAGAA…” and the bottom line reads “………………GTUCUU…”. The dotted portions in all sequences suggest that intermediate nucleotides are not displayed. Overall, the diagram appears to compare DNA and RNA sequences across two regions (X and Y), highlighting specific positions marked by the numbered arrows.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  }
+]
+]
