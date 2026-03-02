@@ -1,0 +1,2 @@
+Description
+A physics diagram showing a cross-section of a long straight wire carrying current I into the page, denoted by a circle with an 'X' inside. To the right of the wire, along a horizontal dashed line, is point A. At point A, a Cartesian coordinate system origin is implied with four vectors representing possible magnetic field directions: vector B1 points vertically upwards, vector B2 points vertically downwards, vector B3 points horizontally to the right (away from the wire), and vector B4 points horizontally to the left (towards the wire).
