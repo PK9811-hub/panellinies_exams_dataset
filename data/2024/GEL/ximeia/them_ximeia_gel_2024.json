@@ -1,0 +1,402 @@
+[
+  {
+    "id": "A1",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή. \nΑ1. Η υποστιβάδα 3d αποτελείται από",
+    "input": "",
+    "choices": [
+      "α. τρία (3) ατομικά τροχιακά.",
+      "β. πέντε (5) ατομικά τροχιακά.",
+      "γ. ένα (1) ατομικό τροχιακό.",
+      "δ. επτά (7) ατομικά τροχιακά."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A2",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή. \nΑ2. Έχει αποκατασταθεί η παρακάτω χημική ισορροπία \n$N_{2}(g)+O_{2}(g)\\rightleftharpoons2NO(g).$ \nΑυξάνοντας τον όγκο του δοχείου υπό σταθερή θερμοκρασία",
+    "input": "",
+    "choices": [
+      "α. δεν μετατοπίζεται η θέση της χημικής ισορροπίας.",
+      "β. μετατοπίζεται η θέση της χημικής ισορροπίας προς τα δεξιά.",
+      "γ. μετατοπίζεται η θέση της χημικής ισορροπίας προς τα αριστερά.",
+      "δ. αυξάνεται ο αριθμός mol του $NO(g)$."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A3",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή. \nΑ3. Η οργανική ένωση $CH_{3}COOH$ δεν αντιδρά με",
+    "input": "",
+    "choices": [
+      "α. αντιδραστήριο Fehling.",
+      "β. υδατικό διάλυμα $K_{2}CO_{3}$.",
+      "γ. μεταλλικό νάτριο Na.",
+      "δ. υδατικό διάλυμα $NH_{3}$."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A4",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή. \nΑ4. Η μεταβολή της ενθαλπίας μιας αντίδρασης εξαρτάται",
+    "input": "",
+    "choices": [
+      "α. μόνο από τη φύση των αντιδρώντων.",
+      "β. μόνο από τη φυσική κατάσταση των αντιδρώντων και των προϊόντων.",
+      "γ. μόνο από τις συνθήκες πίεσης και θερμοκρασίας που λαμβάνει χώρα η αντίδραση.",
+      "δ. από όλα τα παραπάνω."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A5.1",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στον αριθμό που αντιστοιχεί σε κάθε πρόταση, τη λέξη ΣΩΣΤΟ, αν η πρόταση είναι σωστή ή τη λέξη ΛΑΘΟΣ, αν η πρόταση είναι λανθασμένη. \n1. Το $\\psi^{2}$ εκφράζει την πιθανότητα να βρεθεί το ηλεκτρόνιο σε ένα ορισμένο σημείο του χώρου γύρω από τον πυρήνα.",
+    "input": "",
+    "choices": [
+      "ΣΩΣΤΟ",
+      "ΛΑΘΟΣ"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδα 1"
+    ]
+  },
+  {
+    "id": "A5.2",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στον αριθμό που αντιστοιχεί σε κάθε πρόταση, τη λέξη ΣΩΣΤΟ, αν η πρόταση είναι σωστή ή τη λέξη ΛΑΘΟΣ, αν η πρόταση είναι λανθασμένη. \n2. Η χημική ένωση $BeF_{2}$ έχει ευθύγραμμη διάταξη. Δίνονται: $_{4}Be, _{9}F$.",
+    "input": "",
+    "choices": [
+      "ΣΩΣΤΟ",
+      "ΛΑΘΟΣ"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδα 1"
+    ]
+  },
+  {
+    "id": "A5.3",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στον αριθμό που αντιστοιχεί σε κάθε πρόταση, τη λέξη ΣΩΣΤΟ, αν η πρόταση είναι σωστή ή τη λέξη ΛΑΘΟΣ, αν η πρόταση είναι λανθασμένη. \n3. Στην κατάσταση χημικής ισορροπίας οι ταχύτητες των δύο αντιδράσεων που εκφράζουν οι δύο αντίθετες κατευθύνσεις έχουν μηδενιστεί.",
+    "input": "",
+    "choices": [
+      "ΣΩΣΤΟ",
+      "ΛΑΘΟΣ"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδα 1"
+    ]
+  },
+  {
+    "id": "A5.4",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στον αριθμό που αντιστοιχεί σε κάθε πρόταση, τη λέξη ΣΩΣΤΟ, αν η πρόταση είναι σωστή ή τη λέξη ΛΑΘΟΣ, αν η πρόταση είναι λανθασμένη. \n4. Η πρότυπη ενθαλπία εξουδετέρωσης είναι πάντοτε θετική.",
+    "input": "",
+    "choices": [
+      "ΣΩΣΤΟ",
+      "ΛΑΘΟΣ"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδα 1"
+    ]
+  },
+  {
+    "id": "A5.5",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στον αριθμό που αντιστοιχεί σε κάθε πρόταση, τη λέξη ΣΩΣΤΟ, αν η πρόταση είναι σωστή ή τη λέξη ΛΑΘΟΣ, αν η πρόταση είναι λανθασμένη. \n5. Τα κατώτερα μέλη των αλκοολών διαλύονται εύκολα στο νερό.",
+    "input": "",
+    "choices": [
+      "ΣΩΣΤΟ",
+      "ΛΑΘΟΣ"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδα 1"
+    ]
+  },
+  {
+    "id": "B1.α",
+    "question": "Δίνονται τα στοιχεία Χ, Ψ με ατομικούς αριθμούς 18 και 19, αντίστοιχα. \nα. Να βρείτε την ηλεκτρονιακή δομή σε υποστιβάδες των δύο στοιχείων στη θεμελιώδη τους κατάσταση.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B1.β",
+    "question": "Δίνονται τα στοιχεία Χ, Ψ με ατομικούς αριθμούς 18 και 19, αντίστοιχα. \nβ. Να προσδιορίσετε σε ποιον τομέα, σε ποια περίοδο και σε ποια ομάδα του περιοδικού πίνακα βρίσκεται κάθε ένα από τα δύο στοιχεία.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B1.γ",
+    "question": "Στο παρακάτω σχήμα αποτυπώνεται η ενέργεια πρώτου ιοντισμού ($E_{i1}$) τεσσάρων διαδοχικών χημικών στοιχείων σε συνάρτηση με τον ατομικό τους αριθμό (Ζ). \nΟι ατομικοί αριθμοί των στοιχείων Σ1, Σ2, Σ3, Σ4 μπορεί να είναι, αντίστοιχα: \n\nΝα επιλέξετε τη σωστή απάντηση και να αιτιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [
+      "i) 17, 18, 19, 20",
+      "ii) 16, 17, 18, 19",
+      "iii) 18, 19, 20, 21"
+    ],
+    "images": [
+      {
+        "path": "images/them_ximeia_gel_2024/imag1/them_ximeia_gel_2024_img1.png",
+        "description": "Figure 1: A two-dimensional graph illustrating the first ionization energy (Ei₁) of four consecutive chemical elements as a function of their atomic number (Z). The vertical axis is labeled Ei₁, representing the first ionization energy, while the horizontal axis is labeled Z, representing the atomic number. Four points are plotted on the graph and labeled Σ1, Σ2, Σ3, and Σ4, corresponding to the four successive elements. The points are arranged from left to right in increasing atomic number. From Σ1 to Σ3, the ionization energy increases progressively, as each point is positioned higher than the previous one. However, Σ4, although further to the right (indicating a higher atomic number), is positioned significantly lower than Σ3, showing a noticeable decrease in ionization energy compared to the preceding element. The graph has a simple layout with clear axes and isolated data points marked by solid dots.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B2.α",
+    "question": "Μπλε χρώματος στερεό $CoCl_{2}(s)$ μεταβάλλει το χρώμα του σε ροδόχρουν στερεό $CoCl_{2}·6H_{2}O(s)$ σύμφωνα με την αμφίδρομη χημική εξίσωση: \n$CoCl_{2}(s) + 6H_{2}O(g) \\rightleftharpoons CoCl_{2}·6H_{2}O(s)$ $\\Delta H$ \n\nα. Βασιζόμενοι στην παραπάνω ισορροπία, εξηγήστε γιατί το μπλε $CoCl_{2}(s)$ χρησιμοποιείται για την ανίχνευση της υγρασίας.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B2.β",
+    "question": "Μπλε χρώματος στερεό $CoCl_{2}(s)$ μεταβάλλει το χρώμα του σε ροδόχρουν στερεό $CoCl_{2}·6H_{2}O(s)$ σύμφωνα με την αμφίδρομη χημική εξίσωση: \n$CoCl_{2}(s) + 6H_{2}O(g) \\rightleftharpoons CoCl_{2}·6H_{2}O(s)$ \n\nβ. Με αύξηση της θερμοκρασίας το χρώμα του στερεού γίνεται μπλε. Να εξηγήσετε αν η αντίδραση προς τα δεξιά είναι ενδόθερμη ή εξώθερμη.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "B3.α",
+    "question": "Να εξηγήσετε την πολύ μεγάλη τιμή του σημείου βρασμού του LiH ($1270^{\\circ}C$). \nΔίνονται οι ατομικοί αριθμοί: $_{3}Li, _{1}H$.",
+    "input": "",
+    "choices": [],
+    "images": [
+        {
+        "path": "images/them_ximeia_gel_2024/img2/them_ximeia_gel_2024_img2.png",
+        "description": "Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B3.β",
+    "question": "Να εξηγήσετε γιατί το HF ($23^{\\circ}C$) έχει μεγαλύτερο σημείο βρασμού από τα άλλα υδραλογόνα ($HBr: -66^{\\circ}C, HCl: -82^{\\circ}C$).",
+    "input": "",
+    "choices": [],
+    "images": [
+        {
+        "path": "images/them_ximeia_gel_2024/img2/them_ximeia_gel_2024_img2.png",
+        "description": "Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B3.γ",
+    "question": "Να εξηγήσετε γιατί το HBr έχει μεγαλύτερο σημείο βρασμού από το HCl. \nΔίνονται οι σχετικές ατομικές μάζες: $A_{r}(H)=1, A_{r}(Cl)=35,5$ και $A_{r}(Br)=80$.",
+    "input": "",
+    "choices": [],
+    "images": [{
+        "path": "images/them_ximeia_gel_2024/img2/them_ximeia_gel_2024_img2.png",
+        "description": "Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B4",
+    "question": "Στο παρακάτω σχήμα, δίνεται η ενεργειακή κατανομή μορίων σε δύο διαφορετικές θερμοκρασίες Τ1 και Τ2. \nΠοια από τις θερμοκρασίες Τ1 ή Τ2 είναι υψηλότερη και να αιτιολογήσετε την απάντησή σας.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_ximeia_gel_2024/img3/them_ximeia_gel_2024_img3.png",
+        "description": "Figure 3: A graph representing the distribution of molecular kinetic energies at two different temperatures. The vertical axis is labeled “κλάσμα των μορίων” (fraction of molecules), while the horizontal axis is labeled “κινητική ενέργεια” (kinetic energy). Two curves are plotted on the graph and are labeled T₁ and T₂, corresponding to two different temperatures. The curve labeled T₂ has a higher and sharper peak positioned at lower kinetic energy values, while the curve labeled T₁ is broader and lower in height, extending further toward higher kinetic energy values. A vertical dashed line marked Eₐ indicates the activation energy. The area of each curve to the right of Eₐ represents the fraction of molecules with kinetic energy equal to or greater than the activation energy. The diagram is drawn with smooth curves and clearly marked axes, illustrating how temperature affects the distribution of molecular kinetic energies.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Γ1.α",
+    "question": "Δίνονται οι αντιδράσεις του παρακάτω σχήματος. Να γράψετε τους συντακτικούς τύπους των οργανικών ενώσεων Α, Β, Γ, Δ, Ε, Ζ, Θ, Κ, Λ, Μ.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_ximeia_gel_2024/img4/them_ximeia_gel_2024_img4.png",
+        "description": "Figure 4: A multi-step organic reaction scheme illustrating the transformation of an initial compound through several intermediates and reaction conditions. The starting compound, labeled A, has the general formula CₙH₂ᵥO and reacts with H₂ in the presence of Ni, forming compound B. Compound B is then treated with SOCl₂, producing compound Γ. The compound Γ reacts with Mg in absolute ether (απόλυτος αιθέρας), forming compound Δ. Compound Δ subsequently reacts with compound A, yielding an intermediate product (ενδιάμεσο προϊόν), which upon addition of H₂O forms compound E. From compound E, several reaction pathways are shown. In one pathway, treatment with KOH/Br₂ leads to the formation of compounds Λ and M. In another pathway, reaction with KMnO₄/H₂SO₄ produces compound Θ, which further reacts with NaHCO₃ to give compound K. Additionally, compound E can undergo dehydration in the presence of concentrated H₂SO₄ at 170°C, forming compound Z. The diagram is arranged with arrows indicating the direction of each reaction step, reaction conditions written above or beside the arrows, and each compound represented by a circled capital Greek letter..",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 10"
+    ]
+  },
+  {
+    "id": "Γ1.β",
+    "question": "Δίνονται οι παρακάτω αντιδράσεις:\n\nβ. Εξηγήστε τη χρήση απόλυτου αιθέρα για τον σχηματισμό της ένωσης Δ, γράφοντας την αντίστοιχη χημική εξίσωση.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_ximeia_gel_2024/img4/them_ximeia_gel_2024_img4.png",
+        "description": "Figure 4: A multi-step organic reaction scheme illustrating the transformation of an initial compound through several intermediates and reaction conditions. The starting compound, labeled A, has the general formula CₙH₂ᵥO and reacts with H₂ in the presence of Ni, forming compound B. Compound B is then treated with SOCl₂, producing compound Γ. The compound Γ reacts with Mg in absolute ether (απόλυτος αιθέρας), forming compound Δ. Compound Δ subsequently reacts with compound A, yielding an intermediate product (ενδιάμεσο προϊόν), which upon addition of H₂O forms compound E. From compound E, several reaction pathways are shown. In one pathway, treatment with KOH/Br₂ leads to the formation of compounds Λ and M. In another pathway, reaction with KMnO₄/H₂SO₄ produces compound Θ, which further reacts with NaHCO₃ to give compound K. Additionally, compound E can undergo dehydration in the presence of concentrated H₂SO₄ at 170°C, forming compound Z. The diagram is arranged with arrows indicating the direction of each reaction step, reaction conditions written above or beside the arrows, and each compound represented by a circled capital Greek letter..",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδα 1"
+    ]
+  },
+  {
+    "id": "Γ2.α",
+    "question": "Ποσότητα 1 mol προπενίου πολυμερίζεται πλήρως υπό κατάλληλες συνθήκες και προκύπτει διάλυμα όγκου 1 L. Το διάλυμα μετά τον πολυμερισμό έχει ωσμωτική πίεση 0,0246 atm σε θερμοκρασία $\\theta = 27^\\circ C$.\nα. Να γράψετε τη χημική εξίσωση πολυμερισμού.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "Γ2.β",
+    "question": "Ποσότητα 1 mol προπενίου πολυμερίζεται πλήρως υπό κατάλληλες συνθήκες και προκύπτει διάλυμα όγκου 1 L. Το διάλυμα μετά τον πολυμερισμό έχει ωσμωτική πίεση 0,0246 atm σε θερμοκρασία $\\theta = 27^\\circ C$.\n β. Να προσδιορίσετε τον αριθμό των μορίων του μονομερούς που σχηματίζουν ένα μόριο πολυμερούς. \nΔίνεται: $R=0,082 \\frac{L·atm}{mol·K}$.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "Γ2.γ",
+    "question": "Ποσότητα 1 mol προπενίου πολυμερίζεται πλήρως υπό κατάλληλες συνθήκες και προκύπτει διάλυμα όγκου 1 L. Το διάλυμα μετά τον πολυμερισμό έχει ωσμωτική πίεση 0,0246 atm σε θερμοκρασία $\\theta = 27^\\circ C$.\n\nγ. Να αναφέρετε το είδος των υβριδικών τροχιακών όλων των ατόμων $C$ στο μονομερές και στην επαναλαμβανόμενη δομική μονάδα του πολυμερούς (μονάδα 1). Να αιτιολογήσετε την απάντησή σας (μονάδα 1).",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "Γ3.α",
+    "question": "Σε κενό δοχείο όγκου $2 L$ και σε θερμοκρασία $\\theta ^\\circ C$, προστίθεται ποσότητα στερεής οργανικής ένωσης $Χ$ και $0,6 mol$ ένωσης $\\Psi$, οπότε πραγματοποιείται η απλή αντίδραση με χημική εξίσωση: $Χ_{(s)} + 2\\Psi_{(g)} \\rightarrow \\Omega_{(g)}$. Τη χρονική στιγμή $t_1$ η ποσότητα του $\\Omega$ στο δοχείο είναι $0,1 mol$. Τη χρονική στιγμή $t_2$ ολοκληρώνεται η χημική αντίδραση και το σύνολο των αερίων μορίων είναι $0,4 mol$. Δίνεται η σταθερά ταχύτητας, $k = 10^{-3} M^{-1} \\cdot s^{-1}$.\n\nα. Να υπολογίσετε τη στιγμιαία ταχύτητα της αντίδρασης τη χρονική στιγμή $t_1$.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "Γ3.β",
+    "question": "Σε κενό δοχείο όγκου $2 L$ και σε θερμοκρασία $\\theta ^\\circ C$, προστίθεται ποσότητα στερεής οργανικής ένωσης $Χ$ και $0,6 mol$ ένωσης $\\Psi$, οπότε πραγματοποιείται η απλή αντίδραση με χημική εξίσωση: $Χ_{(s)} + 2\\Psi_{(g)} \\rightarrow \\Omega_{(g)}$. Τη χρονική στιγμή $t_1$ η ποσότητα του $\\Omega$ στο δοχείο είναι $0,1 mol$. Τη χρονική στιγμή $t_2$ ολοκληρώνεται η χημική αντίδραση και το σύνολο των αερίων μορίων είναι $0,4 mol$. Δίνεται η σταθερά ταχύτητας, $k = 10^{-3} M^{-1} \\cdot s^{-1}$.\n\nβ. Να υπολογίσετε τη στιγμιαία ταχύτητα κατανάλωσης του $\\Psi$ τη χρονική στιγμή $t_1$.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "Γ3.γ",
+    "question": "Σε κενό δοχείο όγκου $2 L$ και σε θερμοκρασία $\\theta ^\\circ C$, προστίθεται ποσότητα στερεής οργανικής ένωσης $Χ$ και $0,6 mol$ ένωσης $\\Psi$, οπότε πραγματοποιείται η απλή αντίδραση με χημική εξίσωση: $Χ_{(s)} + 2\\Psi_{(g)} \\rightarrow \\Omega_{(g)}$. Τη χρονική στιγμή $t_1$ η ποσότητα του $\\Omega$ στο δοχείο είναι $0,1 mol$. Τη χρονική στιγμή $t_2$ ολοκληρώνεται η χημική αντίδραση και το σύνολο των αερίων μορίων είναι $0,4 mol$. Δίνεται η σταθερά ταχύτητας, $k = 10^{-3} M^{-1} \\cdot s^{-1}$.\n\nγ. Να υπολογίσετε τη σύσταση όλων των σωμάτων τη χρονική στιγμή $t_2$.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 4"
+    ]
+  },
+  {
+    "id": "Δ1",
+    "question": "Υδατικό διάλυμα περιέχει $CH_{3}COOH$ 1 Μ και $HCOOH$ 0,8 Μ στους $25^{\\circ}C$. Να υπολογιστεί η συγκέντρωση των $H_{3}O^{+}$ στο διάλυμα. \nΔίνονται: $K_{a}(CH_{3}COOH)=10^{-5}, K_{a}(HCOOH)=10^{-4}$.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Δ2.α",
+    "question": "Διαθέτουμε τα παρακάτω διαλύματα:\n• Υ1 : Υδατικό διάλυμα $NH_3$ όγκου $100 mL$ και συγκέντρωσης $0,5 M$\n• Υ2 : Υδατικό διάλυμα $HBr$ όγκου $100 mL$ και συγκέντρωσης $1 M$\n\nα. Να υπολογιστεί ο μέγιστος όγκος ρυθμιστικού διαλύματος Υ3 με $pH = 9$, που μπορεί να προκύψει από την ανάμιξη των διαλυμάτων Υ1 και Υ2.\n\nΔίνονται:\n• $K_w = 10^{-14}$\n• Για την $NH_3$: $K_b = 10^{-5}$\n• Όλα τα διαλύματα βρίσκονται σε θερμοκρασία $\\theta = 25^\\circ C$ και τα δεδομένα του προβλήματος επιτρέπουν τις γνωστές προσεγγίσεις.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 7"
+    ]
+  },
+  {
+    "id": "Δ2.β",
+    "question": "Διαθέτουμε τα παρακάτω διαλύματα:\n• Υ1 : Υδατικό διάλυμα $NH_3$ όγκου $100 mL$ και συγκέντρωσης $0,5 M$\n• Υ2 : Υδατικό διάλυμα $HBr$ όγκου $100 mL$ και συγκέντρωσης $1 M$\n\nβ. Στο ρυθμιστικό διάλυμα Υ3 με $pH = 9$ προσθέτουμε σταγόνες του δείκτη $Η\\Delta$ με $K_{a H\\Delta} = 10^{-9}$. Να υπολογιστεί ο βαθμός ιοντισμού του δείκτη $Η\\Delta$ στο διάλυμα Υ3. Η θερμοκρασία του διαλύματος παραμένει σταθερή.\n\nΔίνονται:\n• $K_w = 10^{-14}$\n• Για την $NH_3$: $K_b = 10^{-5}$\n• Όλα τα διαλύματα βρίσκονται σε θερμοκρασία $\\theta = 25^\\circ C$ και τα δεδομένα του προβλήματος επιτρέπουν τις γνωστές προσεγγίσεις.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 4"
+    ]
+  },
+  {
+    "id": "Δ3.α",
+    "question": "10 gr δείγματος $S_{(s)}$ καίγονται πλήρως και σχηματίζεται $SO_2(g)$. Η ποσότητα του $SO_2(g)$ διαβιβάζεται σε υδατικό διάλυμα χλωρίου ($Cl_2$) και αντιδρά πλήρως σύμφωνα με τη χημική εξίσωση (1): $SO_2(g) + Cl_2(aq) \\rightarrow HCl(aq) + H_2SO_4(aq)$ (1). Τα οξέα που σχηματίζονται εξουδετερώνονται πλήρως από διάλυμα $NaOH$ συγκέντρωσης $0,5 M$ και όγκου $2 L$. Δίνεται η σχετική ατομική μάζα: $A_r(S) = 32$. Θεωρούμε ότι οι προσμίξεις του δείγματος είναι αδρανείς.\n\nα. Να ισοσταθμίσετε τη χημική εξίσωση (1).",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "Δ3.β",
+    "question": "10 gr δείγματος $S_{(s)}$ καίγονται πλήρως και σχηματίζεται $SO_2(g)$. Η ποσότητα του $SO_2(g)$ διαβιβάζεται σε υδατικό διάλυμα χλωρίου ($Cl_2$) και αντιδρά πλήρως σύμφωνα με τη χημική εξίσωση (1): $SO_2(g) + Cl_2(aq) \\rightarrow HCl(aq) + H_2SO_4(aq)$ (1). Τα οξέα που σχηματίζονται εξουδετερώνονται πλήρως από διάλυμα $NaOH$ συγκέντρωσης $0,5 M$ και όγκου $2 L$. Δίνεται η σχετική ατομική μάζα: $A_r(S) = 32$. Θεωρούμε ότι οι προσμίξεις του δείγματος είναι αδρανείς.\n\nβ. Να προσδιορίσετε την % w/w περιεκτικότητα του δείγματος σε $S_{(s)}$.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Δ3.γ",
+    "question": "10 gr δείγματος $S_{(s)}$ καίγονται πλήρως και σχηματίζεται $SO_2(g)$. Η ποσότητα του $SO_2(g)$ διαβιβάζεται σε υδατικό διάλυμα χλωρίου ($Cl_2$) and αντιδρά πλήρως σύμφωνα με τη χημική εξίσωση (1): $SO_2(g) + Cl_2(aq) \\rightarrow HCl(aq) + H_2SO_4(aq)$ (1). Τα οξέα που σχηματίζονται εξουδετερώνονται πλήρως από διάλυμα $NaOH$ συγκέντρωσης $0,5 M$ και όγκου $2 L$. Δίνεται η σχετική ατομική μάζα: $A_r(S) = 32$. Θεωρούμε ότι οι προσμίξεις του δείγματος είναι αδρανείς.\n\nγ. Να αιτιολογήσετε, χωρίς υπολογισμούς, γράφοντας τις κατάλληλες αντιδράσεις, αν το τελικό διάλυμα που προκύπτει μετά την εξουδετέρωση είναι όξινο, βασικό ή ουδέτερο.",
+    "input": "",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  }
+]

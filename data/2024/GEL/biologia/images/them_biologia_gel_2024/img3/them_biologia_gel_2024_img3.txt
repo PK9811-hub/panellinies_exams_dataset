@@ -1,0 +1,2 @@
+Description
+Figure 3: A short amino acid sequence written in lowercase three-letter abbreviations separated by dashes. The sequence reads: lys – phe – his. These abbreviations correspond to the amino acids lysine (lys), phenylalanine (phe), and histidine (his), arranged in that specific order. The text is centered on a plain background, with no additional structural formulas or directional indicators, representing a simple tripeptide sequence composed of three amino acids linked in succession.
