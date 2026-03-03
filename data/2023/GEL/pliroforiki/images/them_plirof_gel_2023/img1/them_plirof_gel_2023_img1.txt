@@ -1,0 +1,2 @@
+Description
+A diagram of a binary search tree. The root node has the value 12. The root's left child is 7, and its right child is an empty node labeled (K1). The node 7 has a left child labeled (K2) and a right child with the value 10. The node (K2) has a left child labeled (K3) and no right child. The node (K1) has a left child with the value 17 and a right child with the value 23. The node 17 has a left child labeled (K4) and no right child. The node 23 has no left child and a right child labeled (K5).
