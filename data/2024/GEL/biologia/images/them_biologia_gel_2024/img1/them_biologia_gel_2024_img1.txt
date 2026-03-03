@@ -1,0 +1,2 @@
+Description
+Figure 1: A nucleotide sequence written with directional notation. On the top line, an RNA sequence is presented from the 5′ end to the 3′ end as: 5′ – AUGCUACAUUGAAAA – 3′. Directly below the last four adenine bases (AAAA), a complementary DNA sequence segment is shown as TTTT, written in the opposite orientation from 3′ to 5′. The figure emphasizes the antiparallel nature of nucleic acid strands, with the RNA strand labeled 5′ to 3′ and the complementary thymine bases aligned beneath the adenine bases at the 3′ end of the RNA sequence.
