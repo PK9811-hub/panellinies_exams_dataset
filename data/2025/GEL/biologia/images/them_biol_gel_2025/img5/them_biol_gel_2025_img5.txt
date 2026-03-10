@@ -1,2 +1,5 @@
 Description
 Figure 5: A single-pane graph depicts the concentration of the enzyme $\beta$-galactosidase on the vertical axis relative to time, t, on the horizontal axis. Two distinct curves emerge from the origin, with a vertical dashed line marking a specific moment in time labeled $t_1$. Curve 1 remains at a baseline level of zero until $t_1$, after which it rises sharply in a sigmoidal fashion, indicating the induction of the lac operon and the subsequent rapid synthesis of the enzyme. Conversely, Curve 2 continues along the horizontal axis at a constant zero value even after $t_1$, representing a scenario where the enzyme is not produced, likely due to the absence of an inducer or the presence of a repressing factor like glucose.
+
+Transcription
+Figure 5: "Γονίδιο ανθεκτικότητας στην αμπικιλίνη",\n"Θέση έναρξης της αντιγραφής",\n"ΠΕ-I",\n"ΠΕ-II"
