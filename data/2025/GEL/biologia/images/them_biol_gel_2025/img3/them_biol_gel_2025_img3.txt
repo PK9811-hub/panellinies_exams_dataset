@@ -1,2 +1,5 @@
 Description
 Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as "αλυσίδα I" (strand I) and "αλυσίδα II" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence "TAATTA" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.
+
+Transcription
+Figure 3: "...CAATTGAATGGCCCGTTTTGGATTAATTA...",\n"αλυσίδα I",\n"...GTTAACTTACCGGCAAAACCTAATTAAT...",\n"αλυσίδα II"
