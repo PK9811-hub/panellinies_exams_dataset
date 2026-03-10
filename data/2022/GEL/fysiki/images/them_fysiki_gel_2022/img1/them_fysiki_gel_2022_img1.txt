@@ -1,0 +1,5 @@
+Description
+Two identical vertical springs with constant 'k' attached to a ceiling. The left spring is at its natural length. The right spring has a block 'Σ' of mass 'm' attached to its bottom, extending it. A dotted horizontal line marks the natural length (θ.φ.μ.) passing through the bottom of the left spring and a lower dotted horizontal line marks the equilibrium position (θ.ι.) passing through the top of the mass block attached to the right spring.
+
+Transcription
+"Σχήμα 1"

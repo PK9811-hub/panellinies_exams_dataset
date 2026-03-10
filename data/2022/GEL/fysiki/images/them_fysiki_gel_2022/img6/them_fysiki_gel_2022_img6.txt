@@ -1,0 +1,5 @@
+Description
+A mechanical system consisting of a rod AB and a pulley. The rod AB rests on a smooth horizontal floor (1) at point B with an angle φ. Its midpoint Γ is supported by a triangular vertical stand. At the top end A, there is a small sphere Σ. The distance AΓ and ΓB is ℓ/2. A horizontal string (1) connects sphere Σ at A to the top point Δ of a pulley. The pulley rests on a higher horizontal floor (2). The pulley has an outer radius R and an inner groove of radius r. A second horizontal string (2) is wound around the inner groove and pulled to the right from point Z with a force F.
+
+Transcription
+"λείο δάπεδο (1)",\n"νήμα (1)",\n"δάπεδο (2)",\n"νήμα (2)",\n"Σχήμα 6"

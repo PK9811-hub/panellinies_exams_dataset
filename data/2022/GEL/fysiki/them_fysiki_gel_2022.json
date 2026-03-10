@@ -1,0 +1,445 @@
+[
+  {
+    "id": "A1",
+    "question": "Στις ερωτήσεις Α1-Α4 να γράψετε στο τετράδιό σας τον αριθμό της ερώτησης και δίπλα το γράμμα που αντιστοιχεί στην επιλογή σας, η οποία συμπληρώνει σωστά την ημιτελή πρόταση.\n\nΌταν δύο σφαίρες μικρών διαστάσεων, ίδιας μάζας, που κινούνται σε λείο οριζόντιο δάπεδο, συγκρουστούν έκκεντρα και ελαστικά, τότε:",
+    "input": "",
+    "choices": [
+      "α. ανταλλάσσουν ταχύτητες.",
+      "β. ελαττώνεται η κινητική ενέργεια του συστήματος των δύο σφαιρών.",
+      "γ. διατηρείται η ορμή του συστήματος των δύο σφαιρών.",
+      "δ. δεν μεταβάλλεται η ορμή της κάθε σφαίρας κατά την κρούση."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A2",
+    "question": "Στις ερωτήσεις Α1-Α4 να γράψετε στο τετράδιό σας τον αριθμό της ερώτησης και δίπλα το γράμμα που αντιστοιχεί στην επιλογή σας, η οποία συμπληρώνει σωστά την ημιτελή πρόταση.\n\nΙδανικό ρευστό ρέει σε οριζόντιο σωλήνα μεταβλητής διατομής. Η διατομή του σωλήνα σε μια περιοχή Α είναι τετραπλάσια της διατομής του σωλήνα σε μια άλλη περιοχή Β. Αν η ταχύτητα του ρευστού στην περιοχή Α είναι ίση με $\\upsilon$, τότε η ταχύτητα στην περιοχή Β είναι:",
+    "input": "",
+    "choices": [
+      "α. $\\frac{\\upsilon}{4}$",
+      "β. $\\upsilon$",
+      "γ. $2\\upsilon$",
+      "δ. $4\\upsilon$"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A3",
+    "question": "Στις ερωτήσεις Α1-Α4 να γράψετε στο τετράδιό σας τον αριθμό της ερώτησης και δίπλα το γράμμα που αντιστοιχεί στην επιλογή σας, η οποία συμπληρώνει σωστά την ημιτελή πρόταση.\n\nΑν το πλάτος της έντασης του εναλλασσόμενου ρεύματος που διαρρέει έναν αντιστάτη υποδιπλασιαστεί, τότε ο ρυθμός με τον οποίο ο αντιστάτης αποδίδει θερμότητα στο περιβάλλον:",
+    "input": "",
+    "choices": [
+      "α. υποδιπλασιάζεται.",
+      "β. διπλασιάζεται.",
+      "γ. υποτετραπλασιάζεται.",
+      "δ. τετραπλασιάζεται."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A4",
+    "question": "Στις ερωτήσεις Α1-Α4 να γράψετε στο τετράδιό σας τον αριθμό της ερώτησης και δίπλα το γράμμα που αντιστοιχεί στην επιλογή σας, η οποία συμπληρώνει σωστά την ημιτελή πρόταση.\n\nΣε μια απλή αρμονική ταλάντωση, όταν ο ταλαντωτής κινείται προς τη θέση ισορροπίας:",
+    "input": "",
+    "choices": [
+      "α. η δυναμική ενέργεια του ταλαντωτή αυξάνεται.",
+      "β. το μέτρο της επιτάχυνσης του ταλαντωτή μειώνεται.",
+      "γ. το μέτρο της ταχύτητας του ταλαντωτή μειώνεται.",
+      "δ. το μέτρο της δύναμης επαναφοράς στον ταλαντωτή αυξάνεται."
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "A5.α",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη.\nΑν διπλασιάσουμε το μέτρο καθεμιάς από τις δύο δυνάμεις ενός ζεύγους δυνάμεων, χωρίς να αλλάξουμε την απόσταση των φορέων των δυνάμεων, τότε το μέτρο της ροπής του ζεύγους των δυνάμεων τετραπλασιάζεται.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.β",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη.\nΑν μέσα σε σωληνοειδές, που διαρρέεται από ρεύμα σταθερής έντασης, τοποθετήσουμε πυρήνα μαλακού σιδήρου, οι δυναμικές γραμμές του μαγνητικού πεδίου στο εσωτερικό του πυρήνα θα πυκνώσουν.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.γ",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη.\nΑν μικρή σφαίρα συγκρουστεί κάθετα και ελαστικά με λείο κατακόρυφο τοίχο έχοντας ορμή μέτρου $p$, η μεταβολή του μέτρου της ορμής της είναι ίση με $2p$.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.δ",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη.\nΗ Γη έχει ιδιοστροφορμή (σπιν) εξαιτίας της περιστροφής της γύρω από τον άξονά της.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "A5.ε",
+    "question": "Να χαρακτηρίσετε τις προτάσεις που ακολουθούν, γράφοντας στο τετράδιό σας, δίπλα στο γράμμα που αντιστοιχεί σε κάθε πρόταση, τη λέξη Σωστό, αν η πρόταση είναι σωστή, ή τη λέξη Λάθος, αν η πρόταση είναι λανθασμένη.\nΣε μια εξαναγκασμένη ταλάντωση με σταθερά απόσβεσης $b$, το μέγιστο πλάτος της ταλάντωσης στην περιοχή συντονισμού εξαρτάται από την τιμή της σταθεράς $b$.",
+    "input": "",
+    "choices": [
+      "α. Σωστό",
+      "β. Λάθος"
+    ],
+    "images": [],
+    "mark": [
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "B1.α",
+    "question": "Σώμα $\\Sigma$ μικρών διαστάσεων και μάζας $m$ ισορροπεί δεμένο στο κάτω άκρο κατακόρυφου ιδανικού ελατηρίου σταθεράς $k$, το άλλο άκρο του οποίου είναι ακλόνητα στερεωμένο (Σχήμα 1).\n\nΕκτελούμε δύο πειράματα:\n\nΠείραμα 1\nΜετακινούμε το σώμα $\\Sigma$ στη θέση φυσικού μήκους (θ.φ.μ.) του ελατηρίου, το αφήνουμε ελεύθερο και αυτό εκτελεί απλή αρμονική ταλάντωση με σταθερά επαναφοράς $D = k$ και πλάτος $A_1$.\nΠείραμα 2\nΣτην αρχική θέση ισορροπίας (θ.ι.) του σώματος $\\Sigma$ ασκείται σε αυτό, συνεχώς, κατακόρυφη δύναμη $\\vec{F}$ μέτρου $F = mg$ με φορά προς τα πάνω και τότε το σώμα εκτελεί απλή αρμονική ταλάντωση με σταθερά επαναφοράς $D = k$ και πλάτος $A_2$.\n\nΓια τα πλάτη $A_1$ και $A_2$ των παραπάνω πειραμάτων, ισχύει:\n\nΝα επιλέξετε τη σωστή απάντηση.",
+    "input": "",
+    "choices": [
+      "i. $A_1 = A_2$",
+      "ii. $A_1 = \\frac{1}{2} A_2$",
+      "iii. $A_1 = 2A_2$"
+    ],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img1/them_fysiki_gel_2022_img1.png",
+        "description": "Two identical vertical springs with constant 'k' attached to a ceiling. The left spring is at its natural length. The right spring has a block 'Σ' of mass 'm' attached to its bottom, extending it. A dotted horizontal line marks the natural length (θ.φ.μ.) passing through the bottom of the left spring and a lower dotted horizontal line marks the equilibrium position (θ.ι.) passing through the top of the mass block attached to the right spring.",
+        "transcription": [
+          "Σχήμα 1"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B1.β",
+    "question": "Σώμα $\\Sigma$ μικρών διαστάσεων και μάζας $m$ ισορροπεί δεμένο στο κάτω άκρο κατακόρυφου ιδανικού ελατηρίου σταθεράς $k$, το άλλο άκρο του οποίου είναι ακλόνητα στερεωμένο (Σχήμα 1).\n\nΕκτελούμε δύο πειράματα:\n\nΠείραμα 1\nΜετακινούμε το σώμα $\\Sigma$ στη θέση φυσικού μήκους (θ.φ.μ.) του ελατηρίου, το αφήνουμε ελεύθερο και αυτό εκτελεί απλή αρμονική ταλάντωση με σταθερά επαναφοράς $D = k$ και πλάτος $A_1$.\nΠείραμα 2\nΣτην αρχική θέση ισορροπίας (θ.ι.) του σώματος $\\Sigma$ ασκείται σε αυτό, συνεχώς, κατακόρυφη δύναμη $\\vec{F}$ μέτρου $F = mg$ με φορά προς τα πάνω και τότε το σώμα εκτελεί απλή αρμονική ταλάντωση με σταθερά επαναφοράς $D = k$ και πλάτος $A_2$.\n\nΓια τα πλάτη $A_1$ και $A_2$ των παραπάνω πειραμάτων, ισχύει:\n\ni. $A_1 = A_2$\nii. $A_1 = \\frac{1}{2} A_2$\niii. $A_1 = 2A_2$\n\nΝα επιλέξετε τη σωστή απάντηση και να δικαιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img1/them_fysiki_gel_2022_img1.png",
+        "description": "Two identical vertical springs with constant 'k' attached to a ceiling. The left spring is at its natural length. The right spring has a block 'Σ' of mass 'm' attached to its bottom, extending it. A dotted horizontal line marks the natural length (θ.φ.μ.) passing through the bottom of the left spring and a lower dotted horizontal line marks the equilibrium position (θ.ι.) passing through the top of the mass block attached to the right spring.",
+        "transcription": [
+          "Σχήμα 1"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "B2.α",
+    "question": "Ένα ανοιχτό δοχείο μεγάλου όγκου με κατακόρυφα τοιχώματα ηρεμεί ακλόνητο πάνω σε οριζόντιο δάπεδο. Το δοχείο περιέχει νερό, το οποίο θεωρείται ιδανικό ρευστό, μέχρι ύψους $H$ πάνω από τη βάση του. Το δοχείο έχει στο πλευρικό του τοίχωμα δύο οπές (1) και (2) ίδιου εμβαδού διατομής $A$, το οποίο είναι αμελητέο σε σύγκριση με το εμβαδόν της ελεύθερης επιφάνειας του νερού.\n\nΟι δύο οπές (1) και (2) βρίσκονται σε ύψη $\\frac{5H}{6}$ και $\\frac{H}{3}$, αντίστοιχα, από τον πυθμένα του δοχείου (Σχήμα 2). Όταν είναι ανοικτή μόνο η οπή (1), όγκος υγρού $V$ εκρέει από το δοχείο σε χρονικό διάστημα $\\Delta t_1$. Όταν είναι ανοικτές και οι δύο οπές (1) και (2), ο ίδιος όγκος $V$ εκρέει σε χρονικό διάστημα $\\Delta t_2$.\n\nΟ λόγος των χρονικών διαστημάτων $\\frac{\\Delta t_2}{\\Delta t_1}$ είναι ίσος με:\n\n(Θεωρήστε ότι κατά τις εκροές του υγρού, η ταχύτητα της επιφάνειας του υγρού είναι μηδενική).\n\nΝα επιλέξετε τη σωστή απάντηση.",
+    "input": "",
+    "choices": [
+      "i. $\\frac{1}{2}$",
+      "ii. $\\frac{1}{3}$",
+      "iii. $\\frac{1}{4}$"
+    ],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img2/them_fysiki_gel_2022_img2.png",
+        "description": "A cross-sectional diagram of a large open cylindrical tank filled with water resting on a horizontal floor. The total height of the water is H. There are two holes on the right vertical wall of the tank. Hole (1) has a cross-sectional area A and is located at a height of 5H/6 from the bottom. Hole (2) also has a cross-sectional area A and is located at a height of H/3 from the bottom. The atmospheric pressure Patm acts on the open top surface of the water and outside the holes. Dashed lines indicate the trajectory of the water flowing out of hole (1) towards the floor.",
+        "transcription": [
+          "Σχήμα 2"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B2.β",
+    "question": "Ένα ανοιχτό δοχείο μεγάλου όγκου με κατακόρυφα τοιχώματα ηρεμεί ακλόνητο πάνω σε οριζόντιο δάπεδο. Το δοχείο περιέχει νερό, το οποίο θεωρείται ιδανικό ρευστό, μέχρι ύψους $H$ πάνω από τη βάση του. Το δοχείο έχει στο πλευρικό του τοίχωμα δύο οπές (1) και (2) ίδιου εμβαδού διατομής $A$, το οποίο είναι αμελητέο σε σύγκριση με το εμβαδόν της ελεύθερης επιφάνειας του νερού.\n\nΟι δύο οπές (1) και (2) βρίσκονται σε ύψη $\\frac{5H}{6}$ και $\\frac{H}{3}$, αντίστοιχα, από τον πυθμένα του δοχείου (Σχήμα 2). Όταν είναι ανοικτή μόνο η οπή (1), όγκος υγρού $V$ εκρέει από το δοχείο σε χρονικό διάστημα $\\Delta t_1$. Όταν είναι ανοικτές και οι δύο οπές (1) και (2), ο ίδιος όγκος $V$ εκρέει σε χρονικό διάστημα $\\Delta t_2$.\n\nΟ λόγος των χρονικών διαστημάτων $\\frac{\\Delta t_2}{\\Delta t_1}$ είναι ίσος με:\n\n i. $\\frac{1}{2}$\n ii. $\\frac{1}{3}$\n iii. $\\frac{1}{4}$\n\n(Θεωρήστε ότι κατά τις εκροές του υγρού, η ταχύτητα της επιφάνειας του υγρού είναι μηδενική).\n\nΝα επιλέξετε τη σωστή απάντηση και να δικαιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img2/them_fysiki_gel_2022_img2.png",
+        "description": "A cross-sectional diagram of a large open cylindrical tank filled with water resting on a horizontal floor. The total height of the water is H. There are two holes on the right vertical wall of the tank. Hole (1) has a cross-sectional area A and is located at a height of 5H/6 from the bottom. Hole (2) also has a cross-sectional area A and is located at a height of H/3 from the bottom. The atmospheric pressure Patm acts on the open top surface of the water and outside the holes. Dashed lines indicate the trajectory of the water flowing out of hole (1) towards the floor.",
+        "transcription": [
+          "Σχήμα 2"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "B3.α",
+    "question": "Σφαίρα μάζας $m_1$ κινείται με ορμή μέτρου $p_1$ και συγκρούεται, κεντρικά και ελαστικά, με ακίνητη σφαίρα μάζας $m_2$, όπως φαίνεται στο Σχήμα 3. Η γραφική παράσταση της ορμής της σφαίρας $m_1$ φαίνεται στο Σχήμα 4.\n\nΤο ποσοστό της κινητικής ενέργειας που μεταβιβάστηκε από τη σφαίρα μάζας $m_1$ στη σφαίρα μάζας $m_2$ κατά την κρούση είναι ίσο με:\n\nΝα επιλέξετε τη σωστή απάντηση.",
+    "input": "",
+    "choices": [
+      "i. $64\\%$",
+      "ii. $80\\%$",
+      "iii. $96\\%$"
+    ],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img3/them_fysiki_gel_2022_img3.png",
+        "description": "A diagram showing two spheres on a horizontal surface before a collision. Sphere m1 on the left is moving to the right with momentum p1. Sphere m2 on the right is stationary, with velocity u2 = 0.",
+        "transcription": [
+          "Σχήμα 3"
+        ]
+      },
+      {
+        "path": "images/them_fysiki_gel_2022/img4/them_fysiki_gel_2022_img4.png",
+        "description": "A momentum-time (p-t) graph for sphere m1. Before the collision, the momentum is constant at p1. During the collision, which has negligible duration, the momentum drops abruptly. After the collision, the momentum is constant at a lower positive value of p1/5.",
+        "transcription": [
+          "διάρκεια κρούσης αμελητέα",
+          "Σχήμα 4"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "B3.β",
+    "question": "Σφαίρα μάζας $m_1$ κινείται με ορμή μέτρου $p_1$ και συγκρούεται, κεντρικά και ελαστικά, με ακίνητη σφαίρα μάζας $m_2$, όπως φαίνεται στο Σχήμα 3. Η γραφική παράσταση της ορμής της σφαίρας $m_1$ φαίνεται στο Σχήμα 4.\n\nΤο ποσοστό της κινητικής ενέργειας που μεταβιβάστηκε από τη σφαίρα μάζας $m_1$ στη σφαίρα μάζας $m_2$ κατά την κρούση είναι ίσο με:\n\ni. $64\\%$\nii. $80\\%$\niii. $96\\%$\n\nΝα επιλέξετε τη σωστή απάντηση και να δικαιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img3/them_fysiki_gel_2022_img3.png",
+        "description": "A diagram showing two spheres on a horizontal surface before a collision. Sphere m1 on the left is moving to the right with momentum p1. Sphere m2 on the right is stationary, with velocity u2 = 0.",
+        "transcription": [
+          "Σχήμα 3"
+        ]
+      },
+      {
+        "path": "images/them_fysiki_gel_2022/img4/them_fysiki_gel_2022_img4.png",
+        "description": "A momentum-time (p-t) graph for sphere m1. Before the collision, the momentum is constant at p1. During the collision, which has negligible duration, the momentum drops abruptly. After the collision, the momentum is constant at a lower positive value of p1/5.",
+        "transcription": [
+          "διάρκεια κρούσης αμελητέα",
+          "Σχήμα 4"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 7"
+    ]
+  },
+  {
+    "id": "Γ1",
+    "question": "Οι μεγάλου μήκους, κατακόρυφοι, μεταλλικοί αγωγοί $Ax$ και $\\Gamma y$ απέχουν μεταξύ τους σταθερή απόσταση $\\ell = 1 \\text{ m}$ και έχουν αμελητέα ωμική αντίσταση. Στα άκρα $A$, $\\Gamma$ συνδέεται πηγή ηλεκτρεγερτικής δύναμης $E = 9 \\text{ V}$ και εσωτερικής αντίστασης $r = 1 \\Omega$.\nΑγωγός $K\\Lambda$ μήκους $\\ell = 1 \\text{ m}$, μάζας $m = 0,3 \\text{ kg}$ και ωμικής αντίστασης $R_{K\\Lambda} = 2 \\Omega$ έχει τα άκρα του $K$, $\\Lambda$ πάνω στους κατακόρυφους αγωγούς $Ax$ και $\\Gamma y$, είναι κάθετος σε αυτούς και είναι δυνατόν να ολισθαίνει κατά μήκος των αγωγών χωρίς τριβές. (Σχήμα 5)\nΗ όλη διάταξη βρίσκεται σε περιοχή που υπάρχει οριζόντιο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$, του οποίου οι δυναμικές γραμμές είναι κάθετες στο επίπεδο του σχήματος.\nΑρχικά ο διακόπτης $\\delta_1$ είναι κλειστός, ο διακόπτης $\\delta_2$ είναι ανοικτός και ο αγωγός $K\\Lambda$ είναι ακίνητος στη θέση 1.\nΝα υπολογίσετε το μέτρο $B$ της έντασης του μαγνητικού πεδίου (μονάδες 3) και να προσδιορίσετε την κατεύθυνσή της. (μονάδα 1)\n\n• Δίνεται η επιτάχυνση της βαρύτητας: $g = 10 \\text{ m/s}^2$\n• Η αντίσταση του αέρα θεωρείται αμελητέα.\n• Το σχήμα δεν είναι υπό κλίμακα.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img5/them_fysiki_gel_2022_img5.png",
+        "description": "A circuit diagram showing two long vertical parallel rails, Γy on the left and Ax on the right, connected at the top. A voltage source E with internal resistance r is connected at the top between points A and Γ, with a switch δ1 on the left side of the source. A horizontal conducting bar KΛ lies across the rails. The distance between the rails is marked as ℓ. The bar is shown at three different vertical positions: 'θέση 1 (u=0)' at the top, 'θέση 2 (u_op/2)' in the middle, and 'θέση 3 (u_op)' at the bottom, indicating downward motion with an arrow marked '↓'. A uniform magnetic field B is indicated by a circle with a dot, pointing out of the page. Below the bar, there's another circuit section: a switch δ2 on the left rail, followed by a parallel combination of a resistor R1 (between points Z and Δ) and a thermal device Σ with resistance RΣ (between points N and M). The rails continue downwards past points M and N.",
+        "transcription": [
+          "Σχήμα 5"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 4"
+    ]
+  },
+  {
+    "id": "Γ2",
+    "question": "Οι μεγάλου μήκους, κατακόρυφοι, μεταλλικοί αγωγοί $Ax$ και $\\Gamma y$ απέχουν μεταξύ τους σταθερή απόσταση $\\ell = 1 \\text{ m}$ και έχουν αμελητέα ωμική αντίσταση. Στα άκρα $A$, $\\Gamma$ συνδέεται πηγή ηλεκτρεγερτικής δύναμης $E = 9 \\text{ V}$ και εσωτερικής αντίστασης $r = 1 \\Omega$.\nΑγωγός $K\\Lambda$ μήκους $\\ell = 1 \\text{ m}$, μάζας $m = 0,3 \\text{ kg}$ και ωμικής αντίστασης $R_{K\\Lambda} = 2 \\Omega$ έχει τα άκρα του $K$, $\\Lambda$ πάνω στους κατακόρυφους αγωγούς $Ax$ και $\\Gamma y$, είναι κάθετος σε αυτούς και είναι δυνατόν να ολισθαίνει κατά μήκος των αγωγών χωρίς τριβές. (Σχήμα 5)\nΗ όλη διάταξη βρίσκεται σε περιοχή που υπάρχει οριζόντιο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$, του οποίου οι δυναμικές γραμμές είναι κάθετες στο επίπεδο του σχήματος.\nΑρχικά ο διακόπτης $\\delta_1$ είναι κλειστός, ο διακόπτης $\\delta_2$ είναι ανοικτός και ο αγωγός $K\\Lambda$ είναι ακίνητος στη θέση 1.\nΣτο κάτω μέρος της διάταξης, μεταξύ των σημείων $Z$ και $\\Delta$, είναι συνδεδεμένος αντιστάτης με ωμική αντίσταση $R_1 = 3 \\Omega$ και στα σημεία $M$, $N$ είναι συνδεδεμένη θερμική συσκευή $\\Sigma$ ωμικής αντίστασης $R_\\Sigma$, η οποία όταν στα άκρα της $M$, $N$ έχει τάση ίση με $6 \\text{ V}$ λειτουργεί κανονικά αποδίδοντας θερμική ισχύ $6 \\text{ W}$.\nΑνοίγουμε τον διακόπτη $\\delta_1$, κλείνοντας ταυτόχρονα τον διακόπτη $\\delta_2$ και ο αγωγός $K\\Lambda$ αρχίζει να κατέρχεται παραμένοντας συνεχώς οριζόντιος χωρίς τα άκρα του $K$, $\\Lambda$ να χάνουν την επαφή με τους αγωγούς $Ax$ και $\\Gamma y$.\nΈστω ότι ο αγωγός $K\\Lambda$ έχει αποκτήσει οριακή ταχύτητα $\\upsilon_{o\\rho}$ στη θέση 3. Να δικαιολογήσετε το είδος της κίνησης που εκτελεί ο αγωγός $K\\Lambda$ από τη θέση 1 έως τη θέση 3 (μονάδες 3) και να υπολογίσετε τη σταθερή οριακή ταχύτητα $\\upsilon_{o\\rho}$. (μονάδες 6)\n\n• Δίνεται η επιτάχυνση της βαρύτητας: $g = 10 \\text{ m/s}^2$\n• Η αντίσταση του αέρα θεωρείται αμελητέα.\n• Το σχήμα δεν είναι υπό κλίμακα.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img5/them_fysiki_gel_2022_img5.png",
+        "description": "A circuit diagram showing two long vertical parallel rails, Γy on the left and Ax on the right, connected at the top. A voltage source E with internal resistance r is connected at the top between points A and Γ, with a switch δ1 on the left side of the source. A horizontal conducting bar KΛ lies across the rails. The distance between the rails is marked as ℓ. The bar is shown at three different vertical positions: 'θέση 1 (u=0)' at the top, 'θέση 2 (u_op/2)' in the middle, and 'θέση 3 (u_op)' at the bottom, indicating downward motion with an arrow marked '↓'. A uniform magnetic field B is indicated by a circle with a dot, pointing out of the page. Below the bar, there's another circuit section: a switch δ2 on the left rail, followed by a parallel combination of a resistor R1 (between points Z and Δ) and a thermal device Σ with resistance RΣ (between points N and M). The rails continue downwards past points M and N.",
+        "transcription": [
+          "Σχήμα 5"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 9"
+    ]
+  },
+  {
+    "id": "Γ3",
+    "question": "Οι μεγάλου μήκους, κατακόρυφοι, μεταλλικοί αγωγοί $Ax$ και $\\Gamma y$ απέχουν μεταξύ τους σταθερή απόσταση $\\ell = 1 \\text{ m}$ και έχουν αμελητέα ωμική αντίσταση. Στα άκρα $A$, $\\Gamma$ συνδέεται πηγή ηλεκτρεγερτικής δύναμης $E = 9 \\text{ V}$ και εσωτερικής αντίστασης $r = 1 \\Omega$.\nΑγωγός $K\\Lambda$ μήκους $\\ell = 1 \\text{ m}$, μάζας $m = 0,3 \\text{ kg}$ και ωμικής αντίστασης $R_{K\\Lambda} = 2 \\Omega$ έχει τα άκρα του $K$, $\\Lambda$ πάνω στους κατακόρυφους αγωγούς $Ax$ και $\\Gamma y$, είναι κάθετος σε αυτούς και είναι δυνατόν να ολισθαίνει κατά μήκος των αγωγών χωρίς τριβές. (Σχήμα 5)\nΗ όλη διάταξη βρίσκεται σε περιοχή που υπάρχει οριζόντιο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$, του οποίου οι δυναμικές γραμμές είναι κάθετες στο επίπεδο του σχήματος.\nΑρχικά ο διακόπτης $\\delta_1$ είναι κλειστός, ο διακόπτης $\\delta_2$ είναι ανοικτός και ο αγωγός $K\\Lambda$ είναι ακίνητος στη θέση 1.\nΣτο κάτω μέρος της διάταξης, μεταξύ των σημείων $Z$ και $\\Delta$, είναι συνδεδεμένος αντιστάτης με ωμική αντίσταση $R_1 = 3 \\Omega$ και στα σημεία $M$, $N$ είναι συνδεδεμένη θερμική συσκευή $\\Sigma$ ωμικής αντίστασης $R_\\Sigma$, η οποία όταν στα άκρα της $M$, $N$ έχει τάση ίση με $6 \\text{ V}$ λειτουργεί κανονικά αποδίδοντας θερμική ισχύ $6 \\text{ W}$.\nΑνοίγουμε τον διακόπτη $\\delta_1$, κλείνοντας ταυτόχρονα τον διακόπτη $\\delta_2$ και ο αγωγός $K\\Lambda$ αρχίζει να κατέρχεται παραμένοντας συνεχώς οριζόντιος χωρίς τα άκρα του $K$, $\\Lambda$ να χάνουν την επαφή με τους αγωγούς $Ax$ και $\\Gamma y$.\nΝα υπολογίσετε τον ρυθμό μεταβολής της ορμής του αγωγού στη θέση 2, στην οποία η ταχύτητά του είναι ίση με $\\frac{\\upsilon_{o\\rho}}{2}$.\n\n• Δίνεται η επιτάχυνση της βαρύτητας: $g = 10 \\text{ m/s}^2$\n• Η αντίσταση του αέρα θεωρείται αμελητέα.\n• Το σχήμα δεν είναι υπό κλίμακα.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img5/them_fysiki_gel_2022_img5.png",
+        "description": "A circuit diagram showing two long vertical parallel rails, Γy on the left and Ax on the right, connected at the top. A voltage source E with internal resistance r is connected at the top between points A and Γ, with a switch δ1 on the left side of the source. A horizontal conducting bar KΛ lies across the rails. The distance between the rails is marked as ℓ. The bar is shown at three different vertical positions: 'θέση 1 (u=0)' at the top, 'θέση 2 (u_op/2)' in the middle, and 'θέση 3 (u_op)' at the bottom, indicating downward motion with an arrow marked '↓'. A uniform magnetic field B is indicated by a circle with a dot, pointing out of the page. Below the bar, there's another circuit section: a switch δ2 on the left rail, followed by a parallel combination of a resistor R1 (between points Z and Δ) and a thermal device Σ with resistance RΣ (between points N and M). The rails continue downwards past points M and N.",
+        "transcription": [
+          "Σχήμα 5"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Γ4",
+    "question": "Οι μεγάλου μήκους, κατακόρυφοι, μεταλλικοί αγωγοί $Ax$ και $\\Gamma y$ απέχουν μεταξύ τους σταθερή απόσταση $\\ell = 1 \\text{ m}$ και έχουν αμελητέα ωμική αντίσταση. Στα άκρα $A$, $\\Gamma$ συνδέεται πηγή ηλεκτρεγερτικής δύναμης $E = 9 \\text{ V}$ και εσωτερικής αντίστασης $r = 1 \\Omega$.\nΑγωγός $K\\Lambda$ μήκους $\\ell = 1 \\text{ m}$, μάζας $m = 0,3 \\text{ kg}$ και ωμικής αντίστασης $R_{K\\Lambda} = 2 \\Omega$ έχει τα άκρα του $K$, $\\Lambda$ πάνω στους κατακόρυφους αγωγούς $Ax$ και $\\Gamma y$, είναι κάθετος σε αυτούς και είναι δυνατόν να ολισθαίνει κατά μήκος των αγωγών χωρίς τριβές. (Σχήμα 5)\nΗ όλη διάταξη βρίσκεται σε περιοχή που υπάρχει οριζόντιο ομογενές μαγνητικό πεδίο έντασης $\\vec{B}$, του οποίου οι δυναμικές γραμμές είναι κάθετες στο επίπεδο του σχήματος.\nΑρχικά ο διακόπτης $\\delta_1$ είναι κλειστός, ο διακόπτης $\\delta_2$ είναι ανοικτός και ο αγωγός $K\\Lambda$ είναι ακίνητος στη θέση 1.\nΣτο κάτω μέρος της διάταξης, μεταξύ των σημείων $Z$ και $\\Delta$, είναι συνδεδεμένος αντιστάτης με ωμική αντίσταση $R_1 = 3 \\Omega$ και στα σημεία $M$, $N$ είναι συνδεδεμένη θερμική συσκευή $\\Sigma$ ωμικής αντίστασης $R_\\Sigma$, η οποία όταν στα άκρα της $M$, $N$ έχει τάση ίση με $6 \\text{ V}$ λειτουργεί κανονικά αποδίδοντας θερμική ισχύ $6 \\text{ W}$.\nΑνοίγουμε τον διακόπτη $\\delta_1$, κλείνοντας ταυτόχρονα τον διακόπτη $\\delta_2$ και ο αγωγός $K\\Lambda$ αρχίζει να κατέρχεται παραμένοντας συνεχώς οριζόντιος χωρίς τα άκρα του $K$, $\\Lambda$ να χάνουν την επαφή με τους αγωγούς $Ax$ και $\\Gamma y$.\nΌταν ο αγωγός έχει αποκτήσει την οριακή του ταχύτητα, να εξετάσετε αν η θερμική συσκευή $\\Sigma$ λειτουργεί κανονικά.\n\n• Δίνεται η επιτάχυνση της βαρύτητας: $g = 10 \\text{ m/s}^2$\n• Η αντίσταση του αέρα θεωρείται αμελητέα.\n• Το σχήμα δεν είναι υπό κλίμακα.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img5/them_fysiki_gel_2022_img5.png",
+        "description": "A circuit diagram showing two long vertical parallel rails, Γy on the left and Ax on the right, connected at the top. A voltage source E with internal resistance r is connected at the top between points A and Γ, with a switch δ1 on the left side of the source. A horizontal conducting bar KΛ lies across the rails. The distance between the rails is marked as ℓ. The bar is shown at three different vertical positions: 'θέση 1 (u=0)' at the top, 'θέση 2 (u_op/2)' in the middle, and 'θέση 3 (u_op)' at the bottom, indicating downward motion with an arrow marked '↓'. A uniform magnetic field B is indicated by a circle with a dot, pointing out of the page. Below the bar, there's another circuit section: a switch δ2 on the left rail, followed by a parallel combination of a resistor R1 (between points Z and Δ) and a thermal device Σ with resistance RΣ (between points N and M). The rails continue downwards past points M and N.",
+        "transcription": [
+          "Σχήμα 5"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ1",
+    "question": "Λεπτή, άκαμπτη, ομογενής και ισοπαχής ράβδος ΑΒ μάζας $M_\\rho = 3 \\text{ kg}$ και μήκους $\\ell = 2 \\text{ m}$, φέρει στο άκρο της Α σφαιρίδιο $\\Sigma$ μάζας $m = 1 \\text{ kg}$, αμελητέων διαστάσεων, και ισορροπεί σε πλάγια θέση με τη βοήθεια κατακόρυφου υποστηρίγματος, το οποίο έχουμε στερεώσει στο λείο οριζόντιο δάπεδο (1). Η ράβδος ακουμπά με το άκρο της Β στο δάπεδο (1) σχηματίζοντας γωνία $\\phi$, όπου $\\eta\\mu\\phi = 0,8$ και $\\sigma\\upsilon\\nu\\phi = 0,6$. Η κορυφή του υποστηρίγματος συνδέεται με την ράβδο στο μέσον της $\\Gamma$ με άρθρωση και το σύστημα ράβδος-σφαιρίδιο μπορεί να περιστρέφεται χωρίς τριβές γύρω από οριζόντιο άξονα που διέρχεται από το σημείο $\\Gamma$ (κάθετα στο επίπεδο του σχήματος).\nΜε τη βοήθεια του οριζόντιου, αβαρούς και μη εκτατού νήματος (1) έχουμε συνδέσει το σφαιρίδιο $\\Sigma$ με το ανώτερο σημείο $\\Delta$ ομογενούς τροχαλίας μάζας $M_\\tau = 7 \\text{ kg}$ και ακτίνας $R = 0,4 \\text{ m}$. Η τροχαλία σε απόσταση $r = 0,3 \\text{ m}$ από το κέντρο της Ο έχει ένα λεπτό κυκλικό αυλάκι στο οποίο έχουμε τυλίξει πολλές φορές αβαρές και μη εκτατό νήμα (2). Στο άκρο Ζ του νήματος (2) ασκούμε σταθερή δύναμη $\\vec{F}$. Όλη η διάταξη ισορροπεί στο ίδιο κατακόρυφο επίπεδο.\n\nΑν το μέτρο της δύναμης που ασκεί το νήμα (1) στο σφαιρίδιο $\\Sigma$ είναι $10,5 \\text{ N}$, να υπολογίσετε το μέτρο της δύναμης που δέχεται η ράβδος στο άκρο της Β από το λείο δάπεδο (1).\n\nΔίνονται:\n• η επιτάχυνση της βαρύτητας $g = 10 \\text{ m/s}^2$\n• η ροπή αδράνειας ράβδου ως προς άξονα που διέρχεται από το κέντρο μάζας της και είναι κάθετος σε αυτή: $I_{cm(\\rho)} = \\frac{1}{12} M_\\rho \\cdot \\ell^2$\n• η ροπή αδράνειας τροχαλίας ως προς τον άξονά της: $I_{cm(\\tau)} = \\frac{1}{2} M_\\tau \\cdot R^2$\nΝα θεωρήσετε ότι:\n• η κρούση είναι ακαριαία\n• η αντίσταση του αέρα θεωρείται αμελητέα για όλα τα σώματα\n• κατά την κρούση, δεν έχουμε απώλεια μάζας\n• το σχήμα δεν είναι υπό κλίμακα",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img6/them_fysiki_gel_2022_img6.png",
+        "description": "A mechanical system consisting of a rod AB and a pulley. The rod AB rests on a smooth horizontal floor (1) at point B with an angle φ. Its midpoint Γ is supported by a triangular vertical stand. At the top end A, there is a small sphere Σ. The distance AΓ and ΓB is ℓ/2. A horizontal string (1) connects sphere Σ at A to the top point Δ of a pulley. The pulley rests on a higher horizontal floor (2). The pulley has an outer radius R and an inner groove of radius r. A second horizontal string (2) is wound around the inner groove and pulled to the right from point Z with a force F.",
+        "transcription": [
+          "λείο δάπεδο (1)",
+          "νήμα (1)",
+          "δάπεδο (2)",
+          "νήμα (2)",
+          "Σχήμα 6"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 4"
+    ]
+  },
+  {
+    "id": "Δ2",
+    "question": "Λεπτή, άκαμπτη, ομογενής και ισοπαχής ράβδος ΑΒ μάζας $M_\\rho = 3 \\text{ kg}$ και μήκους $\\ell = 2 \\text{ m}$, φέρει στο άκρο της Α σφαιρίδιο $\\Sigma$ μάζας $m = 1 \\text{ kg}$, αμελητέων διαστάσεων, και ισορροπεί σε πλάγια θέση με τη βοήθεια κατακόρυφου υποστηρίγματος, το οποίο έχουμε στερεώσει στο λείο οριζόντιο δάπεδο (1). Η ράβδος ακουμπά με το άκρο της Β στο δάπεδο (1) σχηματίζοντας γωνία $\\phi$, όπου $\\eta\\mu\\phi = 0,8$ και $\\sigma\\upsilon\\nu\\phi = 0,6$. Η κορυφή του υποστηρίγματος συνδέεται με την ράβδο στο μέσον της $\\Gamma$ με άρθρωση και το σύστημα ράβδος-σφαιρίδιο μπορεί να περιστρέφεται χωρίς τριβές γύρω από οριζόντιο άξονα που διέρχεται από το σημείο $\\Gamma$ (κάθετα στο επίπεδο του σχήματος).\nΜε τη βοήθεια του οριζόντιου, αβαρούς και μη εκτατού νήματος (1) έχουμε συνδέσει το σφαιρίδιο $\\Sigma$ με το ανώτερο σημείο $\\Delta$ ομογενούς τροχαλίας μάζας $M_\\tau = 7 \\text{ kg}$ και ακτίνας $R = 0,4 \\text{ m}$. Η τροχαλία σε απόσταση $r = 0,3 \\text{ m}$ από το κέντρο της Ο έχει ένα λεπτό κυκλικό αυλάκι στο οποίο έχουμε τυλίξει πολλές φορές αβαρές και μη εκτατό νήμα (2). Στο άκρο Ζ του νήματος (2) ασκούμε σταθερή δύναμη $\\vec{F}$. Όλη η διάταξη ισορροπεί στο ίδιο κατακόρυφο επίπεδο.\n\nΤη χρονική στιγμή $t_0 = 0 \\text{ s}$ κόβουμε το νήμα (1). Το σύστημα ράβδος – σφαιρίδιο $\\Sigma$ αρχίζει να περιστρέφεται σε κατακόρυφο επίπεδο, χάνοντας την επαφή του με το δάπεδο (1).\nΝα υπολογίσετε τον ρυθμό μεταβολής της στροφορμής της ράβδου ως προς τον άξονα περιστροφής της, αμέσως μετά το κόψιμο του νήματος (1) και ενώ η ράβδος έχει χάσει την επαφή της με το λείο δάπεδο (1).\n\nΔίνονται:\n• η επιτάχυνση της βαρύτητας $g = 10 \\text{ m/s}^2$\n• η ροπή αδράνειας ράβδου ως προς άξονα που διέρχεται από το κέντρο μάζας της και είναι κάθετος σε αυτή: $I_{cm(\\rho)} = \\frac{1}{12} M_\\rho \\cdot \\ell^2$\n• η ροπή αδράνειας τροχαλίας ως προς τον άξονά της: $I_{cm(\\tau)} = \\frac{1}{2} M_\\tau \\cdot R^2$\nΝα θεωρήσετε ότι:\n• η κρούση είναι ακαριαία\n• η αντίσταση του αέρα θεωρείται αμελητέα για όλα τα σώματα\n• κατά την κρούση, δεν έχουμε απώλεια μάζας\n• το σχήμα δεν είναι υπό κλίμακα",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img6/them_fysiki_gel_2022_img6.png",
+        "description": "A mechanical system consisting of a rod AB and a pulley. The rod AB rests on a smooth horizontal floor (1) at point B with an angle φ. Its midpoint Γ is supported by a triangular vertical stand. At the top end A, there is a small sphere Σ. The distance AΓ and ΓB is ℓ/2. A horizontal string (1) connects sphere Σ at A to the top point Δ of a pulley. The pulley rests on a higher horizontal floor (2). The pulley has an outer radius R and an inner groove of radius r. A second horizontal string (2) is wound around the inner groove and pulled to the right from point Z with a force F.",
+        "transcription": [
+         "λείο δάπεδο (1)",
+          "νήμα (1)",
+          "δάπεδο (2)",
+          "νήμα (2)",
+          "Σχήμα 6"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  },
+  {
+    "id": "Δ3",
+    "question": "Λεπτή, άκαμπτη, ομογενής και ισοπαχής ράβδος ΑΒ μάζας $M_\\rho = 3 \\text{ kg}$ και μήκους $\\ell = 2 \\text{ m}$, φέρει στο άκρο της Α σφαιρίδιο $\\Sigma$ μάζας $m = 1 \\text{ kg}$, αμελητέων διαστάσεων, και ισορροπεί σε πλάγια θέση με τη βοήθεια κατακόρυφου υποστηρίγματος, το οποίο έχουμε στερεώσει στο λείο οριζόντιο δάπεδο (1). Η ράβδος ακουμπά με το άκρο της Β στο δάπεδο (1) σχηματίζοντας γωνία $\\phi$, όπου $\\eta\\mu\\phi = 0,8$ και $\\sigma\\upsilon\\nu\\phi = 0,6$. Η κορυφή του υποστηρίγματος συνδέεται με την ράβδο στο μέσον της $\\Gamma$ με άρθρωση και το σύστημα ράβδος-σφαιρίδιο μπορεί να περιστρέφεται χωρίς τριβές γύρω από οριζόντιο άξονα που διέρχεται από το σημείο $\\Gamma$ (κάθετα στο επίπεδο του σχήματος).\nΜε τη βοήθεια του οριζόντιου, αβαρούς και μη εκτατού νήματος (1) έχουμε συνδέσει το σφαιρίδιο $\\Sigma$ με το ανώτερο σημείο $\\Delta$ ομογενούς τροχαλίας μάζας $M_\\tau = 7 \\text{ kg}$ και ακτίνας $R = 0,4 \\text{ m}$. Η τροχαλία σε απόσταση $r = 0,3 \\text{ m}$ από το κέντρο της Ο έχει ένα λεπτό κυκλικό αυλάκι στο οποίο έχουμε τυλίξει πολλές φορές αβαρές και μη εκτατό νήμα (2). Στο άκρο Ζ του νήματος (2) ασκούμε σταθερή δύναμη $\\vec{F}$. Όλη η διάταξη ισορροπεί στο ίδιο κατακόρυφο επίπεδο.\n\nΤη χρονική στιγμή $t_0 = 0 \\text{ s}$ κόβουμε το νήμα (1). Το σύστημα ράβδος – σφαιρίδιο $\\Sigma$ αρχίζει να περιστρέφεται σε κατακόρυφο επίπεδο, χάνοντας την επαφή του με το δάπεδο (1).\nΚατά την περιστροφή του συστήματος ράβδου–σφαιριδίου $\\Sigma$, το σφαιρίδιο $\\Sigma$ χτυπά στο οριζόντιο δάπεδο. Η γωνιακή ταχύτητα του συστήματος αμέσως μετά την κρούση έχει μέτρο $\\frac{\\omega}{2}$, όπου $\\omega$ το μέτρο της γωνιακής ταχύτητας ακριβώς πριν την κρούση.\nΝα υπολογίσετε το μέτρο της μεταβολής της στροφορμής $\\Delta\\vec{L}$ του συστήματος ράβδος–σφαιρίδιο $\\Sigma$ και να σχεδιάσετε το διάνυσμα $\\Delta\\vec{L}$.\n\nΔίνονται:\n• η επιτάχυνση της βαρύτητας $g = 10 \\text{ m/s}^2$\n• η ροπή αδράνειας ράβδου ως προς άξονα που διέρχεται από το κέντρο μάζας της και είναι κάθετος σε αυτή: $I_{cm(\\rho)} = \\frac{1}{12} M_\\rho \\cdot \\ell^2$\n• η ροπή αδράνειας τροχαλίας ως προς τον άξονά της: $I_{cm(\\tau)} = \\frac{1}{2} M_\\tau \\cdot R^2$\nΝα θεωρήσετε ότι:\n• η κρούση είναι ακαριαία\n• η αντίσταση του αέρα θεωρείται αμελητέα για όλα τα σώματα\n• κατά την κρούση, δεν έχουμε απώλεια μάζας\n• το σχήμα δεν είναι υπό κλίμακα",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img6/them_fysiki_gel_2022_img6.png",
+        "description": "A mechanical system consisting of a rod AB and a pulley. The rod AB rests on a smooth horizontal floor (1) at point B with an angle φ. Its midpoint Γ is supported by a triangular vertical stand. At the top end A, there is a small sphere Σ. The distance AΓ and ΓB is ℓ/2. A horizontal string (1) connects sphere Σ at A to the top point Δ of a pulley. The pulley rests on a higher horizontal floor (2). The pulley has an outer radius R and an inner groove of radius r. A second horizontal string (2) is wound around the inner groove and pulled to the right from point Z with a force F.",
+        "transcription": [
+          "λείο δάπεδο (1)",
+          "νήμα (1)",
+          "δάπεδο (2)",
+          "νήμα (2)",
+          "Σχήμα 6"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 5"
+    ]
+  },
+  {
+    "id": "Δ4",
+    "question": "Λεπτή, άκαμπτη, ομογενής και ισοπαχής ράβδος ΑΒ μάζας $M_\\rho = 3 \\text{ kg}$ και μήκους $\\ell = 2 \\text{ m}$, φέρει στο άκρο της Α σφαιρίδιο $\\Sigma$ μάζας $m = 1 \\text{ kg}$, αμελητέων διαστάσεων, και ισορροπεί σε πλάγια θέση με τη βοήθεια κατακόρυφου υποστηρίγματος, το οποίο έχουμε στερεώσει στο λείο οριζόντιο δάπεδο (1). Η ράβδος ακουμπά με το άκρο της Β στο δάπεδο (1) σχηματίζοντας γωνία $\\phi$, όπου $\\eta\\mu\\phi = 0,8$ και $\\sigma\\upsilon\\nu\\phi = 0,6$. Η κορυφή του υποστηρίγματος συνδέεται με την ράβδο στο μέσον της $\\Gamma$ με άρθρωση και το σύστημα ράβδος-σφαιρίδιο μπορεί να περιστρέφεται χωρίς τριβές γύρω από οριζόντιο άξονα που διέρχεται από το σημείο $\\Gamma$ (κάθετα στο επίπεδο του σχήματος).\nΜε τη βοήθεια του οριζόντιου, αβαρούς και μη εκτατού νήματος (1) έχουμε συνδέσει το σφαιρίδιο $\\Sigma$ με το ανώτερο σημείο $\\Delta$ ομογενούς τροχαλίας μάζας $M_\\tau = 7 \\text{ kg}$ και ακτίνας $R = 0,4 \\text{ m}$. Η τροχαλία σε απόσταση $r = 0,3 \\text{ m}$ από το κέντρο της Ο έχει ένα λεπτό κυκλικό αυλάκι στο οποίο έχουμε τυλίξει πολλές φορές αβαρές και μη εκτατό νήμα (2). Στο άκρο Ζ του νήματος (2) ασκούμε σταθερή δύναμη $\\vec{F}$. Όλη η διάταξη ισορροπεί στο ίδιο κατακόρυφο επίπεδο.\n\nΗ τροχαλία, αμέσως μετά τη χρονική στιγμή $t_0 = 0 \\text{ s}$, αρχίζει να κυλίεται χωρίς να ολισθαίνει στο οριζόντιο δάπεδο (2) με την επίδραση της δύναμης $\\vec{F}$, το μέτρο της οποίας είναι $12 \\text{ N}$. Ο άξονας περιστροφής της παραμένει συνεχώς οριζόντιος και κάθετος στο επίπεδο του σχήματος.\nΝα υπολογίσετε την επιτάχυνση του κέντρου μάζας της τροχαλίας.\n\nΔίνονται:\n• η επιτάχυνση της βαρύτητας $g = 10 \\text{ m/s}^2$\n• η ροπή αδράνειας ράβδου ως προς άξονα που διέρχεται από το κέντρο μάζας της και είναι κάθετος σε αυτή: $I_{cm(\\rho)} = \\frac{1}{12} M_\\rho \\cdot \\ell^2$\n• η ροπή αδράνειας τροχαλίας ως προς τον άξονά της: $I_{cm(\\tau)} = \\frac{1}{2} M_\\tau \\cdot R^2$\nΝα θεωρήσετε ότι:\n• η κρούση είναι ακαριαία\n• η αντίσταση του αέρα θεωρείται αμελητέα για όλα τα σώματα\n• κατά την κρούση, δεν έχουμε απώλεια μάζας\n• το σχήμα δεν είναι υπό κλίμακα",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img6/them_fysiki_gel_2022_img6.png",
+        "description": "A mechanical system consisting of a rod AB and a pulley. The rod AB rests on a smooth horizontal floor (1) at point B with an angle φ. Its midpoint Γ is supported by a triangular vertical stand. At the top end A, there is a small sphere Σ. The distance AΓ and ΓB is ℓ/2. A horizontal string (1) connects sphere Σ at A to the top point Δ of a pulley. The pulley rests on a higher horizontal floor (2). The pulley has an outer radius R and an inner groove of radius r. A second horizontal string (2) is wound around the inner groove and pulled to the right from point Z with a force F.",
+        "transcription": [
+          "λείο δάπεδο (1)",
+          "νήμα (1)",
+          "δάπεδο (2)",
+          "νήμα (2)",
+          "Σχήμα 6"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 4"
+    ]
+  },
+  {
+    "id": "Δ5",
+    "question": "Λεπτή, άκαμπτη, ομογενής και ισοπαχής ράβδος ΑΒ μάζας $M_\\rho = 3 \\text{ kg}$ και μήκους $\\ell = 2 \\text{ m}$, φέρει στο άκρο της Α σφαιρίδιο $\\Sigma$ μάζας $m = 1 \\text{ kg}$, αμελητέων διαστάσεων, και ισορροπεί σε πλάγια θέση με τη βοήθεια κατακόρυφου υποστηρίγματος, το οποίο έχουμε στερεώσει στο λείο οριζόντιο δάπεδο (1). Η ράβδος ακουμπά με το άκρο της Β στο δάπεδο (1) σχηματίζοντας γωνία $\\phi$, όπου $\\eta\\mu\\phi = 0,8$ και $\\sigma\\upsilon\\nu\\phi = 0,6$. Η κορυφή του υποστηρίγματος συνδέεται με την ράβδο στο μέσον της $\\Gamma$ με άρθρωση και το σύστημα ράβδος-σφαιρίδιο μπορεί να περιστρέφεται χωρίς τριβές γύρω από οριζόντιο άξονα που διέρχεται από το σημείο $\\Gamma$ (κάθετα στο επίπεδο του σχήματος).\nΜε τη βοήθεια του οριζόντιου, αβαρούς και μη εκτατού νήματος (1) έχουμε συνδέσει το σφαιρίδιο $\\Sigma$ με το ανώτερο σημείο $\\Delta$ ομογενούς τροχαλίας μάζας $M_\\tau = 7 \\text{ kg}$ και ακτίνας $R = 0,4 \\text{ m}$. Η τροχαλία σε απόσταση $r = 0,3 \\text{ m}$ από το κέντρο της Ο έχει ένα λεπτό κυκλικό αυλάκι στο οποίο έχουμε τυλίξει πολλές φορές αβαρές και μη εκτατό νήμα (2). Στο άκρο Ζ του νήματος (2) ασκούμε σταθερή δύναμη $\\vec{F}$. Όλη η διάταξη ισορροπεί στο ίδιο κατακόρυφο επίπεδο.\n\nΗ τροχαλία, αμέσως μετά τη χρονική στιγμή $t_0 = 0 \\text{ s}$, αρχίζει να κυλίεται χωρίς να ολισθαίνει στο οριζόντιο δάπεδο (2) με την επίδραση της δύναμης $\\vec{F}$, το μέτρο της οποίας είναι $12 \\text{ N}$. Ο άξονας περιστροφής της παραμένει συνεχώς οριζόντιος και κάθετος στο επίπεδο του σχήματος.\nΔ5. Να υπολογίσετε το έργο της δύναμης $\\vec{F}$ από τη χρονική στιγμή $t_0 = 0 \\text{ s}$ έως τη χρονική στιγμή $t_1 = 2 \\text{ s}$.\n\nΔίνονται:\n• η επιτάχυνση της βαρύτητας $g = 10 \\text{ m/s}^2$\n• η ροπή αδράνειας ράβδου ως προς άξονα που διέρχεται από το κέντρο μάζας της και είναι κάθετος σε αυτή: $I_{cm(\\rho)} = \\frac{1}{12} M_\\rho \\cdot \\ell^2$\n• η ροπή αδράνειας τροχαλίας ως προς τον άξονά της: $I_{cm(\\tau)} = \\frac{1}{2} M_\\tau \\cdot R^2$\nΝα θεωρήσετε ότι:\n• η κρούση είναι ακαριαία\n• η αντίσταση του αέρα θεωρείται αμελητέα για όλα τα σώματα\n• κατά την κρούση, δεν έχουμε απώλεια μάζας\n• το σχήμα δεν είναι υπό κλίμακα",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_fysiki_gel_2022/img6/them_fysiki_gel_2022_img6.png",
+        "description": "A mechanical system consisting of a rod AB and a pulley. The rod AB rests on a smooth horizontal floor (1) at point B with an angle φ. Its midpoint Γ is supported by a triangular vertical stand. At the top end A, there is a small sphere Σ. The distance AΓ and ΓB is ℓ/2. A horizontal string (1) connects sphere Σ at A to the top point Δ of a pulley. The pulley rests on a higher horizontal floor (2). The pulley has an outer radius R and an inner groove of radius r. A second horizontal string (2) is wound around the inner groove and pulled to the right from point Z with a force F.",
+        "transcription": [
+          "λείο δάπεδο (1)",
+          "νήμα (1)",
+          "δάπεδο (2)",
+          "νήμα (2)",
+          "Σχήμα 6"
+        ]
+      }
+    ],
+    "mark": [
+      "Μονάδες 6"
+    ]
+  }
+]
