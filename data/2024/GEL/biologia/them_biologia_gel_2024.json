@@ -73,7 +73,7 @@
       {
         "path": "images/them_biologia_gel_2024/img1/them_biologia_gel_2024_img1.png",
         "description": "Figure 1: A nucleotide sequence written with directional notation. On the top line, an RNA sequence is presented from the 5′ end to the 3′ end as: 5′ – AUGCUACAUUGAAAA – 3′. Directly below the last four adenine bases (AAAA), a complementary DNA sequence segment is shown as TTTT, written in the opposite orientation from 3′ to 5′. The figure emphasizes the antiparallel nature of nucleic acid strands, with the RNA strand labeled 5′ to 3′ and the complementary thymine bases aligned beneath the adenine bases at the 3′ end of the RNA sequence.",
-        "transcription": []
+        "transcription": ["5′","AUGCUACAUUGAAAA","3′","TTTT","5′"]
       }
     ],
     "mark": [
@@ -227,15 +227,13 @@
       {
         "path": "images/them_biologia_gel_2024/img2/them_biologia_gel_2024_img2.png",
         "description": "Figure 2: A double-stranded DNA sequence displayed in two horizontal lines. The first line presents a nucleotide sequence written in uppercase letters as: AGTAATGCATTTGTCCCAGTAAATGACATA. Directly below it, a second nucleotide sequence is shown: TCATTACGTAAACAGGGTCA T TTACTGTAT (continuous without spaces in the image). The two sequences consist of the four DNA bases adenine (A), thymine (T), cytosine (C), and guanine (G), and are arranged one above the other to represent complementary strands of a DNA molecule. Each base in the top strand pairs with its complementary base in the bottom strand (A with T, and C with G), illustrating standard base-pairing rules in double-stranded DNA. The sequences are written in bold, evenly spaced capital letters without additional labels or directional markings.",
-        "transcription": [
-          "Αλυσίδα 1: AGTAATGCATTTGTCCCAGTAAATGACATA",
-          "Αλυσίδα 2: TCATTACGTAAACAGGGTCATTTACTGTAT"
+        "transcription": ["AGTAATGCATTTGTCCCAGTAAATGACATA","TCATTACGTAAACAGGGTCATTTACTGTAT"
         ]
       },
       {
         "path": "images/them_biologia_gel_2024/img3/them_biologia_gel_2024_img3.png",
         "description": " Figure 3: A short amino acid sequence written in lowercase three-letter abbreviations separated by dashes. The sequence reads: lys – phe – his. These abbreviations correspond to the amino acids lysine (lys), phenylalanine (phe), and histidine (his), arranged in that specific order. The text is centered on a plain background, with no additional structural formulas or directional indicators, representing a simple tripeptide sequence composed of three amino acids linked in succession.",
-        "transcription": []
+        "transcription": ["lys","phe","his"]
       }
     ],
     "mark": [
@@ -251,15 +249,13 @@
       {
         "path": "images/them_biologia_gel_2024/img2/them_biologia_gel_2024_img2.png",
         "description": "Figure 2: A double-stranded DNA sequence displayed in two horizontal lines. The first line presents a nucleotide sequence written in uppercase letters as: AGTAATGCATTTGTCCCAGTAAATGACATA. Directly below it, a second nucleotide sequence is shown: TCATTACGTAAACAGGGTCA T TTACTGTAT (continuous without spaces in the image). The two sequences consist of the four DNA bases adenine (A), thymine (T), cytosine (C), and guanine (G), and are arranged one above the other to represent complementary strands of a DNA molecule. Each base in the top strand pairs with its complementary base in the bottom strand (A with T, and C with G), illustrating standard base-pairing rules in double-stranded DNA. The sequences are written in bold, evenly spaced capital letters without additional labels or directional markings.",
-        "transcription": [
-          "Αλυσίδα 1: AGTAATGCATTTGTCCCAGTAAATGACATA",
-          "Αλυσίδα 2: TCATTACGTAAACAGGGTCATTTACTGTAT"
+        "transcription": ["AGTAATGCATTTGTCCCAGTAAATGACATA","TCATTACGTAAACAGGGTCATTTACTGTAT"
         ]
       },
       {
         "path": "images/them_biologia_gel_2024/img3/them_biologia_gel_2024_img3.png",
         "description": " Figure 3: A short amino acid sequence written in lowercase three-letter abbreviations separated by dashes. The sequence reads: lys – phe – his. These abbreviations correspond to the amino acids lysine (lys), phenylalanine (phe), and histidine (his), arranged in that specific order. The text is centered on a plain background, with no additional structural formulas or directional indicators, representing a simple tripeptide sequence composed of three amino acids linked in succession.",
-        "transcription": []
+        "transcription": ["lys","phe","his"]
       }
     ],
     "mark": [
@@ -275,15 +271,13 @@
         {
         "path": "images/them_biologia_gel_2024/img2/them_biologia_gel_2024_img2.png",
         "description": "Figure 2: A double-stranded DNA sequence displayed in two horizontal lines. The first line presents a nucleotide sequence written in uppercase letters as: AGTAATGCATTTGTCCCAGTAAATGACATA. Directly below it, a second nucleotide sequence is shown: TCATTACGTAAACAGGGTCA T TTACTGTAT (continuous without spaces in the image). The two sequences consist of the four DNA bases adenine (A), thymine (T), cytosine (C), and guanine (G), and are arranged one above the other to represent complementary strands of a DNA molecule. Each base in the top strand pairs with its complementary base in the bottom strand (A with T, and C with G), illustrating standard base-pairing rules in double-stranded DNA. The sequences are written in bold, evenly spaced capital letters without additional labels or directional markings.",
-        "transcription": [
-          "Αλυσίδα 1: AGTAATGCATTTGTCCCAGTAAATGACATA",
-          "Αλυσίδα 2: TCATTACGTAAACAGGGTCATTTACTGTAT"
+        "transcription": ["AGTAATGCATTTGTCCCAGTAAATGACATA","TCATTACGTAAACAGGGTCATTTACTGTAT"
         ]
       },
       {
         "path": "images/them_biologia_gel_2024/img4/them_biologia_gel_2024_img4.png",
         "description": " Figure 4: A double-stranded DNA sequence written in two horizontal lines using uppercase letters. The first line displays the nucleotide sequence: AGTAATGCATTTATCCCAGTAAATGACATA. Directly below it, a second sequence is shown: TCATTACGTAAATAGGGTCA TTTACTGTAT (presented continuously in the image without spacing). The sequences consist of the four DNA nitrogenous bases adenine (A), thymine (T), cytosine (C), and guanine (G). The two strands are arranged one above the other to represent complementary DNA strands, where each base in the upper strand pairs with its corresponding complementary base in the lower strand (A with T and C with G). The text appears in bold, evenly spaced capital letters, without additional annotations or directional markings.",
-        "transcription": []
+        "transcription": ["AGTAATGCATTTATCCCAGTAAATGACATA","TCATTACGTAAATAGGGTCATTTTACTGTAT"]
       }
     ],
     "mark": [
@@ -299,7 +293,7 @@
         {
         "path": "images/them_biologia_gel_2024/img5/them_biologia_gel_2024_img5.png",
         "description": " Figure 5: A complete genetic code table that correlates mRNA codons with their corresponding amino acids. The table is organized according to the three bases of each codon. Along the left vertical side, the label “Πρώτο γράμμα” (First letter) indicates the first nucleotide of the codon, arranged in four large horizontal sections: U, C, A, and G. Across the top, the label “Δεύτερο γράμμα” (Second letter) identifies the second nucleotide, also organized into four columns: U, C, A, and G. On the right vertical side, the label “Τρίτο γράμμα” (Third letter) shows the possible third nucleotides (U, C, A, G) listed vertically for each codon group. Within the grid, each cell contains four codons sharing the same first two bases but differing in the third base. Next to each codon group, the corresponding amino acid is written in Greek along with its three-letter abbreviation in parentheses. For example, UUU and UUC code for phenylalanine (phe), UUA and UUG code for leucine (leu), and AUG codes for methionine (met) and is marked as the start codon (έναρξη). The three stop codons (λήξη) are also indicated: UAA, UAG, and UGA. Other amino acids shown include serine (ser), tyrosine (tyr), cysteine (cys), tryptophan (trp), proline (pro), histidine (his), glutamine (gln), arginine (arg), isoleucine (ile), threonine (thr), asparagine (asn), lysine (lys), valine (val), alanine (ala), aspartic acid (asp), glutamic acid (glu), and glycine (gly). The table is displayed with clear grid lines and structured sections, systematically presenting all 64 possible mRNA codons and their corresponding amino acids.",
-        "transcription": []
+        "transcription": ["Δεύτερο γράμμα","Πρώτο γράμμα","Τρίτο γράμμα","U","C","A","G","UUU","UUC","Φαινυλαλανίνη (phe)","UUA","UUG","Λευκίνη (leu)","UCU","UCC","UCA","UCG","Σερίνη (ser)","UAU","UAC","Τυροσίνη (tyr)","UAA","UAG","λήξη","UGU","UGC","κυστεΐνη (cys)","UGA","λήξη","UGG","Τρυπτοφάνη (trp)","CUU","CUC","CUA","CUG","Λευκίνη (leu)","CCU","CCC","CCA","CCG","Προλίνη (pro)","CAU","CAC","Ιστιδίνη (his)","CAA","CAG","Γλουταμίνη (gln)","CGU","CGC","CGA","CGG","Αργινίνη (arg)","AUU","AUC","AUA","Ισολευκίνη (ile)","AUG","Μεθειονίνη (met) έναρξη","ACU","ACC","ACA","ACG","Θρεονίνη (thr)","AAU","AAC","Ασπαραγίνη (asn)","AAA","AAG","Λυσίνη (lys)","AGU","AGC","Σερίνη (ser)","AGA","AGG","Αργινίνη (arg)","GUU","GUC","GUA","GUG","βαλίνη (val)","GCU","GCC","GCA","GCG","Αλανίνη (ala)","GAU","GAC","Ασπαρτικό οξύ (asp)","GAA","GAG","γλουταμινικό οξύ (glu)","GGU","GGC","GGA","GGG","Γλυκίνη (gly)"]
       }
     ],
     "mark": [
@@ -308,8 +302,8 @@
   },
   {
     "id": "Δ1",
-    "question": "Να προσδιορίσετε τον τρόπο κληρονόμησης του χρώματος του σώματος στο συγκεκριμένο είδος εντόμου. Να αιτιολογήσετε την απάντησή σας γράφοντας την κατάλληλη διασταύρωση.",
-    "input": "Σε ένα είδος εντόμου, το χρώμα σώματος μπορεί να είναι είτε μαύρο είτε λευκό. Από τη διασταύρωση θηλυκού εντόμου με λευκό χρώμα σώματος και αρσενικού εντόμου με μαύρο χρώμα σώματος προέκυψαν 400 θηλυκοί απόγονοι με μαύρο χρώμα και 200 αρσενικοί με λευκό χρώμα σώματος. Το φύλο καθορίζεται όπως και στον άνθρωπο.",
+    "question": "Σε ένα είδος εντόμου, το χρώμα σώματος μπορεί να είναι είτε μαύρο είτε λευκό. Από τη διασταύρωση θηλυκού εντόμου με λευκό χρώμα σώματος και αρσενικού εντόμου με μαύρο χρώμα σώματος προέκυψαν 400 θηλυκοί απόγονοι με μαύρο χρώμα και 200 αρσενικοί με λευκό χρώμα σώματος. Το φύλο καθορίζεται όπως και στον άνθρωπο. Να προσδιορίσετε τον τρόπο κληρονόμησης του χρώματος του σώματος στο συγκεκριμένο είδος εντόμου. Να αιτιολογήσετε την απάντησή σας γράφοντας την κατάλληλη διασταύρωση.",
+    "input": "",
     "choices": [],
     "images": [],
     "mark": [
@@ -318,8 +312,8 @@
   },
   {
     "id": "Δ2",
-    "question": "Ποια είναι η φαινοτυπική αναλογία των απογόνων Arabidopsis της F1 γενιάς; Να αιτιολογήσετε την απάντησή σας γράφοντας την κατάλληλη διασταύρωση.",
-    "input": "Στο φυτό Petunia το γονίδιο Α κωδικοποιεί για ένα ένζυμο που παράγει μια γαλάζια χρωστική, ενώ το γονίδιο Β μετατρέπει τη γαλάζια σε μωβ. Το φυτό Arabidopsis έχει άσπρα άνθη. Ένα διαγονιδιακό Arabidopsis με το γονίδιο Α (σε ένα χρωμόσωμα του 2ου ζεύγους) διασταυρώνεται με ένα διαγονιδιακό Arabidopsis με το γονίδιο Β (σε ένα χρωμόσωμα του 5ου ζεύγους).",
+    "question": "Στο φυτό Petunia το γονίδιο Α κωδικοποιεί για ένα ένζυμο που παράγει μια γαλάζια χρωστική, ενώ το γονίδιο Β μετατρέπει τη γαλάζια σε μωβ. Το φυτό Arabidopsis έχει άσπρα άνθη. Ένα διαγονιδιακό Arabidopsis με το γονίδιο Α (σε ένα χρωμόσωμα του 2ου ζεύγους) διασταυρώνεται με ένα διαγονιδιακό Arabidopsis με το γονίδιο Β (σε ένα χρωμόσωμα του 5ου ζεύγους). Ποια είναι η φαινοτυπική αναλογία των απογόνων Arabidopsis της F1 γενιάς; Να αιτιολογήσετε την απάντησή σας γράφοντας την κατάλληλη διασταύρωση.",
+    "input": "",
     "choices": [],
     "images": [],
     "mark": [

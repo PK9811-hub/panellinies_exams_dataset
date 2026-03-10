@@ -193,7 +193,7 @@
         {
         "path": "images/them_ximeia_gel_2024/img2/them_ximeia_gel_2024_img2.png",
         "description": "Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.",
-        "transcription": []
+        "transcription": ["Ένωση","Σημείο Βρασμού","LiH","1270°C","HF","23°C","HBr","-66°C","HCl","-82°C"]
       }
     ],
     "mark": [
@@ -209,7 +209,7 @@
         {
         "path": "images/them_ximeia_gel_2024/img2/them_ximeia_gel_2024_img2.png",
         "description": "Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.",
-        "transcription": []
+        "transcription": ["Ένωση","Σημείο Βρασμού","LiH","1270°C","HF","23°C","HBr","-66°C","HCl","-82°C"]
       }
     ],
     "mark": [
@@ -224,7 +224,7 @@
     "images": [{
         "path": "images/them_ximeia_gel_2024/img2/them_ximeia_gel_2024_img2.png",
         "description": "Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.",
-        "transcription": []
+        "transcription": ["Ένωση","Σημείο Βρασμού","LiH","1270°C","HF","23°C","HBr","-66°C","HCl","-82°C"]
       }
     ],
     "mark": [
@@ -240,7 +240,7 @@
       {
         "path": "images/them_ximeia_gel_2024/img3/them_ximeia_gel_2024_img3.png",
         "description": "Figure 3: A graph representing the distribution of molecular kinetic energies at two different temperatures. The vertical axis is labeled “κλάσμα των μορίων” (fraction of molecules), while the horizontal axis is labeled “κινητική ενέργεια” (kinetic energy). Two curves are plotted on the graph and are labeled T₁ and T₂, corresponding to two different temperatures. The curve labeled T₂ has a higher and sharper peak positioned at lower kinetic energy values, while the curve labeled T₁ is broader and lower in height, extending further toward higher kinetic energy values. A vertical dashed line marked Eₐ indicates the activation energy. The area of each curve to the right of Eₐ represents the fraction of molecules with kinetic energy equal to or greater than the activation energy. The diagram is drawn with smooth curves and clearly marked axes, illustrating how temperature affects the distribution of molecular kinetic energies.",
-        "transcription": []
+        "transcription": ["κλάσμα των μορίων","T₂","T₁","E_a","κινητική ενέργεια"]
       }
     ],
     "mark": [
@@ -256,7 +256,7 @@
       {
         "path": "images/them_ximeia_gel_2024/img4/them_ximeia_gel_2024_img4.png",
         "description": "Figure 4: A multi-step organic reaction scheme illustrating the transformation of an initial compound through several intermediates and reaction conditions. The starting compound, labeled A, has the general formula CₙH₂ᵥO and reacts with H₂ in the presence of Ni, forming compound B. Compound B is then treated with SOCl₂, producing compound Γ. The compound Γ reacts with Mg in absolute ether (απόλυτος αιθέρας), forming compound Δ. Compound Δ subsequently reacts with compound A, yielding an intermediate product (ενδιάμεσο προϊόν), which upon addition of H₂O forms compound E. From compound E, several reaction pathways are shown. In one pathway, treatment with KOH/Br₂ leads to the formation of compounds Λ and M. In another pathway, reaction with KMnO₄/H₂SO₄ produces compound Θ, which further reacts with NaHCO₃ to give compound K. Additionally, compound E can undergo dehydration in the presence of concentrated H₂SO₄ at 170°C, forming compound Z. The diagram is arranged with arrows indicating the direction of each reaction step, reaction conditions written above or beside the arrows, and each compound represented by a circled capital Greek letter..",
-        "transcription": []
+        "transcription": ["C_nH_{2ν}O + H_2","A","Ni","B","SOCl_2","Γ","+Mg","απόλυτος αιθέρας","Δ","+A","ενδιάμεσο προϊόν","+H_2O","E","+KMnO_4/H_2SO_4","Θ","+NaHCO_3","K","π.Η_2SO_4 170°C","Z","+KOH/Br_2","Λ","M"]
       }
     ],
     "mark": [
@@ -272,7 +272,7 @@
       {
         "path": "images/them_ximeia_gel_2024/img4/them_ximeia_gel_2024_img4.png",
         "description": "Figure 4: A multi-step organic reaction scheme illustrating the transformation of an initial compound through several intermediates and reaction conditions. The starting compound, labeled A, has the general formula CₙH₂ᵥO and reacts with H₂ in the presence of Ni, forming compound B. Compound B is then treated with SOCl₂, producing compound Γ. The compound Γ reacts with Mg in absolute ether (απόλυτος αιθέρας), forming compound Δ. Compound Δ subsequently reacts with compound A, yielding an intermediate product (ενδιάμεσο προϊόν), which upon addition of H₂O forms compound E. From compound E, several reaction pathways are shown. In one pathway, treatment with KOH/Br₂ leads to the formation of compounds Λ and M. In another pathway, reaction with KMnO₄/H₂SO₄ produces compound Θ, which further reacts with NaHCO₃ to give compound K. Additionally, compound E can undergo dehydration in the presence of concentrated H₂SO₄ at 170°C, forming compound Z. The diagram is arranged with arrows indicating the direction of each reaction step, reaction conditions written above or beside the arrows, and each compound represented by a circled capital Greek letter..",
-        "transcription": []
+        "transcription": ["C_nH_{2ν}O + H_2","A","Ni","B","SOCl_2","Γ","+Mg","απόλυτος αιθέρας","Δ","+A","ενδιάμεσο προϊόν","+H_2O","E","+KMnO_4/H_2SO_4","Θ","+NaHCO_3","K","π.Η_2SO_4 170°C","Z","+KOH/Br_2","Λ","M"]
       }
     ],
     "mark": [
