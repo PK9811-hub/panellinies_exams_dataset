@@ -1,0 +1,5 @@
+Description
+Figure 3: A diagram showing a DNA sequence with a labeled region indicated as «εσώνιο» (intron). Two nucleotide sequences are displayed in two horizontal lines. Above a specific segment of the upper sequence, a bracket marks the region labeled εσώνιο, indicating the intron within the gene sequence. The sequences consist of the nucleotide bases A, T, C, and G arranged in continuous strings of characters.
+
+Transcription
+Figure 3: "εσώνιο",\n"TTCATGGAATTCCATGAAAGGGTAGGGGAATTCTAGCCC",\n"AAGTACCTTAAGGTACTTTCCCATCCCCCTTAAGATCGGG"

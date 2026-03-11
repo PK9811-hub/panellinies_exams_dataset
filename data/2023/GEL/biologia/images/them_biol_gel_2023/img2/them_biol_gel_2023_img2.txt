@@ -1,0 +1,5 @@
+Description
+Figure 2: A two-column table labeled Στήλη I and Στήλη II. The first column lists the Greek letters α, β, and γ, each corresponding to a substance listed in the second column. In Στήλη II, the substances are καταλάση, υπεροξείδιο του υδρογόνου, and διοξείδιο του άνθρακα. An additional entry νερό appears in the second column without a corresponding symbol in the first column. The table presents the possible matches between the items in the two columns.
+
+Transcription
+Figure 2: "Στήλη I",\n"Στήλη II",\n"α",\n"καταλάση",\n"β",\n"υπεροξείδιο του υδρογόνου",\n"γ",\n"διοξείδιο του άνθρακα",\n"νερό"

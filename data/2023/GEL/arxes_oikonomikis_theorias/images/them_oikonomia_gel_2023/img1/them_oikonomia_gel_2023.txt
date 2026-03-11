@@ -1,0 +1,5 @@
+Description
+Figure 1: A table presenting economic data for three different years: Έτος 2000, Έτος 2001, and Έτος 2002. The rows list several economic indicators. The first row shows Τιμή (σε ευρώ) with values 20 for 2000 and 32 for 2002. The second row shows Ποσότητα (σε μονάδες) with value 5.000 for 2000. The third row shows Α.Ε.Π. σε τρέχουσες τιμές (σε ευρώ)* with value 132.000 for 2001. The fourth row shows Δείκτης τιμών (%) with value 100 for 2000. The fifth row shows Α.Ε.Π. σε σταθερές τιμές (σε ευρώ) with values 100.000 for 2000 and 120.000 for 2002. The sixth row shows Κατά Κεφαλήν Πραγματικό Α.Ε.Π. (σε ευρώ) with value 1.000 for 2000. The final row shows Πληθυσμός (αριθμός ατόμων) with values 110 for 2001 and 120 for 2002.
+
+Transcription
+Figure 1:"Έτος 2000",\n"Έτος 2001",\n"Έτος 2002",\n"Τιμή (σε ευρώ)",\n"20",\n"32",\n"Ποσότητα (σε μονάδες)",\n"5.000",\n"Α.Ε.Π.* σε τρέχουσες τιμές (σε ευρώ)",\n"132.000",\n"Δείκτης τιμών (%)",\"100",\n"Α.Ε.Π. σε σταθερές τιμές (σε ευρώ)",\n"100.000",\n"120.000",\n"Κατά Κεφαλήν Πραγματικό Α.Ε.Π. (σε ευρώ)",\"1.000",\n"Πληθυσμός (αριθμός ατόμων)",\n"110",\n"120"

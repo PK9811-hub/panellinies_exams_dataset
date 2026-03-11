@@ -1,0 +1,5 @@
+Description
+Figure 3: A table comparing measurements for two solutions labeled Διάλυμα Δ1 and Διάλυμα Δ2. The first row shows the initial pH, which is 2 for both solutions. The second row presents the pH of the diluted solutions, with values 2,5 for Δ1 and 3 for Δ2. The third row indicates the volume of NaOH solution (in mL) that was consumed to reach the endpoint, represented as V₁ mL for Δ1 and V₂ mL for Δ2. The table organizes these measurements into rows with descriptive labels in the first column and the corresponding values for each solution in the second and third columns.
+
+Transcription
+Figure 3: "Διάλυμα Δ1",\n"Διάλυμα Δ2",\n"αρχικό pH",\n"2",\n"2",\n"pH αραιωμένων διαλυμάτων",\n"2,5",\n"3",\n"mL διαλύματος NaOH που καταναλώθηκε ως το τελικό σημείο",\n"V₁ mL",\n"V₂ mL"
