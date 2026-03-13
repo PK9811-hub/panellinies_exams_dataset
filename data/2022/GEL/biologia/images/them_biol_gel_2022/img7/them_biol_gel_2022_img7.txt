@@ -1,0 +1,5 @@
+Description
+Figure 7: A diagram showing two loops formed along two parallel nucleic acid strands labeled αλυσίδα I and αλυσίδα II. The strands are drawn as two horizontal parallel lines. Two looped structures are positioned above the strands and are labeled α and β. Each loop emerges from the upper strand and reconnects to it, indicating regions where the strand forms a loop structure while remaining attached to the main sequence.
+
+Transcription
+Figure 7:"α",\n"β",\n"αλυσίδα I",\n"αλυσίδα II"

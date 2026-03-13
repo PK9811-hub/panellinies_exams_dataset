@@ -1,0 +1,5 @@
+Description
+Figure 4: A table presenting antibiotic resistance patterns for four plasmids labeled 1, 2, 3, and 4. The first column lists three categories: Ανθεκτικότητα στην Αμπικιλίνη, Ανθεκτικότητα στη Στρεπτομυκίνη, and Ανθεκτικότητα στην Καναμυκίνη. Each plasmid column contains symbols + or −, indicating whether resistance to the corresponding antibiotic is present or absent. Plasmid 1 shows resistance to ampicillin but not to streptomycin or kanamycin. Plasmid 2 shows resistance only to kanamycin. Plasmid 3 shows resistance to both ampicillin and streptomycin but not to kanamycin. Plasmid 4 shows resistance only to streptomycin.
+
+Transcription
+Figure 4:"Πλασμίδιο",\n"1",\n"2",\n"3",\n"4",\n"Ανθεκτικότητα στην Αμπικιλίνη",\n"+",\n"-",\n"+",\n"-",\n"Ανθεκτικότητα στη Στρεπτομυκίνη",\n"-",\n"-",\n"+",\n"+",\n"Ανθεκτικότητα στην Καναμυκίνη",\n"-",\n"+",\n"-",\n"-"
