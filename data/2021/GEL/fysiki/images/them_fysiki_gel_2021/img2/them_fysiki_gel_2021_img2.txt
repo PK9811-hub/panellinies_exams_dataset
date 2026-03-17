@@ -1,0 +1,5 @@
+Description
+A cross-sectional diagram showing a large open tank labeled 'Δ' filled with a fluid up to a height 'H'. Atmospheric pressure 'Patm' acts on the fluid surface. The tank is connected at its bottom to a horizontal pipe. At a certain point along the pipe, a vertical, narrower pipe is attached, forming a T-junction labeled (1). The fluid rises in this vertical pipe to a height 'h'. The top of the fluid in this vertical pipe is covered by a piston of area 'A'. Atmospheric pressure 'Patm' also acts on the top of this piston. The horizontal pipe continues and its cross-section narrows down at its open end, labeled (2), where the fluid flows out. Atmospheric pressure 'Patm' is indicated at the exit (2). Dashed lines show the trajectory of the fluid exiting the pipe.
+
+Transcription
+"Σχήμα 2"
