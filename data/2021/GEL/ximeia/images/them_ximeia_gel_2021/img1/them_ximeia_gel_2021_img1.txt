@@ -1,0 +1,2 @@
+Description
+Figure 1: A two-column table listing different conjugate bases and their corresponding pKₐ values. The left column is labeled X⁻, representing the conjugate bases, while the right column is labeled pKₐ. The entries include F⁻ with pKₐ value 2,7, NO₂⁻ with 1,7, HO⁻ with 3,6, and C₆H₅⁻ with 4,2. The table presents a comparison of acidity strength based on the pKₐ values of the corresponding acids.

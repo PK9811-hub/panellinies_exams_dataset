@@ -1,0 +1,2 @@
+Description
+Figure 4: A titration curve showing the variation of pH as a function of the added volume of HCl (V_HCl). The vertical axis is labeled pH, and the horizontal axis represents the volume of HCl added. The curve starts at a relatively high pH and gradually decreases as more acid is added. A steep drop in pH occurs near the equivalence point, which is marked by a point labeled Ι.Σ.. A dashed vertical line indicates the volume at which this equivalence point occurs. After this point, the curve continues to decrease and approaches a lower pH value.
