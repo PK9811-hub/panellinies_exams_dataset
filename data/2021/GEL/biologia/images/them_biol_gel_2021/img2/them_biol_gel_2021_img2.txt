@@ -1,0 +1,5 @@
+Description
+Figure 2: Two circular diagrams representing plasmids labeled Πλασμίδιο Α and Πλασμίδιο Β. Each plasmid is depicted as a double-stranded circular DNA molecule. Specific nucleotide sequences are indicated along the circular structure. In both plasmids, the sequences GAATTC and CTTAAG appear at two positions on the circle, representing recognition sites of a restriction enzyme. In Πλασμίδιο Α, the positions of these sequences are shown at the top and bottom of the circle, while in Πλασμίδιο Β, similar sequences are shown but arranged in a different orientation along the plasmid. The diagram illustrates the presence and arrangement of restriction sites in two plasmids.
+
+Transcription
+Figure 2: "GAATTC",\n"CTTAAG",\n"Πλασμίδιο Α",\n"CTTAAG",\n"GAATTC",\n"GAATTC",\n"CTTAAG",\n"Πλασμίδιο Β",\n"GAATTC",\n"CTTAAG"
