@@ -1,0 +1,2 @@
+Description
+Figure 5: A diagram showing two restriction enzyme recognition sites labeled ΠΕ-I and ΠΕ-II. For ΠΕ-I, a double-stranded DNA sequence is presented with the upper strand oriented 5′ to 3′ and the lower strand 3′ to 5′. Arrows indicate the cleavage positions within the sequence CAATTG / GTTAAC. For ΠΕ-II, another double-stranded DNA sequence is shown, again with orientation labels, and arrows marking the cleavage points within the sequence GGATCC / CCTAGG. The diagram illustrates how two different restriction enzymes recognize and cut specific DNA sequences.

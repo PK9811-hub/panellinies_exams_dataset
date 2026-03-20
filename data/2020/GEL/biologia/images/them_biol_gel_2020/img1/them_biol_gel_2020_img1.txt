@@ -1,0 +1,5 @@
+Description
+Figure 1: A table comparing the number of chromosomes and the number of DNA molecules in the nucleus for different cellular stages. The columns are labeled «Αριθμός χρωμοσωμάτων» and «Αριθμός μορίων DNA πυρήνα». Two rows are provided: «Μετάφαση μίτωσης» and «Θυγατρικό κύτταρο που προκύπτει από την Μείωση I». The corresponding cells for both categories are left blank, indicating that the values are to be completed.
+
+Transcription
+Figure 1: "Αριθμός χρωμοσωμάτων",\n"Αριθμός μορίων DNA πυρήνα",\n"Μετάφαση μίτωσης",\n"Θυγατρικό κύτταρο που προκύπτει από την Μείωση I"
