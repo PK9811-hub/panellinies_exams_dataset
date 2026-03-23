@@ -2,4 +2,39 @@ Description
 Figure 1: A structured table presenting production data with four columns labeled (in Greek) Number of Workers (L), Total Product (Q), Average Product (AP), and Marginal Product (MP). The table contains eight rows including the header. In the first row, when L equals 0, Q is 0 and both AP and MP are indicated with dashes, showing they are undefined at zero labor. When L equals 10, Q is 200, AP is 20, and MP is 20. The next row shows a missing value for labor, Q equals 800, AP is missing, and MP is 60. For L equal to 30, Q is 1,500, AP is 50, and MP is 70. At L equal to 40, the values for Q, AP, and MP are all missing. When L equals 50, Q and AP are missing while MP is 40. At L equal to 60, Q and AP are missing and MP is 0. Finally, when L equals 70, Q is 2,100, AP is 30, and MP is missing. The table is displayed with clear grid lines and centered numerical entries, and several cells contain semicolons indicating missing data.
 
 Transcription
-Figure 1: "Αριθμός Εργαζομένων (L)",\n"Συνολικό Προϊόν (Q)",\n"Μέσο Προϊόν (AP)",\n"Οριακό Προϊόν (MP)",\n"0",\n"0",\n"-",\n"-",\n"10",\n"200",\n"20",\n"20",\n";",\n"800",\n";",\n"60",\n"30",\n"1.500",\n"50",\n"70",\n"40",\n";",\n";",\n";",\n"50",\n";",\n";",\n"40",\n"60",\n";",\n";",\n"0",\n"70",\n"2.100",\n"30",\n";"
+Αριθμός Εργαζομένων (L)
+Συνολικό Προϊόν (Q)
+Μέσο Προϊόν (AP)
+Οριακό Προϊόν (MP)
+0
+0
+-
+-
+10
+200
+20
+20
+;
+800
+;
+60
+30
+1.500
+50
+70
+40
+;
+;
+;
+50
+;
+;
+40
+60
+;
+;
+0
+70
+2.100
+30
+;

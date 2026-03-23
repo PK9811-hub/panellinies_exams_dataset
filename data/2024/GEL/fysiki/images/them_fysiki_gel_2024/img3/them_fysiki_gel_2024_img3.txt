@@ -2,4 +2,12 @@ Description
 A schematic diagram illustrating the photoelectric effect and the subsequent motion of electrons in a magnetic field. On the left, wavy arrows labeled 'light rays' strike a rectangular hatched block labeled 'metal surface'. Electrons (e-) are ejected from the surface moving to the right. They enter a dashed rectangular region defined by vertices A, Γ, Δ, Z representing a 'High Vacuum Space'. Inside this region, there is a uniform magnetic field B indicated by circles with crosses (directed into the page). An electron velocity vector v is shown pointing to the right, perpendicular to the magnetic field lines.
 
 Transcription
-"ακτίνες φωτός",\n"μεταλλική επιφάνεια",\n"e-",\n"Χώρος Υψηλού Κενού",\n"A",\n"Γ",\n"Δ",\n"Z",\n"B"
+ακτίνες φωτός
+μεταλλική επιφάνεια
+e-
+Χώρος Υψηλού Κενού
+A
+Γ
+Δ
+Z
+B

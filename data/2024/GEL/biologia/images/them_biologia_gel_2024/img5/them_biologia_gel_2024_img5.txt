@@ -2,4 +2,99 @@ Description
 Figure 5: A complete genetic code table that correlates mRNA codons with their corresponding amino acids. The table is organized according to the three bases of each codon. Along the left vertical side, the label “Πρώτο γράμμα” (First letter) indicates the first nucleotide of the codon, arranged in four large horizontal sections: U, C, A, and G. Across the top, the label “Δεύτερο γράμμα” (Second letter) identifies the second nucleotide, also organized into four columns: U, C, A, and G. On the right vertical side, the label “Τρίτο γράμμα” (Third letter) shows the possible third nucleotides (U, C, A, G) listed vertically for each codon group. Within the grid, each cell contains four codons sharing the same first two bases but differing in the third base. Next to each codon group, the corresponding amino acid is written in Greek along with its three-letter abbreviation in parentheses. For example, UUU and UUC code for phenylalanine (phe), UUA and UUG code for leucine (leu), and AUG codes for methionine (met) and is marked as the start codon (έναρξη). The three stop codons (λήξη) are also indicated: UAA, UAG, and UGA. Other amino acids shown include serine (ser), tyrosine (tyr), cysteine (cys), tryptophan (trp), proline (pro), histidine (his), glutamine (gln), arginine (arg), isoleucine (ile), threonine (thr), asparagine (asn), lysine (lys), valine (val), alanine (ala), aspartic acid (asp), glutamic acid (glu), and glycine (gly). The table is displayed with clear grid lines and structured sections, systematically presenting all 64 possible mRNA codons and their corresponding amino acids.
 
 Transcription
-Figure 5: "Δεύτερο γράμμα",\n"Πρώτο γράμμα",\n"Τρίτο γράμμα",\n"U",\n"C",\n"A",\n"G",\n"UUU",\n"UUC",\n"Φαινυλαλανίνη (phe)",\n"UUA",\n"UUG",\n"Λευκίνη (leu)",\n"UCU",\n"UCC",\n"UCA",\n"UCG",\n"Σερίνη (ser)",\n"UAU",\n"UAC",\n"Τυροσίνη (tyr)",\n"UAA",\n"UAG",\n"λήξη",\n"UGU",\n"UGC",\n"κυστεΐνη (cys)",\n"UGA",\n"λήξη",\n"UGG",\n"Τρυπτοφάνη (trp)",\n"CUU",\n"CUC",\n"CUA",\n"CUG",\n"Λευκίνη (leu)",\n"CCU",\n"CCC",\n"CCA",\n"CCG",\n"Προλίνη (pro)",\n"CAU",\n"CAC",\n"Ιστιδίνη (his)",\n"CAA",\n"CAG",\n"Γλουταμίνη (gln)",\n"CGU",\n"CGC",\n"CGA",\n"CGG",\n"Αργινίνη (arg)",\n"AUU",\n"AUC",\n"AUA",\n"Ισολευκίνη (ile)",\n"AUG",\n"Μεθειονίνη (met) έναρξη",\n"ACU",\n"ACC",\n"ACA",\n"ACG",\n"Θρεονίνη (thr)",\n"AAU",\n"AAC",\n"Ασπαραγίνη (asn)",\n"AAA",\n"AAG",\n"Λυσίνη (lys)",\n"AGU",\n"AGC",\n"Σερίνη (ser)",\n"AGA",\n"AGG",\n"Αργινίνη (arg)",\n"GUU",\n"GUC",\n"GUA",\n"GUG",\n"βαλίνη (val)",\n"GCU",\n"GCC",\n"GCA",\n"GCG",\n"Αλανίνη (ala)",\n"GAU",\n"GAC",\n"Ασπαρτικό οξύ (asp)",\n"GAA",\n"GAG",\n"γλουταμινικό οξύ (glu)",\n"GGU",\n"GGC",\n"GGA",\n"GGG",\n"Γλυκίνη (gly)"
+Δεύτερο γράμμα
+Πρώτο γράμμα
+Τρίτο γράμμα
+U
+C
+A
+G
+UUU
+UUC
+Φαινυλαλανίνη (phe)
+UUA
+UUG
+Λευκίνη (leu)
+UCU
+UCC
+UCA
+UCG
+Σερίνη (ser)
+UAU
+UAC
+Τυροσίνη (tyr)
+UAA
+UAG
+λήξη
+UGU
+UGC
+κυστεΐνη (cys)
+UGA
+λήξη
+UGG
+Τρυπτοφάνη (trp)
+CUU
+CUC
+CUA
+CUG
+Λευκίνη (leu)
+CCU
+CCC
+CCA
+CCG
+Προλίνη (pro)
+CAU
+CAC
+Ιστιδίνη (his)
+CAA
+CAG
+Γλουταμίνη (gln)
+CGU
+CGC
+CGA
+CGG
+Αργινίνη (arg)
+AUU
+AUC
+AUA
+Ισολευκίνη (ile)
+AUG
+Μεθειονίνη (met) έναρξη
+ACU
+ACC
+ACA
+ACG
+Θρεονίνη (thr)
+AAU
+AAC
+Ασπαραγίνη (asn)
+AAA
+AAG
+Λυσίνη (lys)
+AGU
+AGC
+Σερίνη (ser)
+AGA
+AGG
+Αργινίνη (arg)
+GUU
+GUC
+GUA
+GUG
+βαλίνη (val)
+GCU
+GCC
+GCA
+GCG
+Αλανίνη (ala)
+GAU
+GAC
+Ασπαρτικό οξύ (asp)
+GAA
+GAG
+γλουταμινικό οξύ (glu)
+GGU
+GGC
+GGA
+GGG
+Γλυκίνη (gly)

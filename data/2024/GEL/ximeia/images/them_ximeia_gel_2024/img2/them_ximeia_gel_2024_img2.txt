@@ -2,4 +2,13 @@ Description
 Figure 2: A table with two columns presenting chemical compounds and their corresponding boiling points. The column headers, written in Greek, are “Ένωση” (Compound) and “Σημείο Βρασμού” (Boiling Point). Four compounds are listed in the first column: LiH, HF, HBr, and HCl. In the second column, their boiling points are given in degrees Celsius. LiH has a boiling point of 1270°C, HF has a boiling point of 23°C, HBr has a boiling point of −66°C, and HCl has a boiling point of −82°C. The table is displayed with clear grid lines separating the rows and columns, and all entries are centered within their respective cells.
 
 Transcription
-Figure 2: "Ένωση",\n"Σημείο Βρασμού",\n"LiH",\n"1270°C",\n"HF",\n"23°C",\n"HBr",\n"-66°C",\n"HCl",\n"-82°C"
+Ένωση
+Σημείο Βρασμού
+LiH
+1270°C
+HF
+23°C
+HBr
+-66°C
+HCl
+-82°C
