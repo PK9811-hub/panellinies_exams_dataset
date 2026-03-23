@@ -160,13 +160,13 @@
     "images": [
         {
         "path": "images/them_fysiki_gel_2025/img1/them_fysiki_gel_2025_img1.png",
-        "description": "Figure 1: Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).",
-        "transcription": []
+        "description": "Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).",
+        "transcription": ["Σχήμα 1"]
         },
         {
         "path": "images/them_fysiki_gel_2025/img2/them_fysiki_gel_2025_img2.png",
-        "description": "Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i. The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii. The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii. The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
-        "transcription": []
+        "description": "Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i. The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii. The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii. The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
+        "transcription": ["Σχήμα 2"]
         }
       ],
         "mark": [
@@ -181,13 +181,13 @@
     "images": [
         {
         "path": "images/them_fysiki_gel_2025/img1/them_fysiki_gel_2025_img1.png",
-        "description": "Figure 1: Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).",
-        "transcription": []
+        "description": "Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).",
+        "transcription": ["Σχήμα 1"]
         },
         {
         "path": "images/them_fysiki_gel_2025/img2/them_fysiki_gel_2025_img2.png",
-        "description": "Figure 2: Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i. The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii. The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii. The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
-        "transcription": []
+        "description": "Three wave snapshots (i, ii, iii) in the region of points K, L, M, N.\n i. The wave forms a 'trough' (below the axis) between K and M (with L at the lowest point) and a 'crest' (above the axis) between M and N.\n ii. The wave forms a 'crest' between K and L and a 'trough' between L and N (with M at the lowest point).\n iii. The wave forms a 'crest' between K and M (with L at the highest point) and a 'trough' between M and N.",
+        "transcription": ["Σχήμα 2"]
         }
       ],
         "mark": [
@@ -226,8 +226,8 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
-        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
-        "transcription": []
+        "description": "A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": ["Σχήμα 3"]
       },
       {
         "path": "images/them_fysiki_gel_2025/img4/them_fysiki_gel_2025_img4.png",
@@ -247,8 +247,8 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
-        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
-        "transcription": []
+        "description": "A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": ["Σχήμα 3"]
       }
     ],
     "mark": [
@@ -263,8 +263,8 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
-        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
-        "transcription": []
+        "description": "A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": ["Σχήμα 3"]
       }
     ],
     "mark": [
@@ -279,8 +279,8 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img3/them_fysiki_gel_2025_img3.png",
-        "description": "Figure 3: A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
-        "transcription": []
+        "description": "A physics circuit diagram showing a square conductive frame ΓΔHZΓ inside a vertical magnetic field B (pointing upwards). The frame rotates around a horizontal axis. Its terminals connect via slip rings Δ1, Δ2 and brushes to an external circuit. The external circuit contains a switch δ1, a vertical resistor rod KΛ of length l, another switch δ2, and a DC voltage source E connected to the rod KΛ. Parallel to KΛ is a straight wire XY carrying current I1.",
+        "transcription": ["Σχήμα 3"]
       }
     ],
     "mark": [
@@ -295,7 +295,7 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
-        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "description": "A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
         "transcription": []
       }
     ],
@@ -311,7 +311,7 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
-        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "description": "A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
         "transcription": []
       }
     ],
@@ -327,7 +327,7 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
-        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "description": "A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
         "transcription": []
       }
     ],
@@ -343,7 +343,7 @@
     "images": [
       {
         "path": "images/them_fysiki_gel_2025/img5/them_fysiki_gel_2025_img5.png",
-        "description": "Figure 5: A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
+        "description": "A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.",
         "transcription": []
       }
     ],
