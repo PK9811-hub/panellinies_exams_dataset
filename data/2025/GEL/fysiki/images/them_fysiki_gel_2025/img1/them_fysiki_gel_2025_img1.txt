@@ -2,4 +2,4 @@ Description
 Illustration of an elastic medium (string) along the horizontal axis x'x. Four equidistant points are marked on the axis: K, L, M, N (from left to right). At point M, there is a velocity vector u_M pointing downwards (negative direction).
 
 Transcription
-"Σχήμα 1"
+Σχήμα 1
