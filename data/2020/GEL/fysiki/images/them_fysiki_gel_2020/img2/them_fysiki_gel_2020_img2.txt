@@ -1,0 +1,5 @@
+Description
+A diagram showing a wheel of radius R rolling on a horizontal surface. The center of the wheel is labeled 'K'. Point 'A' is at the very top of the wheel. A horizontal dotted line passes through the center K. Point 'Γ' is located on this horizontal line to the left of the center. The distance from the center K to the edge is marked as 'R', and the distance from the center K to point Γ is marked as 'R/2'.
+
+Transcription
+"Σχήμα 2"
