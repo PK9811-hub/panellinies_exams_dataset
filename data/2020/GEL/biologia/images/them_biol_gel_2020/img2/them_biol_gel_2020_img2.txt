@@ -2,4 +2,9 @@ Description
 Figure 2: A graph showing the variation of antibody concentration (Συγκέντρωση αντιγόνου) as a function of time (Χρόνος (t)). The vertical axis represents concentration, while the horizontal axis represents time, starting from t₀. Curve A shows a rapid increase to a peak followed by a decline to zero. Curve B starts at a higher level, remains relatively constant for a short period, and then gradually decreases over time. A small initial segment labeled Γ appears near the origin, indicating an early phase before the rise of curve A. The graph illustrates different phases of immune response over time.
 
 Transcription
-Figure 2: "Συγκέντρωση αντιγόνου",\n"Χρόνος (t)",\n"t₀",\n"A",\n"B",\n"Γ"
+Συγκέντρωση αντιγόνου
+Χρόνος (t)
+t₀
+A
+B
+Γ

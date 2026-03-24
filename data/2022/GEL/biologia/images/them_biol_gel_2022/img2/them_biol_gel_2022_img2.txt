@@ -2,4 +2,14 @@ Description
 Figure 2: Two graphs showing the variation of DNA quantity over time for two different cells, labeled κύτταρο A and κύτταρο B. In both graphs, the vertical axis represents ποσότητα DNA (DNA quantity), while the horizontal axis represents χρόνος (time). In the first graph for κύτταρο A, the DNA quantity starts at α, increases to 2α, remains constant for a period, and then decreases back to α. In the second graph for κύτταρο B, the DNA quantity also begins at α, increases to 2α, and later decreases first to α and then further to α/2, indicated by a dashed reference line.
 
 Transcription
-Figure 2:"ποσότητα DNA",\n"2α",\n"α",\n"διάγραμμα για κύτταρο A",\n"χρόνος",\n"ποσότητα DNA",\n"2α",\n"α",\n"α/2",\n"διάγραμμα για κύτταρο B",\n"χρόνος"
+ποσότητα DNA
+2α
+α
+διάγραμμα για κύτταρο A
+χρόνος
+ποσότητα DNA
+2α
+α
+α/2
+διάγραμμα για κύτταρο B
+χρόνος

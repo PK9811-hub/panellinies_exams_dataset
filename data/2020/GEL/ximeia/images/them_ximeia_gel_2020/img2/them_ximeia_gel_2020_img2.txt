@@ -2,4 +2,13 @@ Description
 Figure 2: A graph showing the variation of reaction rates (Ταχύτητα Αντιδράσεων) as a function of time (Χρόνος). Two curves, υ₁ and υ₂, are shown initially: υ₁ starts at a high value and decreases over time, while υ₂ starts at zero and increases until both curves meet at a common point. This point is marked at time τ with a vertical dashed line. After time τ, five different possible behaviors are illustrated with curves labeled (α), (β), (γ), (δ), and (ε). Curves (α) and (β) increase to higher steady values, (γ) remains constant, while (δ) and (ε) decrease to lower values. The diagram represents different possible changes in reaction rates after a specific moment in time.
 
 Transcription
-Figure 2: "Ταχύτητα Αντιδράσεων",\n"Χρόνος",\n"υ₁",\n"υ₂",\n"τ",\n"(α)",\"(β)",\n"(γ)",\n"(δ)",\n"(ε)"
+Ταχύτητα Αντιδράσεων
+Χρόνος
+υ₁
+υ₂
+τ
+(α)
+(β)
+(γ)
+(δ)
+(ε)

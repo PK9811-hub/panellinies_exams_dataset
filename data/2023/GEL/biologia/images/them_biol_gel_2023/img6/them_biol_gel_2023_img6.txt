@@ -2,4 +2,7 @@ Description
 Figure 6: A diagram displaying two DNA strands labeled «αλυσίδα III» and «αλυσίδα IV». Each strand is represented by a sequence of nucleotide bases written as continuous strings of the letters A, T, C, and G. The sequence for αλυσίδα III appears on the first line, while the sequence for αλυσίδα IV appears on the second line below it. The figure presents the nucleotide arrangement of the two DNA strands.
 
 Transcription
-Figure 6: "αλυσίδα III:",\n"CCAGAGAGACGTATGCTACAACAGATATAAGATCCC",\n"αλυσίδα IV:",\n"GGTCTCTCTGCATACGATGTTGTCTATATTCTAGGG"
+αλυσίδα III:
+CCAGAGAGACGTATGCTACAACAGATATAAGATCCC
+αλυσίδα IV:
+GGTCTCTCTGCATACGATGTTGTCTATATTCTAGGG

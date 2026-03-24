@@ -2,4 +2,6 @@ Description
 Figure 5: A short nucleotide sequence labeled with strand orientation. The sequence is written from 3′ to 5′, indicated by the labels at the left and right ends. Between the orientation markers, the RNA sequence UAUCUG is displayed. The figure illustrates the directionality of a nucleic acid strand together with its nucleotide sequence.
 
 Transcription
-Figure 5: "3′",\n"UAUCUG",\n"5′"
+3′
+UAUCUG
+5′

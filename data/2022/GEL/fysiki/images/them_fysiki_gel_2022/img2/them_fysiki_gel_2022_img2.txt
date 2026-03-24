@@ -2,4 +2,4 @@ Description
 A cross-sectional diagram of a large open cylindrical tank filled with water resting on a horizontal floor. The total height of the water is H. There are two holes on the right vertical wall of the tank. Hole (1) has a cross-sectional area A and is located at a height of 5H/6 from the bottom. Hole (2) also has a cross-sectional area A and is located at a height of H/3 from the bottom. The atmospheric pressure Patm acts on the open top surface of the water and outside the holes. Dashed lines indicate the trajectory of the water flowing out of hole (1) towards the floor.
 
 Transcription
-"Σχήμα 2"
+Σχήμα 2

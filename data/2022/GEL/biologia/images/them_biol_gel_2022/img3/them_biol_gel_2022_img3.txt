@@ -2,4 +2,13 @@ Description
 Figure 3: A table showing bacterial resistance to antibiotics. The first column is labeled «Βακτήριο» and «Ανθεκτικότητα σε Αντιβιοτικά». The following columns correspond to three bacterial strains labeled A, B, and Γ. Under strain A, the bacterium is resistant to αμπικιλίνη and στρεπτομυκίνη. Under strain B, the bacterium is resistant to καναμυκίνη. Under strain Γ, the bacterium is resistant to αμπικιλίνη and καναμυκίνη. The table summarizes the antibiotic resistance profile for each bacterial strain.
 
 Transcription
-Figure 3:"Βακτήριο",\n"Ανθεκτικότητα σε Αντιβιοτικά",\n"A",\n"αμπικιλίνη",\n"στρεπτομυκίνη",\n"B",\n"καναμυκίνη",\n"Γ",\n"αμπικιλίνη",\n"καναμυκίνη"
+Βακτήριο
+Ανθεκτικότητα σε Αντιβιοτικά
+A
+αμπικιλίνη
+στρεπτομυκίνη
+B
+καναμυκίνη
+Γ
+αμπικιλίνη
+καναμυκίνη

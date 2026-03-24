@@ -2,4 +2,4 @@ Description
 A diagram showing two spheres on a horizontal surface before a collision. Sphere m1 on the left is moving to the right with momentum p1. Sphere m2 on the right is stationary, with velocity u2 = 0.
 
 Transcription
-"Σχήμα 3"
+Σχήμα 3

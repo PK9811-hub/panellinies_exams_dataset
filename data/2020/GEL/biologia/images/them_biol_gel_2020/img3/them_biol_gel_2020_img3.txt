@@ -2,4 +2,18 @@ Description
 Figure 3: A table presenting data for different species. The columns are labeled «Είδος», «Αριθμός Ατόμων», and «Μέση βιομάζα ατόμου (kg)». Four species are listed: Π, Κ, Λ, and Σ. For species Π, the number of individuals is 20.000 and the average biomass per individual is 0,25 kg. For Κ, there are 5 individuals with an average biomass of 10.000 kg. For Λ, there are 10 individuals with an average biomass of 5 kg. For Σ, there are 200 individuals with an average biomass of 2,5 kg. The table summarizes population size and biomass for each species.
 
 Transcription
-Figure 1: "Είδος",\n"Αριθμός Ατόμων",\n"Μέση βιομάζα ατόμου (kg)",\n"Π",\n"20.000",\n"0,25",\n"Κ",\n"5",\n"10.000",\n"Λ",\n"10",\n"5",\n"Σ",\n"200",\n"2,5"
+Είδος
+Αριθμός Ατόμων
+Μέση βιομάζα ατόμου (kg)
+Π
+20.000
+0,25
+Κ
+5
+10.000
+Λ
+10
+5
+Σ
+200
+2,5

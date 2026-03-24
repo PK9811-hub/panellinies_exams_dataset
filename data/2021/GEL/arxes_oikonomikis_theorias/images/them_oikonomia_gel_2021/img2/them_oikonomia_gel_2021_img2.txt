@@ -2,5 +2,35 @@ Description
 Figure 2: A table presenting production data in relation to the quantity of labor. The columns are labeled «Ποσότητα Εργασίας (L)», «Συνολικό Προϊόν (Q)», «Μέσο Προϊόν (AP)», and «Οριακό Προϊόν (MP)». The table includes values for labor quantities from 0 to 6. For L = 0, total product is 0, while AP and MP are not defined (shown as –). For L = 1, Q = 8, AP = 8, MP = 8. For L = 2, Q = 22, AP = 11, MP = 14. For L = 3, Q = 60, AP = 20, MP = 38. For L = 4, Q = 96, AP is missing (;), and MP = 36. For L = 5, all values are missing (;). For L = 6, Q = 132, AP = 22, and MP is missing (;).
 
 Transcription
-Figure 2:"Ποσότητα Εργασίας (L)",\n"Συνολικό Προϊόν (Q)",\n"Μέσο Προϊόν (AP)",\n"Οριακό Προϊόν (MP)",\n"0",\n"0",\n"–",\n"–",\n"1",\n"8",\n"8",\n"8",\n"2",\n"22",\n"11",\n"14",\n"3",\n"60",\n"20",\n"38",\n"4",\n
-"96",\n";",\n"36",\n"5",\n";",\n";",\n";",\n"6",\n"132",\n"22",\n";"
+Ποσότητα Εργασίας (L)
+Συνολικό Προϊόν (Q)
+Μέσο Προϊόν (AP)
+Οριακό Προϊόν (MP)
+0
+0
+–
+–
+1
+8
+8
+8
+2
+22
+11
+14
+3
+60
+20
+38
+4
+96
+;
+36
+5
+;
+;
+;
+6
+132
+22
+;

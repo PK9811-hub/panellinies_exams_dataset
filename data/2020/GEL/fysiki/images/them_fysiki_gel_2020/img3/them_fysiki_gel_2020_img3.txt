@@ -2,4 +2,4 @@ Description
 A diagram showing a large open tank with vertical walls filled with water to a height H. A tap labeled B pours water into the top. Water leaks from a small hole O on the right vertical wall at height h1, following a parabolic trajectory to hit the horizontal ground at point Δ, which is at a horizontal distance S from the tank's base corner Γ. A horizontal rod EZ is attached to the right tank wall at point E (height h2), extending to point Z, which lies exactly on the water's parabolic trajectory.
 
 Transcription
-"Σχήμα 3"
+Σχήμα 3

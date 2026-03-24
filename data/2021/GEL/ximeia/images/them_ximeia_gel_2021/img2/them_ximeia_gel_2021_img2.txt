@@ -2,4 +2,15 @@ Description
 Figure 2: Two structural diagrams labeled Δομή Α and Δομή Β, representing coordination compounds centered around a platinum (Pt) atom. In both structures, the platinum atom is bonded to two chlorine (Cl) ligands and two ammonia (NH₃) ligands. In Δομή Α, the two chlorine atoms are positioned opposite each other (trans configuration), while the two ammonia groups are also opposite each other. In Δομή Β, the chlorine atoms are adjacent to each other (cis configuration), and the ammonia groups occupy the remaining adjacent positions. The diagrams illustrate geometric isomerism in square planar complexes.
 
 Transcription
-Figure 2: "Cl",\n"NH₃",\n"Pt",\n"H₃N",\n"Cl",\n"Δομή Α",\n"Cl",\n"NH₃",\n"Pt",\n"Cl",\n"NH₃",\n"Δομή Β"
+Cl
+NH₃
+Pt
+H₃N
+Cl
+Δομή Α
+Cl
+NH₃
+Pt
+Cl
+NH₃
+Δομή Β

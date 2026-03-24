@@ -2,4 +2,8 @@ Description
 A diagram illustrating a complex mechanics problem. A uniform rod AΓ is hinged at A on a horizontal plane and leans against a smooth vertical wall at point Γ, making an angle θ=45° with the horizontal. Its midpoint is O. At point K, a distance d from O along the rod, a horizontal string (1) is attached. This string wraps around the inner cylinder of a fixed double-cylinder pulley. The inner cylinder has radius r, and the outer has radius R. Another string (2) wraps around the outer cylinder and hangs vertically, holding a mass Σ2 (m2). Directly below Σ2, separated by a vertical distance h, is another mass Σ1 (m1). Mass Σ1 rests on an inclined plane with angle φ=30°. Σ1 is attached to a spring with constant k, which is anchored at the top of the incline at Z. An axis pointing downwards along the incline is labeled (+).
 
 Transcription
-"νήμα (1)",\n"νήμα (2)",\n"οριζόντιο επίπεδο",\n"λείος κατακόρυφος τοίχος",\n"Σχήμα 5"
+νήμα (1)
+νήμα (2)
+οριζόντιο επίπεδο
+λείος κατακόρυφος τοίχος
+Σχήμα 5

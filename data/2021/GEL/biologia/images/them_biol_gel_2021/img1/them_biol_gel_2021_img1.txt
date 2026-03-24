@@ -2,4 +2,13 @@ Description
 Figure 1: A diagram showing two complementary DNA strands labeled A and B at the left and right ends, respectively. The upper strand is oriented from 3′ to 5′, while the lower strand is oriented from 5′ to 3′. Specific regions of the sequences are highlighted and numbered 1, 2, and 3. These numbered segments correspond to particular subsequences within the DNA strands, indicated by underlining. The diagram presents the nucleotide sequences using the bases A, T, C, and G, illustrating both strand orientation and specific marked regions of interest.
 
 Transcription
-Figure 1: "A",\n"3′",\n"CACTAGCCAGCTTCGCGAATAGCTACGGTTCG",\n"5′",\n"GTGATCGGTCGAAGCGCTTATCGATGCCAAGC",\n"3′",\n"B",\n"1",\n"2",\n"3"
+A
+3′
+CACTAGCCAGCTTCGCGAATAGCTACGGTTCG
+5′
+GTGATCGGTCGAAGCGCTTATCGATGCCAAGC
+3′
+B
+1
+2
+3
