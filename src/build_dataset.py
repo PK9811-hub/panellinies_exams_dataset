@@ -122,7 +122,30 @@ def get_file_pairs(data_dir):
     return pairs
 
 # --- DATA TRANSFORMERS ---        
-
-
+#def detect_exercise_type
+#def unify_label
+#def find_answer_index
+#def extract_points
+#def apply_structural_tags 
+#def parse_image_txt
 
 # --- DATA CONSOLIDATION ---
+#def consolidate
+
+
+#Suggested columns for final df:
+#id
+#subject
+#format (multiple_choice, true_false, matching, fill_in_the_gaps, open_ended)
+#reference (none, passage, multimodal, table)
+#question
+#input
+#images
+#choices
+#answer_text
+#answer_index
+#image_description
+#image_transcription
+#points
+#year
+#admission_level
