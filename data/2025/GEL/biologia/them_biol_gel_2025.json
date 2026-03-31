@@ -170,6 +170,7 @@
     "id": "Γ1.β",
     "question": "Δυο κλώνοι $E.coli$, εκ των οποίων ο ένας είναι φυσιολογικός και ο άλλος μεταλλαγμένος, καλλιεργούνται σε θρεπτικό υλικό που αρχικά περιέχει μόνο γλυκόζη και μετά την κατανάλωσή της (χρονική στιγμή $t_1$) προστίθεται λακτόζη. Κατά τη διάρκεια της διαδικασίας μετράται συνεχώς η συγκέντρωση της $\\beta$-γαλακτοζιδάσης, οπότε κατασκευάζεται η καμπύλη της Εικόνας 1. Δίνεται ότι η $\\beta$-γαλακτοζιδάση και η περμεάση είναι ένζυμα που κωδικοποιούνται από δομικά γονίδια του οπερονίου της λακτόζης. Να εντοπίσετε τρεις διαφορετικές περιοχές του οπερονίου της λακτόζης, που αν υποστούν μετάλλαξη εξηγούν την καμπύλη του μεταλλαγμένου κλώνου.",
     "input": "",
+    "choices": [],
     "images": [
       {
         "path": "images/them_biol_gel_2025/img1/them_biol_gel_2025_img1.png",
@@ -185,6 +186,7 @@
     "id": "Γ1.γ",
     "question": "Δυο κλώνοι $E.coli$, εκ των οποίων ο ένας είναι φυσιολογικός και ο άλλος μεταλλαγμένος, καλλιεργούνται σε θρεπτικό υλικό που αρχικά περιέχει μόνο γλυκόζη και μετά την κατανάλωσή της (χρονική στιγμή $t_1$) προστίθεται λακτόζη. Κατά τη διάρκεια της διαδικασίας μετράται συνεχώς η συγκέντρωση της $\\beta$-γαλακτοζιδάσης, οπότε κατασκευάζεται η καμπύλη της Εικόνας 1. Δίνεται ότι η $\\beta$-γαλακτοζιδάση και η περμεάση είναι ένζυμα που κωδικοποιούνται από δομικά γονίδια του οπερονίου της λακτόζης. Να εξετάσετε αν οι προτεινόμενες μεταλλάξεις επηρεάζουν με τον ίδιο τρόπο τη συγκέντρωση της περμεάσης.",
     "input": "",
+    "choices": [],
     "images": [
       {
         "path": "images/them_biol_gel_2025/img1/them_biol_gel_2025_img1.png",
@@ -203,7 +205,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img2/them_biol_gel_2025_img2.png",
+        "path": "images/them_biol_gel_2025/img2/them_biol_gel_2025_img2.png",
         "description": "Figure 2: A genealogical pedigree chart displays two generations, labeled with Roman numerals I and II, to track the inheritance of a specific trait. In the first generation, an affected male, represented by a black square (I-1), and an affected female, represented by a black circle (I-2), are joined by a horizontal mating line. Their offspring in the second generation include an unaffected female, indicated by a white circle (II-1), and a second individual marked by a black diamond (II-2), which signifies an affected offspring of unspecified sex. The appearance of an unaffected child from two affected parents strongly suggests that the trait is inherited in an autosomal dominant manner, as both parents must be heterozygous to produce a phenotypically normal daughter.",
         "transcription": []
       }
@@ -276,12 +278,12 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.txt",
+        "path": "images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.png",
         "description": "Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence \"TAATTA\" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.",
         "transcription": ["...CAATTGAATGGCCCGTTTTGGATTAATTA...","αλυσίδα I","...GTTAACTTACCGGCAAAACCTAATTAAT...","αλυσίδα II"]
       },
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img4/them_biol_gel_2025_img4.png",
+        "path": "images/them_biol_gel_2025/img4/them_biol_gel_2025_img4.png",
         "description": "Figure 4: Two complementary DNA strands, labeled \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II), are presented as horizontal sequences of nitrogenous bases reading from left to right. Strand I begins with the sequence ...CAATTGAATGGC... and concludes with ...TTAATTA..., while strand II follows the strict base-pairing rules of the double helix, starting with ...GTTAACTTACCG... and ending with ...AATTAAT.... The presence of ellipses at both ends of the strings indicates that this segment is a snapshot taken from a much larger genomic sequence. By examining the alignment, it is clear that for every Adenine (A) on one strand, there is a Thymine (T) on the other, and every Cytosine (C) is paired with a Guanine (G).",
         "transcription": ["NH_2","... ile – glu – lys – arg – pro – trp – ile – asn ...","COOH"]
       }
@@ -297,12 +299,12 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.txt",
+        "path": "images/them_biol_gel_2025/img3/them_biol_gel_2025_img3.png",
         "description": "Figure 3: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The top sequence, strand I, begins with the partial sequence ...CAATTGAATGGC... and continues toward the right, while the bottom sequence, strand II, begins with ...GTTAACTTACCG... and aligns perfectly according to base-pairing rules ($A$ with $T$, and $C$ with $G$). Ellipses at both ends of the sequences indicate that these segments are parts of a larger DNA molecule. Within the code, specific biological signals can be identified, such as the sequence \"TAATTA\" at the end of strand I, which, depending on the orientation, might represent a regulatory region or a termination signal.",
         "transcription": ["...CAATTGAATGGCCCGTTTTGGATTAATTA...","αλυσίδα I","...GTTAACTTACCGGCAAAACCTAATTAAT...","αλυσίδα II"]
       },
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2025/GEL/GEL/biologia/images/them_biol_gel_2025/img5/them_biol_gel_2025_img5.png",
+        "path": "images/them_biol_gel_2025/img5/them_biol_gel_2025_img5.png",
         "description": "Figure 5: A single-pane graph depicts the concentration of the enzyme $\\beta$-galactosidase on the vertical axis relative to time, t, on the horizontal axis. Two distinct curves emerge from the origin, with a vertical dashed line marking a specific moment in time labeled $t_1$. Curve 1 remains at a baseline level of zero until $t_1$, after which it rises sharply in a sigmoidal fashion, indicating the induction of the lac operon and the subsequent rapid synthesis of the enzyme. Conversely, Curve 2 continues along the horizontal axis at a constant zero value even after $t_1$, representing a scenario where the enzyme is not produced, likely due to the absence of an inducer or the presence of a repressing factor like glucose.",
         "transcription": ["Γονίδιο ανθεκτικότητας στην αμπικιλίνη","Θέση έναρξης της αντιγραφής","ΠΕ-I","ΠΕ-II"]
       }

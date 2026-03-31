@@ -104,11 +104,14 @@ def merge_qa_data(json_path, md_path):
     return combined_data
 
 #folder_scanning and file_pairing returning a list of questions with their answers
-def get_file_pairs(data_dir):
+def get_file_pairs(data_dir, target_school=None):
     data_dir = Path(data_dir)
     pairs = []
     
     for json_path in data_dir.rglob("*.json"):
+        if target_school and target_school not in json_path.parts:
+            continue
+        
         json_filename = json_path.name
         md_filename = json_filename.replace("them_", "apant_").replace(".json", ".md")
         
