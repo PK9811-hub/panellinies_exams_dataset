@@ -135,21 +135,22 @@ def detect_exercise_type (q_text, q_choices):
     else:
         choices_list=[]
     
+        #fill_in_the_gaps
+    if "κενά" in question_text or "...." in question_text:
+        return "fill_in_the_gaps"
+    
     #open_ended
     if len(choices_list) == 0:
         return "open_ended"
     
     #true_false
-    for choice in choices_list:
-        current_choice = str(choice).lower()
-        true_false_keywords = "σωστό" in current_choice or "λάθος" in current_choice or "αληθής" in current_choice or "ψευδής" in current_choice
+    if len(choices_list) <=2:
+        for choice in choices_list:
+            current_choice = str(choice).lower()
+            true_false_keywords = "σωστό" in current_choice or "λάθος" in current_choice or "αληθής" in current_choice or "ψευδής" in current_choice
         
-        if true_false_keywords:
-            return "true_false"
-    
-    #fill_in_the_gaps
-    if "κενά" in question_text or "...." in question_text:
-        return "fill_in_the_gaps"
+            if true_false_keywords:
+                return "true_false"
     
     #matching
     has_keyword=False
