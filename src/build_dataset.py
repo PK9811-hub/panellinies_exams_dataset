@@ -125,7 +125,53 @@ def get_file_pairs(data_dir, target_school=None):
     return pairs
 
 # --- DATA TRANSFORMERS ---        
-#def detect_exercise_type
+def detect_exercise_type (q_text, q_choices):
+    if q_text:
+        question_text = str(q_text).lower() 
+    else:
+        question_text=""
+    if q_choices:
+        choices_list = list(q_choices)
+    else:
+        choices_list=[]
+    
+    #open_ended
+    if len(choices_list) == 0:
+        return "open_ended"
+    
+    #true_false
+    for choice in choices_list:
+        current_choice = str(choice).lower()
+        true_false_keywords = "σωστό" in current_choice or "λάθος" in current_choice or "αληθής" in current_choice or "ψευδής" in current_choice
+        
+        if true_false_keywords:
+            return "true_false"
+    
+    #fill_in_the_gaps
+    if "κενά" in question_text or "...." in question_text:
+        return "fill_in_the_gaps"
+    
+    #matching
+    has_keyword=False
+    if "στήλη" in question_text or "στήλης" in question_text:
+        has_keyword=True
+    
+    has_numbers=False
+    has_letters=False
+    
+    for choice in choices_list:
+        num_pattern = re.match(r'^\d+\.', str(choice).strip())
+        if num_pattern:
+            has_numbers=True
+        letter_pattern = re.match(r'^[α-ω]\.', str(choice).strip().lower())
+        if letter_pattern:
+            has_letters=True
+    
+    if has_keyword==True and has_numbers==True and has_letters==True:
+        return "matching"
+
+    return "multiple_choice"
+
 #def unify_label
 #def find_answer_index
 #def extract_points
