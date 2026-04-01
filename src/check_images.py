@@ -18,8 +18,11 @@ def check_image_paths():
     missing_images = []
     total_images = 0
     checked_files = 0
+    total_ids_checked = 0
 
     for json_path in data_path.rglob("*.json"):
+        if "GEL" not in json_path.parts:
+            continue
         checked_files += 1
     
         with open (json_path, "r", encoding="utf-8") as f:
@@ -29,27 +32,28 @@ def check_image_paths():
             continue
         
         for entry in data:
+            total_ids_checked += 1
             images_list = entry.get("images", [])
             
-        for image_dict in images_list:
-            total_images += 1
-            img_rel_path = image_dict.get("path", "")
+            for image_dict in images_list:
+                total_images += 1
+                img_rel_path = image_dict.get("path", "")
             
-            if img_rel_path == "":
-                continue
+                if img_rel_path == "":
+                    continue
         
-            absolute_img_path = json_path.parent / img_rel_path
+                absolute_img_path = json_path.parent / img_rel_path
             
-            if not absolute_img_path.exists():
-                missing_images.append(
-                    {"file": json_path.name,
-                     "id": entry.get("id", "Άγνωστο ID"),
-                     "path": img_rel_path}
-                     )
-                logger.warning(f"Δε βρέθηκε εικόνα για το αρχείο {json_path}.")
+                if not absolute_img_path.exists():
+                    missing_images.append(
+                        {"file": json_path.name,
+                        "id": entry.get("id", "Άγνωστο ID"),
+                        "path": img_rel_path}
+                        )
+                    logger.warning(f"Δε βρέθηκε εικόνα για το αρχείο {json_path}.")
 
     print(f"\nΣυνολικά αρχεία JSON που ελέγχθηκαν: {checked_files}")
-    print(f"Συνολικές αναφορές σε εικόνες που βρέθηκαν: {total_images}")
+    print(f"Συνολικά IDs (ερωτήσεις) που σαρώθηκαν: {total_ids_checked}")
 
     if len(missing_images) > 0:
         logger.warning(f"ΠΡΟΣΟΧΗ! Βρέθηκαν {len(missing_images)} χαμένες εικόνες:")
