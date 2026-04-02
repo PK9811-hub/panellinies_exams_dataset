@@ -145,8 +145,8 @@
     ]
   },
   {
-    "id": "B1.γ",
-    "question": "Στο παρακάτω σχήμα αποτυπώνεται η ενέργεια πρώτου ιοντισμού ($E_{i1}$) τεσσάρων διαδοχικών χημικών στοιχείων σε συνάρτηση με τον ατομικό τους αριθμό (Ζ). \nΟι ατομικοί αριθμοί των στοιχείων Σ1, Σ2, Σ3, Σ4 μπορεί να είναι, αντίστοιχα:\n\nΝα επιλέξετε τη σωστή απάντηση και να αιτιολογήσετε την επιλογή σας.",
+    "id": "B1.γ.1",
+    "question": "Στο παρακάτω σχήμα αποτυπώνεται η ενέργεια πρώτου ιοντισμού ($E_{i1}$) τεσσάρων διαδοχικών χημικών στοιχείων σε συνάρτηση με τον ατομικό τους αριθμό (Ζ). \nΟι ατομικοί αριθμοί των στοιχείων Σ1, Σ2, Σ3, Σ4 μπορεί να είναι, αντίστοιχα:\n\nΝα επιλέξετε τη σωστή απάντηση.",
     "input": "",
     "choices": [
       "i) 17, 18, 19, 20",
@@ -161,7 +161,23 @@
       }
     ],
     "mark": [
-      "Μονάδες 3"
+      "Μονάδες 1"
+    ]
+  },
+  {
+    "id": "B1.γ.2",
+    "question": "Στο παρακάτω σχήμα αποτυπώνεται η ενέργεια πρώτου ιοντισμού ($E_{i1}$) τεσσάρων διαδοχικών χημικών στοιχείων σε συνάρτηση με τον ατομικό τους αριθμό (Ζ). \nΟι ατομικοί αριθμοί των στοιχείων Σ1, Σ2, Σ3, Σ4 μπορεί να είναι, αντίστοιχα: i) 17, 18, 19, 20, ii) 16, 17, 18, 19, iii) 18, 19, 20, 21.\n\nΝα επιλέξετε τη σωστή απάντηση και να αιτιολογήσετε την επιλογή σας.",
+    "input": "",
+    "choices": [],
+    "images": [
+      {
+        "path": "images/them_ximeia_gel_2024/img1/them_ximeia_gel_2024_img1.png",
+        "description": "Figure 1: A two-dimensional graph illustrating the first ionization energy (Ei₁) of four consecutive chemical elements as a function of their atomic number (Z). The vertical axis is labeled Ei₁, representing the first ionization energy, while the horizontal axis is labeled Z, representing the atomic number. Four points are plotted on the graph and labeled Σ1, Σ2, Σ3, and Σ4, corresponding to the four successive elements. The points are arranged from left to right in increasing atomic number. From Σ1 to Σ3, the ionization energy increases progressively, as each point is positioned higher than the previous one. However, Σ4, although further to the right (indicating a higher atomic number), is positioned significantly lower than Σ3, showing a noticeable decrease in ionization energy compared to the preceding element. The graph has a simple layout with clear axes and isolated data points marked by solid dots.",
+        "transcription": []
+      }
+    ],
+    "mark": [
+      "Μονάδες 2"
     ]
   },
   {

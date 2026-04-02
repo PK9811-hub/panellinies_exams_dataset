@@ -173,11 +173,37 @@ def detect_exercise_type (q_text, q_choices):
 
     return "multiple_choice"
 
-#def unify_label
-#def find_answer_index
+def unify_label(answer_text, form_type):
+    if form_type != 'multiple_choice' and form_type != "true_false":
+        return answer_text
+    
+    clean_ans = str(answer_text).replace(".","").replace(")","").replace("(","").strip().lower()
+    mapping = {"α": "A", "β": "B", "γ": "C", "δ": "D", "ε": "E", "i": "A", "ii": "B", "iii": "C", "iv": "D", "σωστό": "True", "λάθος": "False"}
+    
+    return mapping.get(clean_ans, clean_ans)
+
+def find_answer_index(choices, answer_text):
+    if choices == [] or answer_text == "":
+        return None
+    
+    answer_str = str(answer_text).strip().lower()
+    
+    for idx, choice in enumerate(choices):
+        choice_str = str(choice).strip().lower()
+        
+        if choice_str == answer_str:
+            return idx
+            
+        if choice_str.startswith(f"{answer_str}.") or choice_str.startswith(f"{answer_str})") or choice_str.startswith(f"{answer_str} "):
+            return idx
+            
+        if choice_str.endswith(answer_str):
+            return idx
+            
+    return None     
+
 #def extract_points
 #def apply_structural_tags 
-#def parse_image_txt
 
 # --- DATA CONSOLIDATION ---
 #def consolidate
