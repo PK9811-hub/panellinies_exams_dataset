@@ -202,8 +202,22 @@ def find_answer_index(choices, answer_text):
             
     return None     
 
-#def extract_points
-#def apply_structural_tags 
+def apply_reference_tag(item):
+    image_urls = item.get("images", [])
+    input_text = str(item.get("input", "")).lower()
+    subj = str(item.get("subject", "")).lower()
+    
+    if image_urls != []:
+        return "multimodal"
+    
+    elif "πίνακα" in input_text or "πίνακας" in input_text:
+        return "table"
+    
+    elif len(input_text) > 200 and subj in ["arxaia", "istoria", "latinika", "nea_ellinika"]:
+        return "passage"
+    
+    else:
+        return "none"    
 
 # --- DATA CONSOLIDATION ---
 #def consolidate
