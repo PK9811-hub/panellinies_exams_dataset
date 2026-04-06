@@ -24,6 +24,14 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 # --- HELPER FUNCTIONS ---
+# --- HELPER FUNCTIONS ---
+
+def normalize_for_compare(value):
+    if pd.isna(value):
+        return ""
+    if isinstance(value, list):
+        return str([str(x).strip() for x in value])
+    return str(value).strip()
 
 # --- DATA LOADERS ---
 #identification of year, school_type, and subject based on filepath
@@ -362,6 +370,95 @@ def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx")
     return df
 
 #def compare
+def compare(current_df, reference_file):
+    """Συγκρίνει το τρέχον consolidated dataset με ένα reference Excel αρχείο."""
+    if current_df.empty:
+        logger.error("❌ Δεν μπορεί να γίνει σύγκριση: το current dataset είναι κενό.")
+        return
+
+    reference_file = Path(reference_file)
+
+    if not reference_file.exists():
+        logger.error(f"❌ Το reference αρχείο δε βρέθηκε: {reference_file}")
+        return
+
+    logger.info(f"🔍 Σύγκριση με το αρχείο: {reference_file}")
+
+    ref_df = pd.read_excel(reference_file)
+
+    if "id" not in current_df.columns:
+        logger.error("❌ Η στήλη 'id' λείπει από το current dataset.")
+        return
+
+    if "id" not in ref_df.columns:
+        logger.error("❌ Η στήλη 'id' λείπει από το reference dataset.")
+        return
+
+    merged = pd.merge(
+        current_df,
+        ref_df,
+        on="id",
+        suffixes=("_cur", "_ref"),
+        how="outer",
+        indicator=True
+    )
+
+    only_cur = merged[merged["_merge"] == "left_only"]
+    only_ref = merged[merged["_merge"] == "right_only"]
+    both = merged[merged["_merge"] == "both"]
+
+    logger.info("📊 Στατιστικά σύγκρισης:")
+    logger.info(f"   - Match (ίδια ids και στα δύο): {len(both)}")
+    logger.info(f"   - Only in Current: {len(only_cur)}")
+    logger.info(f"   - Only in Reference: {len(only_ref)}")
+
+    cols_to_check = [
+        "subject",
+        "format",
+        "reference",
+        "question",
+        "input",
+        "choices",
+        "answer_text",
+        "answer_index",
+        "image_description",
+        "image_transcription",
+        "points",
+        "year",
+        "school_type"
+    ]
+
+    for col in cols_to_check:
+        col_cur = f"{col}_cur"
+        col_ref = f"{col}_ref"
+
+        if col_cur not in merged.columns or col_ref not in merged.columns:
+            logger.warning(f"⚠️ Η στήλη '{col}' δεν υπάρχει και στα δύο datasets. Παραλείπεται.")
+            continue
+
+        cur_series = both[col_cur].apply(normalize_for_compare)
+        ref_series = both[col_ref].apply(normalize_for_compare)
+        
+        mismatch = cur_series != ref_series
+
+        if mismatch.any():
+            logger.warning(f"❌ Mismatch στη στήλη '{col}': {mismatch.sum()} διαφορές.")
+
+            sample_diffs = both.loc[mismatch, ["id", col_cur, col_ref]].head(5)
+            for _, row in sample_diffs.iterrows():
+                logger.warning(
+                    f"   ID: {row['id']}\n"
+                    f"      current  = {row[col_cur]}\n"
+                    f"      reference= {row[col_ref]}"
+                )
+        else:
+            logger.info(f"✅ Η στήλη '{col}' ταιριάζει πλήρως.")
+
+    return {
+        "only_current": only_cur,
+        "only_reference": only_ref,
+        "matched": both
+    }
 
 #def push_to_hub
 
@@ -373,6 +470,24 @@ def main():
     # Φτιάχνουμε την εντολή "consolidate"
     con_parser = subparsers.add_parser("consolidate", help="Δημιουργεί το τελικό Excel dataset")
     # Μπορούμε στο μέλλον να προσθέσουμε εδώ τα ορίσματα (π.χ. --output)
+
+    # compare
+    cmp_parser = subparsers.add_parser("compare", help="Συγκρίνει το νέο dataset με reference Excel")
+    cmp_parser.add_argument(
+        "--reference",
+        required=True,
+        help="Το path του reference Excel αρχείου"
+    )
+    cmp_parser.add_argument(
+        "--output",
+        default="panellinies_dataset.xlsx",
+        help="Όνομα του προσωρινού/current Excel που θα δημιουργηθεί"
+    )
+    cmp_parser.add_argument(
+        "--school",
+        default="GEL",
+        help="Τύπος σχολείου (π.χ. GEL)"
+    )
 
     args = parser.parse_args()
 
