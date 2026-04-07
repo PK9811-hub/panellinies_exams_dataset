@@ -610,6 +610,32 @@ def main():
                     except:
                         return val
                 df[col] = df[col].apply(safe_eval)
+        
+        if args.with_images and 'images' in df.columns:
+            logger.info("🔍 Αναζήτηση των μονοπατιών για τις εικόνες...")
+            
+            def fix_image_paths(img_list):
+                new_paths = []
+                for img in img_list:
+                    img_path = Path(img)
+                    
+                    if img_path.exists():
+                        new_paths.append(str(img_path.resolve()))
+                        continue
+                        
+                    found_path = None
+                    for p in Path("data").rglob(img_path.name):
+                        found_path = str(p.resolve())
+                        break 
+                        
+                    if found_path:
+                        new_paths.append(found_path)
+                    else:
+                        logger.warning(f"⚠️ Η εικόνα δεν βρέθηκε πουθενά: {img}")
+                        new_paths.append(img)
+                return new_paths
+                
+            df['images'] = df['images'].apply(fix_image_paths)
                 
         push_to_hub(df, with_images=args.with_images)
         
