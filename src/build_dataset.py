@@ -24,14 +24,6 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 # --- HELPER FUNCTIONS ---
-# --- HELPER FUNCTIONS ---
-
-def normalize_for_compare(value):
-    if pd.isna(value):
-        return ""
-    if isinstance(value, list):
-        return str([str(x).strip() for x in value])
-    return str(value).strip()
 
 # --- DATA LOADERS ---
 #identification of year, school_type, and subject based on filepath
@@ -236,6 +228,21 @@ def apply_reference_tag(item):
     else:
         return "none"    
 
+def normalize_for_compare(value):
+    if isinstance(value, str) and value.startswith("["):
+        try:
+            value = ast.literal_eval(value)
+        except (ValueError, SyntaxError):
+            pass
+    if isinstance (value, (list,tuple)):
+        return str([str(x).strip() for x in value])
+    try:
+        if pd.isna(value):
+            return ""
+    except ValueError:
+        pass
+    return str(value).strip()
+
 # --- DATA CONSOLIDATION ---
 def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx"):
     """
@@ -369,17 +376,16 @@ def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx")
 
     return df
 
-#def compare
 def compare(current_df, reference_file):
     """Συγκρίνει το τρέχον consolidated dataset με ένα reference Excel αρχείο."""
     if current_df.empty:
-        logger.error("❌ Δεν μπορεί να γίνει σύγκριση: το current dataset είναι κενό.")
+        logger.error("Δεν μπορεί να γίνει σύγκριση: το current dataset είναι κενό.")
         return
 
     reference_file = Path(reference_file)
 
     if not reference_file.exists():
-        logger.error(f"❌ Το reference αρχείο δε βρέθηκε: {reference_file}")
+        logger.error(f"Το reference αρχείο δε βρέθηκε: {reference_file}")
         return
 
     logger.info(f"🔍 Σύγκριση με το αρχείο: {reference_file}")
@@ -387,11 +393,11 @@ def compare(current_df, reference_file):
     ref_df = pd.read_excel(reference_file)
 
     if "id" not in current_df.columns:
-        logger.error("❌ Η στήλη 'id' λείπει από το current dataset.")
+        logger.error("Η στήλη 'id' λείπει από το current dataset.")
         return
 
     if "id" not in ref_df.columns:
-        logger.error("❌ Η στήλη 'id' λείπει από το reference dataset.")
+        logger.error("Η στήλη 'id' λείπει από το reference dataset.")
         return
 
     merged = pd.merge(
@@ -442,7 +448,7 @@ def compare(current_df, reference_file):
         mismatch = cur_series != ref_series
 
         if mismatch.any():
-            logger.warning(f"❌ Mismatch στη στήλη '{col}': {mismatch.sum()} διαφορές.")
+            logger.warning(f"Mismatch στη στήλη '{col}': {mismatch.sum()} διαφορές.")
 
             sample_diffs = both.loc[mismatch, ["id", col_cur, col_ref]].head(5)
             for _, row in sample_diffs.iterrows():
@@ -460,41 +466,165 @@ def compare(current_df, reference_file):
         "matched": both
     }
 
-#def push_to_hub
+def push_to_hub(df, with_images=False):
+    """Ανεβάζει το processed dataset στο Hugging Face Hub."""
+    
+    repo_id = os.getenv("HF_REPO_ID")
+    token = os.getenv("HF_TOKEN")
+    is_private = os.getenv("HF_PRIVATE_REPO", "True").lower() == "true"
+    gated_setting = os.getenv("HF_GATED_REPO", "False").lower()
+
+    if not repo_id:
+        print("Error: HF_REPO_ID not found in .env")
+        return
+
+    if not token:
+        print("Error: HF_TOKEN not found in .env")
+        return
+
+    print(f"📤 Preparing to push to Hugging Face Hub: {repo_id}")
+
+    try:
+        if not repo_exists(repo_id=repo_id, token=token, repo_type="dataset"):
+            create_repo(
+                repo_id=repo_id,
+                token=token,
+                private=is_private,
+                repo_type="dataset"
+            )
+            print(f"✅ Created dataset repo: {repo_id}")
+
+        if gated_setting in ["true", "manual"]:
+            api = HfApi()
+            gated_value = True if gated_setting == "true" else "manual"
+            api.update_repo_settings(
+                repo_id=repo_id,
+                gated=gated_value,
+                token=token,
+                repo_type="dataset"
+            )
+            print(f"🔒 Updated gated setting: {gated_value}")
+
+    except Exception as e:
+        print(f"⚠️ Error during repo setup: {e}")
+        return
+
+    df_hub = df.copy()
+
+    if "answer_index" in df_hub.columns:
+        df_hub["answer_index"] = pd.to_numeric(
+            df_hub["answer_index"], errors="coerce"
+        ).astype("Int64")
+
+    if "points" in df_hub.columns:
+        df_hub["points"] = pd.to_numeric(df_hub["points"], errors="coerce")
+
+    for col in ["id", "subject", "format", "reference", "question", "input",
+                "answer_text", "image_description", "image_transcription",
+                "year", "school_type"]:
+        if col in df_hub.columns:
+            df_hub[col] = df_hub[col].fillna("").astype(str)
+
+    for col in ["choices", "images"]:
+        if col in df_hub.columns:
+            df_hub[col] = df_hub[col].apply(
+                lambda x: x if isinstance(x, list) else ([] if pd.isna(x) else [x])
+            )
+
+    # --- Create HF dataset ---
+    try:
+        dataset = Dataset.from_pandas(df_hub, preserve_index=False)
+    except Exception as e:
+        print(f"Failed to convert DataFrame to Dataset: {e}")
+        return
+
+    # --- Optional image casting ---
+    if with_images:
+        if "images" in dataset.column_names:
+            print("🖼️ Casting 'images' column to Sequence(Image())...")
+            try:
+                dataset = dataset.cast_column("images", Sequence(Image()))
+            except Exception as e:
+                print(f"⚠️ Failed to cast 'images' as images: {e}")
+                print("ℹ️ Continuing upload without image casting.")
+        else:
+            print("⚠️ Column 'images' not found, skipping image casting.")
+
+    # --- Push to hub ---
+    try:
+        dataset.push_to_hub(
+            repo_id,
+            token=token,
+            private=is_private,
+            split="train"
+        )
+        print("✅ Successfully pushed to Hub (split='train').")
+    except Exception as e:
+        print(f"Failed to push to Hub: {e}")
 
 def main():
-    # Φτιάχνουμε τον μεταφραστή για το τερματικό
     parser = argparse.ArgumentParser(description="Εργαλείο διαχείρισης Dataset Πανελληνίων")
     subparsers = parser.add_subparsers(dest="command", help="Η εντολή που θέλεις να τρέξεις")
 
-    # Φτιάχνουμε την εντολή "consolidate"
+    # --- consolidate ---
     con_parser = subparsers.add_parser("consolidate", help="Δημιουργεί το τελικό Excel dataset")
-    # Μπορούμε στο μέλλον να προσθέσουμε εδώ τα ορίσματα (π.χ. --output)
+    con_parser.add_argument("--school", default="GEL", help="Τύπος σχολείου (π.χ. GEL)")
+    con_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Όνομα του τελικού Excel")
 
-    # compare
+    # --- compare ---
     cmp_parser = subparsers.add_parser("compare", help="Συγκρίνει το νέο dataset με reference Excel")
-    cmp_parser.add_argument(
-        "--reference",
-        required=True,
-        help="Το path του reference Excel αρχείου"
-    )
-    cmp_parser.add_argument(
-        "--output",
-        default="panellinies_dataset.xlsx",
-        help="Όνομα του προσωρινού/current Excel που θα δημιουργηθεί"
-    )
-    cmp_parser.add_argument(
-        "--school",
-        default="GEL",
-        help="Τύπος σχολείου (π.χ. GEL)"
-    )
+    cmp_parser.add_argument("--reference", required=True, help="Το path του reference Excel αρχείου")
+    cmp_parser.add_argument("--school", default="GEL", help="Τύπος σχολείου (π.χ. GEL)")
+    cmp_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Όνομα του current Excel που θα δημιουργηθεί")
+
+    # --- push ---
+    push_parser = subparsers.add_parser("push", help="Ανεβάζει το dataset στο Hugging Face Hub")
+    push_parser.add_argument("--file", type=str, required=True, help="Το Excel αρχείο που θέλεις να ανεβάσεις")
+    push_parser.add_argument("--with-images", action="store_true", help="Ενσωμάτωση των πραγματικών εικόνων")
+
 
     args = parser.parse_args()
-
+    
     if args.command == "consolidate":
-        df = consolidate()
+        df = consolidate(target_school=args.school, output_filename=args.output)
+        
+    elif args.command == "compare":
+        current_df = consolidate(target_school=args.school, output_filename=args.output)
+        compare(current_df, args.reference)
+        
+    elif args.command == "push":
+        file_path = Path(args.file)
+        if not file_path.exists():
+            logger.error(f"Το αρχείο {file_path} δε βρέθηκε!")
+            return
+            
+        df = pd.read_excel(file_path)
+        
+        for col in ['choices', 'images']:
+            if col in df.columns:
+                def safe_eval(val):
+                    try:
+                        if isinstance(val, str) and val.startswith('['):
+                            return ast.literal_eval(val)
+                        return val
+                    except:
+                        return val
+                df[col] = df[col].apply(safe_eval)
+                
+        push_to_hub(df, with_images=args.with_images)
+        
     else:
         parser.print_help()
 
 if __name__ == "__main__":
     main()
+
+#Πώς δουλεύουν πλέον οι εντολές στο τερματικό:
+#Για να φτιάξεις το Excel:
+#uv run src/build_dataset.py consolidate
+
+#Για να ελέγξεις αν κάτι χάλασε σε σχέση με χθες:
+#uv run src/build_dataset.py compare --reference ../παλιό_αρχείο.xlsx
+
+#Για να το στείλεις στο Hugging Face (μαζί με τις φωτογραφίες):
+#uv run src/build_dataset.py push --file results/panellinies_dataset.xlsx --with-images
