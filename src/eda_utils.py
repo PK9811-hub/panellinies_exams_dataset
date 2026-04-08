@@ -43,7 +43,7 @@ def process_text(text):
     
     # Replace literal newlines and real newlines with <br>
     # Replace literal newlines only if NOT followed by ASCII letters (protects \neq, \nu, etc.)
-    text = re.sub(r'\\n(?![a-zA-Z])', '<br>', text)
+    #text = re.sub(r'\\n(?![a-zA-Z])', '<br>', text)
     # Handle real newlines
     text = text.replace('\r\n', '<br>').replace('\n', '<br>')
     
@@ -87,7 +87,8 @@ def get_mathjax_trigger(container_id):
                             tex2jax: {{
                                 inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
                                 displayMath: [['$$', '$$'], ['\\\\[', ' \\\\]']],
-                                processEscapes: true
+                                processEscapes: true,
+                                packages: {{ '[+]': ['mhchem', 'ams', 'boldsymbol'] }}
                             }}
                         }});
                         MathJax.Hub.Queue(["Typeset", MathJax.Hub, '{container_id}']);
@@ -147,7 +148,7 @@ def display_samples(df, n=3, prioritize_images=False, truncate=None):
     "reference",
     "question",
     "input",
-    "images",
+    "image", 
     "choices",
     "answer_text",
     "answer_index",
@@ -159,8 +160,20 @@ def display_samples(df, n=3, prioritize_images=False, truncate=None):
     
     # Add embedded images column if 'images' exists
     if 'images' in samples.columns:
-        # Create a copy to avoid SettingWithCopyWarning
         samples = samples.copy()
+        
+        def safe_eval_images(val):
+            if isinstance(val, str) and val.startswith('['):
+                try:
+                    import ast
+                    return ast.literal_eval(val)
+                except:
+                    return val
+            return val
+            
+        samples['images'] = samples['images'].apply(safe_eval_images)
+        
+        # Φτιάχνουμε τη στήλη 'image'
         samples['image'] = samples['images'].apply(lambda imgs: img_to_base64_html(imgs[0], 150) if isinstance(imgs, (list, np.ndarray)) and len(imgs) > 0 else "")
     
     available_cols = [c for c in cols if c in samples.columns]
@@ -186,6 +199,7 @@ def display_samples(df, n=3, prioritize_images=False, truncate=None):
         def safe_list_eval(val):
             if isinstance(val,str) and val.startswith('['):
                 try:
+                    import ast
                     return ast.literal_eval(val)
                 except:
                     return val
@@ -705,7 +719,7 @@ def print_source_files(df, sample_id=None, data_root="data"):
         sample = filtered.iloc[0]
         
     subject = str(sample.get('subject', ''))
-    school_type = str(sample.get('school_type', ''))
+    school_type = str(sample.get('school_type', '')).lower()
     year = str(sample.get('year', ''))
     sample_id_val = sample.get('id', '')
     
@@ -715,17 +729,17 @@ def print_source_files(df, sample_id=None, data_root="data"):
         "ancient_greek": "arxaia", 
         "history": "istoria", 
         "latin": "latinika",
-        "biology":"biologia",
+        "biology":"biol",
         "physics": "fysiki",
         "chemistry": "ximeia",
-        "computer_science": "pliroforiki",
-        "economics": "arxes_oikonomikis_theorias",
-        "mathematics": "mathimatika"
+        "computer_science": "plirof",
+        "economics": "oikonomia",
+        "mathematics": "math"
     }
     
     
-    # Normalize values for filename matching (handling Greek uppercase labels)
-    orig_subj = subj_map.get(subject, subject.upper())
+    # Normalize values for filename matching
+    orig_subj = subj_map.get(subject, subject)
     
     # Filenames sometimes omit the set number if it is '1'
     patterns = [
