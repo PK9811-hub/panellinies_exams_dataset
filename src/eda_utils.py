@@ -72,7 +72,7 @@ def img_to_base64_html(img_data, max_width=300):
         return "[Image]"
     return ""
 
-def get_mathjax_trigger(container_id):
+#def get_mathjax_trigger(container_id):
     """
     Returns a script block to trigger MathJax typesetting with $ support.
     """
@@ -123,6 +123,47 @@ def get_mathjax_trigger(container_id):
             setTimeout(configureAndTrigger, 100); 
             setTimeout(configureAndTrigger, 1000);
             setTimeout(configureAndTrigger, 3000);
+        }})();
+    </script>
+    """
+def get_mathjax_trigger(container_id):
+    r"""
+    Returns a script block to trigger MathJax.
+    Forces the loading of chemistry and physics packages using the \require macro, 
+    bypassing strict editor configurations.
+    """
+    return f"""
+    <div id="hidden-math-{container_id}" style="height: 0px; overflow: hidden; color: transparent; margin: 0; padding: 0;">
+        $\\require{{mhchem}} \\require{{boldsymbol}}$
+    </div>
+    
+    <script>
+        (function() {{
+            function triggerMathJax() {{
+                var container = document.getElementById('{container_id}');
+                var hiddenDiv = document.getElementById('hidden-math-{container_id}');
+                if (!container) return;
+
+                if (window.MathJax) {{
+                    // Για MathJax v3 (Η σύγχρονη έκδοση)
+                    if (MathJax.typesetPromise) {{
+                        // Κάνουμε render πρώτα το αόρατο div για να φορτώσουν τα extensions
+                        MathJax.typesetPromise([hiddenDiv, container]).catch(function (err) {{
+                            console.log('MathJax error:', err);
+                        }});
+                    }} 
+                    // Για MathJax v2 (Παλαιότερη έκδοση)
+                    else if (MathJax.Hub) {{
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, hiddenDiv]);
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, container]);
+                    }}
+                }}
+            }}
+
+            // Τρέχουμε τη συνάρτηση με μικρή καθυστέρηση για να προλάβει να φορτώσει το HTML
+            setTimeout(triggerMathJax, 100);
+            setTimeout(triggerMathJax, 1000);
+            setTimeout(triggerMathJax, 2500);
         }})();
     </script>
     """
