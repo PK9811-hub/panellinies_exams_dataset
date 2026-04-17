@@ -88,7 +88,7 @@ def get_mathjax_trigger(container_id):
                                 inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
                                 displayMath: [['$$', '$$'], ['\\\\[', ' \\\\]']],
                                 processEscapes: true,
-                                packages: {{ '[+]': ['mhchem', 'ams', 'boldsymbol'] }}
+                                packages: {{ '[+]': ['mhchem', 'ams', 'boldsymbol', 'mathtools'] }}
                             }}
                         }});
                         MathJax.Hub.Queue(["Typeset", MathJax.Hub, '{container_id}']);
