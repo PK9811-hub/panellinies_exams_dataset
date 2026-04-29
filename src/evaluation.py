@@ -1,6 +1,17 @@
 import ast
 import random
 import pandas as pd
+import os
+import logging
+import traceback
+from datasets import load_dataset, concatenate_datasets
+from dotenv import load_dotenv, find_dotenv
+import lm_eval
+from lm_eval.models.openai_completions import OpenAIChatCompletion
+from lm_eval.models.huggingface import HFLM
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def process_matching_row(row):
     """
@@ -79,15 +90,93 @@ def apply_matching_processing(df):
     
     return df
 
+def load_panellinies_exams_dataset(repo_id=None, split=None):
+    """
+    Loads the dataset. If no split is specified, returns the concatenated train and test sets.
+    """
+    if repo_id is None:
+        repo_id = os.getenv("HF_REPO_ID")
+    
+    logger.info(f"Loading dataset from Hugging Face: {repo_id}")
+    dataset_dict = load_dataset(repo_id)
+    
+    if split:
+        if split in dataset_dict:
+            return dataset_dict[split]
+        else:
+            logger.error((f"Split '{split}' not found in {repo_id}"))
+            return None
+    
+    available_splits = list(dataset_dict.keys)
+    
+    if len(available_splits) == 1:
+        return dataset_dict[available_splits[0]]
+    
+    logger.info(f"Concatenating splits: {available_splits}")
+    return concatenate_datasets([dataset_dict[s] for s in available_splits])
+
 #functions to be added from protipa exams dataset
 
-#def filter_dataset()
+#def filter_dataset() ?
 
-#def load_panellinies_dataset()
-
-#def clean_dataset_paths()
+#def clean_dataset_paths() ?
 
 #def process_results_open() ?
+
 #def process_results_bypass() ?
 
-#def run_evaluation()
+def run_evaluation(model_name, backend="api", api_base=None, task_dict=None, eval_limit=None):
+    """
+    Runs evaluation.
+    - backend="api": For API models (KriKri web service, OpenAI, etc).
+    - backend="hf": For open models (Hugging Face) which run locally on GPU.
+    """
+    logger.info(f"Starting evaluation for model: {model_name} (Backend: {backend})")
+    
+    try:
+        if backend == "api":
+            # ---------------------------------------------------------
+            # Scenario 1: API call
+            # ---------------------------------------------------------
+            chat_api_url = api_base or os.getenv("OPENAI_BASE_URL")
+            
+            if not chat_api_url:
+                raise ValueError("No API base URL provided. Set OPENAI_BASE_URL in .env.")
+
+            if not chat_api_url.endswith("/chat/completions"):
+                chat_api_url = chat_api_url.rstrip("/") + "/chat/completions"
+
+            model = OpenAIChatCompletion(
+                model=model_name,
+                base_url=chat_api_url,
+                num_fewshot=0,
+                eos_string="<|end_of_text|>",
+                max_retries=10,
+                num_concurrent=1
+            )
+            
+        elif backend == "hf":
+            # ---------------------------------------------------------
+            # Scenario 2: Local call on GPU server
+            # ---------------------------------------------------------
+            model = HFLM(
+                pretrained=model_name,
+                device="cuda",  
+                batch_size="auto"
+            )
+            
+        else:
+            raise ValueError(f"Unsupported backend: {backend}. Use 'api' or 'hf'.")
+
+        results = lm_eval.evaluate(
+            lm=model,
+            task_dict=task_dict,
+            limit=eval_limit,
+            apply_chat_template=True
+        )
+        return results
+
+    except Exception as e:
+        logger.error(f"Error evaluating {model_name}: {e}")
+        logger.error(traceback.format_exc())
+        return None
