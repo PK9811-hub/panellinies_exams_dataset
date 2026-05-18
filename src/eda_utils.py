@@ -41,9 +41,6 @@ def process_text(text):
     if not isinstance(text, str):
         return str(text)
     
-    # Replace literal newlines and real newlines with <br>
-    # Replace literal newlines only if NOT followed by ASCII letters (protects \neq, \nu, etc.)
-    #text = re.sub(r'\\n(?![a-zA-Z])', '<br>', text)
     # Handle real newlines
     text = text.replace('\r\n', '<br>').replace('\n', '<br>')
     
@@ -75,31 +72,45 @@ def img_to_base64_html(img_data, max_width=300):
 def get_mathjax_trigger(container_id):
     """
     Returns a script block to trigger MathJax typesetting with $ support.
+    It dynamically registers and loads the mhchem extension for chemistry formulas.
     """
     return f"""
     <script>
         (function() {{
             function configureAndTrigger() {{
                 if (window.MathJax) {{
-                    // v2 Config
+                    // v2 Dynamic Loading & Typesetting
                     if (MathJax.Hub) {{
                         MathJax.Hub.Config({{
                             tex2jax: {{
                                 inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
                                 displayMath: [['$$', '$$'], ['\\\\[', ' \\\\]']],
-                                processEscapes: true,
-                                packages: {{ '[+]': ['mhchem', 'ams', 'boldsymbol', 'mathtools'] }}
+                                processEscapes: true
                             }}
                         }});
-                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, '{container_id}']);
+                        // Dynamically load the mhchem extension from CDN, then trigger typesetting
+                        MathJax.Hub.Queue(
+                            ["Require", MathJax.Ajax, "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/extensions/TeX/mhchem.js"],
+                            function() {{
+                                MathJax.Hub.Queue(["Typeset", MathJax.Hub, '{container_id}']);
+                            }}
+                        );
                     }}
-                    // v3 Config
+                    // v3 Dynamic Loading & Typesetting
                     if (MathJax.typesetPromise) {{
                         if (MathJax.config && MathJax.config.tex) {{
                             MathJax.config.tex.inlineMath = [['$', '$'], ['\\\\(', '\\\\)']];
                         }}
-                        MathJax.typesetPromise([document.getElementById('{container_id}')]).catch(function (err) {{
-                            console.log('MathJax typeset failed: ' + err.message);
+                        // Dynamically load mhchem package, then typeset
+                        MathJax.loader.load('[tex]/mhchem').then(function() {{
+                            MathJax.typesetPromise([document.getElementById('{container_id}')]).catch(function (err) {{
+                                console.log('MathJax typeset failed: ' + err.message);
+                            }});
+                        }}).catch(function(err) {{
+                            // Fallback to direct typesetting if loading fails
+                            MathJax.typesetPromise([document.getElementById('{container_id}')]).catch(function (e) {{
+                                console.log('MathJax typeset failed: ' + e.message);
+                            }});
                         }});
                     }}
                 }}
@@ -107,14 +118,18 @@ def get_mathjax_trigger(container_id):
             
             // Load MathJax if totally missing
             if (!window.MathJax) {{
+                window.MathJax = {{
+                    loader: {{load: ['[tex]/mhchem']}},
+                    tex: {{ 
+                        inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                        packages: {{'[+]': ['mhchem']}}
+                    }}
+                }};
                 var script = document.createElement('script');
                 script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
                 script.async = true;
                 script.onload = configureAndTrigger;
                 document.head.appendChild(script);
-                window.MathJax = {{
-                    tex: {{ inlineMath: [['$', '$'], ['\\\\(', '\\\\)']] }}
-                }};
             }} else {{
                 configureAndTrigger();
             }}
