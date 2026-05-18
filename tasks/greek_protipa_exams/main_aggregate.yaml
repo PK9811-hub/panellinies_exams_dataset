@@ -1,0 +1,4 @@
+group: panellinies_exams_aggregate
+task:
+  - panellinies_exams_closed_aggregate
+  - panellinies_exams_open_aggregate

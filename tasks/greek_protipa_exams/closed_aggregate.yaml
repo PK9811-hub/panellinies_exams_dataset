@@ -1,0 +1,15 @@
+group: panellinies_exams_closed_aggregate
+task:
+  - panellinies_exams_ancient_greek_closed
+  - panellinies_exams_biology_closed
+  - panellinies_exams_chemistry_closed
+  - panellinies_exams_computer_science_closed
+  - panellinies_exams_economics_closed
+  - panellinies_exams_greek_language_closed
+  - panellinies_exams_history_closed
+  - panellinies_exams_latin_closed
+  - panellinies_exams_mathematics_closed
+  - panellinies_exams_physics_closed
+aggregate_metric_list:
+  - metric: exact_match
+    aggregation: mean

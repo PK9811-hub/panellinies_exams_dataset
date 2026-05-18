@@ -1,0 +1,15 @@
+group: panellinies_exams_open_aggregate
+task:
+  - panellinies_exams_ancient_greek_open
+  - panellinies_exams_biology_open
+  - panellinies_exams_chemistry_open
+  - panellinies_exams_computer_science_open
+  - panellinies_exams_economics_open
+  - panellinies_exams_greek_language_open
+  - panellinies_exams_history_open
+  - panellinies_exams_latin_open
+  - panellinies_exams_mathematics_open
+  - panellinies_exams_physics_open
+aggregate_metric_list:
+  - metric: chrf
+    aggregation: mean
