@@ -1,5 +1,5 @@
 task: panellinies_exams_biology_closed
-dataset_path: PennyK98/panellinies_exams_dataset
+dataset_path: ilsp/panellinies-exams-dataset
 output_type: generate_until
 test_split: train
 process_docs: !function utils.process_biology_closed
