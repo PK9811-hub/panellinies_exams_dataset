@@ -1,3 +1,5 @@
+tag:
+  - panellinies_exams_open
 task: panellinies_exams_mathematics_open
 dataset_path: ilsp/panellinies-exams-dataset
 output_type: generate_until
@@ -5,12 +7,27 @@ test_split: train
 process_docs: !function utils.process_mathematics_open
 doc_to_text: !function utils.doc_to_text_open
 doc_to_target: !function utils.doc_to_target_open
+process_results: !function utils.process_results_gen
+should_decontaminate: true
+doc_to_decontamination_query: question
 generation_kwargs:
   do_sample: false
   temperature: 0.0
   max_gen_toks: 512
   until: ["Ερώτηση:", "---"]
 metric_list:
-  - metric: chrf
+  - metric: bleu_max
+    aggregation: mean
+    higher_is_better: true
+  - metric: rouge1_max
+    aggregation: mean
+    higher_is_better: true
+  - metric: rouge2_max
+    aggregation: mean
+    higher_is_better: true
+  - metric: rougeL_max
+    aggregation: mean
+    higher_is_better: true
+  - metric: bertscore_f1_max
     aggregation: mean
     higher_is_better: true

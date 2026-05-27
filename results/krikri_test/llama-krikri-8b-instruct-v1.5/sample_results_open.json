@@ -1,0 +1,1142 @@
+{
+  "results": {
+    "panellinies_exams_open_aggregate": {
+      "bleu_max,none": 4.089643012503805,
+      "bleu_max_stderr,none": 1.202193131826019,
+      "rougeL_max,none": 19.28729256635616,
+      "rougeL_max_stderr,none": 1.518563440758872,
+      "rouge1_max,none": 23.58388301661386,
+      "rouge1_max_stderr,none": 2.308363229311073,
+      "rouge2_max,none": 7.4436692496326184,
+      "rouge2_max_stderr,none": 1.3415773212256394,
+      "bertscore_f1_max,none": 0.6785938709974288,
+      "bertscore_f1_max_stderr,none": 0.010102614744549421,
+      "alias": "panellinies_exams_open_aggregate"
+    },
+    "panellinies_exams_ancient_greek_open": {
+      "alias": " - panellinies_exams_ancient_greek_open",
+      "bleu_max,none": 1.0328996951891172,
+      "bleu_max_stderr,none": 0.7983397975163625,
+      "rouge1_max,none": 23.244817404186666,
+      "rouge1_max_stderr,none": 11.734026037280191,
+      "rouge2_max,none": 7.327145644700027,
+      "rouge2_max_stderr,none": 0.02787557170732757,
+      "rougeL_max,none": 16.474718673580178,
+      "rougeL_max_stderr,none": 4.9639273066737015,
+      "bertscore_f1_max,none": 0.6711012125015259,
+      "bertscore_f1_max_stderr,none": 0.04415780305862426
+    },
+    "panellinies_exams_biology_open": {
+      "alias": " - panellinies_exams_biology_open",
+      "bleu_max,none": 0.5980702127473512,
+      "bleu_max_stderr,none": 0.030851060247115758,
+      "rouge1_max,none": 13.628659476117104,
+      "rouge1_max_stderr,none": 0.916795069337442,
+      "rouge2_max,none": 2.1681173057319847,
+      "rouge2_max_stderr,none": 1.250686113071434,
+      "rougeL_max,none": 10.993836671802775,
+      "rougeL_max_stderr,none": 0.8243451463790441,
+      "bertscore_f1_max,none": 0.6373912394046783,
+      "bertscore_f1_max_stderr,none": 0.006988316774368285
+    },
+    "panellinies_exams_chemistry_open": {
+      "alias": " - panellinies_exams_chemistry_open",
+      "bleu_max,none": 2.9203129011205613,
+      "bleu_max_stderr,none": 2.324582948850519,
+      "rouge1_max,none": 15.631420894578792,
+      "rouge1_max_stderr,none": 5.421210684368578,
+      "rouge2_max,none": 4.490706468458014,
+      "rouge2_max_stderr,none": 1.4695584322042377,
+      "rougeL_max,none": 14.34427848901533,
+      "rougeL_max_stderr,none": 4.734668879405719,
+      "bertscore_f1_max,none": 0.638085275888443,
+      "bertscore_f1_max_stderr,none": 0.009923368692398071
+    },
+    "panellinies_exams_computer_science_open": {
+      "alias": " - panellinies_exams_computer_science_open",
+      "bleu_max,none": 1.3382157483220651,
+      "bleu_max_stderr,none": 0.17285368554170255,
+      "rouge1_max,none": 19.73045719918114,
+      "rouge1_max_stderr,none": 7.333762984305105,
+      "rouge2_max,none": 5.4953917050691246,
+      "rouge2_max_stderr,none": 0.4953917050691245,
+      "rougeL_max,none": 18.35431041019031,
+      "rougeL_max_stderr,none": 5.9576161953142766,
+      "bertscore_f1_max,none": 0.674998015165329,
+      "bertscore_f1_max_stderr,none": 0.02630433440208435
+    },
+    "panellinies_exams_economics_open": {
+      "alias": " - panellinies_exams_economics_open",
+      "bleu_max,none": 2.060592828654507,
+      "bleu_max_stderr,none": 0.6522961876012023,
+      "rouge1_max,none": 19.31739317831496,
+      "rouge1_max_stderr,none": 0.5471666410981317,
+      "rouge2_max,none": 3.768456351052907,
+      "rouge2_max_stderr,none": 0.1403384372207077,
+      "rougeL_max,none": 18.54230131422268,
+      "rougeL_max_stderr,none": 0.419323967944365,
+      "bertscore_f1_max,none": 0.6581119298934937,
+      "bertscore_f1_max_stderr,none": 0.04927241802215576
+    },
+    "panellinies_exams_greek_language_open": {
+      "alias": " - panellinies_exams_greek_language_open",
+      "bleu_max,none": 2.982814225763421,
+      "bleu_max_stderr,none": 1.1294622145826057,
+      "rouge1_max,none": 28.432494279176204,
+      "rouge1_max_stderr,none": 11.041189931350118,
+      "rouge2_max,none": 5.195219123505976,
+      "rouge2_max_stderr,none": 2.8047808764940236,
+      "rougeL_max,none": 18.168816309548575,
+      "rougeL_max_stderr,none": 1.568025795714584,
+      "bertscore_f1_max,none": 0.7262482047080994,
+      "bertscore_f1_max_stderr,none": 0.05401325225830078
+    },
+    "panellinies_exams_history_open": {
+      "alias": " - panellinies_exams_history_open",
+      "bleu_max,none": 1.0890501416608709,
+      "bleu_max_stderr,none": 0.5754411352338199,
+      "rouge1_max,none": 20.066960246124147,
+      "rouge1_max_stderr,none": 7.670266031248114,
+      "rouge2_max,none": 3.7745098039215685,
+      "rouge2_max_stderr,none": 2.1078431372549016,
+      "rougeL_max,none": 15.177655788140195,
+      "rougeL_max_stderr,none": 5.260300416239369,
+      "bertscore_f1_max,none": 0.6553390026092529,
+      "bertscore_f1_max_stderr,none": 0.008588373661041258
+    },
+    "panellinies_exams_latin_open": {
+      "alias": " - panellinies_exams_latin_open",
+      "bleu_max,none": 4.110367252584615,
+      "bleu_max_stderr,none": 2.8525232562582983,
+      "rouge1_max,none": 30.25476061287238,
+      "rouge1_max_stderr,none": 2.0760664547967806,
+      "rouge2_max,none": 11.447520184544404,
+      "rouge2_max_stderr,none": 5.21914648212226,
+      "rougeL_max,none": 22.403948014365813,
+      "rougeL_max_stderr,none": 3.1599617600702814,
+      "bertscore_f1_max,none": 0.7175539433956146,
+      "bertscore_f1_max_stderr,none": 0.0066259801387786865
+    },
+    "panellinies_exams_mathematics_open": {
+      "alias": " - panellinies_exams_mathematics_open",
+      "bleu_max,none": 13.185282361935833,
+      "bleu_max_stderr,none": 10.865354639456426,
+      "rouge1_max,none": 35.29755092698558,
+      "rouge1_max_stderr,none": 11.17303730830854,
+      "rouge2_max,none": 20.38635572572224,
+      "rouge2_max_stderr,none": 10.974591019839886,
+      "rougeL_max,none": 32.071412222476546,
+      "rougeL_max_stderr,none": 10.28152895399405,
+      "bertscore_f1_max,none": 0.7041703760623932,
+      "bertscore_f1_max_stderr,none": 0.040292590856552124
+    },
+    "panellinies_exams_physics_open": {
+      "alias": " - panellinies_exams_physics_open",
+      "bleu_max,none": 11.578824757059703,
+      "bleu_max_stderr,none": 3.1984124247439714,
+      "rouge1_max,none": 30.23431594860166,
+      "rouge1_max_stderr,none": 0.9826152683295531,
+      "rouge2_max,none": 10.383270183619937,
+      "rouge2_max_stderr,none": 4.0002914602156805,
+      "rougeL_max,none": 26.341647770219197,
+      "rougeL_max_stderr,none": 1.171579743008314,
+      "bertscore_f1_max,none": 0.702939510345459,
+      "bertscore_f1_max_stderr,none": 0.018187463283538815
+    }
+  },
+  "groups": {
+    "panellinies_exams_open_aggregate": {
+      "bleu_max,none": 4.089643012503805,
+      "bleu_max_stderr,none": 1.202193131826019,
+      "rougeL_max,none": 19.28729256635616,
+      "rougeL_max_stderr,none": 1.518563440758872,
+      "rouge1_max,none": 23.58388301661386,
+      "rouge1_max_stderr,none": 2.308363229311073,
+      "rouge2_max,none": 7.4436692496326184,
+      "rouge2_max_stderr,none": 1.3415773212256394,
+      "bertscore_f1_max,none": 0.6785938709974288,
+      "bertscore_f1_max_stderr,none": 0.010102614744549421,
+      "alias": "panellinies_exams_open_aggregate"
+    }
+  },
+  "group_subtasks": {
+    "panellinies_exams_open_aggregate": [
+      "panellinies_exams_ancient_greek_open",
+      "panellinies_exams_biology_open",
+      "panellinies_exams_chemistry_open",
+      "panellinies_exams_computer_science_open",
+      "panellinies_exams_economics_open",
+      "panellinies_exams_greek_language_open",
+      "panellinies_exams_history_open",
+      "panellinies_exams_latin_open",
+      "panellinies_exams_mathematics_open",
+      "panellinies_exams_physics_open"
+    ]
+  },
+  "configs": {
+    "panellinies_exams_ancient_greek_open": {
+      "task": "panellinies_exams_ancient_greek_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_ancient_greek_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='ancient_greek')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_ancient_greek_open at 0x00000268A63B40E0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x00000268A63B4C20>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A63B5F80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_biology_open": {
+      "task": "panellinies_exams_biology_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_biology_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='biology')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_biology_open at 0x00000268A648A5C0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x00000268A649B740>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A6360E00>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_chemistry_open": {
+      "task": "panellinies_exams_chemistry_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_chemistry_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='chemistry')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_chemistry_open at 0x00000268A647EAC0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x00000268A647F240>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A647FE20>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_computer_science_open": {
+      "task": "panellinies_exams_computer_science_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_computer_science_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='computer_science')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_computer_science_open at 0x00000268A64BCEA0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x00000268A64BE0C0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A64BECA0>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_economics_open": {
+      "task": "panellinies_exams_economics_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_economics_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='economics')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_economics_open at 0x00000268A6484540>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x00000268A64859E0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A6486020>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_greek_language_open": {
+      "task": "panellinies_exams_greek_language_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_greek_language_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='greek_language')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_greek_language_open at 0x000002689A0CE700>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x000002689A0CFE20>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A6499260>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_history_open": {
+      "task": "panellinies_exams_history_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_history_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='history')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_history_open at 0x000002689A126480>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x000002689A1576A0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x00000268A6450540>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_latin_open": {
+      "task": "panellinies_exams_latin_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_latin_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='latin')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_latin_open at 0x000002689A1262A0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x000002689A1259E0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x000002689A127F60>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_mathematics_open": {
+      "task": "panellinies_exams_mathematics_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_mathematics_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='mathematics')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_mathematics_open at 0x000002689A0A1E40>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x000002689A1540E0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x000002689A155440>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    },
+    "panellinies_exams_physics_open": {
+      "task": "panellinies_exams_physics_open",
+      "tag": [
+        "panellinies_exams_open"
+      ],
+      "dataset_path": "ilsp/panellinies-exams-dataset",
+      "test_split": "train",
+      "process_docs": "def process_physics_open(dataset): return filter_by_mode_and_subject(dataset, mode='open', subject='physics')\n",
+      "doc_to_text": "def doc_to_text_open(doc):\n    \"\"\"\n    Prompt logic for open-ended and fill-in-the-gap questions.\n    \"\"\"\n    prompt_parts = []\n    \n    # Instruction\n    instruction = (\n        \"Δίνεται η παρακάτω ερώτηση από σχολικές εξετάσεις.\\n\"\n        \"Αν είναι ερώτηση ανάπτυξης, δώσε μια ολοκληρωμένη και τεκμηριωμένη απάντηση.\\n\"\n        \"Αν είναι ερώτηση συμπλήρωσης κενών, γράψε τη σωστή λέξη ή τη σωστή φράση που λείπει.\"\n    )\n    prompt_parts.append(instruction)\n    \n    # Contextual Inputs \n    if doc.get(\"input\"): \n        prompt_parts.append(f\"Πλαίσιο/Κείμενο: {doc['input']}\")\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\\n\\nΑπάντηση:\")\n    \n    return \"\\n\\n\".join([p for p in prompt_parts if p.strip()])\n",
+      "doc_to_target": "def doc_to_target_open(doc):\n    \"\"\"Extracts the expected text answer for open-ended evaluation.\"\"\"\n    ans = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    return [str(ans).strip()]\n",
+      "unsafe_code": false,
+      "process_results": "def process_results_gen(doc, results):\n    completion = results[0]\n    \n    gold_answer = doc.get(\"answer_text\") or doc.get(\"answer\") or \"\"\n    true_refs = [gold_answer]\n\n    # BLEU (sacrebleu with international tokenization)\n    bleu_scores = [bleu([[ref]], [completion]) for ref in true_refs]\n    bleu_max = np.nanmax(bleu_scores)\n\n    # ROUGE with custom Greek-safe tokenizer\n    global ROUGE_SCORER\n    if ROUGE_SCORER is None:\n        ROUGE_SCORER = rouge_scorer.RougeScorer(\n            [\"rouge1\", \"rouge2\", \"rougeLsum\"], \n            tokenizer=GreekTokenizer()\n        )\n    \n    rouge_scores = []\n    for ref in true_refs:\n        scores = ROUGE_SCORER.score(ref, completion)\n        rouge_scores.append({\n            \"rouge1\": scores[\"rouge1\"].fmeasure * 100.0,\n            \"rouge2\": scores[\"rouge2\"].fmeasure * 100.0,\n            \"rougeL\": scores[\"rougeLsum\"].fmeasure * 100.0,\n        })\n\n    rouge1_max = np.nanmax([s[\"rouge1\"] for s in rouge_scores])\n    rouge2_max = np.nanmax([s[\"rouge2\"] for s in rouge_scores])\n    rougeL_max = np.nanmax([s[\"rougeL\"] for s in rouge_scores])\n\n    # BERTScore using multilingual BERT to handle semantic similarity in Greek\n    bertscore_f1_max = 0.0\n    if BERTSCORE_AVAILABLE:\n        # P, R, F1 are returned as tensors\n        P, R, F1 = bert_score_fn(\n            [completion],\n            true_refs,\n            lang=\"el\",\n            model_type=\"bert-base-multilingual-cased\",\n            verbose=False,\n        )\n        bertscore_f1_max = F1.max().item()\n\n    return {\n        \"bleu_max\": bleu_max,\n        \"rouge1_max\": rouge1_max,\n        \"rouge2_max\": rouge2_max,\n        \"rougeL_max\": rougeL_max,\n        \"bertscore_f1_max\": bertscore_f1_max,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_physics_open at 0x0000026899E60EA0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_open at 0x0000026899E61440>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target_open at 0x0000026899E62700>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "bleu_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rouge2_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "rougeL_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "bertscore_f1_max",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 512,
+        "until": [
+          "Ερώτηση:",
+          "---"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question",
+      "metadata": {
+        "model": "llama-krikri-8b-instruct-v1.5",
+        "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+        "num_concurrent": 1,
+        "eos_string": "<|end_of_text|>",
+        "max_retries": 10
+      }
+    }
+  },
+  "versions": {
+    "panellinies_exams_ancient_greek_open": "Yaml",
+    "panellinies_exams_biology_open": "Yaml",
+    "panellinies_exams_chemistry_open": "Yaml",
+    "panellinies_exams_computer_science_open": "Yaml",
+    "panellinies_exams_economics_open": "Yaml",
+    "panellinies_exams_greek_language_open": "Yaml",
+    "panellinies_exams_history_open": "Yaml",
+    "panellinies_exams_latin_open": "Yaml",
+    "panellinies_exams_mathematics_open": "Yaml",
+    "panellinies_exams_open_aggregate": null,
+    "panellinies_exams_physics_open": "Yaml"
+  },
+  "n-shot": {
+    "panellinies_exams_ancient_greek_open": 0,
+    "panellinies_exams_biology_open": 0,
+    "panellinies_exams_chemistry_open": 0,
+    "panellinies_exams_computer_science_open": 0,
+    "panellinies_exams_economics_open": 0,
+    "panellinies_exams_greek_language_open": 0,
+    "panellinies_exams_history_open": 0,
+    "panellinies_exams_latin_open": 0,
+    "panellinies_exams_mathematics_open": 0,
+    "panellinies_exams_physics_open": 0
+  },
+  "higher_is_better": {
+    "panellinies_exams_ancient_greek_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_biology_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_chemistry_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_computer_science_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_economics_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_greek_language_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_history_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_latin_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_mathematics_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_open_aggregate": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    },
+    "panellinies_exams_physics_open": {
+      "bleu_max": true,
+      "rouge1_max": true,
+      "rouge2_max": true,
+      "rougeL_max": true,
+      "bertscore_f1_max": true
+    }
+  },
+  "n-samples": {
+    "panellinies_exams_ancient_greek_open": {
+      "original": 141,
+      "effective": 2
+    },
+    "panellinies_exams_biology_open": {
+      "original": 99,
+      "effective": 2
+    },
+    "panellinies_exams_chemistry_open": {
+      "original": 123,
+      "effective": 2
+    },
+    "panellinies_exams_computer_science_open": {
+      "original": 59,
+      "effective": 2
+    },
+    "panellinies_exams_economics_open": {
+      "original": 73,
+      "effective": 2
+    },
+    "panellinies_exams_greek_language_open": {
+      "original": 42,
+      "effective": 2
+    },
+    "panellinies_exams_history_open": {
+      "original": 54,
+      "effective": 2
+    },
+    "panellinies_exams_latin_open": {
+      "original": 159,
+      "effective": 2
+    },
+    "panellinies_exams_mathematics_open": {
+      "original": 95,
+      "effective": 2
+    },
+    "panellinies_exams_physics_open": {
+      "original": 73,
+      "effective": 2
+    }
+  },
+  "config": {
+    "model": "openai-chat-completions",
+    "model_args": {
+      "model": "llama-krikri-8b-instruct-v1.5",
+      "base_url": "http://ec2-3-18-183-221.us-east-2.compute.amazonaws.com:4000/v1/chat/completions",
+      "num_concurrent": 1,
+      "eos_string": "<|end_of_text|>",
+      "max_retries": 10
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": 2.0,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "7ba285d",
+  "date": 1779875393.0026684,
+  "pretty_env_info": "PyTorch version: 2.11.0+cpu\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: Microsoft Windows 11 Home (10.0.26200 64-bit)\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] (64-bit runtime)\nPython platform: Windows-11-10.0.26200-SP0\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nName: 13th Gen Intel(R) Core(TM) i7-1360P\nManufacturer: GenuineIntel\nFamily: 198\nArchitecture: 9\nProcessorType: 3\nDeviceID: CPU0\nCurrentClockSpeed: 2200\nMaxClockSpeed: 2200\nL2CacheSize: 9216\nL2CacheSpeed: None\nRevision: None\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.5\n[pip3] torch==2.11.0\n[conda] Could not collect",
+  "transformers_version": "5.7.0",
+  "lm_eval_version": "0.4.11",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "panellinies_exams_ancient_greek_open": "e7aee83607a1b74be741debafd75d182923dc080a4bca87f79f5118f648f0db0",
+    "panellinies_exams_biology_open": "470869c1e50a57fc4e71dbd27ae5e81a7832074cee915c41f902536928953a94",
+    "panellinies_exams_chemistry_open": "d5039593ea696a188966ba056ae4613bd4a983fa6e7eee15f9ee3b04f4d93548",
+    "panellinies_exams_computer_science_open": "327bbd7c1969e279ec89ec38a3f1a83418615c78b2748e044309ac0dc09971e7",
+    "panellinies_exams_economics_open": "1be07f194173f3a21fd76a8bc63881518021d3c840f8e42c38d5e70d0112780f",
+    "panellinies_exams_greek_language_open": "97855e4a3c3cadeb623389ffb2733cfb00f4bd802a49af3ef759fe26656fbd51",
+    "panellinies_exams_history_open": "7a832f7883c38b36bab40d70cbd9d65abe559ed5e149dc9913c3055048f3e8b9",
+    "panellinies_exams_latin_open": "52f3efb1870b5a52e6950c1b315f8290c90485ef84b50edabff864a16135c44d",
+    "panellinies_exams_mathematics_open": "9fa2cfdc5ea6d89981c62ef8b536a45c06852bb31d59471ecea2752fd3a84efd",
+    "panellinies_exams_physics_open": "9ee63f5a8c4f88e1d393a6981a2a2f6e410229e09f46d9febf9d4ff3feafe4cb"
+  },
+  "model_source": "openai-chat-completions",
+  "model_name": "llama-krikri-8b-instruct-v1.5",
+  "model_name_sanitized": "llama-krikri-8b-instruct-v1.5",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "542.288377400022"
+}
