@@ -1,0 +1,7 @@
+Description
+Diagram of a uniform elastic string OG of length L, fixed at point G (x=L) and free at point O (x=0).
+
+Transcription
+O
+L
+G
