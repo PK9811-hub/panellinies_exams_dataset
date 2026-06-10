@@ -1,0 +1,9 @@
+Description
+Diagram showing two parallel vertical straight wires labeled (1) and (2). Both wires carry upward currents, indicated by arrows labeled I_1 for wire (1) and I_2 for wire (2). The horizontal distance between the two wires is denoted by r.
+
+Transcription
+(1)
+(2)
+I_1
+I_2
+r
