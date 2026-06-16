@@ -1,7 +1,7 @@
 [
   {
     "id": "A1",
-    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΑ1. Σε ποια από τις παρακάτω υποστιβάδες αντιστοιχούν περισσότερα ατομικά τροχιακά;",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΣε ποια από τις παρακάτω υποστιβάδες αντιστοιχούν περισσότερα ατομικά τροχιακά;",
     "input": "",
     "choices": [
       "α. Στην υποστιβάδα 3d.",
@@ -16,7 +16,7 @@
   },
   {
     "id": "A2",
-    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΑ2. Δίνεται η θερμοχημική εξίσωση:\n$C_3H_8(g) + 5O_2(g) \\rightarrow 3CO_2(g) + 4H_2O(l)$, $\\Delta H_c^0 = -2220\\text{ kJ}$\nΚατά την πλήρη καύση $4,4\\text{ g}$ προπανίου ($C_3H_8$) σε πρότυπες συνθήκες:",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΔίνεται η θερμοχημική εξίσωση:\n$C_3H_8(g) + 5O_2(g) \\rightarrow 3CO_2(g) + 4H_2O(l)$, $\\Delta H_c^0 = -2220\\text{ kJ}$\nΚατά την πλήρη καύση $4,4\\text{ g}$ προπανίου ($C_3H_8$) σε πρότυπες συνθήκες:",
     "input": "",
     "choices": [
       "α. ελευθερώνεται ποσό θερμότητας $2220\\text{ kJ}$.",
@@ -31,7 +31,7 @@
   },
   {
     "id": "A3",
-    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΑ3. Κατά την επίδραση περίσσειας υδατικού διαλύματος $NaOH$ σε μίγμα $CH_3COOH$ και $CH_3COOCH_2CH_3$, τα προϊόντα που προκύπτουν μετά την ολοκλήρωση των αντιδράσεων είναι:",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΚατά την επίδραση περίσσειας υδατικού διαλύματος $NaOH$ σε μίγμα $CH_3COOH$ και $CH_3COOCH_2CH_3$, τα προϊόντα που προκύπτουν μετά την ολοκλήρωση των αντιδράσεων είναι:",
     "input": "",
     "choices": [
       "α. $CH_3COONa$ και $CH_3CH_2OH$.",
@@ -46,7 +46,7 @@
   },
   {
     "id": "A4",
-    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΑ4. Μίγμα αερίων $A$ και $B$ εισάγεται σε κλειστό δοχείο σταθερού όγκου $V$, σε θερμοκρασία $T$, οπότε πραγματοποιείται η αντίδραση: $2A(g) + B(g) \\rightleftharpoons 2\\Gamma(g)$. Μετά την αποκατάσταση της χημικής ισορροπίας, αυξάνουμε τη θερμοκρασία του συστήματος, οπότε η απόδοση της αντίδρασης αυξάνεται. Η αντίδραση προς τα δεξιά είναι:",
+    "question": "Για τις προτάσεις Α1 έως και Α4 να γράψετε στο τετράδιό σας τον αριθμό της πρότασης και δίπλα το γράμμα που αντιστοιχεί στη σωστή επιλογή.\n\nΜίγμα αερίων $A$ και $B$ εισάγεται σε κλειστό δοχείο σταθερού όγκου $V$, σε θερμοκρασία $T$, οπότε πραγματοποιείται η αντίδραση: $2A(g) + B(g) \\rightleftharpoons 2\\Gamma(g)$. Μετά την αποκατάσταση της χημικής ισορροπίας, αυξάνουμε τη θερμοκρασία του συστήματος, οπότε η απόδοση της αντίδρασης αυξάνεται. Η αντίδραση προς τα δεξιά είναι:",
     "input": "",
     "choices": [
       "α. εξώθερμη και η σταθερά ισορροπίας $K_c$ μειώνεται.",
@@ -61,11 +61,11 @@
   },
   {
     "id": "A5.1",
-    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \n1. Σε ένα πολυηλεκτρονικό άτομο, η ενέργεια ενός ατομικού τροχιακού καθορίζεται αποκλειστικά από την τιμή του κύριου κβαντικού αριθμού ($n$).",
+    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \nΣε ένα πολυηλεκτρονικό άτομο, η ενέργεια ενός ατομικού τροχιακού καθορίζεται αποκλειστικά από την τιμή του κύριου κβαντικού αριθμού ($n$).",
     "input": "",
     "choices": [
-      "ΣΩΣΤΟ",
-      "ΛΑΘΟΣ"
+      "α. Σωστό",
+      "β. Λάθος"
     ],
     "images": [],
     "mark": [
@@ -74,11 +74,11 @@
   },
   {
     "id": "A5.2",
-    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \n2. Κατά την αραίωση ασθενούς οξέος με νερό σε σταθερή θερμοκρασία, ο βαθμός ιοντισμού ($\u03b1$) του οξέος αυξάνεται.",
+    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \nΚατά την αραίωση ασθενούς οξέος με νερό σε σταθερή θερμοκρασία, ο βαθμός ιοντισμού ($\u03b1$) του οξέος αυξάνεται.",
     "input": "",
     "choices": [
-      "ΣΩΣΤΟ",
-      "ΛΑΘΟΣ"
+      "α. Σωστό",
+      "β. Λάθος"
     ],
     "images": [],
     "mark": [
@@ -87,11 +87,11 @@
   },
   {
     "id": "A5.3",
-    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \n3. Η αντίδραση της μεθανάλης ($HCHO$) με αντιδραστήριο $Fehling$ οδηγεί στον σχηματισμό καστανοκόκκινου ιζήματος $Cu_2O$.",
+    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \nΗ αντίδραση της μεθανάλης ($HCHO$) με αντιδραστήριο $Fehling$ οδηγεί στον σχηματισμό καστανοκόκκινου ιζήματος $Cu_2O$.",
     "input": "",
     "choices": [
-      "ΣΩΣΤΟ",
-      "ΛΑΘΟΣ"
+      "α. Σωστό",
+      "β. Λάθος"
     ],
     "images": [],
     "mark": [
@@ -100,11 +100,11 @@
   },
   {
     "id": "A5.4",
-    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \n4. Για μια απλή αντίδραση, η τάξη της αντίδρασης συμπίπτει με το άθροισμα των στοιχειομετρικών συντελεστών των αντιδρώντων.",
+    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \nΓια μια απλή αντίδραση, η τάξη της αντίδρασης συμπίπτει με το άθροισμα των στοιχειομετρικών συντελεστών των αντιδρώντων.",
     "input": "",
     "choices": [
-      "ΣΩΣΤΟ",
-      "ΛΑΘΟΣ"
+      "α. Σωστό",
+      "β. Λάθος"
     ],
     "images": [],
     "mark": [
@@ -113,11 +113,11 @@
   },
   {
     "id": "A5.5",
-    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \n5. Το ιόν $Cl^-$ δρα ως ασθενής βάση κατά Bronsted-Lowry σε υδατικό διάλυμα.",
+    "question": "Να χαρακτηρίσετε την πρόταση που ακολουθεί ως ΣΩΣΤΟ ή ΛΑΘΟΣ: \nΤο ιόν $Cl^-$ δρα ως ασθενής βάση κατά Bronsted-Lowry σε υδατικό διάλυμα.",
     "input": "",
     "choices": [
-      "ΣΩΣΤΟ",
-      "ΛΑΘΟΣ"
+      "α. Σωστό",
+      "β. Λάθος"
     ],
     "images": [],
     "mark": [
@@ -126,7 +126,7 @@
   },
   {
     "id": "B1.α.1",
-    "question": "Δίνονται τα στοιχεία $_8O$, $_{16}S$ και $_{34}Se$.\n1. Να γράψετε την ηλεκτρονιακή δομή των στοιχείων αυτών σε θεμελιώδη κατάσταση.",
+    "question": "Δίνονται τα στοιχεία $_8O$, $_{16}S$ και $_{34}Se$.\nΝα γράψετε την ηλεκτρονιακή δομή των στοιχείων αυτών σε θεμελιώδη κατάσταση.",
     "input": "",
     "choices": [],
     "images": [],
@@ -136,7 +136,7 @@
   },
   {
     "id": "B1.α.2",
-    "question": "Δίνονται τα στοιχεία $_8O$, $_{16}S$ και $_{34}Se$.\n2. Να κατατάξετε τα στοιχεία αυτά κατά σειρά αυξανόμενης ατομικής ακτίνας.",
+    "question": "Δίνονται τα στοιχεία $_8O$, $_{16}S$ και $_{34}Se$.\nΝα κατατάξετε τα στοιχεία αυτά κατά σειρά αυξανόμενης ατομικής ακτίνας.",
     "input": "",
     "choices": [],
     "images": [],
@@ -213,7 +213,7 @@
     ],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/ximeia/images/them_ximeia_gel_2026/img1/them_ximeia_gel_2026_img1.png",
+        "path": "images/them_ximeia_gel_2026/img1/them_ximeia_gel_2026_img1.png",
         "description": "Figure 1: A horizontal cylindrical container or tube is depicted, divided into two distinct compartments labeled \"A\" and \"B\" by a central cross-hatched semi-permeable membrane or barrier. Compartment A on the left contains a solution of urea labeled \"ουρία 6% w/v\". Compartment B on the right contains a solution of an unknown substance X labeled \"άγνωστη ουσία X 6% w/v\". The left end of the cylinder features a dashed curve, while the right end is solid, representing the boundaries of the experimental setup.",
         "transcription": ["A", "ουρία", "6% w/v", "B", "άγνωστη", "ουσία Χ", "6% w/v"]
       }
@@ -229,7 +229,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/ximeia/images/them_ximeia_gel_2026/img1/them_ximeia_gel_2026_img1.png",
+        "path": "images/them_ximeia_gel_2026/img1/them_ximeia_gel_2026_img1.png",
         "description": "Figure 1: A horizontal cylindrical container or tube is depicted, divided into two distinct compartments labeled \"A\" and \"B\" by a central cross-hatched semi-permeable membrane.",
         "transcription": ["A", "ουρία", "6% w/v", "B", "άγνωστη", "ουσία Χ", "6% w/v"]
       }
@@ -249,7 +249,7 @@
     ],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/ximeia/images/them_ximeia_gel_2026/img2/them_ximeia_gel_2026_img2.png",
+        "path": "images/them_ximeia_gel_2026/img2/them_ximeia_gel_2026_img2.png",
         "description": "Figure 2: A pH titration curve diagram is displayed, showing the variation of pH as a function of the volume of a standard titrant solution added, measured in milliliters (mL). The vertical y-axis represents the pH value, with specific gridlines marked at pH 5 and pH 7, as well as an upper dashed line representing the equivalence point pH. The horizontal x-axis represents the volume of the standard solution (\"όγκος πρότυπου διαλύματος (mL)\"), starting from 0, with two specific points marked: the equivalence volume (\"V_ισ.\") and the half-equivalence volume (\"V_ισ./2\"). The titration curve starts at an acidic pH below 5, rises smoothly to a plateau near pH 5 at the half-equivalence point, and then exhibits a sharp inflection vertical rise through pH 7 up to the equivalence point, before leveling off at a basic pH.",
         "transcription": ["pH", "όγκος πρότυπου διαλύματος (mL)", "0", "V_ισ./2", "V_ισ.", "5", "7"]
       }
@@ -265,7 +265,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/ximeia/images/them_ximeia_gel_2026/img2/them_ximeia_gel_2026_img2.png",
+        "path": "images/them_ximeia_gel_2026/img2/them_ximeia_gel_2026_img2.png",
         "description": "Figure 2: A pH titration curve diagram is displayed, showing the variation of pH as a function of the volume of a standard titrant solution added.",
         "transcription": ["pH", "όγκος πρότυπου διαλύματος (mL)", "0", "V_ισ./2", "V_ισ.", "5", "7"]
       }
@@ -281,7 +281,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/ximeia/images/them_ximeia_gel_2026/img3/them_ximeia_gel_2026_img3.png",
+        "path": "images/them_ximeia_gel_2026/img3/them_ximeia_gel_2026_img3.png",
         "description": "Figure 3: A multi-step organic chemistry reaction flowchart (synthetic route) is displayed, divided into two main horizontal sequences. The diagram uses circled Greek letters (A, B, Γ, Δ, E, Θ, K, M, N, Π, P) to represent unknown organic compounds and arrows to indicate chemical transformations. Reagents, catalysts, and reaction conditions (such as NaOH, SOCl2, Mg in anhydrous ether, KMnO4/H+, Cu at 320°C, conc. H2SO4 at 170°C, Br2 in CCl4, alcoholic KOH, and excess CuCl/NH3) are written along the arrows. The scheme starts with the alkaline hydrolysis of an ester labeled A (C\u03bdH2\u03bdO2) and involves various reaction types including oxidation to CO2, Grignard reagent formation, addition, elimination, and specific diagnostic tests like the iodoform test (producing a yellow precipitate / \u03ba\u03af\u03c4\u03c1\u03b9\u03bd\u03bf \u03af\u03b6\u03b7\u03bc\u03b1).",
         "transcription": ["(Α) C_νH_2νO_2 + NaOH -> (Β) + (Γ)", "(Β) + KMnO4 / H+ -> CO2", "(Γ) + SOCl2 -> (Δ)", "(Δ) + Mg / άνυδρος αιθέρας -> (Ε)", "(Γ) + Cu / 320°C -> (Θ)", "(Θ) + (Ε) -> ενδιάμεσο προϊόν", "ενδιάμεσο προϊόν + H2O -> (Κ)", "(Κ) + I2 / NaOH -> κίτρινο ίζημα", "(Κ) + π. H2SO4 / 170°C -> (Μ)", "(Μ) + Br2 / CCl4 -> (Ν)", "(Ν) + KOH αλκοολικό διάλυμα -> (Π)", "(Π) + CuCl (περίσσεια) / NH3 -> (Ρ)"]
       }

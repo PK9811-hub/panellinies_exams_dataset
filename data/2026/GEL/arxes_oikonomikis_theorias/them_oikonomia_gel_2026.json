@@ -91,7 +91,7 @@
     ],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/oikonomia/images/them_oikonomia_gel_2026/img1/them_oikonomia_gel_2026_img1.png",
+        "path": "images/them_oikonomia_gel_2026/img1/them_oikonomia_gel_2026_img1.png",
         "description": "Figure 1: A diagram illustrating a molecular biology process involving nucleic acids is displayed. The structure consists of an RNA or single-stranded nucleotide sequence containing specific marked regions. On the left side, there is a distinct block labeled \"X\", which represents a regulatory region, a modified cap, or a specific sequence tag at the 5' end. This is followed by a sequence of bases: AAA, UUG, UUU, AGU, GGG, CCU, ACG. A bracket spans across the codons UUG, UUU, AGU, GGG, CCU, and ACG, identifying this entire segment as a specific gene region or functional open reading frame labeled \"Γονίδιο gfp\" (gfp gene). On the far right, at the 3' end, the sequence is terminated by a block labeled \"Y\", which may denote a poly-A tail, a transcriptional terminator, or a 3' untranslated region.",
         "transcription": ["X - AAA UUG UUU AGU GGG CCU ACG - Y", "Γονίδιο gfp"]
       }
@@ -127,7 +127,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/oikonomia/images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
+        "path": "images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
         "description": "Figure 2: An economics data table showing production combinations of two goods, \"Αγαθό Χ\" and \"Αγαθό Ψ\", alongside the Opportunity Cost of good Ψ (ΚΕψ). The table contains four columns: Combinations of quantities (Συνδυασμοί ποσοτήτων labeled A, B, Γ), quantity of Good X, quantity of Good Ψ, and Opportunity Cost of Good Ψ. Several cells contain semicolons (;) indicating missing values that need to be calculated.",
         "transcription": ["Συνδυασμοί ποσοτήτων", "Αγαθό Χ", "Αγαθό Ψ", "Κόστος Ευκαιρίας αγαθού Ψ (ΚΕψ)", "A", "0", ";", ";", "B", ";", ";", ";", "Γ", ";", "0"]
       }
@@ -143,7 +143,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/oikonomia/images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
+        "path": "images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
         "description": "Figure 2: An economics data table showing production combinations of two goods, \"Αγαθό Χ\" and \"Αγαθό Ψ\", alongside the Opportunity Cost of good Ψ (ΚΕψ).",
         "transcription": ["Συνδυασμοί ποσοτήτων", "Αγαθό Χ", "Αγαθό Ψ", "Κόστος Ευκαιρίας αγαθού Ψ (ΚΕψ)", "A", "0", ";", ";", "B", ";", ";", ";", "Γ", ";", "0"]
       }
@@ -159,7 +159,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/oikonomia/images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
+        "path": "images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
         "description": "Figure 2: An economics data table showing production combinations of two goods, \"Αγαθό Χ\" and \"Αγαθό Ψ\", alongside the Opportunity Cost of good Ψ (ΚΕψ).",
         "transcription": ["Συνδυασμοί ποσοτήτων", "Αγαθό Χ", "Αγαθό Ψ", "Κόστος Ευκαιρίας αγαθού Ψ (ΚΕψ)", "A", "0", ";", ";", "B", ";", ";", ";", "Γ", ";", "0"]
       }
@@ -175,7 +175,7 @@
     "choices": [],
     "images": [
       {
-        "path": "panellinies/panellinies_exams_dataset/data/2026/GEL/oikonomia/images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
+        "path": "images/them_oikonomia_gel_2026/img2/them_oikonomia_gel_2026_img2.png",
         "description": "Figure 2: An economics data table showing production combinations of two goods, \"Αγαθό Χ\" and \"Αγαθό Ψ\", alongside the Opportunity Cost of good Ψ (ΚΕψ).",
         "transcription": ["Συνδυασμοί ποσοτήτων", "Αγαθό Χ", "Αγαθό Ψ", "Κόστος Ευκαιρίας αγαθού Ψ (ΚΕψ)", "A", "0", ";", ";", "B", ";", ";", ";", "Γ", ";", "0"]
       }

@@ -122,7 +122,7 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img1/them_biol_gel_2026_img1.png",
+        "path": "images/them_biol_gel_2026/img1/them_biol_gel_2026_img1.png",
         "description": "Figure 1: A biochemical pathway diagram showing the conversion of two colorless substances into colored products by different enzymes. The upper pathway shows άχρωμη ουσία Α (colorless substance A) being converted into a κόκκινη χρωστική (red pigment) by enzyme E₁. The lower pathway shows άχρωμη ουσία Β (colorless substance B) being converted into a κίτρινη χρωστική (yellow pigment) by enzyme E₂. The diagram illustrates two independent enzymatic reactions producing different pigments.",
         "transcription": ["άχρωμη ουσία Α", "E₁", "κόκκινη χρωστική", "άχρωμη ουσία Β", "E₂", "κίτρινη χρωστική"]
       }
@@ -138,7 +138,7 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img1/them_biol_gel_2026_img1.png",
+        "path": "images/them_biol_gel_2026/img1/them_biol_gel_2026_img1.png",
         "description": "Figure 1: A biochemical pathway diagram showing the conversion of two colorless substances into colored products by different generations.",
         "transcription": ["άχρωμη ουσία Α", "E₁", "κόκκινη χρωστική", "άχρωμη ουσία Β", "E₂", "κίτρινη χρωστική"]
       }
@@ -154,12 +154,12 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img2/them_biol_gel_2026_img2.png",
+        "path": "images/them_biol_gel_2026/img2/them_biol_gel_2026_img2.png",
         "description": "Figure 2: A pedigree chart showing inheritance of a trait across three generations. Squares represent males, circles represent females. Filled symbols indicate affected individuals, while unfilled symbols indicate unaffected individuals. Generation I I-1: unaffected male. I-2: affected female. They are connected as a couple. Generation II (their children) II-1: affected male. II-2: unaffected female. II-4: unaffected male. II-2 is married to II-3, an unaffected male. Generation III III-1: affected female, daughter of II-2 and II-3. The pedigree shows affected individuals in every generation and includes an affected child born to two unaffected parents.",
         "transcription": ["I", "II", "III", "I-1", "I-2", "II-1", "II-2", "II-3", "II-4", "III-1"]
       },
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img3/them_biol_gel_2026_img3.png",
+        "path": "images/them_biol_gel_2026/img3/them_biol_gel_2026_img3.png",
         "description": "Figure 3: A table presenting the results of genetic probe (ανιχνευτής) analysis for five individuals of a pedigree. Columns correspond to individuals II₁, II₂, II₃, II₄, and III₁. Rows correspond to two probes, ανιχνευτής Α (probe A) and ανιχνευτής Β (probe B). The numbers indicate the number of DNA fragments detected by each probe in each individual.",
         "transcription": ["II₁", "II₂", "II₃", "II₄", "III₁", "ανιχνευτής Α: 1 2 1 2 2", "ανιχνευτής Β: 2 2 0 2 2"]
       }
@@ -175,12 +175,12 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img2/them_biol_gel_2026_img2.png",
+        "path": "images/them_biol_gel_2026/img2/them_biol_gel_2026_img2.png",
         "description": "Figure 2: A pedigree chart showing inheritance of a trait across three generations.",
         "transcription": ["I", "II", "III", "I-1", "I-2", "II-1", "II-2", "II-3", "II-4", "III-1"]
       },
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img3/them_biol_gel_2026_img3.png",
+        "path": "images/them_biol_gel_2026/img3/them_biol_gel_2026_img3.png",
         "description": "Figure 3: A table presenting the results of genetic probe (ανιχνευτής) analysis for five individuals of a pedigree.",
         "transcription": ["II₁", "II₂", "II₃", "II₄", "III₁", "ανιχνευτής Α: 1 2 1 2 2", "ανιχνευτής Β: 2 2 0 2 2"]
       }
@@ -196,12 +196,12 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img2/them_biol_gel_2026_img2.png",
+        "path": "images/them_biol_gel_2026/img2/them_biol_gel_2026_img2.png",
         "description": "Figure 2: A pedigree chart showing inheritance of a trait across three generations.",
         "transcription": ["I", "II", "III", "I-1", "I-2", "II-1", "II-2", "II-3", "II-4", "III-1"]
       },
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img3/them_biol_gel_2026_img3.png",
+        "path": "images/them_biol_gel_2026/img3/them_biol_gel_2026_img3.png",
         "description": "Figure 3: A table presenting the results of genetic probe (ανιχνευτής) analysis for five individuals of a pedigree.",
         "transcription": ["II₁", "II₂", "II₃", "II₄", "III₁", "ανιχνευτής Α: 1 2 1 2 2", "ανιχνευτής Β: 2 2 0 2 2"]
       }
@@ -217,7 +217,7 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img4/them_biol_gel_2026_img4.png",
+        "path": "images/them_biol_gel_2026/img4/them_biol_gel_2026_img4.png",
         "description": "Figure4: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II). The sequence is divided into three distinct regions by vertical dashed lines labeled \"K\" and \"Λ\". On the far left, the sequence is bounded by a box labeled \"Y_A\", and on the far right, by a box labeled \"Y_B\". The top sequence, strand I, reads from left to right starting with CCGGCTGCAG..., while the bottom sequence, strand II, aligns perfectly according to base-pairing rules (A with T, and C with G), starting with GGCCGACGTC... The middle section between lines K and Λ contains a specific AT-rich sequence, while the flanking regions contain various restriction enzyme recognition sites or regulatory sequences.",
         "transcription": ["Y_A - CCGGCTGCAG | TTAATGAACCCCTTTTAGAAACAT | CGAATTCCCGGG - Y_B", "αλυσίδα I", "Y_A - GGCCGACGTC | AATTACTTGGGGAAAATCTTTGTA | GCTTAAGGGCCC - Y_B", "αλυσίδα II"]
       }
@@ -233,7 +233,7 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img4/them_biol_gel_2026_img4.png",
+        "path": "images/them_biol_gel_2026/img4/them_biol_gel_2026_img4.png",
         "description": "Figure4: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as \"αλυσίδα I\" (strand I) and \"αλυσίδα II\" (strand II).",
         "transcription": ["Y_A - CCGGCTGCAG | TTAATGAACCCCTTTTAGAAACAT | CGAATTCCCGGG - Y_B", "αλυσίδα I", "Y_A - GGCCGACGTC | AATTACTTGGGGAAAATCTTTGTA | GCTTAAGGGCCC - Y_B", "αλυσίδα II"]
       }
@@ -249,7 +249,7 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img5/them_biol_gel_2026_img5.png",
+        "path": "images/them_biol_gel_2026/img5/them_biol_gel_2026_img5.png",
         "description": "Figure 5: A circular map of a recombinant plasmid (\"Πλασμίδιο\") is displayed, showing various functional genetic regions and restriction enzyme cleavage sites. At the bottom, a section is labeled as the origin of replication (Θέση έναρξης αντιγραφής). Moving clockwise around the plasmid, there is a region labeled Y, followed immediately by a restriction site for enzyme I (ΠΕ_I), which marks the beginning of the Γονίδιο gfp (GFP gene). The GFP gene region is shaded with diagonal lines and ends at a restriction site for enzyme II (ΠΕ_II). Further along the circle, another region labeled Y is present, followed by a region shaded with diagonal lines representing the ampicillin resistance gene (Γονίδιο ανθεκτικότητας στην αμπικιλίνη). Inside this resistance gene, a restriction site for enzyme III (ΠΕ_III) is indicated.",
         "transcription": ["Κεντρική ένδειξη: Πλασμίδιο", "Κάτω αριστερά: Θέση έναρξης αντιγραφής", "Πάνω αριστερά:", "Περιοχή \"Y\"", "Θέση αναγνώρισης ΠΕ_I", "Γονίδιο gfp", "Θέση αναγνώρισης ΠΕ_II", "Πάνω δεξιά:", "Περιοχή \"Y\"", "Γονίδιο ανθεκτικότητας στην αμπικιλίνη", "Θέση αναγνώρισης ΠΕ_III"]
       }
@@ -265,7 +265,7 @@
     "choices": [],
     "images": [
       {
-        "path": "/home/eleni/panellinies/panellinies_exams_dataset/data/2026/GEL/biologia/images/them_biol_gel_2026/img5/them_biol_gel_2026_img5.png",
+        "path": "images/them_biol_gel_2026/img5/them_biol_gel_2026_img5.png",
         "description": "Figure 5: A circular map of a recombinant plasmid (\"Πλασμίδιο\") is displayed, showing various functional genetic regions and restriction enzyme cleavage sites.",
         "transcription": ["Κεντρική ένδειξη: Πλασμίδιο", "Κάτω αριστερά: Θέση έναρξης αντιγραφής", "Πάνω αριστερά:", "Περιοχή \"Y\"", "Θέση αναγνώρισης ΠΕ_I", "Γονίδιο gfp", "Θέση αναγνώρισης ΠΕ_II", "Πάνω δεξιά:", "Περιοχή \"Y\"", "Γονίδιο ανθεκτικότητας στην αμπικιλίνη", "Θέση αναγνώρισης ΠΕ_III"]
       }
