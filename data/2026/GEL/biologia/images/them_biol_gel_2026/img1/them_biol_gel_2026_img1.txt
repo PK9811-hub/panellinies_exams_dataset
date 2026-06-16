@@ -1,0 +1,10 @@
+Description
+Figure 1: A biochemical pathway diagram showing the conversion of two colorless substances into colored products by different enzymes. The upper pathway shows άχρωμη ουσία Α (colorless substance A) being converted into a κόκκινη χρωστική (red pigment) by enzyme E₁. The lower pathway shows άχρωμη ουσία Β (colorless substance B) being converted into a κίτρινη χρωστική (yellow pigment) by enzyme E₂. The diagram illustrates two independent enzymatic reactions producing different pigments.
+
+Transcription
+άχρωμη ουσία Α
+E₁
+κόκκινη χρωστική
+άχρωμη ουσία Β
+E₂
+κίτρινη χρωστική

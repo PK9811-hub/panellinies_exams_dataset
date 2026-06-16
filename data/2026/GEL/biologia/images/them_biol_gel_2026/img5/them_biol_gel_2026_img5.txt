@@ -1,0 +1,15 @@
+Description
+Figure 5: A circular map of a recombinant plasmid ("Πλασμίδιο") is displayed, showing various functional genetic regions and restriction enzyme cleavage sites. At the bottom, a section is labeled as the origin of replication ("Θέση έναρξης αντιγραφής"). Moving clockwise around the plasmid, there is a region labeled "Y", followed immediately by a restriction site for enzyme I ("ΠΕ_I"), which marks the beginning of the "Γονίδιο gfp" (GFP gene). The GFP gene region is shaded with diagonal lines and ends at a restriction site for enzyme II ("ΠΕ_II"). Further along the circle, another region labeled "Y" is present, followed by a region shaded with diagonal lines representing the ampicillin resistance gene ("Γονίδιο ανθεκτικότητας στην αμπικιλίνη"). Inside this resistance gene, a restriction site for enzyme III ("ΠΕ_III") is indicated.
+
+Transcription
+Κεντρική ένδειξη: Πλασμίδιο
+Κάτω αριστερά: Θέση έναρξης αντιγραφής
+Πάνω αριστερά:
+Περιοχή "Y"
+Θέση αναγνώρισης ΠΕ_I
+Γονίδιο gfp 
+Θέση αναγνώρισης ΠΕ_II
+Πάνω δεξιά:
+Περιοχή "Y"
+Γονίδιο ανθεκτικότητας στην αμπικιλίνη
+Θέση αναγνώρισης ΠΕ_III 
