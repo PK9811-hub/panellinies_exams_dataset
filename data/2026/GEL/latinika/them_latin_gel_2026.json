@@ -404,7 +404,7 @@
   },
   {
     "id": "Δ2.α",
-    "question": "«cum viri sui consilium de interficiendo Caesare cognovisset»: Να αναγνωρίσετε το είδος της δευτερεύουσας πρότασης (μονάδα 1), να δηλώσετε τη συντακτική της λειτουργία (μονάδα 1), τον τρόπο εισαγωγής της (μονάδα 1) και να αιτιολογήσετε τον τρόπο εκφοράς της (μονάδες 2). Στη συνέχεια, να συμπτύξετε τη δευτερεύουσα πρόταση στην αντίστοιχη μετοχή (μονάδες 2).",
+    "question": "«cum viri sui consilium de interficiendo Caesare cognovisset»: Να αναγνωρίσετε το είδος της δευτερεύουσας πρότασης, να δηλώσετε τη συντακτική της λειτουργία, τον τρόπο εισαγωγής της και να αιτιολογήσετε τον τρόπο εκφοράς της. Στη συνέχεια, να συμπτύξετε τη δευτερεύουσα πρόταση στην αντίστοιχη μετοχή.",
     "input": "Porcia, Bruti uxor, cum viri sui consilium de interficiendo Caesare cognovisset",
     "choices": [],
     "images": [],
@@ -413,13 +413,33 @@
     ]
   },
   {
-    "id": "Δ2.β",
-    "question": "«Brutus ad eam obiurgandam vēnit»: Να δηλώσετε τον προσδιορισμό του σκοπού με: α) τελική πρόταση (μονάδες 3), β) σουπίνο (μονάδες 2), γ) εμπρόθετη γενική του γερουνδίου (μονάδες 3).",
+    "id": "Δ2.β.α",
+    "question": "«Brutus ad eam obiurgandam vēnit»: Να δηλώσετε τον προσδιορισμό του σκοπού με: τελική πρόταση.",
     "input": "Brutus ad eam obiurgandam vēnit",
     "choices": [],
     "images": [],
     "mark": [
-      "Μονάδες 8"
+      "Μονάδες 3"
+    ]
+  },
+  {
+    "id": "Δ2.β.β",
+    "question": "«Brutus ad eam obiurgandam vēnit»: Να δηλώσετε τον προσδιορισμό του σκοπού με: σουπίνο.",
+    "input": "Brutus ad eam obiurgandam vēnit",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 2"
+    ]
+  },
+  {
+    "id": "Δ2.β.γ",
+    "question": "«Brutus ad eam obiurgandam vēnit»: Να δηλώσετε τον προσδιορισμό του σκοπού με: εμπρόθετη γενική του γερουνδίου.",
+    "input": "Brutus ad eam obiurgandam vēnit",
+    "choices": [],
+    "images": [],
+    "mark": [
+      "Μονάδες 3"
     ]
   }
 ]
