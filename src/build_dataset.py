@@ -134,7 +134,7 @@ def get_file_pairs(data_dir, target_school=None):
     return pairs
 
 # --- DATA TRANSFORMERS ---        
-def detect_exercise_type (q_text, q_choices):
+#def detect_exercise_type (q_text, q_choices):
     if q_text:
         question_text = str(q_text).lower() 
     else:
@@ -180,6 +180,48 @@ def detect_exercise_type (q_text, q_choices):
     if has_keyword==True and has_numbers==True and has_letters==True:
         return "matching"
 
+    return "multiple_choice"
+
+def detect_exercise_type(q_text, q_choices):
+    if q_text:
+        question_text = str(q_text).lower() 
+    else:
+        question_text = ""
+        
+    if q_choices:
+        choices_list = list(q_choices)
+    else:
+        choices_list = []
+    
+    # 1. fill_in_the_gaps
+    if "κενά" in question_text or "...." in question_text:
+        return "fill_in_the_gaps"
+    
+    # 2. matching 
+    has_keyword = False
+    if "στήλη" in question_text or "στήλης" in question_text:
+        has_keyword = True
+    
+    has_numbers = bool(re.search(r'\d+\.', question_text))
+    has_letters = bool(re.search(r'[α-ω]\.', question_text))
+    
+    if has_keyword and has_numbers and has_letters:
+        return "matching"
+    
+    # 3. open_ended
+    if len(choices_list) == 0:
+        return "open_ended"
+    
+    # 4. true_false
+    if len(choices_list) <= 2:
+        for choice in choices_list:
+            current_choice = str(choice).lower()
+            true_false_keywords = "σωστό" in current_choice or "λάθος" in current_choice or "αληθής" in current_choice or "ψευδής" in current_choice
+        
+            if true_false_keywords:
+                return "true_false"
+    
+    # 5. multiple_choice
     return "multiple_choice"
 
 def unify_label(answer_text, form_type):
