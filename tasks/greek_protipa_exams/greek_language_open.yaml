@@ -1,33 +1,21 @@
-tag:
-  - panellinies_exams_open
-task: panellinies_exams_greek_language_open
-dataset_path: ilsp/panellinies-exams-dataset
+task: panellinies_greek_language_open
+dataset_path: ./hf_panellinies_dataset
 output_type: generate_until
 test_split: train
+fewshot_split: train
+num_fewshot: 0  
 process_docs: !function utils.process_greek_language_open
 doc_to_text: !function utils.doc_to_text_open
 doc_to_target: !function utils.doc_to_target_open
 process_results: !function utils.process_results_gen
-should_decontaminate: true
-doc_to_decontamination_query: question
 generation_kwargs:
   do_sample: false
   temperature: 0.0
   max_gen_toks: 512
-  until: ["Ερώτηση:", "---"]
+  until: 
+    - "Ερώτηση:"
+    - "---"
 metric_list:
-  - metric: bleu_max
-    aggregation: mean
-    higher_is_better: true
-  - metric: rouge1_max
-    aggregation: mean
-    higher_is_better: true
-  - metric: rouge2_max
-    aggregation: mean
-    higher_is_better: true
-  - metric: rougeL_max
-    aggregation: mean
-    higher_is_better: true
   - metric: bertscore_f1_max
     aggregation: mean
     higher_is_better: true

@@ -1,0 +1,5 @@
+group: panellinies_aggregate_private
+task:
+  - panellinies_closed_aggregate_private
+  - panellinies_structured_aggregate_private
+  - panellinies_open_aggregate_private

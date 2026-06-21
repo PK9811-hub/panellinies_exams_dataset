@@ -1,0 +1,15 @@
+group: panellinies_structured_aggregate_private
+task:
+  - panellinies_ancient_greek_structured_private
+  - panellinies_economics_structured_private
+  - panellinies_physics_structured_private
+  - panellinies_history_structured_private
+  - panellinies_latin_structured_private
+  - panellinies_mathematics_structured_private
+  - panellinies_greek_language_structured_private
+  - panellinies_computer_science_structured_private
+  - panellinies_chemistry_structured_private
+  - panellinies_biology_structured_private
+aggregate_metric_list:
+  - metric: structured_accuracy
+    aggregation: mean

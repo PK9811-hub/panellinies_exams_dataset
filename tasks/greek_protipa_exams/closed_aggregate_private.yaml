@@ -1,0 +1,15 @@
+group: panellinies_closed_aggregate_private
+task:
+  - panellinies_ancient_greek_closed_private
+  - panellinies_economics_closed_private
+  - panellinies_physics_closed_private
+  - panellinies_history_closed_private
+  - panellinies_latin_closed_private
+  - panellinies_mathematics_closed_private
+  - panellinies_greek_language_closed_private
+  - panellinies_computer_science_closed_private
+  - panellinies_chemistry_closed_private
+  - panellinies_biology_closed_private
+aggregate_metric_list:
+  - metric: exact_match
+    aggregation: mean

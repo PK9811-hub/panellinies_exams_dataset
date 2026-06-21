@@ -1,0 +1,3 @@
+include: physics_closed.yaml
+task: panellinies_physics_closed_private
+dataset_path: ./hf_panellinies_dataset

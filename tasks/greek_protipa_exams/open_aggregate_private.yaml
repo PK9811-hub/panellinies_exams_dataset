@@ -1,0 +1,15 @@
+group: panellinies_open_aggregate_private
+task:
+  - panellinies_ancient_greek_open_private
+  - panellinies_economics_open_private
+  - panellinies_physics_open_private
+  - panellinies_history_open_private
+  - panellinies_latin_open_private
+  - panellinies_mathematics_open_private
+  - panellinies_greek_language_open_private
+  - panellinies_computer_science_open_private
+  - panellinies_chemistry_open_private
+  - panellinies_biology_open_private
+aggregate_metric_list:
+  - metric: bertscore_f1_max
+    aggregation: mean

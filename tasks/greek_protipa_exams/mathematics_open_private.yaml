@@ -1,0 +1,3 @@
+include: mathematics_open.yaml
+task: panellinies_mathematics_open_private
+dataset_path: ./hf_panellinies_dataset

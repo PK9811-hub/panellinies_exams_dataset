@@ -1,4 +1,5 @@
-group: panellinies_exams_aggregate
+group: panellinies_aggregate
 task:
-  - panellinies_exams_closed_aggregate
-  - panellinies_exams_open_aggregate
+  - panellinies_closed_aggregate
+  - panellinies_structured_aggregate
+  - panellinies_open_aggregate
