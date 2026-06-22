@@ -115,16 +115,6 @@ def load_panellinies_exams_dataset(repo_id=None, split=None):
     logger.info(f"Concatenating splits: {available_splits}")
     return concatenate_datasets([dataset_dict[s] for s in available_splits])
 
-#functions to be added from protipa exams dataset
-
-#def filter_dataset() ?
-
-#def clean_dataset_paths() ?
-
-#def process_results_open() ?
-
-#def process_results_bypass() ?
-
 def run_evaluation(model_name, backend="api", api_base=None, task_dict=None, eval_limit=None):
     """
     Runs evaluation.
