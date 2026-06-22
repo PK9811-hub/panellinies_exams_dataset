@@ -2,8 +2,8 @@ task: panellinies_greek_language_closed
 dataset_path: ./hf_panellinies_dataset
 output_type: generate_until
 test_split: train
-fewshot_split: train
-num_fewshot: 0
+fewshot_split: dev
+num_fewshot: 5
 process_docs: !function utils.process_greek_language_closed
 doc_to_text: !function utils.doc_to_text_closed
 doc_to_target: !function utils.doc_to_target
