@@ -1,3 +1,0 @@
-include: ancient_greek_open.yaml
-task: panellinies_ancient_greek_open_private
-dataset_path: ./hf_panellinies_dataset

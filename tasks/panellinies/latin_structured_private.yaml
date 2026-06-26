@@ -1,0 +1,3 @@
+include: latin_structured.yaml
+task: panellinies_latin_structured_private
+dataset_path: ilsp/panellinies-exams-dataset-private

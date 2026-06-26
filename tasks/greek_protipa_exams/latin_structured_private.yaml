@@ -1,3 +1,0 @@
-include: latin_structured.yaml
-task: panellinies_latin_structured_private
-dataset_path: ./hf_panellinies_dataset

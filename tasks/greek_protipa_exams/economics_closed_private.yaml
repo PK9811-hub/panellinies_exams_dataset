@@ -1,3 +1,0 @@
-include: economics_closed.yaml
-task: panellinies_economics_closed_private
-dataset_path: ./hf_panellinies_dataset

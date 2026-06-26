@@ -1,3 +1,0 @@
-include: physics_open.yaml
-task: greek_protipa_exams_physics_open_private
-dataset_path: ilsp/greek-protipa-exams-private

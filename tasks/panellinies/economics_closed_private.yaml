@@ -1,0 +1,3 @@
+include: economics_closed.yaml
+task: panellinies_economics_closed_private
+dataset_path: ilsp/panellinies-exams-dataset-private

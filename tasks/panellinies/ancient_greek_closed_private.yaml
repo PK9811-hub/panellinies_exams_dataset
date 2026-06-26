@@ -1,0 +1,3 @@
+include: ancient_greek_closed.yaml
+task: panellinies_ancient_greek_closed_private
+dataset_path: ilsp/panellinies-exams-dataset-private

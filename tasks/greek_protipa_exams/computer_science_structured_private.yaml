@@ -1,3 +1,0 @@
-include: computer_science_structured.yaml
-task: panellinies_computer_science_structured_private
-dataset_path: ./hf_panellinies_dataset

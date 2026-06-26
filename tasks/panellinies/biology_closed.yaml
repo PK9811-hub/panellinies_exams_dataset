@@ -1,0 +1,24 @@
+task: panellinies_biology_closed
+dataset_path: ilsp/panellinies-exams-dataset
+output_type: generate_until
+test_split: train
+#fewshot_split: dev
+#num_fewshot: 5
+process_docs: !function utils.process_biology_closed
+doc_to_text: !function utils.doc_to_text_closed
+doc_to_target: !function utils.doc_to_target
+generation_kwargs:
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 50
+  until: ["\n", "."]
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "regex"
+        regex_pattern: "(?<![0-9/])([0-9])(?![0-9/])"
+      - function: "take_first"
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true

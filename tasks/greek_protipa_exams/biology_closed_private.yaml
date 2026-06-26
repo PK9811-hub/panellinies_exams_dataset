@@ -1,3 +1,0 @@
-include: biology_closed.yaml
-task: panellinies_biology_closed_private
-dataset_path: ./hf_panellinies_dataset

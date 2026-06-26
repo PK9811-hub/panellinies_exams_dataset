@@ -1,3 +1,0 @@
-include: greek_language_closed.yaml
-task: panellinies_greek_language_closed_private
-dataset_path: ./hf_panellinies_dataset

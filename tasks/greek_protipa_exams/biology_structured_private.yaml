@@ -1,3 +1,0 @@
-include: biology_structured.yaml
-task: panellinies_biology_structured_private
-dataset_path: ./hf_panellinies_dataset
