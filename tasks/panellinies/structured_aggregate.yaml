@@ -1,14 +1,8 @@
 group: panellinies_structured_aggregate
 task:
   - panellinies_ancient_greek_structured
-  - panellinies_economics_structured
-  - panellinies_physics_structured
-  - panellinies_history_structured
   - panellinies_latin_structured
-  - panellinies_mathematics_structured
-  - panellinies_greek_language_structured
   - panellinies_computer_science_structured
-  - panellinies_chemistry_structured
   - panellinies_biology_structured
 aggregate_metric_list:
   - metric: structured_accuracy

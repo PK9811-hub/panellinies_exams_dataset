@@ -245,10 +245,7 @@ def process_biology_closed(dataset): return filter_by_mode_and_subject(dataset, 
 
 # ------ STRUCTURED MODE (Matching, Fill-in-gaps) ------
 def process_ancient_greek_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='ancient_greek')
-def process_economics_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='economics')
-def process_history_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='history')
 def process_latin_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='latin')
-def process_greek_language_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='greek_language')
 def process_computer_science_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='computer_science')
 def process_biology_structured(dataset): return filter_by_mode_and_subject(dataset, mode='structured', subject='biology')
 
