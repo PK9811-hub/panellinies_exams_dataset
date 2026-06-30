@@ -5,8 +5,11 @@ from inspect_ai.scorer import scorer, Score
 from inspect_ai.model import get_model
 from inspect_ai.scorer import scorer, Score, Target
 from bert_score import score as bert_score_fn
+from bert_score import BERTScorer
 from inspect_ai.scorer import mean
 from transformers import BertTokenizer
+
+bert_scorer = BERTScorer(lang="el",  model_type="bert-base-multilingual-cased")
 
 if not hasattr(BertTokenizer, "build_inputs_with_special_tokens"):
     def build_inputs_with_special_tokens(self, token_ids_0, token_ids_1=None):
@@ -26,12 +29,12 @@ def greek_bertscore():
         else:
             true_refs = [gold_answer]
 
-        P, R, F1 = bert_score_fn(
+        P, R, F1 = bert_scorer.score(
             [completion] * len(true_refs),
             true_refs,
-            lang="el",
-            model_type="bert-base-multilingual-cased",
-            verbose=False,
+            # lang="el",
+            # model_type="bert-base-multilingual-cased",
+            # verbose=False,
         )
         bertscore_f1_max = F1.max().item()
 

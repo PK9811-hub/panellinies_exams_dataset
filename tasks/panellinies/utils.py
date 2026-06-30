@@ -3,8 +3,12 @@ import re
 import numpy as np
 import sacrebleu
 from rouge_score import rouge_scorer
+from bert_score import BERTScorer
 
 from bert_score import score as bert_score_fn
+
+bert_scorer = BERTScorer(lang="el",  model_type="bert-base-multilingual-cased")
+
 
 class GreekTokenizer:
     def tokenize(self, text):
@@ -53,11 +57,11 @@ def process_results_gen(doc, results):
     rougeL_max = np.nanmax([s["rougeL"] for s in rouge_scores])
 
     # P, R, F1 are returned as tensors
-    P, R, F1 = bert_score_fn(
+    P, R, F1 = bert_scorer.score(
         [completion]* len(true_refs),
         true_refs,
-        lang="el",
-        model_type="bert-base-multilingual-cased",
+        # lang="el",
+        # model_type="bert-base-multilingual-cased",
         verbose=False,
     )
     bertscore_f1_max = F1.max().item()
