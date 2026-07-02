@@ -1,0 +1,924 @@
+{
+  "results": {
+    "panellinies_ancient_greek_closed_private": {
+      "name": "panellinies_ancient_greek_closed_private",
+      "alias": "panellinies_ancient_greek_closed_private",
+      "sample_len": 52,
+      "exact_match,strict-match": 0.7115384615384616,
+      "exact_match_stderr,strict-match": 0.0634392529086423
+    },
+    "panellinies_economics_closed_private": {
+      "name": "panellinies_economics_closed_private",
+      "alias": "panellinies_economics_closed_private",
+      "sample_len": 49,
+      "exact_match,strict-match": 0.7142857142857143,
+      "exact_match_stderr,strict-match": 0.06520506636966263
+    },
+    "panellinies_physics_closed_private": {
+      "name": "panellinies_physics_closed_private",
+      "alias": "panellinies_physics_closed_private",
+      "sample_len": 86,
+      "exact_match,none": 0.6046511627906976,
+      "exact_match_stderr,none": 0.053031415120890164
+    },
+    "panellinies_history_closed_private": {
+      "name": "panellinies_history_closed_private",
+      "alias": "panellinies_history_closed_private",
+      "sample_len": 35,
+      "exact_match,strict-match": 0.6,
+      "exact_match_stderr,strict-match": 0.0840168050416806
+    },
+    "panellinies_latin_closed_private": {
+      "name": "panellinies_latin_closed_private",
+      "alias": "panellinies_latin_closed_private",
+      "sample_len": 20,
+      "exact_match,strict-match": 0.8,
+      "exact_match_stderr,strict-match": 0.0917662935482247
+    },
+    "panellinies_mathematics_closed_private": {
+      "name": "panellinies_mathematics_closed_private",
+      "alias": "panellinies_mathematics_closed_private",
+      "sample_len": 36,
+      "exact_match,strict-match": 0.6666666666666666,
+      "exact_match_stderr,strict-match": 0.07968190728895957
+    },
+    "panellinies_greek_language_closed_private": {
+      "name": "panellinies_greek_language_closed_private",
+      "alias": "panellinies_greek_language_closed_private",
+      "sample_len": 35,
+      "exact_match,strict-match": 1.0,
+      "exact_match_stderr,strict-match": 0.0
+    },
+    "panellinies_computer_science_closed_private": {
+      "name": "panellinies_computer_science_closed_private",
+      "alias": "panellinies_computer_science_closed_private",
+      "sample_len": 35,
+      "exact_match,strict-match": 0.7714285714285715,
+      "exact_match_stderr,strict-match": 0.07201440432144052
+    },
+    "panellinies_chemistry_closed_private": {
+      "name": "panellinies_chemistry_closed_private",
+      "alias": "panellinies_chemistry_closed_private",
+      "sample_len": 66,
+      "exact_match,strict-match": 0.45454545454545453,
+      "exact_match_stderr,strict-match": 0.06176056549879611
+    },
+    "panellinies_biology_closed_private": {
+      "name": "panellinies_biology_closed_private",
+      "alias": "panellinies_biology_closed_private",
+      "sample_len": 37,
+      "exact_match,strict-match": 0.4864864864864865,
+      "exact_match_stderr,strict-match": 0.08330289193201319
+    },
+    "panellinies_closed_aggregate_private": {
+      "alias": "panellinies_closed_aggregate_private",
+      "name": "panellinies_closed_aggregate_private",
+      "sample_len": 451,
+      "exact_match,none": 0.6046511627906976,
+      "exact_match_stderr,none": 0.05303141512089017,
+      "exact_match,strict-match": 0.6657534246575343,
+      "exact_match_stderr,strict-match": 0.023547767318976842,
+      "sample_count": {
+        "exact_match,none": 86,
+        "exact_match,strict-match": 365
+      }
+    }
+  },
+  "groups": {
+    "panellinies_closed_aggregate_private": {
+      "alias": "panellinies_closed_aggregate_private",
+      "name": "panellinies_closed_aggregate_private",
+      "sample_len": 451,
+      "exact_match,none": 0.6046511627906976,
+      "exact_match_stderr,none": 0.05303141512089017,
+      "exact_match,strict-match": 0.6657534246575343,
+      "exact_match_stderr,strict-match": 0.023547767318976842,
+      "sample_count": {
+        "exact_match,none": 86,
+        "exact_match,strict-match": 365
+      }
+    }
+  },
+  "group_subtasks": {
+    "panellinies_closed_aggregate_private": [
+      "panellinies_ancient_greek_closed_private",
+      "panellinies_economics_closed_private",
+      "panellinies_physics_closed_private",
+      "panellinies_history_closed_private",
+      "panellinies_latin_closed_private",
+      "panellinies_mathematics_closed_private",
+      "panellinies_greek_language_closed_private",
+      "panellinies_computer_science_closed_private",
+      "panellinies_chemistry_closed_private",
+      "panellinies_biology_closed_private"
+    ]
+  },
+  "configs": {
+    "panellinies_ancient_greek_closed_private": {
+      "task": "panellinies_ancient_greek_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_ancient_greek_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='ancient_greek')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_ancient_greek_closed at 0x000002709D717B00>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\ancient_greek_closed_private.yaml"
+      }
+    },
+    "panellinies_biology_closed_private": {
+      "task": "panellinies_biology_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_biology_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='biology')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_biology_closed at 0x000002709D7172E0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\biology_closed_private.yaml"
+      }
+    },
+    "panellinies_chemistry_closed_private": {
+      "task": "panellinies_chemistry_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_chemistry_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='chemistry')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_chemistry_closed at 0x000002709D7174C0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\chemistry_closed_private.yaml"
+      }
+    },
+    "panellinies_computer_science_closed_private": {
+      "task": "panellinies_computer_science_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_computer_science_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='computer_science')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_computer_science_closed at 0x000002709D717420>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\computer_science_closed_private.yaml"
+      }
+    },
+    "panellinies_economics_closed_private": {
+      "task": "panellinies_economics_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_economics_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='economics')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_economics_closed at 0x000002709D7177E0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\economics_closed_private.yaml"
+      }
+    },
+    "panellinies_greek_language_closed_private": {
+      "task": "panellinies_greek_language_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_greek_language_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='greek_language')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_greek_language_closed at 0x000002709D717600>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\greek_language_closed_private.yaml"
+      }
+    },
+    "panellinies_history_closed_private": {
+      "task": "panellinies_history_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_history_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='history')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_history_closed at 0x000002709D717740>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\history_closed_private.yaml"
+      }
+    },
+    "panellinies_latin_closed_private": {
+      "task": "panellinies_latin_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_latin_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='latin')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_latin_closed at 0x000002709D717880>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\latin_closed_private.yaml"
+      }
+    },
+    "panellinies_mathematics_closed_private": {
+      "task": "panellinies_mathematics_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_mathematics_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='mathematics')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_mathematics_closed at 0x000002709D717560>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 50,
+        "until": [
+          "\n",
+          "."
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "strict-match",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "(?<![0-9/])([0-9])(?![0-9/])"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\mathematics_closed_private.yaml"
+      }
+    },
+    "panellinies_physics_closed_private": {
+      "task": "panellinies_physics_closed_private",
+      "dataset_path": "ilsp/panellinies-exams-dataset-private",
+      "test_split": "train",
+      "fewshot_split": "dev",
+      "process_docs": "def process_physics_closed(dataset): return filter_by_mode_and_subject(dataset, mode='closed', subject='physics')\n",
+      "doc_to_text": "def doc_to_text_closed(doc):\n    \"\"\"\n    MCQ prompt logic with specific Greek instructions for index-based answers.\n    \"\"\"\n    prompt_parts = []\n    \n    # 1. Contextual Inputs\n    if doc.get(\"input\"): \n        prompt_parts.append(doc[\"input\"])\n    if doc.get(\"image_description\"): \n        prompt_parts.append(f\"Περιγραφή εικόνας: {doc['image_description']}\")\n    if doc.get(\"image_transcription\"): \n        prompt_parts.append(f\"Κείμενο εικόνας: {doc['image_transcription']}\")\n    \n    # 2. Question\n    prompt_parts.append(f\"Ερώτηση: {doc['question']}\")\n    \n    # 3. Choices (Index-based)\n    if doc.get(\"choices\"):\n        prompt_parts.append(\"Επιλογές:\")\n        for i, choice in enumerate(doc[\"choices\"]):\n            # Fix choice-stripping bug: if rest of choice is empty, keep the original letter label\n            match = re.match(r'^([Α-Ωα-ωA-Za-z0-9]+)\\.\\s*(.*)$', str(choice))\n            if match:\n                letter, rest = match.groups()\n                cleaned_choice = rest.strip() if rest.strip() else letter\n            else:\n                cleaned_choice = str(choice).strip()\n            prompt_parts.append(f\"{i}. {cleaned_choice}\")\n            \n    # 4. Critical Instructions\n    instruction = (\n        \"\\nΕίσαι ένας 18χρονος τελειόφοιτος Λυκείου που απαντά σε διαγώνισμα Πανελλαδικών.\\n\"\n        \"\\nΑπάντησε ΜΟΝΟ με τον αριθμό της σωστής επιλογής (δηλαδή 0, 1, 2 ή 3).\\n\"\n        \"Μην γράφεις καμία άλλη λέξη, επεξήγηση ή σημεία στίξης.\\n\"\n        \"Απάντηση:\"\n    )\n    prompt_parts.append(instruction)\n    return \"\\n\".join(prompt_parts)\n",
+      "doc_to_target": "def doc_to_target(doc):\n    \"\"\"Extracts the integer index as the target string.\"\"\"\n    if doc.get(\"answer_index\") is not None:\n        return doc_to_target_index(doc)\n    \n    if doc.get(\"format\") == \"true_false\":\n        return doc_to_target_true_false(doc)\n        \n    return \"\"\n",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": "dev",
+        "process_docs": "<function process_physics_closed at 0x000002709D717920>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_choice": null,
+        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 10,
+        "until": [
+          "Ερώτηση:",
+          "\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 8,
+        "max_retries": 10,
+        "config_source": "tasks\\panellinies\\physics_closed_private.yaml"
+      }
+    }
+  },
+  "versions": {
+    "panellinies_ancient_greek_closed_private": "Yaml",
+    "panellinies_biology_closed_private": "Yaml",
+    "panellinies_chemistry_closed_private": "Yaml",
+    "panellinies_closed_aggregate_private": "N/A",
+    "panellinies_computer_science_closed_private": "Yaml",
+    "panellinies_economics_closed_private": "Yaml",
+    "panellinies_greek_language_closed_private": "Yaml",
+    "panellinies_history_closed_private": "Yaml",
+    "panellinies_latin_closed_private": "Yaml",
+    "panellinies_mathematics_closed_private": "Yaml",
+    "panellinies_physics_closed_private": "Yaml"
+  },
+  "n-shot": {
+    "panellinies_ancient_greek_closed_private": 5,
+    "panellinies_biology_closed_private": 5,
+    "panellinies_chemistry_closed_private": 5,
+    "panellinies_closed_aggregate_private": 5,
+    "panellinies_computer_science_closed_private": 5,
+    "panellinies_economics_closed_private": 5,
+    "panellinies_greek_language_closed_private": 5,
+    "panellinies_history_closed_private": 5,
+    "panellinies_latin_closed_private": 5,
+    "panellinies_mathematics_closed_private": 5,
+    "panellinies_physics_closed_private": 5
+  },
+  "higher_is_better": {
+    "panellinies_ancient_greek_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_biology_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_chemistry_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_closed_aggregate_private": {
+      "exact_match": true
+    },
+    "panellinies_computer_science_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_economics_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_greek_language_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_history_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_latin_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_mathematics_closed_private": {
+      "exact_match": true
+    },
+    "panellinies_physics_closed_private": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "panellinies_ancient_greek_closed_private": {
+      "original": 52,
+      "effective": 52
+    },
+    "panellinies_economics_closed_private": {
+      "original": 49,
+      "effective": 49
+    },
+    "panellinies_physics_closed_private": {
+      "original": 86,
+      "effective": 86
+    },
+    "panellinies_history_closed_private": {
+      "original": 35,
+      "effective": 35
+    },
+    "panellinies_latin_closed_private": {
+      "original": 20,
+      "effective": 20
+    },
+    "panellinies_mathematics_closed_private": {
+      "original": 36,
+      "effective": 36
+    },
+    "panellinies_greek_language_closed_private": {
+      "original": 35,
+      "effective": 35
+    },
+    "panellinies_computer_science_closed_private": {
+      "original": 35,
+      "effective": 35
+    },
+    "panellinies_chemistry_closed_private": {
+      "original": 66,
+      "effective": 66
+    },
+    "panellinies_biology_closed_private": {
+      "original": 37,
+      "effective": 37
+    }
+  },
+  "config": {
+    "model": "local-chat-completions",
+    "model_args": {
+      "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+      "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
+      "num_concurrent": 8,
+      "max_retries": 10
+    },
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "ad516b4",
+  "date": 1782998209.9595935,
+  "pretty_env_info": "PyTorch version: 2.12.0+cpu\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: Microsoft Windows 11 Home (10.0.26200 64-bit)\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] (64-bit runtime)\nPython platform: Windows-11-10.0.26200-SP0\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nName: 13th Gen Intel(R) Core(TM) i7-1360P\nManufacturer: GenuineIntel\nFamily: 198\nArchitecture: 9\nProcessorType: 3\nDeviceID: CPU0\nCurrentClockSpeed: 2200\nMaxClockSpeed: 2200\nL2CacheSize: 9216\nL2CacheSpeed: None\nRevision: None\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.5\n[pip3] torch==2.12.0\n[conda] Could not collect",
+  "transformers_version": "5.12.1",
+  "lm_eval_version": "0.4.12",
+  "upper_git_hash": null,
+  "task_hashes": {
+    "panellinies_ancient_greek_closed_private": "9063e27fe344aac9543c552aa3a37d4a33cdf198a2ac962e3eec5c06f7351cf6",
+    "panellinies_economics_closed_private": "ffe244b78d58d3d597a05f605c3fc45e30169fd61d0e1b1447982e3ee71d5e79",
+    "panellinies_physics_closed_private": "7c341af4477997e86b33d681e46b3e57dca67d6b71d02723c093955d01b4a36a",
+    "panellinies_history_closed_private": "a05fe843008a7e34a2161a7cac84a73bd7e3976ac0704bee9834648f62327463",
+    "panellinies_latin_closed_private": "e982f3d0db152431b55eca35ca1fe7e14421b0354dfe84761cc97a951a5fa4cf",
+    "panellinies_mathematics_closed_private": "081811bfcd5f811e439b4106c0b49741287e9d476503981e47ead46ee1d8cad0",
+    "panellinies_greek_language_closed_private": "b29537015ef5c90d8154e7e5fcfb3b80d282577eeecff704b3f771382ff3321a",
+    "panellinies_computer_science_closed_private": "2462a6ea3845a1114f3583b0ed9dc2b6e883dc8688a3298b2fc9be60ed963bf2",
+    "panellinies_chemistry_closed_private": "2a7d3f7f8db0bfcbf37f22bc51d8093c518c375ec05a6715361d381070c3463c",
+    "panellinies_biology_closed_private": "4b830dc5c854a60276b0235f2554ac4f94b647eab0b3e67c09922b3cad9a1ff6"
+  },
+  "model_source": "local-chat-completions",
+  "model_name": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
+  "model_name_sanitized": "ilsp__Llama-Krikri-8B-Instruct-v1.5",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": true,
+  "chat_template": "",
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "240.01183610002045"
+}
