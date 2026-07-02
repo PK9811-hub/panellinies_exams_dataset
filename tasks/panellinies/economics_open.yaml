@@ -2,8 +2,8 @@ task: panellinies_economics_open
 dataset_path: ilsp/panellinies-exams-dataset
 output_type: generate_until
 test_split: train
-#fewshot_split: dev
-#num_fewshot: 5
+fewshot_split: dev
+num_fewshot: 5
 process_docs: !function utils.process_economics_open
 doc_to_text: !function utils.doc_to_text_open
 doc_to_target: !function utils.doc_to_target_open
