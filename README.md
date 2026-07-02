@@ -69,6 +69,21 @@ else:
     print(f"\nAnswer: {sample['answer_text']}")
 ```
 
+
+## Benchmarking & Evaluation
+
+To facilitate the seamless evaluation of Large Language Models, this repository provides ready-to-use configurations for two popular evaluation frameworks:
+
+### 1. LM Evaluation Harness (`lm-eval`)
+All tasks compatible with the EleutherAI `lm-eval` harness can be found in the [`tasks/panellinies`](https://github.com/PK9811-hub/panellinies_exams_dataset/tree/main/tasks/panellinies) directory. 
+* You can run experiments across different overarching formats, including **open-ended**, **closed-ended**, and **structured aggregate** (short phrases/single words) exercises.
+* Individual tasks are also broken down by specific academic subjects and their corresponding question types, allowing for highly targeted benchmarking.
+
+### 2. Inspect AI (LLM-as-a-Judge)
+For evaluating complex, open-ended questions where standard exact-match metrics fall short, we utilize the **Inspect AI** framework employing an LLM-as-a-judge methodology.
+* The necessary Python evaluation scripts, along with the prompt configurations (in the `configs` folder), are located in the [`src/evals`](https://github.com/PK9811-hub/panellinies_exams_dataset/tree/main/src/evals) directory.
+
+  
 ## Local Data & Repository Contents
 For researchers working locally or using the source repository, the data is available in several formats with additional internal metadata for traceability.
 
