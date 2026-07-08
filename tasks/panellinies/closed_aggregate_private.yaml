@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=none
 group: panellinies_closed_aggregate_private
 task:
   - panellinies_ancient_greek_closed_private
