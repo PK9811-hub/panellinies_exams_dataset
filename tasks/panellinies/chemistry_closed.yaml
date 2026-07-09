@@ -2,8 +2,8 @@ task: panellinies_chemistry_closed
 dataset_path: ilsp/panellinies-exams-dataset
 output_type: generate_until
 test_split: train
-fewshot_split: dev
-num_fewshot: 5
+#fewshot_split: dev
+#num_fewshot: 5
 process_docs: !function utils.process_chemistry_closed
 doc_to_text: !function utils.doc_to_text_closed
 doc_to_target: !function utils.doc_to_target

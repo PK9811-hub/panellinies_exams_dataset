@@ -4,15 +4,15 @@
       "name": "panellinies_ancient_greek_structured_private",
       "alias": "panellinies_ancient_greek_structured_private",
       "sample_len": 16,
-      "structured_accuracy,none": 0.28541666666666665,
-      "structured_accuracy_stderr,none": 0.0872930754328115
+      "structured_accuracy,none": 0.20208333333333334,
+      "structured_accuracy_stderr,none": 0.07235897842879803
     },
     "panellinies_latin_structured_private": {
       "name": "panellinies_latin_structured_private",
       "alias": "panellinies_latin_structured_private",
       "sample_len": 20,
-      "structured_accuracy,none": 0.08,
-      "structured_accuracy_stderr,none": 0.05311358236439101
+      "structured_accuracy,none": 0.09,
+      "structured_accuracy_stderr,none": 0.05707797067908166
     },
     "panellinies_computer_science_structured_private": {
       "name": "panellinies_computer_science_structured_private",
@@ -24,18 +24,18 @@
     "panellinies_biology_structured_private": {
       "name": "panellinies_biology_structured_private",
       "alias": "panellinies_biology_structured_private",
-      "sample_len": 4,
-      "structured_accuracy,none": 0.20476190476190476,
-      "structured_accuracy_stderr,none": 0.044923719676460014
+      "sample_len": 5,
+      "structured_accuracy,none": 0.3923809523809524,
+      "structured_accuracy_stderr,none": 0.15545704687802442
     },
     "panellinies_structured_aggregate_private": {
       "alias": "panellinies_structured_aggregate_private",
       "name": "panellinies_structured_aggregate_private",
-      "sample_len": 50,
-      "structured_accuracy,none": 0.1637142857142857,
-      "structured_accuracy_stderr,none": 0.03901525416016527,
+      "sample_len": 51,
+      "structured_accuracy,none": 0.1606909430438842,
+      "structured_accuracy_stderr,none": 0.038505319272904105,
       "sample_count": {
-        "structured_accuracy,none": 50
+        "structured_accuracy,none": 51
       }
     }
   },
@@ -43,11 +43,11 @@
     "panellinies_structured_aggregate_private": {
       "alias": "panellinies_structured_aggregate_private",
       "name": "panellinies_structured_aggregate_private",
-      "sample_len": 50,
-      "structured_accuracy,none": 0.1637142857142857,
-      "structured_accuracy_stderr,none": 0.03901525416016527,
+      "sample_len": 51,
+      "structured_accuracy,none": 0.1606909430438842,
+      "structured_accuracy_stderr,none": 0.038505319272904105,
       "sample_count": {
-        "structured_accuracy,none": 50
+        "structured_accuracy,none": 51
       }
     }
   },
@@ -75,12 +75,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": null,
-        "process_docs": "<function process_ancient_greek_structured at 0x7c654189e160>",
+        "process_docs": "<function process_ancient_greek_structured at 0x000001621DAF72E0>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_structured at 0x7c654189eb60>",
+        "doc_to_text": "<function doc_to_text_structured at 0x000001621DAF6A20>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target_structured at 0x7c654189ec00>",
+        "doc_to_target": "<function doc_to_target_structured at 0x000001621DAF6980>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -108,10 +108,10 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 20,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
-        "config_source": "tasks/panellinies/ancient_greek_structured_private.yaml"
+        "config_source": "tasks\\panellinies\\ancient_greek_structured_private.yaml"
       }
     },
     "panellinies_biology_structured_private": {
@@ -129,12 +129,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": null,
-        "process_docs": "<function process_biology_structured at 0x7c654189e340>",
+        "process_docs": "<function process_biology_structured at 0x000001621DAF7060>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_structured at 0x7c654189eb60>",
+        "doc_to_text": "<function doc_to_text_structured at 0x000001621DAF6A20>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target_structured at 0x7c654189ec00>",
+        "doc_to_target": "<function doc_to_target_structured at 0x000001621DAF6980>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -162,10 +162,10 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 20,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
-        "config_source": "tasks/panellinies/biology_structured_private.yaml"
+        "config_source": "tasks\\panellinies\\biology_structured_private.yaml"
       }
     },
     "panellinies_computer_science_structured_private": {
@@ -183,12 +183,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": null,
-        "process_docs": "<function process_computer_science_structured at 0x7c654189e2a0>",
+        "process_docs": "<function process_computer_science_structured at 0x000001621DAF74C0>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_structured at 0x7c654189eb60>",
+        "doc_to_text": "<function doc_to_text_structured at 0x000001621DAF6A20>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target_structured at 0x7c654189ec00>",
+        "doc_to_target": "<function doc_to_target_structured at 0x000001621DAF6980>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -216,10 +216,10 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 20,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
-        "config_source": "tasks/panellinies/computer_science_structured_private.yaml"
+        "config_source": "tasks\\panellinies\\computer_science_structured_private.yaml"
       }
     },
     "panellinies_latin_structured_private": {
@@ -237,12 +237,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": null,
-        "process_docs": "<function process_latin_structured at 0x7c654189e200>",
+        "process_docs": "<function process_latin_structured at 0x000001621DAF7380>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_structured at 0x7c654189eb60>",
+        "doc_to_text": "<function doc_to_text_structured at 0x000001621DAF6A20>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target_structured at 0x7c654189ec00>",
+        "doc_to_target": "<function doc_to_target_structured at 0x000001621DAF6980>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -270,10 +270,10 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 20,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
-        "config_source": "tasks/panellinies/latin_structured_private.yaml"
+        "config_source": "tasks\\panellinies\\latin_structured_private.yaml"
       }
     }
   },
@@ -322,16 +322,16 @@
       "effective": 10
     },
     "panellinies_biology_structured_private": {
-      "original": 4,
-      "effective": 4
+      "original": 5,
+      "effective": 5
     }
   },
   "config": {
     "model": "local-chat-completions",
     "model_args": {
       "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-      "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-      "num_concurrent": 20,
+      "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+      "num_concurrent": 10,
       "max_retries": 10
     },
     "batch_size": 1,
@@ -346,9 +346,9 @@
     "torch_seed": 1234,
     "fewshot_seed": 1234
   },
-  "git_hash": "2ab89dc",
-  "date": 1782731628.8265936,
-  "pretty_env_info": "PyTorch version: 2.12.1+cpu\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 24.04.1 LTS (x86_64)\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: glibc-2.39\n\nPython version: 3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0] (64-bit runtime)\nPython platform: Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.39\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nArchitecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           39 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  12\nOn-line CPU(s) list:                     0-11\nVendor ID:                               GenuineIntel\nModel name:                              13th Gen Intel(R) Core(TM) i7-1355U\nCPU family:                              6\nModel:                                   186\nThread(s) per core:                      2\nCore(s) per socket:                      6\nSocket(s):                               1\nStepping:                                3\nBogoMIPS:                                5222.42\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               288 KiB (6 instances)\nL1i cache:                               192 KiB (6 instances)\nL2 cache:                                7.5 MiB (6 instances)\nL3 cache:                                12 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-11\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Vulnerable: No microcode\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.1\n[pip3] torch==2.12.1+cpu\n[pip3] torchaudio==2.11.0+cpu\n[pip3] torchvision==0.27.1+cpu\n[conda] Could not collect",
+  "git_hash": "22e21b0",
+  "date": 1783603460.3260303,
+  "pretty_env_info": "PyTorch version: 2.12.0+cpu\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: Microsoft Windows 11 Home (10.0.26200 64-bit)\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] (64-bit runtime)\nPython platform: Windows-11-10.0.26200-SP0\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nName: 13th Gen Intel(R) Core(TM) i7-1360P\nManufacturer: GenuineIntel\nFamily: 198\nArchitecture: 9\nProcessorType: 3\nDeviceID: CPU0\nCurrentClockSpeed: 2200\nMaxClockSpeed: 2200\nL2CacheSize: 9216\nL2CacheSpeed: None\nRevision: None\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.5\n[pip3] torch==2.12.0\n[conda] Could not collect",
   "transformers_version": "5.12.1",
   "lm_eval_version": "0.4.12",
   "upper_git_hash": null,
@@ -356,7 +356,7 @@
     "panellinies_ancient_greek_structured_private": "80a1ffb14a7a64b1b19f53680f841c56562af8b02812a6c60d45d17531dbc01e",
     "panellinies_latin_structured_private": "9b7f9bc118d538de212bb6e8b89b57fc3d1b87abc095de3f1c04f07a2366bf72",
     "panellinies_computer_science_structured_private": "13e2f548cbe985ecd7b77a8fa65a4d80473eaccf7634aa192b0702d8632973a2",
-    "panellinies_biology_structured_private": "81aa8fa404b510c7abcdfb03f5591d3371b17449b4168d4f84287800bde5aa5e"
+    "panellinies_biology_structured_private": "569779f290bbca87d6af17d378ffb11e1eb42482a5f6a9abdb5af4dd247204ab"
   },
   "model_source": "local-chat-completions",
   "model_name": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
@@ -366,5 +366,5 @@
   "fewshot_as_multiturn": true,
   "chat_template": "",
   "chat_template_sha": null,
-  "total_evaluation_time_seconds": "59.39812052901834"
+  "total_evaluation_time_seconds": "36.30657440000141"
 }

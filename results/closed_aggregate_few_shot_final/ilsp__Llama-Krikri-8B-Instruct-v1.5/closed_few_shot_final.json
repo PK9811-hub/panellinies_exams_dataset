@@ -11,29 +11,29 @@
       "name": "panellinies_economics_closed_private",
       "alias": "panellinies_economics_closed_private",
       "sample_len": 49,
-      "exact_match,strict-match": 0.7142857142857143,
-      "exact_match_stderr,strict-match": 0.06520506636966263
+      "exact_match,strict-match": 0.6938775510204082,
+      "exact_match_stderr,strict-match": 0.06652247352247599
     },
     "panellinies_physics_closed_private": {
       "name": "panellinies_physics_closed_private",
       "alias": "panellinies_physics_closed_private",
       "sample_len": 86,
-      "exact_match,none": 0.6046511627906976,
-      "exact_match_stderr,none": 0.053031415120890164
+      "exact_match,none": 0.5930232558139535,
+      "exact_match_stderr,none": 0.05328576389483537
     },
     "panellinies_history_closed_private": {
       "name": "panellinies_history_closed_private",
       "alias": "panellinies_history_closed_private",
       "sample_len": 35,
-      "exact_match,strict-match": 0.6,
-      "exact_match_stderr,strict-match": 0.0840168050416806
+      "exact_match,strict-match": 0.6285714285714286,
+      "exact_match_stderr,strict-match": 0.08286583553358692
     },
     "panellinies_latin_closed_private": {
       "name": "panellinies_latin_closed_private",
       "alias": "panellinies_latin_closed_private",
       "sample_len": 20,
-      "exact_match,strict-match": 0.8,
-      "exact_match_stderr,strict-match": 0.0917662935482247
+      "exact_match,strict-match": 0.75,
+      "exact_match_stderr,strict-match": 0.09933992677987828
     },
     "panellinies_mathematics_closed_private": {
       "name": "panellinies_mathematics_closed_private",
@@ -53,34 +53,34 @@
       "name": "panellinies_computer_science_closed_private",
       "alias": "panellinies_computer_science_closed_private",
       "sample_len": 35,
-      "exact_match,strict-match": 0.7714285714285715,
-      "exact_match_stderr,strict-match": 0.07201440432144052
+      "exact_match,strict-match": 0.7428571428571429,
+      "exact_match_stderr,strict-match": 0.07495496847387484
     },
     "panellinies_chemistry_closed_private": {
       "name": "panellinies_chemistry_closed_private",
       "alias": "panellinies_chemistry_closed_private",
-      "sample_len": 66,
-      "exact_match,strict-match": 0.45454545454545453,
-      "exact_match_stderr,strict-match": 0.06176056549879611
+      "sample_len": 64,
+      "exact_match,strict-match": 0.515625,
+      "exact_match_stderr,strict-match": 0.06296331249416676
     },
     "panellinies_biology_closed_private": {
       "name": "panellinies_biology_closed_private",
       "alias": "panellinies_biology_closed_private",
-      "sample_len": 37,
-      "exact_match,strict-match": 0.4864864864864865,
-      "exact_match_stderr,strict-match": 0.08330289193201319
+      "sample_len": 42,
+      "exact_match,strict-match": 0.47619047619047616,
+      "exact_match_stderr,strict-match": 0.07799829681942305
     },
     "panellinies_closed_aggregate_private": {
       "alias": "panellinies_closed_aggregate_private",
       "name": "panellinies_closed_aggregate_private",
-      "sample_len": 451,
-      "exact_match,none": 0.6046511627906976,
-      "exact_match_stderr,none": 0.05303141512089017,
-      "exact_match,strict-match": 0.6657534246575343,
-      "exact_match_stderr,strict-match": 0.023547767318976842,
+      "sample_len": 454,
+      "exact_match,none": 0.5930232558139535,
+      "exact_match_stderr,none": 0.053285763894835365,
+      "exact_match,strict-match": 0.6684782608695652,
+      "exact_match_stderr,strict-match": 0.02369088937515106,
       "sample_count": {
         "exact_match,none": 86,
-        "exact_match,strict-match": 365
+        "exact_match,strict-match": 368
       }
     }
   },
@@ -88,14 +88,14 @@
     "panellinies_closed_aggregate_private": {
       "alias": "panellinies_closed_aggregate_private",
       "name": "panellinies_closed_aggregate_private",
-      "sample_len": 451,
-      "exact_match,none": 0.6046511627906976,
-      "exact_match_stderr,none": 0.05303141512089017,
-      "exact_match,strict-match": 0.6657534246575343,
-      "exact_match_stderr,strict-match": 0.023547767318976842,
+      "sample_len": 454,
+      "exact_match,none": 0.5930232558139535,
+      "exact_match_stderr,none": 0.053285763894835365,
+      "exact_match,strict-match": 0.6684782608695652,
+      "exact_match_stderr,strict-match": 0.02369088937515106,
       "sample_count": {
         "exact_match,none": 86,
-        "exact_match,strict-match": 365
+        "exact_match,strict-match": 368
       }
     }
   },
@@ -129,12 +129,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_ancient_greek_closed at 0x000002709D717B00>",
+        "process_docs": "<function process_ancient_greek_closed at 0x000001FB5AD8FB00>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -175,8 +175,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\ancient_greek_closed_private.yaml"
       }
@@ -196,12 +196,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_biology_closed at 0x000002709D7172E0>",
+        "process_docs": "<function process_biology_closed at 0x000001FB5AD8F560>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -242,8 +242,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\biology_closed_private.yaml"
       }
@@ -263,12 +263,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_chemistry_closed at 0x000002709D7174C0>",
+        "process_docs": "<function process_chemistry_closed at 0x000001FB5AD8F6A0>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -309,8 +309,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\chemistry_closed_private.yaml"
       }
@@ -330,12 +330,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_computer_science_closed at 0x000002709D717420>",
+        "process_docs": "<function process_computer_science_closed at 0x000001FB5AD8F600>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -376,8 +376,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\computer_science_closed_private.yaml"
       }
@@ -397,12 +397,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_economics_closed at 0x000002709D7177E0>",
+        "process_docs": "<function process_economics_closed at 0x000001FB5AD8F920>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -443,8 +443,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\economics_closed_private.yaml"
       }
@@ -464,12 +464,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_greek_language_closed at 0x000002709D717600>",
+        "process_docs": "<function process_greek_language_closed at 0x000001FB5AD8F740>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -510,8 +510,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\greek_language_closed_private.yaml"
       }
@@ -531,12 +531,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_history_closed at 0x000002709D717740>",
+        "process_docs": "<function process_history_closed at 0x000001FB5AD8F880>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -577,8 +577,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\history_closed_private.yaml"
       }
@@ -598,12 +598,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_latin_closed at 0x000002709D717880>",
+        "process_docs": "<function process_latin_closed at 0x000001FB5AD8F9C0>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -644,8 +644,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\latin_closed_private.yaml"
       }
@@ -665,12 +665,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_mathematics_closed at 0x000002709D717560>",
+        "process_docs": "<function process_mathematics_closed at 0x000001FB5AD8F7E0>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -711,8 +711,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\mathematics_closed_private.yaml"
       }
@@ -732,12 +732,12 @@
       "fewshot_config": {
         "sampler": "default",
         "split": "dev",
-        "process_docs": "<function process_physics_closed at 0x000002709D717920>",
+        "process_docs": "<function process_physics_closed at 0x000001FB5AD8F420>",
         "fewshot_indices": null,
         "samples": null,
-        "doc_to_text": "<function doc_to_text_closed at 0x000002709D717EC0>",
+        "doc_to_text": "<function doc_to_text_closed at 0x000001FB5AD8FD80>",
         "doc_to_choice": null,
-        "doc_to_target": "<function doc_to_target at 0x000002709D717D80>",
+        "doc_to_target": "<function doc_to_target at 0x000001FB5AD8FCE0>",
         "gen_prefix": null,
         "fewshot_delimiter": "\n\n",
         "target_delimiter": " "
@@ -764,8 +764,8 @@
       "should_decontaminate": false,
       "metadata": {
         "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-        "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-        "num_concurrent": 8,
+        "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+        "num_concurrent": 10,
         "max_retries": 10,
         "config_source": "tasks\\panellinies\\physics_closed_private.yaml"
       }
@@ -866,20 +866,20 @@
       "effective": 35
     },
     "panellinies_chemistry_closed_private": {
-      "original": 66,
-      "effective": 66
+      "original": 64,
+      "effective": 64
     },
     "panellinies_biology_closed_private": {
-      "original": 37,
-      "effective": 37
+      "original": 42,
+      "effective": 42
     }
   },
   "config": {
     "model": "local-chat-completions",
     "model_args": {
       "model": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
-      "base_url": "http://borges.ilsp.gr:8338/v1/chat/completions",
-      "num_concurrent": 8,
+      "base_url": "http://pgx2.ilsp.gr:8338/v1/chat/completions",
+      "num_concurrent": 10,
       "max_retries": 10
     },
     "batch_size": 1,
@@ -894,23 +894,23 @@
     "torch_seed": 1234,
     "fewshot_seed": 1234
   },
-  "git_hash": "ad516b4",
-  "date": 1782998209.9595935,
+  "git_hash": "22e21b0",
+  "date": 1783601894.444613,
   "pretty_env_info": "PyTorch version: 2.12.0+cpu\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: Microsoft Windows 11 Home (10.0.26200 64-bit)\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)] (64-bit runtime)\nPython platform: Windows-11-10.0.26200-SP0\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nName: 13th Gen Intel(R) Core(TM) i7-1360P\nManufacturer: GenuineIntel\nFamily: 198\nArchitecture: 9\nProcessorType: 3\nDeviceID: CPU0\nCurrentClockSpeed: 2200\nMaxClockSpeed: 2200\nL2CacheSize: 9216\nL2CacheSpeed: None\nRevision: None\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.5\n[pip3] torch==2.12.0\n[conda] Could not collect",
   "transformers_version": "5.12.1",
   "lm_eval_version": "0.4.12",
   "upper_git_hash": null,
   "task_hashes": {
     "panellinies_ancient_greek_closed_private": "9063e27fe344aac9543c552aa3a37d4a33cdf198a2ac962e3eec5c06f7351cf6",
-    "panellinies_economics_closed_private": "ffe244b78d58d3d597a05f605c3fc45e30169fd61d0e1b1447982e3ee71d5e79",
-    "panellinies_physics_closed_private": "7c341af4477997e86b33d681e46b3e57dca67d6b71d02723c093955d01b4a36a",
+    "panellinies_economics_closed_private": "5b91b0a0786c31e910cde99940b6062d12d89707e0633cb56bfd9048d4e0203e",
+    "panellinies_physics_closed_private": "78b74ae78aad48d83b45e70eb8a7065dd77c832a6b296caceb199af623765923",
     "panellinies_history_closed_private": "a05fe843008a7e34a2161a7cac84a73bd7e3976ac0704bee9834648f62327463",
     "panellinies_latin_closed_private": "e982f3d0db152431b55eca35ca1fe7e14421b0354dfe84761cc97a951a5fa4cf",
     "panellinies_mathematics_closed_private": "081811bfcd5f811e439b4106c0b49741287e9d476503981e47ead46ee1d8cad0",
-    "panellinies_greek_language_closed_private": "b29537015ef5c90d8154e7e5fcfb3b80d282577eeecff704b3f771382ff3321a",
+    "panellinies_greek_language_closed_private": "5eba032a4d27b47763f5b097ccc46a78c92e282d78bf9cfc7c26a6a402f84b5e",
     "panellinies_computer_science_closed_private": "2462a6ea3845a1114f3583b0ed9dc2b6e883dc8688a3298b2fc9be60ed963bf2",
-    "panellinies_chemistry_closed_private": "2a7d3f7f8db0bfcbf37f22bc51d8093c518c375ec05a6715361d381070c3463c",
-    "panellinies_biology_closed_private": "4b830dc5c854a60276b0235f2554ac4f94b647eab0b3e67c09922b3cad9a1ff6"
+    "panellinies_chemistry_closed_private": "c77653862e33ffc2ccd75f02a0295a276f019b7bca1f9a0130d867fec0766637",
+    "panellinies_biology_closed_private": "04b7382c5a4d183239038ee95b6939c6d982ba93bc809f9ec7e8ad8df5c37eb7"
   },
   "model_source": "local-chat-completions",
   "model_name": "ilsp/Llama-Krikri-8B-Instruct-v1.5",
@@ -920,5 +920,5 @@
   "fewshot_as_multiturn": true,
   "chat_template": "",
   "chat_template_sha": null,
-  "total_evaluation_time_seconds": "240.01183610002045"
+  "total_evaluation_time_seconds": "193.58042960000057"
 }
