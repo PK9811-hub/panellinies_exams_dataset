@@ -131,6 +131,11 @@ def generic_evaluation(
     dataset = MemoryDataset(samples)
     
     if filter_field and filter_value:
+        if isinstance(filter_field, list): 
+            filter_field = ",".join(str(x) for x in filter_field)
+        if isinstance(filter_value, list): 
+            filter_value = ",".join(str(x) for x in filter_value)
+        
         fields = [f.strip() for f in filter_field.split(";")]
         values = [v.strip() for v in filter_value.split(";")]
         

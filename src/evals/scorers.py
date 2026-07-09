@@ -17,6 +17,7 @@ if not hasattr(BertTokenizer, "build_inputs_with_special_tokens"):
     
     BertTokenizer.build_inputs_with_special_tokens = build_inputs_with_special_tokens
 
+
 @scorer(metrics=[mean()])
 def greek_bertscore():
     """Returns the maximum BERTScore F1 for the completion against the target(s)."""
@@ -29,21 +30,29 @@ def greek_bertscore():
         else:
             true_refs = [gold_answer]
 
-        P, R, F1 = bert_scorer.score(
-            [completion] * len(true_refs),
-            true_refs,
-            # lang="el",
-            # model_type="bert-base-multilingual-cased",
-            # verbose=False,
-        )
-        bertscore_f1_max = F1.max().item()
+        is_completion_empty = not completion or not str(completion).strip()
+        is_ref_empty = any(not ref or not str(ref).strip() or str(ref).strip().lower() == 'nan' for ref in true_refs)
+
+        if is_completion_empty or is_ref_empty:
+            bertscore_f1_max = 0.0
+        else:
+            try:
+                P, R, F1 = bert_scorer.score(
+                    [completion] * len(true_refs),
+                    true_refs,
+                    # lang="el",
+                    # model_type="bert-base-multilingual-cased",
+                    # verbose=False,
+                )
+                bertscore_f1_max = F1.max().item()
+            except Exception as e:
+                bertscore_f1_max = 0.0
 
         return Score(
             value=bertscore_f1_max,
             explanation=f"BERTScore F1 calculation. Target(s): {true_refs}"
         )
     return evaluate
-
 
 @scorer(metrics=[])
 def generic_judge_scorer(instructions: str, model: str | None = None):
