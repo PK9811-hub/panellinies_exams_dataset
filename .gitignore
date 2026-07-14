@@ -142,3 +142,4 @@ mkdocs/
 /presidio_mkdocs
 ideas
 .agents/
+logs/
