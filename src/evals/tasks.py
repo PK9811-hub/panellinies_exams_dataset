@@ -46,13 +46,6 @@ def generic_evaluation(
         print(f"Warning: Could not load few-shot split '{fewshot_split}'. Proceeding with 0 shots.")
         dev_records = []
 
-   # try:
-   #     dev_data = load_dataset(dataset_path, dataset_name, split=fewshot_split, download_mode="force_redownload")
-   #     dev_records = list(dev_data)
-    #except Exception as e:
-    #    print(f"Warning: Could not load few-shot split '{fewshot_split}'. Proceeding with 0 shots.")
-    #    dev_records = []
-
 
     def record_to_sample(x):
         subject = x.get("subject")
