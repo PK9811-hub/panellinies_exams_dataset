@@ -98,11 +98,21 @@ Make sure your `.env` file is set up with the correct variables. First, load the
 export $(grep -v '^#' .env | xargs)
 ```
 
-Then run evaluation tasks:
+The evaluation script is highly flexible. You can evaluate the entire dataset, or filter it down using standard inspect ai flags (like --limit for quick testing) and custom task parameters (-T).
 
-Examples:
+Filtering Rules:
 
-* **Open-ended Greek Language**:
+* Use -T filter_field and -T filter_value to specify metadata columns and their allowed values.
+
+* Use ; to apply multiple filters (AND logic) (e.g., -T filter_field="subject;format").
+
+* Use , to allow multiple values for a single field (OR logic) (e.g., -T filter_value="physics;open_ended,fill_in_the_gaps").
+
+* Use -T filter_field="has_image_description" -T filter_value="true" to only evaluate questions that contain image descriptions.
+
+Here are some examples of how to run the evaluations:
+
+**Example 1: Specific Subject and Format (Open-ended Greek Language)**
 
 ```bash
 uv run inspect eval src/evals/tasks.py \
@@ -119,6 +129,40 @@ uv run inspect eval src/evals/tasks.py \
   -M responses_api=false
 ```
 
+**Example 2: Multiple Formats & Limit Samples (Quick Test in Biology)**
+
+```bash
+uv run inspect eval src/evals/tasks.py \
+  --model "openai/$MODEL_ID" \
+  --limit 5 \
+  --max-connections 10 \
+  -T dataset_path="$HF_REPO_ID" \
+  -T split=train \
+  -T input_field=question \
+  -T target_field=answer_text \
+  -T filter_field="subject;format" \
+  -T filter_value="biology;multiple_choice,matching" \
+  -T grader_model="openai/$GRADER_MODEL_ID" \
+  --batch false \
+  -M responses_api=false
+```
+
+**Example 3: Evaluating questions with Image Descriptions (Physics)**
+
+```bash
+uv run inspect eval src/evals/tasks.py \
+  --model "openai/$MODEL_ID" \
+  --max-connections 10 \
+  -T dataset_path="$HF_REPO_ID" \
+  -T split=train \
+  -T input_field=question \
+  -T target_field=answer_text \
+  -T filter_field="subject;has_image_description" \
+  -T filter_value="physics;true" \
+  -T grader_model="openai/$GRADER_MODEL_ID" \
+  --batch false \
+  -M responses_api=false
+```
 </details>
 
 ## Local Data & Repository Contents
