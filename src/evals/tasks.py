@@ -50,6 +50,7 @@ def generic_evaluation(
     def record_to_sample(x):
         subject = x.get("subject")
         format_type = x.get("format")
+        
         system_instruction = PROMPTS_CONFIG.get(subject, {}).get("system_instruction", "Είσαι ένας Έλληνας μαθητής που απαντά σε διαγώνισμα.")
         
         user_prompt_parts = []
