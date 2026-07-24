@@ -72,12 +72,17 @@ def generic_judge_scorer(instructions: str, model: str | None = None):
         # 2. Extract rubric from sample metadata (fallback to default instructions)
         rubric = state.metadata.get("grading_instructions") or instructions
         
-        # 3. Build the grading prompt (Translated & Granular)
+        # 3. Truncate completion if it is excessively long to prevent token context issues
+        submission = state.output.completion
+        if len(submission) > 20000:
+            submission = submission[:20000] + "\n[TRUNCATED DUE TO EXCESSIVE LENGTH]"
+
+        # 4. Build the grading prompt (Translated & Granular)
         prompt = (
             "Αξιολογείς μια υποβληθείσα απάντηση (Submission) σε μια άσκηση (Task), συγκρίνοντάς τη με ένα κριτήριο/πρότυπη λύση (Criterion).\n\n"
             "[BEGIN DATA]\n"
             f"[Task]: {state.input}\n"
-            f"[Submission]: {state.output.completion}\n"
+            f"[Submission]: {submission}\n"
             f"[Criterion]: {target.text}\n"
             "[END DATA]\n\n"
             f"{rubric}\n\n"
@@ -87,12 +92,20 @@ def generic_judge_scorer(instructions: str, model: str | None = None):
             '{\n  "grade": [Βαθμός από 0.0 έως 1.0, π.χ. 0.0, 0.25, 0.5, 0.75, 1.0],\n  "explanation": "Σύντομη αιτιολόγηση του βαθμού στα Ελληνικά"\n}'
         )
         
-        # 4. Call the model (normal text generation)
-        result = await grader.generate(
-            input=prompt
-        )
-        
-        completion = result.completion.strip()
+        # 5. Call the model (normal text generation) with error handling
+        try:
+            result = await grader.generate(
+                input=prompt
+            )
+            completion = result.completion.strip()
+        except Exception as e:
+            return Score(
+                value=0.0,
+                answer=state.output.completion,
+                explanation=f"Grading failed due to API error: {e}",
+                metadata={"error": str(e)}
+            )
+
         
         # 5. Extract JSON block programmatically
         grade = 0.0
