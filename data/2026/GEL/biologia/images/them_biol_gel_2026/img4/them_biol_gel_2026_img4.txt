@@ -1,8 +1,0 @@
-Description
-Figure4: A segment of double-stranded DNA is displayed, featuring two complementary antiparallel nucleotide sequences labeled as "αλυσίδα I" (strand I) and "αλυσίδα II" (strand II). The sequence is divided into three distinct regions by vertical dashed lines labeled "K" and "Λ". On the far left, the sequence is bounded by a box labeled "Y_A", and on the far right, by a box labeled "Y_B". The top sequence, strand I, reads from left to right starting with CCGGCTGCAG..., while the bottom sequence, strand II, aligns perfectly according to base-pairing rules (A with T, and C with G), starting with GGCCGACGTC... The middle section between lines K and Λ contains a specific AT-rich sequence, while the flanking regions contain various restriction enzyme recognition sites or regulatory sequences.
-
-Transcription
-Y_A - CCGGCTGCAG | TTAATGAACCCCTTTTAGAAACAT | CGAATTCCCGGG - Y_B
-αλυσίδα I
-Y_A - GGCCGACGTC | AATTACTTGGGGAAAATCTTTGTA | GCTTAAGGGCCC - Y_B
-αλυσίδα II

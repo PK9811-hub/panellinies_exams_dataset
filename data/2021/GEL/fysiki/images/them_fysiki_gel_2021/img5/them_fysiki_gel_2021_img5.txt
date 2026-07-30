@@ -1,8 +1,0 @@
-Description
-A mechanical system setup. A stepped pulley T with inner radius r and outer radius 2r is suspended from a ceiling. A mass Σ1 is hanging from a string (1) wound around the outer radius. A string (2) is wound around the inner radius and connects to a mass Σ2 resting on a smooth inclined plane at an angle φ. Mass Σ2 is at a height h above the ground. The inclined plane meets a horizontal plane. On the horizontal plane, a mass Σ3 is attached to a horizontal spring with constant k, fixed to a vertical wall on the right. The spring is compressed by a distance d from its natural length position Δ. A string (3) holds it in this position. Point Γ on the horizontal plane is at a distance ℓ from the natural length position Δ.
-
-Transcription
-νήμα (1)
-νήμα (2)
-νήμα (3)
-Σχήμα 5

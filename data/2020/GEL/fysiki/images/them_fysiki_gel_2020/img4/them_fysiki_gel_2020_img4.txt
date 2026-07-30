@@ -1,5 +1,0 @@
-Description
-A circuit diagram showing two long horizontal parallel conducting rails, AΓ on top and ΔZ on the bottom. The rails are connected on the left by a resistor R1 and on the right by a resistor R2, with a switch δ on the top rail just before R2. A vertical conducting bar KΛ rests on the rails and is being pulled to the right by a force F. The rails pass through three distinct magnetic field regions from left to right: a region with field B1 pointing into the page, a region with zero field B2=0 where the bar has velocity υ_op, and a region with field B3 pointing out of the page.
-
-Transcription
-Σχήμα 4

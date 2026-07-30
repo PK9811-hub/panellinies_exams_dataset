@@ -1,2 +1,0 @@
-Description
-A line graph showing the phase φ (in radians) of oscillation versus position x (in meters) at time t1 = 2 s. The vertical axis represents phase φ(rad) and the horizontal axis represents position x(m). The graph starts at a point (0, 4π) on the vertical axis and decreases linearly until it reaches the horizontal axis at x = 4. From x = 4 onwards, the phase remains constant at 0 along the horizontal axis, indicating the wave has reached up to that point at time t1.

@@ -1,6 +1,0 @@
-Description
-Figure 4: A double-stranded DNA sequence written in two horizontal lines using uppercase letters. The first line displays the nucleotide sequence: AGTAATGCATTTATCCCAGTAAATGACATA. Directly below it, a second sequence is shown: TCATTACGTAAATAGGGTCA TTTACTGTAT (presented continuously in the image without spacing). The sequences consist of the four DNA nitrogenous bases adenine (A), thymine (T), cytosine (C), and guanine (G). The two strands are arranged one above the other to represent complementary DNA strands, where each base in the upper strand pairs with its corresponding complementary base in the lower strand (A with T and C with G). The text appears in bold, evenly spaced capital letters, without additional annotations or directional markings.
-
-Transcription
-AGTAATGCATTTATCCCAGTAAATGACATA
-TCATTACGTAAATAGGGTCATTTTACTGTAT

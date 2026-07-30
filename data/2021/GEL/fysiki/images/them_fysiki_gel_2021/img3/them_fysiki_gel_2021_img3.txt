@@ -1,5 +1,0 @@
-Description
-A top-down view diagram showing the collisions of three spheres on a horizontal plane. Sphere Σ1 with mass m is initially moving to the right with velocity u1. It collides off-center with a stationary sphere Σ2. After this first collision, Σ1 moves upwards with velocity u'1, perpendicular to its initial path. Sphere Σ2 moves downwards and to the right with velocity u'2, at a 30-degree angle to Σ1's initial path. Following its upward path, sphere Σ1 then collides with another stationary sphere Σ3.
-
-Transcription
-Σχήμα 3

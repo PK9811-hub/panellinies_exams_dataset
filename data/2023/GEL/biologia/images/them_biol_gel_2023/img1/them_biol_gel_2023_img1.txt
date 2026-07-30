@@ -1,9 +1,0 @@
-Description
-Figure 1: A graph showing the concentration of chemical substances as a function of time. The vertical axis is labeled «Συγκέντρωση χημικών ουσιών» (concentration of chemical substances), while the horizontal axis is labeled «χρόνος t» (time t). Three curves are displayed. The curve labeled α increases over time and gradually approaches a constant value. The curve labeled β starts at a high concentration and decreases continuously toward a very low value as time progresses. The curve labeled γ is represented by a horizontal line, indicating that the concentration of this substance remains constant throughout the process.
-
-Transcription
-Συγκέντρωση χημικών ουσιών
-χρόνος t
-α
-β
-γ

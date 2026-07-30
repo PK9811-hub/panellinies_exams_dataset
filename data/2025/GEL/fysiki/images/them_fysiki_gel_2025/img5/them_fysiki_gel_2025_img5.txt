@@ -1,2 +1,0 @@
-Description
-A mechanical system diagram. A homogeneous beam rests at an angle θ with a smooth horizontal floor and is hinged to a vertical wall on the left. A circular hoop rests on the beam at point P. A vertical thread is tangent to the right side of the hoop and connects upwards to a block Σ1. Block Σ1 is suspended from a ceiling by a vertical spring. Point Z is marked at the top of the hoop's diameter perpendicular to the beam. The distance from the hinge to point P is marked as 0.5m.

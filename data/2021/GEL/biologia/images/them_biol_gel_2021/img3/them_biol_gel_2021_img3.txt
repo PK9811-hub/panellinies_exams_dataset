@@ -1,6 +1,0 @@
-Description
-Figure 3: A diagram displaying two complementary DNA sequences written in two horizontal lines. Each line consists of a continuous string of nucleotide bases represented by the letters A, T, C, and G. The sequences illustrate the arrangement of nucleotides in a double-stranded DNA molecule.
-
-Transcription
-GAATTCATGTTTCACAAAGAGTGAATTC
-CTTAAGTACAAAGTGTTTCTCACTTAAG

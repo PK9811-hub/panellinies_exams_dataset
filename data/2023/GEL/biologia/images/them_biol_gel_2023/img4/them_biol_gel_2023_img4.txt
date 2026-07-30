@@ -1,8 +1,0 @@
-Description
-Figure 4: A diagram showing two DNA strands labeled «αλυσίδα I» and «αλυσίδα II». Each strand is represented by a sequence of nucleotide bases written as continuous strings of the letters A, T, C, and G. The sequence for αλυσίδα I appears on the first line, while the complementary sequence for αλυσίδα II appears directly below it on the second line. The two sequences illustrate the nucleotide arrangement in the two strands of a DNA molecule.
-
-Transcription
-αλυσίδα I:
-TACAGAGAGATATACGGTAGTCAGATAAGTA
-αλυσίδα II:
-ATGTCTCTCTATATGCCATCAGTCTATTCAT

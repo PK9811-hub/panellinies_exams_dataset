@@ -1,7 +1,0 @@
-Description
-Figure 4: A circular diagram representing a plasmid (Πλασμίδιο). The plasmid is shown as a double-stranded circular DNA molecule. A specific region on the plasmid is highlighted and labeled «Υποκινητής» (promoter). Adjacent to this region, a marked site is labeled «θέση που κόβει η EcoRI», indicating the restriction enzyme EcoRI recognition and cleavage site. The diagram illustrates the location of a promoter and a restriction site within the plasmid.
-
-Transcription
-Υποκινητής
-θέση που κόβει η EcoRI
-Πλασμίδιο

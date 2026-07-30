@@ -1,6 +1,0 @@
-Description
-Figure 5: A diagram displaying two complementary DNA sequences written in two horizontal lines. Each sequence consists of nucleotide bases represented by the letters A, T, C, and G. The sequences include repeated regions at the beginning and end, indicating possible recognition or structural patterns within the DNA strands.
-
-Transcription
-GGGGGAATTCATGTTTCACAAAGAGTGAATTCGGGG
-CCCCCTTAAGTACAAAGTGTTTCTCACTTAAGCCCC

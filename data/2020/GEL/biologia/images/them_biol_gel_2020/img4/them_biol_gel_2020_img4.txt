@@ -1,8 +1,0 @@
-Description
-Figure 4: A circular diagram representing a plasmid containing two antibiotic resistance genes. Inside the plasmid, two regions are labeled: «Γονίδιο ανθεκτικότητας στην αμπικιλίνη» and «Γονίδιο ανθεκτικότητας στη στρεπτομυκίνη». Two specific sites on the plasmid are indicated on the outer ring with arrows labeled I and II, marking distinct positions on the DNA molecule. The diagram illustrates the location of resistance genes and specific sites within the plasmid.
-
-Transcription
-Γονίδιο ανθεκτικότητας στην αμπικιλίνη
-Γονίδιο ανθεκτικότητας στη στρεπτομυκίνη
-I
-II

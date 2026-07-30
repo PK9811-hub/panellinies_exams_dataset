@@ -1,6 +1,0 @@
-Description
-A momentum-time (p-t) graph for sphere m1. Before the collision, the momentum is constant at p1. During the collision, which has negligible duration, the momentum drops abruptly. After the collision, the momentum is constant at a lower positive value of p1/5.
-
-Transcription
-διάρκεια κρούσης αμελητέα
-Σχήμα 4

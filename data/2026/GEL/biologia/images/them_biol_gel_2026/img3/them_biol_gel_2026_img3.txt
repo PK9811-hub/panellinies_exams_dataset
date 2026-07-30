@@ -1,7 +1,0 @@
-Description
-Figure 3: A table presenting the results of genetic probe (ανιχνευτής) analysis for five individuals of a pedigree. Columns correspond to individuals II₁, II₂, II₃, II₄, and III₁. Rows correspond to two probes, ανιχνευτής Α (probe A) and ανιχνευτής Β (probe B). The numbers indicate the number of DNA fragments detected by each probe in each individual.
-
-Transcription
-II₁ II₂ II₃ II₄ III₁
-ανιχνευτής Α: 1 2 1 2 2
-ανιχνευτής Β: 2 2 0 2 2

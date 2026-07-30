@@ -1,2 +1,0 @@
-Description
-A diagram of a binary search tree. The root node contains the number 19. There are two arrows pointing downwards from the root to its children. The left child node contains the number 11, and the right child node contains the number 35.

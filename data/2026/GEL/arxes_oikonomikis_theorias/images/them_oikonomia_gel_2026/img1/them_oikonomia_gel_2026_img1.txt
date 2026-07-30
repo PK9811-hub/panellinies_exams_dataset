@@ -1,6 +1,0 @@
-Description
-Figure 1: A diagram illustrating a molecular biology process involving nucleic acids is displayed. The structure consists of an RNA or single-stranded nucleotide sequence containing specific marked regions. On the left side, there is a distinct block labeled "X", which represents a regulatory region, a modified cap, or a specific sequence tag at the 5' end. This is followed by a sequence of bases: AAA, UUG, UUU, AGU, GGG, CCU, ACG. A bracket spans across the codons UUG, UUU, AGU, GGG, CCU, and ACG, identifying this entire segment as a specific gene region or functional open reading frame labeled "Γονίδιο gfp" (gfp gene). On the far right, at the 3' end, the sequence is terminated by a block labeled "Y", which may denote a poly-A tail, a transcriptional terminator, or a 3' untranslated region.
-
-Transcription
-X - AAA UUG UUU AGU GGG CCU ACG - Y
-Γονίδιο gfp 

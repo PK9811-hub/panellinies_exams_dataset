@@ -1,7 +1,0 @@
-Description
-Figure 4: Two complementary DNA strands, labeled "αλυσίδα I" (strand I) and "αλυσίδα II" (strand II), are presented as horizontal sequences of nitrogenous bases reading from left to right. Strand I begins with the sequence ...CAATTGAATGGC... and concludes with ...TTAATTA..., while strand II follows the strict base-pairing rules of the double helix, starting with ...GTTAACTTACCG... and ending with ...AATTAAT.... The presence of ellipses at both ends of the strings indicates that this segment is a snapshot taken from a much larger genomic sequence. By examining the alignment, it is clear that for every Adenine (A) on one strand, there is a Thymine (T) on the other, and every Cytosine (C) is paired with a Guanine (G).
-
-Transcription
-NH_2
-... ile – glu – lys – arg – pro – trp – ile – asn ...
-COOH
