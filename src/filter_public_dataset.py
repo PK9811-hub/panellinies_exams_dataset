@@ -6,4 +6,4 @@ df_public = df[df['year'] != 2026]
 
 df_public.to_excel("results/panellinies_dataset_public.xlsx", index=False)
 
-print(f"Το φιλτραρισμένο dataset δημιουργήθηκε! Αφαιρέθηκαν οι ερωτήσεις του 2026. Σύνολο γραμμών: {len(df_public)}")
+print(f"The filtered dataset has been created! The questions from 2026 have been removed. Total rows: {len(df_public)}")

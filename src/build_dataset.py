@@ -46,7 +46,7 @@ def parse_json_questions(json_path):
     json_path = Path(json_path)
     
     if not json_path.exists():
-        logger.warning(f'Προσοχή: Το αρχείο {json_path} δε βρέθηκε.')
+        logger.warning(f'Warning: The file {json_path} was not found.')
         return questions_list
     
     with json_path.open ("r", encoding = "utf-8-sig") as f:
@@ -59,7 +59,7 @@ def parse_markdown_answers(md_path):
     md_path = Path(md_path)
     
     if not md_path.exists():
-        logger.warning(f"Προσοχή: Το αρχείο {md_path} δε βρέθηκε.")
+        logger.warning(f'Warning: The file {md_path} was not found.')
         return answers_dict
         
     with md_path.open("r", encoding="utf-8-sig") as f:
@@ -102,7 +102,7 @@ def merge_qa_data(json_path, md_path):
             question["answer"] = answers_dict[current_q_id]
         else:
             question["answer"] = None
-            logger.warning(f"Λείπει η απάντηση για το {current_q_id} στο μάθημα {subject} ({year})")
+            logger.warning(f'Warning: The answer for question {current_q_id} in subject {subject} ({year}) was not found.')
         
         question["subject"] = subject
         question["year"] = year
@@ -129,7 +129,7 @@ def get_file_pairs(data_dir, target_school=None):
         if md_path.exists():
             pairs.append({"json": json_path, "md": md_path})
         else:
-            logger.warning(f"Βρέθηκε το {json_filename} χωρίς απάντηση.")
+            logger.warning(f'Warning: The file {md_path} was not found.')
             
     return pairs
 
@@ -245,14 +245,14 @@ def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx")
     """
     data_path = os.getenv("DATA_DIR")
     if not data_path:
-        logger.error("Το DATA_DIR δεν βρέθηκε στο .env αρχείο!")
+        logger.error("DATA_DIR is not set in the .env file!")
         return pd.DataFrame() 
 
     data_dir = Path(data_path)
-    logger.info(f"🚀 Ξεκινάει η αναζήτηση στον φάκελο: {data_dir}")
+    logger.info(f"Searching is starting in the folder: {data_dir}")
     
     all_pairs = get_file_pairs(data_dir, target_school=target_school)
-    logger.info(f"Βρέθηκαν συνολικά {len(all_pairs)} ζευγάρια αρχείων (JSON/MD).")
+    logger.info(f"{len(all_pairs)} file pairs (JSON/MD) found.")
 
     main_dataset = []
     for pair in all_pairs:
@@ -261,7 +261,7 @@ def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx")
         qa_list = merge_qa_data(json_path, md_path)
         main_dataset.extend(qa_list)
 
-    logger.info(f"Η ενοποίηση ολοκληρώθηκε! Βρέθηκαν συνολικά {len(main_dataset)} ερωτήσεις-απαντήσεις.")
+    logger.info(f"Merging is completed! A total of {len(main_dataset)} question-answer pairs were found.")
 
     subject_translation = {
         "nea_ellinika": "greek_language",
@@ -347,7 +347,7 @@ def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx")
         school_type = str(item.get("school_type", target_school)).lower()
         item["id"] = f"{new_subj}_{school_type}_{year}_{old_id}"
 
-    logger.info(f"Συνολικά βρέθηκαν {images_found} ερωτήσεις με εικόνες.")
+    logger.info(f"{images_found} questions with images found.")
 
     df = pd.DataFrame(main_dataset)
     df = df.rename(columns={"answer": "answer_text"})
@@ -367,32 +367,32 @@ def consolidate(target_school="GEL", output_filename="panellinies_dataset.xlsx")
     output_file = results_dir / output_filename
     
     df.to_excel(output_file, index=False)
-    logger.info(f"✅ Το αρχείο δημιουργήθηκε επιτυχώς στο: {output_file.resolve()}")
+    logger.info(f"✅ The file was created successfully at: {output_file.resolve()}")
 
     return df
 
 def compare(current_df, reference_file):
-    """Συγκρίνει το τρέχον consolidated dataset με ένα reference Excel αρχείο."""
+    """Compares the current consolidated dataset with a reference Excel file."""
     if current_df.empty:
-        logger.error("Δεν μπορεί να γίνει σύγκριση: το current dataset είναι κενό.")
+        logger.error("Comparison failed: the current dataset is empty.")
         return
 
     reference_file = Path(reference_file)
 
     if not reference_file.exists():
-        logger.error(f"Το reference αρχείο δε βρέθηκε: {reference_file}")
+        logger.error(f"Reference file not found: {reference_file}")
         return
 
-    logger.info(f"🔍 Σύγκριση με το αρχείο: {reference_file}")
+    logger.info(f"🔍 Comparison with file: {reference_file}")
 
     ref_df = pd.read_excel(reference_file)
 
     if "id" not in current_df.columns:
-        logger.error("Η στήλη 'id' λείπει από το current dataset.")
+        logger.error("The 'id' column is missing from the current dataset.")
         return
 
     if "id" not in ref_df.columns:
-        logger.error("Η στήλη 'id' λείπει από το reference dataset.")
+        logger.error("The 'id' column is missing from the reference dataset.")
         return
 
     merged = pd.merge(
@@ -408,8 +408,8 @@ def compare(current_df, reference_file):
     only_ref = merged[merged["_merge"] == "right_only"]
     both = merged[merged["_merge"] == "both"]
 
-    logger.info("📊 Στατιστικά σύγκρισης:")
-    logger.info(f"   - Match (ίδια ids και στα δύο): {len(both)}")
+    logger.info("📊 Statistics of the comparison:")
+    logger.info(f"   - Match (same ids in both datasets): {len(both)}")
     logger.info(f"   - Only in Current: {len(only_cur)}")
     logger.info(f"   - Only in Reference: {len(only_ref)}")
 
@@ -434,7 +434,7 @@ def compare(current_df, reference_file):
         col_ref = f"{col}_ref"
 
         if col_cur not in merged.columns or col_ref not in merged.columns:
-            logger.warning(f"⚠️ Η στήλη '{col}' δεν υπάρχει και στα δύο datasets. Παραλείπεται.")
+            logger.warning(f"⚠️ The column '{col}' is missing from one or both datasets. Skipping.")
             continue
 
         cur_series = both[col_cur].apply(normalize_for_compare)
@@ -443,7 +443,7 @@ def compare(current_df, reference_file):
         mismatch = cur_series != ref_series
 
         if mismatch.any():
-            logger.warning(f"Mismatch στη στήλη '{col}': {mismatch.sum()} διαφορές.")
+            logger.warning(f"Mismatch in column '{col}': {mismatch.sum()} differences.")
 
             sample_diffs = both.loc[mismatch, ["id", col_cur, col_ref]].head(5)
             for _, row in sample_diffs.iterrows():
@@ -453,7 +453,7 @@ def compare(current_df, reference_file):
                     f"      reference= {row[col_ref]}"
                 )
         else:
-            logger.info(f"✅ Η στήλη '{col}' ταιριάζει πλήρως.")
+            logger.info(f"✅ The column '{col}' matches perfectly.")
 
     return {
         "only_current": only_cur,
@@ -462,7 +462,7 @@ def compare(current_df, reference_file):
     }
 
 def push_to_hub(df, with_images=False, split="train"):
-    """Ανεβάζει το processed dataset στο Hugging Face Hub."""
+    """Pushes the processed dataset to the Hugging Face Hub."""
     
     repo_id = os.getenv("HF_REPO_ID")
     token = os.getenv("HF_TOKEN")
@@ -558,25 +558,25 @@ def push_to_hub(df, with_images=False, split="train"):
         print(f"Failed to push to Hub: {e}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Εργαλείο διαχείρισης Dataset Πανελληνίων")
-    subparsers = parser.add_subparsers(dest="command", help="Η εντολή που θέλεις να τρέξεις")
+    parser = argparse.ArgumentParser(description="Mangement of the Panellinies dataset: consolidate, compare, and push to Hugging Face Hub.")
+    subparsers = parser.add_subparsers(dest="command", help="The command you want to run")
 
     # --- consolidate ---
-    con_parser = subparsers.add_parser("consolidate", help="Δημιουργεί το τελικό Excel dataset")
-    con_parser.add_argument("--school", default="GEL", help="Τύπος σχολείου (π.χ. GEL)")
-    con_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Όνομα του τελικού Excel")
+    con_parser = subparsers.add_parser("consolidate", help="Creates the final Excel dataset")
+    con_parser.add_argument("--school", default="GEL", help="Type of school (e.g., GEL)")
+    con_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Name of the final Excel file")
 
     # --- compare ---
-    cmp_parser = subparsers.add_parser("compare", help="Συγκρίνει το νέο dataset με reference Excel")
-    cmp_parser.add_argument("--reference", required=True, help="Το path του reference Excel αρχείου")
-    cmp_parser.add_argument("--school", default="GEL", help="Τύπος σχολείου (π.χ. GEL)")
-    cmp_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Όνομα του current Excel που θα δημιουργηθεί")
+    cmp_parser = subparsers.add_parser("compare", help="Compares the new dataset with a reference Excel file")
+    cmp_parser.add_argument("--reference", required=True, help="Path to the reference Excel file")
+    cmp_parser.add_argument("--school", default="GEL", help="Type of school (e.g., GEL)")
+    cmp_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Name of the current Excel file to be created")
 
     # --- push ---
-    push_parser = subparsers.add_parser("push", help="Ανεβάζει το dataset στο Hugging Face Hub")
-    push_parser.add_argument("--file", type=str, required=True, help="Το Excel αρχείο που θέλεις να ανεβάσεις")
-    push_parser.add_argument("--with-images", action="store_true", help="Ενσωμάτωση των πραγματικών εικόνων")
-    push_parser.add_argument("--split", type=str, default="train", help="Το target split στο Hugging Face (default: train)")
+    push_parser = subparsers.add_parser("push", help="Pushes the dataset to the Hugging Face Hub")
+    push_parser.add_argument("--file", type=str, required=True, help="Path to the Excel file you want to upload")
+    push_parser.add_argument("--with-images", action="store_true", help="Include the actual images")
+    push_parser.add_argument("--split", type=str, default="train", help="The target split in the Hugging Face Hub (default: train)")
 
 
     args = parser.parse_args()
@@ -591,7 +591,7 @@ def main():
     elif args.command == "push":
         file_path = Path(args.file)
         if not file_path.exists():
-            logger.error(f"Το αρχείο {file_path} δε βρέθηκε!")
+            logger.error(f"File {file_path} not found!")
             return
             
         df = pd.read_excel(file_path)
@@ -608,7 +608,7 @@ def main():
                 df[col] = df[col].apply(safe_eval)
         
         if args.with_images and 'images' in df.columns:
-            logger.info("🔍 Αναζήτηση των μονοπατιών για τις εικόνες...")
+            logger.info("🔍 Searching for image paths...")
             
             def fix_image_paths(img_list):
                 new_paths = []
@@ -627,7 +627,7 @@ def main():
                     if found_path:
                         new_paths.append(found_path)
                     else:
-                        logger.warning(f"⚠️ Η εικόνα δεν βρέθηκε πουθενά: {img}")
+                        logger.warning(f"⚠️ The image was not found anywhere: {img}")
                         new_paths.append(img)
                 return new_paths
                 
@@ -641,12 +641,12 @@ def main():
 if __name__ == "__main__":
     main()
 
-#Πώς δουλεύουν πλέον οι εντολές στο τερματικό:
-#Για να φτιάξεις το Excel:
+#How the commands work in the terminal:
+#To create the Excel file:
 #uv run src/build_dataset.py consolidate
 
-#Για να ελέγξεις αν κάτι χάλασε σε σχέση με χθες:
-#uv run src/build_dataset.py compare --reference ../παλιό_αρχείο.xlsx
+#To check if anything broke compared to yesterday:
+#uv run src/build_dataset.py compare --reference ../old_file.xlsx
 
-#Για να το στείλεις στο Hugging Face (μαζί με τις φωτογραφίες):
+#To upload to Hugging Face (with images):
 #uv run src/build_dataset.py push --file results/panellinies_dataset.xlsx --with-images

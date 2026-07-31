@@ -1,5 +1,5 @@
 task: panellinies_mathematics_closed
-dataset_path: ilsp/panellinies-exams-dataset
+dataset_path: anonymized_for_review/panellinies-exams-dataset
 output_type: generate_until
 test_split: train
 #fewshot_split: dev

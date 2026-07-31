@@ -169,11 +169,11 @@ uv run inspect eval src/evals/tasks.py \
 
 For researchers working locally or using the source repository, the data is available in several formats with additional internal metadata for traceability.
 
-**data/**: Contains the raw structured files (JSON for questions, MD for answers) categorized by subject and year.
+**data/**: *(Currently withheld for the double-blind review process)* Contains the raw structured files (JSON for questions, MD for answers) categorized by subject and year.
 
 **notebooks/**: Jupyter notebooks used for data exploration, testing, and pipeline prototyping.
 
-**results/**: Destination folder for the consolidated Excel master files and comparison reports.
+**results/**: *(Currently withheld for the double-blind review process)* Destination folder for the consolidated Excel master files and comparison reports.
 
 **src/**: Core Python modules and processing scripts (e.g., build_dataset.py).
 
