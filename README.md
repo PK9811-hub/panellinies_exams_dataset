@@ -173,6 +173,8 @@ For researchers working locally or using the source repository, the data is avai
 
 **results/**: *(Currently withheld for the double-blind review process)* Destination folder for the consolidated Excel master files and comparison reports.
 
+**scripts/**: Utility scripts for data management, validation, and automated publishing to the Hugging Face Hub.
+
 **src/**: Core Python modules and processing scripts (e.g., build_dataset.py).
 
 ## Getting Started (Developer)
