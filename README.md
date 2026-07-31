@@ -1,8 +1,6 @@
-# GR-PanelliniesExams Dataset
+# Pan-Ex Dataset
 
-A comprehensive dataset of Greek Panhellenic Exams for NLP research and educational analysis. Includes structured data (JSON-questions & MD-answers), raw files, and processing scripts.
-
-GR-PanelliniesExams is a dataset derived from publicly available exam questions and official solutions used for student admission to Higher Education Institutions in Greece via the Panhellenic Examinations.
+Pan-Ex ([Link withheld for double-blind review]) is a comprehensive dataset of Greek Panhellenic Exams for NLP research and educational analysis. Includes structured data (JSON-questions & MD-answers), raw files, and processing scripts. It is a dataset derived from publicly available exam questions and official solutions used for student admission to Higher Education Institutions in Greece via the Panhellenic Examinations.
 
 The dataset includes questions with the following features:
 
