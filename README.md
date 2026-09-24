@@ -15,7 +15,7 @@ The benchmark can be used for the evaluation of LLMs on complex, multi-subject, 
 
 The complete dataset is officially hosted and maintained on the **Hugging Face Hub**. 
 
-Please note: The public Hugging Face repository purposefully excludes the 2026 exam questions and solutions. This specific year is utilized as a private holdout test set to ensure rigorous, contamination-free model evaluation, as detailed in our preprint.
+Please note: The public Hugging Face repository purposefully excludes the **2026** exam questions and solutions. This specific year is utilized as a private holdout test set to ensure rigorous, contamination-free model evaluation, as detailed in our preprint.
 
 ## Dataset Creation
 
