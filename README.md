@@ -1,6 +1,6 @@
 # Pan-Ex Dataset
 
-Pan-Ex ([Link withheld for double-blind review]) is a comprehensive dataset of Greek Panhellenic Exams for NLP research and educational analysis. Includes structured data (JSON-questions & MD-answers), raw files, and processing scripts. It is a dataset derived from publicly available exam questions and official solutions used for student admission to Higher Education Institutions in Greece via the Panhellenic Examinations.
+Pan-Ex ([ilsp/panellinies-exams-dataset](https://huggingface.co/datasets/ilsp/panellinies-exams-dataset)) is a comprehensive dataset of Greek Panhellenic Exams for NLP research and educational analysis. Includes structured data (JSON-questions & MD-answers), raw files, and processing scripts. It is a dataset derived from publicly available exam questions and official solutions used for student admission to Higher Education Institutions in Greece via the Panhellenic Examinations.
 
 The dataset includes questions with the following features:
 
@@ -10,6 +10,12 @@ The dataset includes questions with the following features:
 * **Modalities:** Questions suitable for multimodal evaluation, featuring high-fidelity images/diagrams, LLM-generated image descriptions, and OCR transcriptions.
 
 The benchmark can be used for the evaluation of LLMs on complex, multi-subject, multi-format questions in the Greek language. Additionally, it may be useful as a high-quality resource for quantitative educational research.
+
+## 🔍 Note 
+
+The complete dataset is officially hosted and maintained on the **Hugging Face Hub**. 
+
+Please note: The public Hugging Face repository purposefully excludes the 2026 exam questions and solutions. This specific year is utilized as a private holdout test set to ensure rigorous, contamination-free model evaluation, as detailed in our preprint.
 
 ## Dataset Creation
 
@@ -167,8 +173,6 @@ uv run inspect eval src/evals/tasks.py \
 
 For researchers working locally or using the source repository, the data is available in several formats with additional internal metadata for traceability.
 
-**data/**: *(Currently withheld for the double-blind review process)* Contains the raw structured files (JSON for questions, MD for answers) categorized by subject and year.
-
 **notebooks/**: Jupyter notebooks used for data exploration, testing, and pipeline prototyping.
 
 **scripts/**: Utility scripts for data management, validation, and automated publishing to the Hugging Face Hub.
@@ -184,7 +188,7 @@ For researchers working locally or using the source repository, the data is avai
 
 ```python
 HF_TOKEN=your_huggingface_write_token
-HF_REPO_ID=your_username/panellinies_exams_dataset
+HF_REPO_ID=ilsp/panellinies_exams_dataset
 HF_PRIVATE_REPO=False
 HF_GATED_REPO=manual
 ```
