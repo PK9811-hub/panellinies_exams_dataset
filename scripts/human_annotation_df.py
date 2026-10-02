@@ -446,10 +446,6 @@
 #         print(final_df.groupby(['Subject', 'Model']).size())
 
 
-
-
-
-
 import os
 import io
 import re
@@ -465,75 +461,78 @@ from inspect_ai.log import read_eval_log
 def is_in_our_subsets(sample_id, metadata):
     sid = str(sample_id).lower()
     meta_school = str(metadata.get('school_type', '')).lower()
-    
-    # 1. School Type: GEL
-    if 'gel' not in sid and meta_school != 'gel':
-        return False
-
-    # 2. Χρονιές: 2020 ΚΑΙ 2021 (Προσαρμοσμένο)
+    if 'gel' not in sid and meta_school != 'gel': return False
     year = str(metadata.get('year', ''))
-    if not (any(y in sid for y in ['2020', '2021']) or year in ['2020', '2021']):
-        return False
-
-    # 3. Μαθήματα: Χημεία (Chemistry) και Βιολογία (Biology)
+    if not (any(y in sid for y in ['2020', '2021']) or year in ['2020', '2021']): return False
+    
     meta_subject = str(metadata.get('subject', '')).lower()
     is_chemistry = 'chemistry' in sid or 'chemistry' in meta_subject or 'ximeia' in sid or 'ximeia' in meta_subject
     is_biology = 'biology' in sid or 'biology' in meta_subject or 'biologia' in sid or 'biologia' in meta_subject
-
     return is_chemistry or is_biology
 
 def get_subject_name(sample_id, metadata):
     combined = (str(sample_id) + " " + str(metadata.get('subject', ''))).lower()
-    if 'chemistry' in combined or 'ximeia' in combined:
-        return 'Chemistry'
-    elif 'biology' in combined or 'biologia' in combined:
-        return 'Biology'
+    if 'chemistry' in combined or 'ximeia' in combined: return 'Chemistry'
+    elif 'biology' in combined or 'biologia' in combined: return 'Biology'
     return 'Other'
 
-def sanitize_text(text, max_len=25000):
-    if not isinstance(text, str):
-        text = str(text) if text is not None else ""
-        
-    # 1. Καθαρισμός τυχόν tags <think>
+def flatten_latex(text):
+    if not isinstance(text, str): return ""
+    
+    # 1. Καθαρισμός <think>
     text = re.sub(r'<think>.*?</think>', ' ', text, flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r'<think>.*', ' ', text, flags=re.IGNORECASE | re.DOTALL)
     
-    # 2. Αφαίρεση του Chain of Thought (οι αγγλικές "ασυναρτησίες" του Qwen)
+    # 2. ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ ΤΟΥ KATEX: Σβήνουμε όλα τα σύμβολα που ανοίγουν μαθηματικά
+    text = text.replace('$', '')
+    text = text.replace(r'\(', '').replace(r'\)', '')
+    text = text.replace(r'\[', '').replace(r'\]', '')
+    
+    # 3. Αφαίρεση τοξικών εντολών LaTeX (κρατάμε μόνο το καθαρό περιεχόμενό τους)
+    for _ in range(3): # Επανάληψη για nested εντολές π.χ. \mathrm{\ce{...}}
+        text = re.sub(r'\\ce{([^}]+)}', r'\1', text)
+        text = re.sub(r'\\mathrm{([^}]+)}', r'\1', text)
+        text = re.sub(r'\\text{([^}]+)}', r'\1', text)
+        text = re.sub(r'\\mathbf{([^}]+)}', r'\1', text)
+    
+    # Αφαίρεση \ce χωρίς αγκύλες (π.χ. \ceH2O -> H2O)
+    text = re.sub(r'\\ce([A-Za-z0-9_+\-]+)', r'\1', text)
+    
+    # 4. Μετατροπή βελών και συμβόλων σε απλό text
+    text = text.replace(r'\rightleftharpoons', '<=>')
+    text = text.replace(r'\rightarrow', '->')
+    text = text.replace(r'\Rightarrow', '=>')
+    text = text.replace(r'\cdot', '*')
+    text = text.replace('< = >', '<=>')
+    text = text.replace(' - > ', '->')
+    
+    # 5. Καθαρισμός κενών και escape characters
+    text = text.replace(r'\,', ' ').replace(r'\;', ' ').replace(r'\ ', ' ')
+    text = text.replace(r'\%', '%').replace(r'\_', '_')
+    
+    return text.strip()
+
+def sanitize_text(text):
+    text = flatten_latex(text)
+    
+    # Αφαίρεση του Chain of Thought (Qwen)
     chunks = re.split(r'(?:\\n|\n|\r)+', text)
     valid_chunks = []
-    
     cot_markers = ['hmm,', 'wait,', 'let me', 'perhaps the', 'alternatively,', 'so the ', 'this means', 'i need to', 'let\'s ']
     
     for chunk in chunks:
         c_lower = chunk.strip().lower()
-        if not c_lower:
-            continue
-            
-        # Αν η πρόταση ξεκινάει ή περιέχει κλασικές εκφράσεις CoT του Qwen, αγνόησέ την
+        if not c_lower: continue
         if any(c_lower.startswith(m) for m in cot_markers) or any(f" {m}" in c_lower for m in cot_markers):
             continue
-            
-        # Αν είναι μεγάλο κομμάτι κειμένου ΠΛΗΡΩΣ στα αγγλικά (χωρίς ΚΑΝΕΝΑ ελληνικό γράμμα)
-        has_greek = bool(re.search(r'[α-ωΑ-ΩάέήίόύώΆΈΉΊΌΎΏ]', chunk))
-        if not has_greek and len(chunk) > 100:
-            continue
-            
         valid_chunks.append(chunk.strip())
         
     text = " ".join(valid_chunks)
     
-    # 3. Εξαφάνιση όλων των αλλαγών γραμμής (πραγματικών & escaped) για προστασία του Excel
-    text = text.replace('\n', ' ').replace('\r', ' ')
-    text = text.replace('\\n', ' ').replace('\\r', ' ')
-    text = text.replace('\\', '') 
-    
-    # 4. Συμπύκνωση πολλαπλών κενών
+    # Προστασία του Excel/Argilla από σπάσιμο γραμμών
+    text = text.replace('\r', ' ').replace('\n', ' ').replace('\\n', ' ')
     text = re.sub(r'\s+', ' ', text)
     
-    # 5. ΑΥΣΤΗΡΟ ΟΡΙΟ (Προστασία από το όριο των 32.767 χαρακτήρων του Excel)
-    if len(text) > max_len:
-        text = text[:max_len] + "... [TRUNCATED DUE TO LENGTH]"
-        
     return text.strip()
 
 def clean_prefix(text):
@@ -582,21 +581,13 @@ def build_dataframe(log_dir):
     
     for zip_path in zip_files:
         fn_lower = zip_path.name.lower()
-        
         matched_model = next((m for m in target_models if m in fn_lower), None)
-        if matched_model:
-            model_name = model_names_mapping[matched_model]
-        else:
-            model_name = zip_path.stem
+        model_name = model_names_mapping[matched_model] if matched_model else zip_path.stem
             
         print(f"\nProcessing archive: {zip_path.name} (Mapped Model: {model_name})")
         
         with zipfile.ZipFile(zip_path) as outer_zf:
-            eval_entries = [
-                n for n in outer_zf.namelist() 
-                if n.endswith('.eval') and 'panellinies' in n.lower() and '0-shot' in n.lower()
-            ]
-            
+            eval_entries = [n for n in outer_zf.namelist() if n.endswith('.eval') and 'panellinies' in n.lower() and '0-shot' in n.lower()]
             if not eval_entries:
                 eval_entries = [n for n in outer_zf.namelist() if n.endswith('.eval') and '0-shot' in n.lower()]
 
@@ -618,8 +609,7 @@ def build_dataframe(log_dir):
                         sample_id = sample.id
                         metadata = sample.metadata or {}
                         
-                        if metadata.get('format') != 'open_ended':
-                            continue
+                        if metadata.get('format') != 'open_ended': continue
                         
                         if is_in_our_subsets(sample_id, metadata):
                             subject = get_subject_name(sample_id, metadata)
@@ -627,23 +617,15 @@ def build_dataframe(log_dir):
                             
                             raw_input = sample.input if isinstance(sample.input, str) else str(sample.input)
                             raw_target = sample.target if isinstance(sample.target, str) else str(sample.target)
-                            
-                            raw_answer = ""
-                            if sample.output:
-                                raw_answer = getattr(sample.output, 'completion', '') or str(sample.output)
-                                
+                            raw_answer = getattr(sample.output, 'completion', '') or str(sample.output) if sample.output else ""
                             img_desc = metadata.get('image_description')
                             
                             input_dict = parse_input_to_dict(raw_input, img_desc)
                             target_dict = {"reference": clean_prefix(raw_target)}
                             answer_dict = {"answer": clean_prefix(raw_answer)}
                             
-                            judge_score = None
-                            bert_score = None
-                            if 'generic_judge_scorer' in scores:
-                                judge_score = getattr(scores['generic_judge_scorer'], 'value', None)
-                            if 'greek_bertscore' in scores:
-                                bert_score = getattr(scores['greek_bertscore'], 'value', None)
+                            judge_score = getattr(scores.get('generic_judge_scorer', object()), 'value', None)
+                            bert_score = getattr(scores.get('greek_bertscore', object()), 'value', None)
 
                             rows.append({
                                 'Subject': subject,
@@ -659,7 +641,6 @@ def build_dataframe(log_dir):
     df = pd.DataFrame(rows)
     if not df.empty:
         df = df.drop_duplicates(subset=['Model', 'Question_ID'], keep='last')
-        
     return df
 
 if __name__ == '__main__':
@@ -669,11 +650,8 @@ if __name__ == '__main__':
     print(f"Starting parsing in: {logs_dir}")
     final_df = build_dataframe(logs_dir)
     
-    print(f"\nTotal records collected (2020 & 2021): {len(final_df)}")
+    print(f"\nTotal records collected: {len(final_df)}")
     if not final_df.empty:
-        # Το νέο όνομα του αρχείου
         output_file = 'human_evaluation_panellinies_science_subset.csv'
         final_df.to_csv(output_file, index=False, encoding='utf-8-sig', quoting=csv.QUOTE_ALL)
         print(f"File created successfully: {output_file}")
-        print("\nBreakdown by Subject and Model:")
-        print(final_df.groupby(['Subject', 'Model']).size())
