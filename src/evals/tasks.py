@@ -38,6 +38,7 @@ def generic_evaluation(
     import json
     from datasets import load_dataset  
 
+    # 1. Φορτώνουμε το dev split ΜΙΑ φορά στην αρχή του task για ταχύτητα
     try:
         dev_data = load_dataset(dataset_path, dataset_name, split=fewshot_split)
         dev_records = list(dev_data)
@@ -65,24 +66,27 @@ def generic_evaluation(
         user_prompt_parts.append(f"Question: {x.get(input_field)}")
         core_question = "\n\n".join(user_prompt_parts)
         
-        # --- FEW SHOT LOGIC ---
+        # --- 2. FEW SHOT LOGIC ---
         final_user_input = core_question
         if num_fewshot > 0 and dev_records:
+            # Βρίσκουμε παραδείγματα που ταιριάζουν στο ίδιο μάθημα (subject) και τύπο (format)
             matching_shots = [r for r in dev_records if r.get("subject") == subject and r.get("format") == format_type]
             
             if matching_shots:
                 few_shot_text = "Ακολουθούν μερικά παραδείγματα προς διευκόλυνσή σου:\n\n"
-        
+                # Παίρνουμε τα πρώτα 'num_fewshot' παραδείγματα
                 for i, shot in enumerate(matching_shots[:num_fewshot]):
                     q = shot.get(input_field, "")
                     a = shot.get(target_field, "")
                     
+                    # Αν το παράδειγμα έχει context, το προσθέτουμε
                     shot_context = f"Context: {shot.get(context_field)}\n" if context_field and shot.get(context_field) else ""
                     
                     few_shot_text += f"--- Παράδειγμα {i+1} ---\n{shot_context}Question: {q}\nΑπάντηση: {a}\n\n"
                 
                 few_shot_text += "--- Τέλος Παραδειγμάτων ---\n\nΤώρα απάντησε στην παρακάτω ερώτηση:\n"
                 
+                # Ενώνουμε τα παραδείγματα με την τωρινή ερώτηση
                 final_user_input = few_shot_text + core_question
         
         target = x.get(target_field) or ""
