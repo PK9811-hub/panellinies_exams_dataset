@@ -84,7 +84,7 @@
 # RECREATE_DATASET = True
 # MIN_SUBMITTED = 1
 
-# # --- ΑΥΣΤΗΡΗ ΟΝΟΜΑΤΟΔΟΣΙΑ ΓΙΑ ΑΝΘΡΩΠΙΣΤΙΚΑ ---
+# # --- ΟΝΟΜΑΤΟΔΟΣΙΑ ΓΙΑ ΑΝΘΡΩΠΙΣΤΙΚΑ ---
 # dataset_name = "pass-or-fail-hum"
 # csv_file = "human_evaluation_panellinies_hum_subset.csv"
 # hf_repo = os.getenv("PANELLINIES_DATASET", "ilsp/panellinies-exams-dataset")
@@ -106,8 +106,6 @@
 #     workspace = rg.Workspace(name=workspace_name, client=client).create()
 # else:
 #     print(f"Workspace '{workspace.name}' found.")
-
-# # Η ΔΙΑΧΕΙΡΙΣΗ ΧΡΗΣΤΩΝ ΑΦΑΙΡΕΘΗΚΕ ΛΟΓΩ 403 FORBIDDEN
 
 # # --- 2. Σχήμα Dataset ---
 # guidelines = """
@@ -214,22 +212,32 @@
 #     input_q_dict = parse_dict_field(row.get("Input_Question"))
 #     csv_question = input_q_dict.get("question", "") if input_q_dict else str(row.get("Input_Question") or "").strip()
 #     csv_context = input_q_dict.get("context", "") if input_q_dict else ""
+    
 #     csv_ans = unpack_field(row.get("Reference_Target"), preferred_key="reference")
 #     model_ans = unpack_field(row.get("Model_Answer"), preferred_key="answer")
 
 #     if hf_item:
-#         question_text = str(hf_item.get("question") or csv_question)
-#         context_input = str(hf_item.get("input") or csv_context)
+#         question_text = str(hf_item.get("question") or csv_question).strip()
+#         context_input = str(hf_item.get("input") or csv_context).strip()
 #         images_rendered = images_to_markdown(hf_item.get("images", []))
-#         image_desc = str(hf_item.get("image_description") or hf_item.get("image_transcription") or "")
+#         image_desc = str(hf_item.get("image_description") or hf_item.get("image_transcription") or "").strip()
         
 #         hf_ans = str(hf_item.get("answer_text") or "").strip()
-#         if hf_ans and csv_ans and hf_ans != csv_ans:
-#             ref_ans = f"**Answer Key:** {hf_ans}\n\n**Detailed Solution:**\n{csv_ans}"
+#         csv_ans_clean = str(csv_ans).strip()
+        
+#         # ΚΑΘΑΡΗ ΑΠΑΝΤΗΣΗ: Χωρίς προθέματα "Answer Key" ή "Detailed Solution"
+#         if csv_ans_clean:
+#             ref_ans = csv_ans_clean
+#         elif hf_ans:
+#             ref_ans = hf_ans
 #         else:
-#             ref_ans = hf_ans or csv_ans
+#             ref_ans = ""
 #     else:
-#         question_text, context_input, images_rendered, image_desc, ref_ans = csv_question, csv_context, "", "", csv_ans
+#         question_text = str(csv_question).strip()
+#         context_input = str(csv_context).strip()
+#         images_rendered = ""
+#         image_desc = ""
+#         ref_ans = str(csv_ans).strip()
 
 #     metadata = {
 #         "subject": str(row["Subject"]) if pd.notna(row["Subject"]) else "",
@@ -245,7 +253,7 @@
 #             "images": images_rendered,
 #             "image_description": image_desc,
 #             "reference_answer": ref_ans,
-#             "answer": model_ans,
+#             "answer": str(model_ans).strip(),
 #         },
 #         metadata=metadata,
 #     ))
@@ -280,179 +288,82 @@ if not argilla_api_url or not argilla_api_key:
     print("\n[ΣΦΑΛΜΑ] Δεν βρέθηκαν τα ARGILLA_API_URL ή ARGILLA_API_KEY!")
     exit(1)
 
-# --- Ρυθμίσεις ---
 RECREATE_DATASET = True
 MIN_SUBMITTED = 1
-
-# --- ΑΥΣΤΗΡΗ ΟΝΟΜΑΤΟΔΟΣΙΑ ΓΙΑ ΘΕΤΙΚΕΣ ΕΠΙΣΤΗΜΕΣ ---
 dataset_name = "pass-or-fail-science"
 csv_file = "human_evaluation_panellinies_science_subset.csv"
 hf_repo = os.getenv("PANELLINIES_DATASET", "ilsp/panellinies-exams-dataset")
 
 if hf_token:
-    try:
-        login(token=hf_token, add_to_git_credential=False)
-        print("Logged in to Hugging Face Hub.")
-    except Exception as e:
-        pass
+    try: login(token=hf_token, add_to_git_credential=False)
+    except Exception: pass
 
 client = rg.Argilla(api_url=argilla_api_url, api_key=argilla_api_key)
-print(f"Argilla Client connected. Argilla version: {rg.__version__}")
-
-# --- 1. Διαχείριση Workspace ---
 workspace = client.workspaces(workspace_name)
 if workspace is None:
-    print(f"Workspace '{workspace_name}' does not exist. Creating...")
     workspace = rg.Workspace(name=workspace_name, client=client).create()
-else:
-    print(f"Workspace '{workspace.name}' found.")
 
-# Η ΔΙΑΧΕΙΡΙΣΗ ΧΡΗΣΤΩΝ ΑΦΑΙΡΕΘΗΚΕ ΛΟΓΩ 403 FORBIDDEN
-
-# --- 2. ΦΙΛΤΡΟ ΚΑΘΑΡΙΣΜΟΥ LATEX ΣΕ ΑΠΛΟ ΚΕΙΜΕΝΟ ---
-def replace_fractions(text):
-    for cmd in ['\\frac', '\\dfrac']:
-        safety = 0
-        while cmd in text and safety < 100:
-            safety += 1
-            start_idx = text.find(cmd)
-            brace1_start = text.find('{', start_idx)
-            if brace1_start == -1 or brace1_start > start_idx + 8:
-                text = text.replace(cmd, cmd.replace('\\', ''), 1)
-                continue
-            
-            brace1_end = -1
-            depth = 0
-            for i in range(brace1_start, len(text)):
-                if text[i] == '{': depth += 1
-                elif text[i] == '}':
-                    depth -= 1
-                    if depth == 0:
-                        brace1_end = i
-                        break
-            if brace1_end == -1: 
-                text = text.replace(cmd, cmd.replace('\\', ''), 1)
-                continue
-            
-            num = text[brace1_start+1:brace1_end]
-            
-            brace2_start = text.find('{', brace1_end + 1)
-            if brace2_start == -1 or brace2_start > brace1_end + 3:
-                text = text.replace(cmd, cmd.replace('\\', ''), 1)
-                continue
-            
-            brace2_end = -1
-            depth = 0
-            for i in range(brace2_start, len(text)):
-                if text[i] == '{': depth += 1
-                elif text[i] == '}':
-                    depth -= 1
-                    if depth == 0:
-                        brace2_end = i
-                        break
-            if brace2_end == -1: 
-                text = text.replace(cmd, cmd.replace('\\', ''), 1)
-                continue
-            
-            den = text[brace2_start+1:brace2_end]
-            full_match = text[start_idx:brace2_end+1]
-            text = text.replace(full_match, f"({num})/({den})")
-    return text
-
-def replace_sqrt(text):
-    safety = 0
-    while '\\sqrt' in text and safety < 100:
-        safety += 1
-        start_idx = text.find('\\sqrt')
-        brace1_start = text.find('{', start_idx)
-        if brace1_start == -1 or brace1_start > start_idx + 6:
-            text = text.replace('\\sqrt', 'sqrt', 1)
-            continue
-            
-        brace1_end = -1
-        depth = 0
-        for i in range(brace1_start, len(text)):
-            if text[i] == '{': depth += 1
-            elif text[i] == '}':
-                depth -= 1
-                if depth == 0:
-                    brace1_end = i
-                    break
-        if brace1_end == -1: 
-            text = text.replace('\\sqrt', 'sqrt', 1)
-            continue
-            
-        content = text[brace1_start+1:brace1_end]
-        full_match = text[start_idx:brace1_end+1]
-        text = text.replace(full_match, f"√({content})")
-    return text
-
-def flatten_latex_for_argilla(text):
+# Ο ΜΙΝΙΜΑΛ ΚΑΙ ΣΤΟΧΕΥΜΕΝΟΣ ΚΑΘΑΡΙΣΜΟΣ ΓΙΑ ΤΕΛΕΙΟ KaTeX RENDERING
+def clean_science_latex(text):
     if not text or pd.isna(text): return ""
     text = str(text)
 
-    # Καθαρισμός <think>
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.IGNORECASE | re.DOTALL)
-    
-    # Αφαίρεση τοξικών εντολών KaTeX (Κρατάμε μόνο το περιεχόμενό τους)
-    text = re.sub(r'\\ce{([^}]+)}', r'\1', text)
-    text = re.sub(r'\\ce([A-Za-z0-9_+\-]+)', r'\1', text)
-    text = re.sub(r'\\mathrm{([^}]+)}', r'\1', text)
-    text = re.sub(r'\\text{([^}]+)}', r'\1', text)
-    
-    # Μετατροπή κλασμάτων και ριζών
-    text = replace_fractions(text)
-    text = replace_sqrt(text)
-    
-    # Unicode αντικαταστάσεις
-    replacements = {
-        r'\Rightarrow': '=>',
-        r'\rightarrow': '->',
-        r'\rightleftharpoons': '<=>',
-        r'\cdot': '*',
-        r'\Delta': 'Δ',
-        r'\alpha': 'α',
-        r'\beta': 'β',
-        r'\gamma': 'γ',
-        r'\pi': 'π',
-        '< = >': '<=>',
-        ' - > ': '->',
-        ' -> ': ' -> '
+    text = text.replace(r'\(', '$').replace(r'\)', '$')
+    text = text.replace(r'\[', '$$').replace(r'\]', '$$')
+
+    bugs = {
+        "pK_{a}$)": "$pK_{a}$)",
+        "pK_a$)": "$pK_a$)",
+        r"\mathrm{M}$)": r"$\mathrm{M}$)",
+        "Y_{2}$)": "$Y_{2}$)",
+        "Y_{1}$ και Y_{2}$)": "$Y_{1}$ και $Y_{2}$)",
+        "K_a = 10^{-5} $)": "$K_a = 10^{-5}$)",
+        "aa$)": "aa)",
+        "($aa$)": "(aa)",
+        "($Aa": "(Aa",
+        "Aa$)": "Aa)",
+        r"\mathrm{H_{3}$O+}": r"H_{3}O^{+}",
+        r"\mathrm{H_{3}$O+}": r"H_{3}O^{+}",
+        r"H_{3}$O+": r"H_{3}O^{+}",
+        r"\mathrm{H\Delta}": r"H\Delta",
+        r"\mathrm{\Delta^-}": r"\Delta^-",
+        r"NO_{2}$ -": r"NO_{2}^{-}",
+        r"C_{6}H_{5}-": r"C_{6}H_{5}^{-}",
+        r"HO-": r"HO^{-}",
+        r"λόγος \frac{[CH_3COO^-]}{[CH_3COOH]} = 1 $": r"λόγος $\frac{[CH_3COO^-]}{[CH_3COOH]} = 1$",
     }
-    for k, v in replacements.items():
-        text = text.replace(k, v)
-        
-    # ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ ΤΟΥ LATEX: Σβήνουμε όλα τα σύμβολα
-    text = text.replace(r'\(', '').replace(r'\)', '')
-    text = text.replace(r'\[', '').replace(r'\]', '')
-    text = text.replace('$', '')
+    for bad, good in bugs.items():
+        text = text.replace(bad, good)
+
+    def chem_replacer(match):
+        formula = match.group(1).replace('$', '')
+        formula = re.sub(r'(?<=[A-Za-z)\]])(\d+)', r'_{\1}', formula)
+        formula = re.sub(r'([+-]+)$', r'^{\1}', formula)
+        return f"\\mathrm{{{formula}}}"
     
-    # Διορθώσεις λαθών HF dataset που άφηναν ανοιχτά $
-    text = text.replace("pK_{a})", "pKa)")
-    text = text.replace("pK_a)", "pKa)")
-    text = text.replace(r"\mathrm{M})", "M)")
-    text = text.replace("'", "'").replace("-", "-")
+    text = re.sub(r'\\ce\s*{([^}]+)}', chem_replacer, text)
+    text = re.sub(r'\\ce\s*([A-Za-z0-9_+\-\^]+)', chem_replacer, text)
+
+    text = text.replace('< = >', r' \rightleftharpoons ').replace('<=>', r' \rightleftharpoons ')
+    text = text.replace(' - > ', r' \rightarrow ').replace(' -> ', r' \rightarrow ')
+    text = text.replace(r'\cdotpmin', r'\cdot \mathrm{min}').replace(r'\cdotp', r'\cdot')
+
+    text = re.sub(r'(?<!\$)\$\s*$', '', text)
     
-    # Escaping του % 
-    text = re.sub(r'(?<!\\)%', r'\%', text)
-        
-    text = re.sub(r'\s+', ' ', text)
+    text = text.replace('\r', '')
+    text = re.sub(r'[ \t]+', ' ', text)
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    
     return text.strip()
 
-# --- 3. Σχήμα Dataset ---
 guidelines = """
 ### Οδηγίες Αξιολόγησης (Θετικές Επιστήμες - Πανελλαδικές)
-Αξιολογείς μια υποβληθείσα απάντηση (**Model answer**) σε μια ερώτηση (**Question**), συγκρίνοντάς τη με την πρότυπη απάντηση (**Reference answer**) και λαμβάνοντας υπόψη το πλαίσιο/δεδομένα (**Context**) και τυχόν εικόνες/σχήματα (**Images**).
-
-#### Βαθμολογική Κλίμακα (Grade):
-- **1.0**: Πλήρως ορθή και ολοκληρωμένη απάντηση / επίλυση.
-- **0.75**: Ορθή προσέγγιση / μεθοδολογία, αλλά με μικρά αριθμητικά λάθη ή επουσιώδεις παραλείψεις.
-- **0.5**: Μερικώς ορθή απάντηση (π.χ. σωστή η μισή άσκηση ή σωστός τύπος με λάθος εφαρμογή).
-- **0.25**: Ελάχιστα σωστά στοιχεία (π.χ. απλή αναφορά του σωστού τύπου χωρίς καμία λογική συνέχεια).
-- **0.0**: Εντελώς λανθασμένη, άσχετη ή κενή απάντηση.
-
-#### Αιτιολόγηση (Explanation):
-- Σύντομη αιτιολόγηση του βαθμού στα Ελληνικά (απαραίτητη σε περιπτώσεις μερικής βαθμολόγησης).
+- **1.0**: Πλήρως ορθή απάντηση.
+- **0.75**: Ορθή προσέγγιση, μικρά αριθμητικά λάθη.
+- **0.5**: Μερικώς ορθή απάντηση.
+- **0.25**: Ελάχιστα σωστά στοιχεία.
+- **0.0**: Λανθασμένη/κενή απάντηση.
 """
 
 settings = rg.Settings(
@@ -478,7 +389,6 @@ settings = rg.Settings(
     distribution=rg.TaskDistribution(min_submitted=MIN_SUBMITTED),
 )
 
-# --- 4. Φόρτωση Δεδομένων & Εμπλουτισμός ---
 def images_to_markdown(images_list):
     if not images_list: return ""
     md_elements = []
@@ -492,8 +402,7 @@ def images_to_markdown(images_list):
                 md_elements.append(f'<img src="data:image/png;base64,{b64_str}" alt="Diagram {idx+1}" style="max-width: 100%; height: auto;" />')
             elif isinstance(img, str) and img.strip():
                 md_elements.append(f"![Diagram {idx+1}]({img})")
-        except Exception:
-            pass
+        except Exception: pass
     return "\n\n".join(md_elements)
 
 def parse_dict_field(val):
@@ -517,13 +426,8 @@ def unpack_field(val, preferred_key=None):
         if len(parsed) == 1: return str(next(iter(parsed.values()))).strip()
     return str(val).strip() if pd.notna(val) else ""
 
-print(f"Loading local CSV: {csv_file}")
 df_subset = pd.read_csv(csv_file)
-print(f"Loaded {len(df_subset)} records.")
-
-print(f"Loading Hugging Face dataset '{hf_repo}'...")
 hf_dataset_dict = load_dataset(hf_repo)
-
 hf_index = {item["id"]: item for split in hf_dataset_dict.keys() for item in hf_dataset_dict[split]}
 
 existing_dataset = client.datasets(name=dataset_name, workspace=workspace_name)
@@ -531,10 +435,7 @@ if existing_dataset and RECREATE_DATASET:
     existing_dataset.delete()
     existing_dataset = None
 
-if existing_dataset:
-    dataset = existing_dataset
-else:
-    dataset = rg.Dataset(name=dataset_name, workspace=workspace_name, settings=settings, client=client).create()
+dataset = existing_dataset or rg.Dataset(name=dataset_name, workspace=workspace_name, settings=settings, client=client).create()
 
 records = []
 for _, row in df_subset.iterrows():
@@ -548,32 +449,25 @@ for _, row in df_subset.iterrows():
     model_ans = unpack_field(row.get("Model_Answer"), preferred_key="answer")
 
     if hf_item:
-        question_text = flatten_latex_for_argilla(str(hf_item.get("question") or csv_question))
-        context_input = flatten_latex_for_argilla(str(hf_item.get("input") or csv_context))
+        question_text = clean_science_latex(str(hf_item.get("question") or csv_question))
+        context_input = clean_science_latex(str(hf_item.get("input") or csv_context))
         images_rendered = images_to_markdown(hf_item.get("images", []))
-        image_desc = flatten_latex_for_argilla(str(hf_item.get("image_description") or hf_item.get("image_transcription") or ""))
+        image_desc = clean_science_latex(str(hf_item.get("image_description") or hf_item.get("image_transcription") or ""))
         
-        hf_ans = flatten_latex_for_argilla(str(hf_item.get("answer_text") or ""))
-        csv_ans_clean = flatten_latex_for_argilla(csv_ans)
+        hf_ans = clean_science_latex(str(hf_item.get("answer_text") or ""))
+        csv_ans_clean = clean_science_latex(csv_ans)
         
-        if hf_ans and csv_ans_clean and hf_ans != csv_ans_clean:
-            ref_ans = f"**Answer Key:** {hf_ans}\n\n**Detailed Solution:**\n{csv_ans_clean}"
-        else:
-            ref_ans = hf_ans or csv_ans_clean
+        if csv_ans_clean: ref_ans = csv_ans_clean
+        elif hf_ans: ref_ans = hf_ans
+        else: ref_ans = ""
     else:
-        question_text = flatten_latex_for_argilla(csv_question)
-        context_input = flatten_latex_for_argilla(csv_context)
+        question_text = clean_science_latex(csv_question)
+        context_input = clean_science_latex(csv_context)
         images_rendered = ""
         image_desc = ""
-        ref_ans = flatten_latex_for_argilla(csv_ans)
-        
-    model_ans = flatten_latex_for_argilla(model_ans)
+        ref_ans = clean_science_latex(csv_ans)
 
-    metadata = {
-        "subject": str(row["Subject"]) if pd.notna(row["Subject"]) else "",
-        "model_name": str(row["Model"]) if pd.notna(row["Model"]) else "",
-        "question_id": qid,
-    }
+    model_ans = clean_science_latex(model_ans)
 
     records.append(rg.Record(
         fields={
@@ -585,9 +479,12 @@ for _, row in df_subset.iterrows():
             "reference_answer": ref_ans,
             "answer": model_ans,
         },
-        metadata=metadata,
+        metadata={
+            "subject": str(row["Subject"]) if pd.notna(row["Subject"]) else "",
+            "model_name": str(row["Model"]) if pd.notna(row["Model"]) else "",
+            "question_id": qid,
+        },
     ))
 
-print(f"Logging {len(records)} records to Argilla dataset '{dataset_name}'...")
 dataset.records.log(records)
 print("Upload complete!")
