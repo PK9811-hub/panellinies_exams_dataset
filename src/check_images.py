@@ -10,7 +10,7 @@ load_dotenv()
 def check_image_paths():
     env_data_path = os.getenv("DATA_DIR")
     if not env_data_path:
-        logger.error ("DATA_DIR not found in .env.")
+        logger.error ("Δε βρέθηκε το DATA_DIR στο .env.")
         return
     
     data_path = Path(env_data_path)
@@ -47,21 +47,21 @@ def check_image_paths():
                 if not absolute_img_path.exists():
                     missing_images.append(
                         {"file": json_path.name,
-                        "id": entry.get("id", "Unknown ID"),
+                        "id": entry.get("id", "Άγνωστο ID"),
                         "path": img_rel_path}
                         )
-                    logger.warning(f"Image not found for file {json_path}.")
+                    logger.warning(f"Δε βρέθηκε εικόνα για το αρχείο {json_path}.")
 
-    print(f"\nTotal JSON files checked: {checked_files}")
-    print(f"Total IDs (questions) checked: {total_ids_checked}")
+    print(f"\nΣυνολικά αρχεία JSON που ελέγχθηκαν: {checked_files}")
+    print(f"Συνολικά IDs (ερωτήσεις) που σαρώθηκαν: {total_ids_checked}")
 
     if len(missing_images) > 0:
-        logger.warning(f"WARNING! Found {len(missing_images)} missing images:")
+        logger.warning(f"ΠΡΟΣΟΧΗ! Βρέθηκαν {len(missing_images)} χαμένες εικόνες:")
     
         for img in missing_images:
-            logger.warning(f" - In file {img['file']} (Question {img['id']}): Missing {img['path']}")
+            logger.warning(f" - Στο αρχείο {img['file']} (Ερώτηση {img['id']}): Έλειπε το {img['path']}")
     else:
-        logger.info(f"Found all {total_images} images.")
+        logger.info(f"Βρέθηκαν και οι {total_images} εικόνες.")
 
 if __name__ == "__main__":
     check_image_paths()

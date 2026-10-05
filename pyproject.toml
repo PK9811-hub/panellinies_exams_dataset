@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "accelerate>=1.14.0",
+    "argilla>=2.8.0",
     "bert-score>=0.3.13",
     "datasets>=4.8.5",
     "dotenv>=0.9.9",
