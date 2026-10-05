@@ -20,7 +20,7 @@ PROMPTS_CONFIG = load_prompts()
 def generic_evaluation(
     dataset_path: str = "ilsp/panellinies-exams-dataset-private",
     dataset_name: str | None = "default",
-    split: str = "train",
+    split: str = "test",
     fewshot_split: str = "dev",  
     num_fewshot: int = 5,        
     input_field: str = "question",
