@@ -461,13 +461,8 @@ def compare(current_df, reference_file):
         "matched": both
     }
 
-<<<<<<< HEAD
 def push_to_hub(df, with_images=False, split="test"):
     """Pushes the processed dataset to the Hugging Face Hub."""
-=======
-def push_to_hub(df, with_images=False, split="train"):
-    """Ανεβάζει το processed dataset στο Hugging Face Hub."""
->>>>>>> 465c2587413c2cfb794920aeefd15c669120ae1d
     
     repo_id = os.getenv("HF_REPO_ID")
     token = os.getenv("HF_TOKEN")
@@ -578,17 +573,10 @@ def main():
     cmp_parser.add_argument("--output", default="panellinies_dataset.xlsx", help="Όνομα του current Excel που θα δημιουργηθεί")
 
     # --- push ---
-<<<<<<< HEAD
     push_parser = subparsers.add_parser("push", help="Pushes the dataset to the Hugging Face Hub")
     push_parser.add_argument("--file", type=str, required=True, help="Path to the Excel file you want to upload")
     push_parser.add_argument("--with-images", action="store_true", help="Include the actual images")
     push_parser.add_argument("--split", type=str, default="test", help="The target split in the Hugging Face Hub (default: test)")
-=======
-    push_parser = subparsers.add_parser("push", help="Ανεβάζει το dataset στο Hugging Face Hub")
-    push_parser.add_argument("--file", type=str, required=True, help="Το Excel αρχείο που θέλεις να ανεβάσεις")
-    push_parser.add_argument("--with-images", action="store_true", help="Ενσωμάτωση των πραγματικών εικόνων")
-    push_parser.add_argument("--split", type=str, default="train", help="Το target split στο Hugging Face (default: train)")
->>>>>>> 465c2587413c2cfb794920aeefd15c669120ae1d
 
 
     args = parser.parse_args()
