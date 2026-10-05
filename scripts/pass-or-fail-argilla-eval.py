@@ -262,12 +262,12 @@
 # dataset.records.log(records)
 # print("Upload complete!")
 
-
 import os
 import json
 import ast
 import base64
 import re
+import uuid
 from io import BytesIO
 from pathlib import Path
 import pandas as pd
@@ -276,7 +276,6 @@ from datasets import load_dataset
 from huggingface_hub import login
 import argilla as rg
 
-# --- Φόρτωση Μεταβλητών Περιβάλλοντος ---
 load_dotenv()
 
 argilla_api_url = os.getenv("ARGILLA_API_URL")
@@ -303,57 +302,79 @@ workspace = client.workspaces(workspace_name)
 if workspace is None:
     workspace = rg.Workspace(name=workspace_name, client=client).create()
 
-# Ο ΜΙΝΙΜΑΛ ΚΑΙ ΣΤΟΧΕΥΜΕΝΟΣ ΚΑΘΑΡΙΣΜΟΣ ΓΙΑ ΤΕΛΕΙΟ KaTeX RENDERING
+
+def fix_inline_math(s: str) -> str:
+    s = re.sub(r'(?<=[(\[{"\'])\$', ' $', s)
+    s = re.sub(r'\$(?=[)\]}"\';])', '$ ', s)
+    return s
+
+
 def clean_science_latex(text):
     if not text or pd.isna(text): return ""
     text = str(text)
 
+    
+    text = fix_inline_math(text)
+
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.IGNORECASE | re.DOTALL)
+    text = text.replace('$$', '$')
     text = text.replace(r'\(', '$').replace(r'\)', '$')
-    text = text.replace(r'\[', '$$').replace(r'\]', '$$')
+    text = text.replace(r'\[', '$').replace(r'\]', '$')
 
     bugs = {
-        "pK_{a}$)": "$pK_{a}$)",
-        "pK_a$)": "$pK_a$)",
-        r"\mathrm{M}$)": r"$\mathrm{M}$)",
-        "Y_{2}$)": "$Y_{2}$)",
-        "Y_{1}$ και Y_{2}$)": "$Y_{1}$ και $Y_{2}$)",
-        "K_a = 10^{-5} $)": "$K_a = 10^{-5}$)",
-        "aa$)": "aa)",
-        "($aa$)": "(aa)",
-        "($Aa": "(Aa",
-        "Aa$)": "Aa)",
-        r"\mathrm{H_{3}$O+}": r"H_{3}O^{+}",
-        r"\mathrm{H_{3}$O+}": r"H_{3}O^{+}",
-        r"H_{3}$O+": r"H_{3}O^{+}",
-        r"\mathrm{H\Delta}": r"H\Delta",
-        r"\mathrm{\Delta^-}": r"\Delta^-",
-        r"NO_{2}$ -": r"NO_{2}^{-}",
-        r"C_{6}H_{5}-": r"C_{6}H_{5}^{-}",
-        r"HO-": r"HO^{-}",
-        r"λόγος \frac{[CH_3COO^-]}{[CH_3COOH]} = 1 $": r"λόγος $\frac{[CH_3COO^-]}{[CH_3COOH]} = 1$",
+        "pK_{a}$)": "$pK_{a}$)", "pK_a$)": "$pK_a$)", r"\mathrm{M}$)": r"$\mathrm{M}$)",
+        "Y_{2}$)": "$Y_{2}$)", "Y_{1}$ και Y_{2}$)": "$Y_{1}$ και $Y_{2}$)",
+        "K_a = 10^{-5} $)": "$K_a = 10^{-5}$)", "aa$)": "aa)", "($aa$)": "(aa)",
+        "($Aa": "(Aa", "Aa$)": "Aa)", "\\$": "",
+        r"\frac{[CH_3COO^-]}{[CH_3COOH]} = 1 $": r"$\frac{[CH_3COO^-]}{[CH_3COOH]} = 1$",
+        r"\cdotpmin": r"\cdot \mathrm{min}", r"\cdotp": r"\cdot",
+        "'$": "'", "$-": "-", "-$": "-",
+        "< = >": r" \rightleftharpoons ", "<=>": r" \rightleftharpoons ", "⇌": r" \rightleftharpoons ",
+        " - > ": r" \rightarrow ", " -> ": r" \rightarrow ", "→": r" \rightarrow ", "−": "-",
+        "H_{3}$O+": "H_{3}O+", "H\Delta$": "H\Delta", "\Delta^-$": "\Delta^-",
+        "SO_{3}$": "SO_{3}", "NO_{2}$": "NO_{2}", "SO_{2}$": "SO_{2}", "HO-$": "HO-",
+        "C_{6}H_{5}-$": "C_{6}H_{5}-", "NO_{2}$ -": "NO_{2}-"
     }
     for bad, good in bugs.items():
         text = text.replace(bad, good)
 
-    def chem_replacer(match):
-        formula = match.group(1).replace('$', '')
-        formula = re.sub(r'(?<=[A-Za-z)\]])(\d+)', r'_{\1}', formula)
-        formula = re.sub(r'([+-]+)$', r'^{\1}', formula)
-        return f"\\mathrm{{{formula}}}"
-    
-    text = re.sub(r'\\ce\s*{([^}]+)}', chem_replacer, text)
-    text = re.sub(r'\\ce\s*([A-Za-z0-9_+\-\^]+)', chem_replacer, text)
+    def fix_chem(content):
+        content = content.replace('$', '')
+        content = re.sub(r'(?<=[A-Za-z)\]])(\d+)', r'_{\1}', content)
+        content = re.sub(r'([+-]+)$', r'^{\1}', content)
+        return f"\\mathrm{{{content}}}"
 
-    text = text.replace('< = >', r' \rightleftharpoons ').replace('<=>', r' \rightleftharpoons ')
-    text = text.replace(' - > ', r' \rightarrow ').replace(' -> ', r' \rightarrow ')
-    text = text.replace(r'\cdotpmin', r'\cdot \mathrm{min}').replace(r'\cdotp', r'\cdot')
+    text = re.sub(r'\\ce\s*{([^}]+)}', lambda m: fix_chem(m.group(1)), text)
+    text = re.sub(r'\\ce\s*([A-Za-z0-9_+\-\^]+)', lambda m: fix_chem(m.group(1)), text)
 
-    text = re.sub(r'(?<!\$)\$\s*$', '', text)
+    text = re.sub(r'\$+', '$', text)
+
+    parts = text.split('$')
+    if len(parts) % 2 == 0: parts.append("") 
+
+    for i in range(1, len(parts), 2):
+        parts[i] = parts[i].replace('\n', ' ').replace('\r', '')
+        
+    text = '$'.join(parts)
     
+    new_parts = text.split('$')
+    for i in range(0, len(new_parts), 2): 
+        new_parts[i] = re.sub(r'(\\mathrm\s*{[^{}]*})', r'$\1$', new_parts[i])
+        new_parts[i] = re.sub(r'(\\d?frac\s*{[^{}]*}\s*{[^{}]*})', r'$\1$', new_parts[i])
+        new_parts[i] = re.sub(r'(\\rightleftharpoons)', r'$\1$', new_parts[i])
+        new_parts[i] = re.sub(r'(\\rightarrow)', r'$\1$', new_parts[i])
+        new_parts[i] = re.sub(r'(\\Rightarrow)', r'$\1$', new_parts[i])
+        new_parts[i] = re.sub(r'\b(X\^[aA])\b', r'$\1$', new_parts[i])
+        
+    text = '$'.join(new_parts)
+
+    text = re.sub(r'\$+', '$', text)
+    text = text.replace('$$', '$') 
+    if text.count('$') % 2 != 0: text += '$'
+
     text = text.replace('\r', '')
     text = re.sub(r'[ \t]+', ' ', text)
-    text = re.sub(r'\n{3,}', '\n\n', text)
+    text = re.sub(r'\n{3,}', '\n\n', text) 
     
     return text.strip()
 
@@ -368,11 +389,11 @@ guidelines = """
 
 settings = rg.Settings(
     fields=[
-        rg.TextField(name="question_id_field", title="Question ID", use_markdown=False),
-        rg.TextField(name="input", title="Context", use_markdown=True, required=False),
+        rg.TextField(name="question_id_field", title="Question ID", use_markdown=True),
+        rg.TextField(name="input", title="Context", use_markdown=True, required=True),
         rg.TextField(name="question", title="Question", use_markdown=True),
-        rg.TextField(name="images", title="Images", use_markdown=True, required=False),
-        rg.TextField(name="image_description", title="Image description", use_markdown=True, required=False),
+        rg.TextField(name="images", title="Images", use_markdown=True, required=True),
+        rg.TextField(name="image_description", title="Image description", use_markdown=True, required=True),
         rg.TextField(name="reference_answer", title="Reference answer", use_markdown=True),
         rg.TextField(name="answer", title="Model answer", use_markdown=True),
     ],

@@ -366,7 +366,6 @@
 # print("Upload complete!")
 
 
-
 import os
 import re
 import json
@@ -396,20 +395,26 @@ def get_subject_name(sample_id, metadata):
     elif 'biology' in combined or 'biologia' in combined: return 'Biology'
     return 'Other'
 
-# Ο ΜΙΝΙΜΑΛ ΚΑΙ ΣΤΟΧΕΥΜΕΝΟΣ ΚΑΘΑΡΙΣΜΟΣ ΓΙΑ ΤΕΛΕΙΟ KaTeX RENDERING
+
+def fix_inline_math(s: str) -> str:
+    s = re.sub(r'(?<=[(\[{"\'])\$', ' $', s)
+    s = re.sub(r'\$(?=[)\]}"\';])', '$ ', s)
+    return s
+
 def clean_science_latex(text):
     if not text or pd.isna(text): return ""
     text = str(text)
 
-    # 1. Καθαρισμός tags των συλλογιστικών μοντέλων
+    text = fix_inline_math(text)
+
+
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r'<think>.*', '', text, flags=re.IGNORECASE | re.DOTALL)
     
-    # 2. Χειρισμός παρενθέσεων μοντέλου
+    
     text = text.replace(r'\(', '$').replace(r'\)', '$')
     text = text.replace(r'\[', '$$').replace(r'\]', '$$')
 
-    # 3. Διορθώσεις ΣΤΟΧΕΥΜΕΝΩΝ λαθών που προκαλούν Red KaTeX ParseError
     bugs = {
         "pK_{a}$)": "$pK_{a}$)",
         "pK_a$)": "$pK_a$)",
@@ -434,26 +439,24 @@ def clean_science_latex(text):
     for bad, good in bugs.items():
         text = text.replace(bad, good)
 
-    # 4. Μετάφραση Χημείας (\ce -> \mathrm)
-    # Το Argilla/KaTeX δεν υποστηρίζει εγγενώς το mhchem, οπότε το φτιάχνουμε εμείς
     def chem_replacer(match):
-        formula = match.group(1).replace('$', '') # Αφαιρεί τα $ μέσα στη χημεία που κρασάρουν το σύστημα
-        formula = re.sub(r'(?<=[A-Za-z)\]])(\d+)', r'_{\1}', formula) # Αριθμοί σε δείκτες
-        formula = re.sub(r'([+-]+)$', r'^{\1}', formula) # Φορτία σε εκθέτες
+        formula = match.group(1).replace('$', '') 
+        formula = re.sub(r'(?<=[A-Za-z)\]])(\d+)', r'_{\1}', formula) 
+        formula = re.sub(r'([+-]+)$', r'^{\1}', formula) 
         return f"\\mathrm{{{formula}}}"
     
     text = re.sub(r'\\ce\s*{([^}]+)}', chem_replacer, text)
     text = re.sub(r'\\ce\s*([A-Za-z0-9_+\-\^]+)', chem_replacer, text)
 
-    # 5. Βελάκια και πολλαπλασιασμός
+
     text = text.replace('< = >', r' \rightleftharpoons ').replace('<=>', r' \rightleftharpoons ')
     text = text.replace(' - > ', r' \rightarrow ').replace(' -> ', r' \rightarrow ')
     text = text.replace(r'\cdotpmin', r'\cdot \mathrm{min}').replace(r'\cdotp', r'\cdot')
 
-    # 6. Καθαρισμός ορφανών $ στο τέλος
+    
     text = re.sub(r'(?<!\$)\$\s*$', '', text)
     
-    # 7. Διατήρηση όμορφων παραγράφων (χωρίς να πειράζουμε τα $$)
+    
     text = text.replace('\r', '')
     text = re.sub(r'[ \t]+', ' ', text)
     text = re.sub(r'\n{3,}', '\n\n', text)
