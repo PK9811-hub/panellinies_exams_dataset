@@ -1,7 +1,7 @@
 task: panellinies_computer_science_open
 dataset_path: ilsp/panellinies-exams-dataset
 output_type: generate_until
-test_split: train
+test_split: test
 #fewshot_split: dev
 #num_fewshot: 5
 process_docs: !function utils.process_computer_science_open
