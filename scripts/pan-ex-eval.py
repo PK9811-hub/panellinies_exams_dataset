@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 from dotenv import load_dotenv
 import streamlit as st
+import streamlit.components.v1 as components
 from datasets import load_dataset
 
 # Enable debug logging
@@ -290,6 +291,92 @@ for k in ["exp_q", "exp_ref", "exp_model", "exp_figs"]:
     if k not in st.session_state:
         st.session_state[k] = False
 
+def get_dirty_fields(check_row_idx):
+    if check_row_idx not in df.index:
+        return []
+    r = df.loc[check_row_idx]
+    q_id = str(r["Question_ID"])
+    hf_i = hf_index.get(q_id, {})
+
+    input_dict = parse_dict_field(r.get("Input_Question"))
+    c_q = get_clean_str(input_dict.get("question", "") if input_dict else r.get("Input_Question"))
+    c_ref = unpack_field(r.get("Reference_Target"), preferred_key="reference")
+    c_model = unpack_field(r.get("Model_Answer"), preferred_key="answer")
+
+    saved_q = get_clean_str(r.get("Edited_Question")) or clean_science_latex(hf_i.get("question") or c_q)
+    saved_ref = get_clean_str(r.get("Edited_Reference")) or clean_science_latex(hf_i.get("answer_text") or c_ref)
+    saved_model = get_clean_str(r.get("Edited_Model_Answer")) or clean_science_latex(c_model)
+
+    saved_grade = r.get("Human_Grade")
+    try:
+        saved_grade_val = float(saved_grade) if pd.notna(saved_grade) and saved_grade is not None else None
+    except Exception:
+        saved_grade_val = None
+    saved_exp = get_clean_str(r.get("Explanation"))
+
+    dirty = []
+    if f"edit_q_{check_row_idx}" in st.session_state:
+        curr_q = st.session_state[f"edit_q_{check_row_idx}"]
+        if curr_q is not None and get_clean_str(curr_q) != get_clean_str(saved_q):
+            dirty.append("Question LaTeX")
+
+    if f"edit_ref_{check_row_idx}" in st.session_state:
+        curr_ref = st.session_state[f"edit_ref_{check_row_idx}"]
+        if curr_ref is not None and get_clean_str(curr_ref) != get_clean_str(saved_ref):
+            dirty.append("Reference LaTeX")
+
+    if f"edit_model_{check_row_idx}" in st.session_state:
+        curr_model = st.session_state[f"edit_model_{check_row_idx}"]
+        if curr_model is not None and get_clean_str(curr_model) != get_clean_str(saved_model):
+            dirty.append("Model Answer LaTeX")
+
+    if f"seg_grade_{check_row_idx}" in st.session_state:
+        curr_grade = st.session_state[f"seg_grade_{check_row_idx}"]
+        if curr_grade != saved_grade_val:
+            dirty.append("Grade")
+
+    if f"text_exp_{check_row_idx}" in st.session_state:
+        curr_exp = st.session_state[f"text_exp_{check_row_idx}"]
+        if curr_exp is not None and get_clean_str(curr_exp) != get_clean_str(saved_exp):
+            dirty.append("Explanation")
+
+    return dirty
+
+@st.dialog("⚠️ Unsaved Changes", width="medium")
+def confirm_leave_dialog(target_idx, dirty_fields):
+    st.warning(f"You have unsaved changes in: **{', '.join(dirty_fields)}**.")
+    st.markdown("If you leave now without saving or submitting, your edits will be discarded.")
+    col_d, col_s = st.columns([1, 1])
+    with col_d:
+        if st.button("Discard & Leave", type="primary", width="stretch"):
+            cur = st.session_state.active_row_idx
+            for k in [f"edit_q_{cur}", f"edit_ref_{cur}", f"edit_model_{cur}", f"seg_grade_{cur}", f"text_exp_{cur}"]:
+                st.session_state.pop(k, None)
+            st.session_state.active_row_idx = target_idx
+            st.session_state.last_row_idx = target_idx
+            st.session_state.nav_count += 1
+            reset_expanders()
+            st.rerun()
+    with col_s:
+        if st.button("Stay on Page", width="stretch"):
+            st.session_state.nav_count += 1
+            st.rerun()
+
+def try_navigate(target_idx, reset_input_key=False):
+    if target_idx == st.session_state.active_row_idx:
+        return
+    dirty = get_dirty_fields(st.session_state.active_row_idx)
+    if dirty:
+        if reset_input_key:
+            st.session_state.nav_count += 1
+        confirm_leave_dialog(target_idx, dirty)
+    else:
+        st.session_state.active_row_idx = target_idx
+        st.session_state.last_row_idx = target_idx
+        st.session_state.nav_count += 1
+        reset_expanders()
+        st.rerun()
+
 # --- Top Navigation & Filter Bar ---
 with st.container(border=True):
     col_filters, col_nav = st.columns([5, 5], vertical_alignment="center")
@@ -360,27 +447,30 @@ with st.container(border=True):
     curr_pos = filtered_row_indices.index(st.session_state.active_row_idx)
 
     with col_nav:
-        n_prev, n_counter, n_next, n_jump = st.columns([1, 1.2, 1, 2.2], vertical_alignment="center")
+        n_prev, n_pos, n_of, n_next, n_jump = st.columns([0.85, 1.1, 0.95, 0.85, 2.2], vertical_alignment="center")
         with n_prev:
             if st.button("◀ Prev", disabled=(curr_pos <= 0), width="stretch"):
-                st.session_state.active_row_idx = filtered_row_indices[curr_pos - 1]
-                st.session_state.last_row_idx = st.session_state.active_row_idx
-                st.session_state.nav_count += 1
-                reset_expanders()
-                st.rerun()
-        with n_counter:
+                try_navigate(filtered_row_indices[curr_pos - 1])
+        with n_pos:
+            target_pos = st.number_input(
+                "Order",
+                min_value=1,
+                max_value=len(filtered_row_indices),
+                value=curr_pos + 1,
+                step=1,
+                label_visibility="collapsed",
+                key=f"pos_input_{st.session_state.nav_count}"
+            )
+            if target_pos != curr_pos + 1:
+                try_navigate(filtered_row_indices[target_pos - 1], reset_input_key=True)
+        with n_of:
             st.markdown(
-                f"<div style='text-align: center; font-size: 0.95rem; font-weight: 600; color: #495057;'>"
-                f"{curr_pos + 1} of {len(filtered_row_indices)}</div>",
+                f"<div style='font-size: 0.9rem; font-weight: 600; color: #546e7a; white-space: nowrap;'>/ {len(filtered_row_indices)}</div>",
                 unsafe_allow_html=True
             )
         with n_next:
             if st.button("Next ▶", disabled=(curr_pos >= len(filtered_row_indices) - 1), width="stretch"):
-                st.session_state.active_row_idx = filtered_row_indices[curr_pos + 1]
-                st.session_state.last_row_idx = st.session_state.active_row_idx
-                st.session_state.nav_count += 1
-                reset_expanders()
-                st.rerun()
+                try_navigate(filtered_row_indices[curr_pos + 1])
         with n_jump:
             # Build unique question IDs preserving order
             unique_qids = []
@@ -405,17 +495,14 @@ with st.container(border=True):
                 options=unique_qids,
                 index=curr_qid_idx,
                 format_func=jump_label,
-                label_visibility="collapsed"
+                label_visibility="collapsed",
+                key=f"jump_qid_{st.session_state.nav_count}"
             )
             if selected_qid != curr_qid:
                 matching = [i for i in filtered_row_indices if str(df.loc[i, "Question_ID"]) == selected_qid]
                 if matching:
                     target_idx = next((i for i in matching if df.loc[i, "Status"] != "seen"), matching[0])
-                    st.session_state.active_row_idx = target_idx
-                    st.session_state.last_row_idx = target_idx
-                    st.session_state.nav_count += 1
-                    reset_expanders()
-                    st.rerun()
+                    try_navigate(target_idx, reset_input_key=True)
 
 # Current item data
 row_idx = st.session_state.active_row_idx
@@ -590,7 +677,11 @@ with col_score:
 
         with col_discard:
             if st.button("Discard", width="stretch"):
+                cur = row_idx
+                for k in [f"edit_q_{cur}", f"edit_ref_{cur}", f"edit_model_{cur}", f"seg_grade_{cur}", f"text_exp_{cur}"]:
+                    st.session_state.pop(k, None)
                 reset_expanders()
+                st.toast("Changes discarded.", icon="↩️")
                 st.rerun()
 
         with col_submit:
@@ -613,6 +704,10 @@ with col_score:
                     st.session_state.df = df
                     st.toast(f"Saved {qid} with Grade {selected_grade:.2f}!", icon="✅")
 
+                    cur = row_idx
+                    for k in [f"edit_q_{cur}", f"edit_ref_{cur}", f"edit_model_{cur}", f"seg_grade_{cur}", f"text_exp_{cur}"]:
+                        st.session_state.pop(k, None)
+
                     # Advance to next item if available
                     pos = filtered_row_indices.index(row_idx)
                     if pos < len(filtered_row_indices) - 1:
@@ -632,3 +727,39 @@ with col_score:
         st.markdown("<hr style='margin: 1.2rem 0 0.8rem 0;' />", unsafe_allow_html=True)
         st.caption(f"**Submitted:** {seen_total} / {total_items} ({pct:.1f}%)")
         st.progress(seen_total / total_items if total_items > 0 else 0)
+
+# --- Browser-level Unsaved Changes Warning (window.onbeforeunload) ---
+is_dirty = bool(get_dirty_fields(st.session_state.active_row_idx)) if "active_row_idx" in st.session_state else False
+if is_dirty:
+    components.html(
+        """
+        <script>
+        try {
+            const handler = function(e) {
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            };
+            window.onbeforeunload = handler;
+            if (window.parent) window.parent.onbeforeunload = handler;
+            if (window.top) window.top.onbeforeunload = handler;
+        } catch(e) {}
+        </script>
+        """,
+        height=0,
+        width=0
+    )
+else:
+    components.html(
+        """
+        <script>
+        try {
+            window.onbeforeunload = null;
+            if (window.parent) window.parent.onbeforeunload = null;
+            if (window.top) window.top.onbeforeunload = null;
+        } catch(e) {}
+        </script>
+        """,
+        height=0,
+        width=0
+    )
