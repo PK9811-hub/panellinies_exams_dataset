@@ -6,7 +6,6 @@ from pathlib import Path
 import pandas as pd
 from dotenv import load_dotenv
 import streamlit as st
-import streamlit.components.v1 as components
 from datasets import load_dataset
 
 # Enable debug logging
@@ -26,6 +25,15 @@ div[data-testid="stDecoration"] {
 }
 footer {
     display: none !important;
+}
+
+/* Hide background communication iframe */
+iframe {
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 /* Centered dashboard layout */
@@ -315,20 +323,21 @@ def get_dirty_fields(check_row_idx):
     saved_exp = get_clean_str(r.get("Explanation"))
 
     dirty = []
-    if f"edit_q_{check_row_idx}" in st.session_state:
-        curr_q = st.session_state[f"edit_q_{check_row_idx}"]
-        if curr_q is not None and get_clean_str(curr_q) != get_clean_str(saved_q):
-            dirty.append("Question LaTeX")
+    if st.session_state.get("allow_latex_edit", False):
+        if f"edit_q_{check_row_idx}" in st.session_state:
+            curr_q = st.session_state[f"edit_q_{check_row_idx}"]
+            if curr_q is not None and get_clean_str(curr_q) != get_clean_str(saved_q):
+                dirty.append("Question LaTeX")
 
-    if f"edit_ref_{check_row_idx}" in st.session_state:
-        curr_ref = st.session_state[f"edit_ref_{check_row_idx}"]
-        if curr_ref is not None and get_clean_str(curr_ref) != get_clean_str(saved_ref):
-            dirty.append("Reference LaTeX")
+        if f"edit_ref_{check_row_idx}" in st.session_state:
+            curr_ref = st.session_state[f"edit_ref_{check_row_idx}"]
+            if curr_ref is not None and get_clean_str(curr_ref) != get_clean_str(saved_ref):
+                dirty.append("Reference LaTeX")
 
-    if f"edit_model_{check_row_idx}" in st.session_state:
-        curr_model = st.session_state[f"edit_model_{check_row_idx}"]
-        if curr_model is not None and get_clean_str(curr_model) != get_clean_str(saved_model):
-            dirty.append("Model Answer LaTeX")
+        if f"edit_model_{check_row_idx}" in st.session_state:
+            curr_model = st.session_state[f"edit_model_{check_row_idx}"]
+            if curr_model is not None and get_clean_str(curr_model) != get_clean_str(saved_model):
+                dirty.append("Model Answer LaTeX")
 
     if f"seg_grade_{check_row_idx}" in st.session_state:
         curr_grade = st.session_state[f"seg_grade_{check_row_idx}"]
@@ -379,10 +388,10 @@ def try_navigate(target_idx, reset_input_key=False):
 
 # --- Top Navigation & Filter Bar ---
 with st.container(border=True):
-    col_filters, col_nav = st.columns([5, 5], vertical_alignment="center")
+    col_filters, col_nav = st.columns([5.3, 4.7], vertical_alignment="center")
 
     with col_filters:
-        f1, f2, f3 = st.columns([1.1, 1.3, 2.2])
+        f1, f2, f3, f4 = st.columns([1.0, 1.2, 1.6, 1.5], vertical_alignment="center")
         with f1:
             status_filter = st.selectbox(
                 "Status",
@@ -401,9 +410,11 @@ with st.container(border=True):
         with f3:
             search_query = st.text_input(
                 "Search",
-                placeholder="🔍 Search Question text or ID...",
+                placeholder="🔍 Search...",
                 label_visibility="collapsed"
             )
+        with f4:
+            allow_latex_edit = st.toggle("✏️ Edit LaTeX", value=False, key="allow_latex_edit")
 
     # Filtering logic
     filtered_df = df.copy()
@@ -570,64 +581,67 @@ with col_content:
     with st.container(border=True):
         st.markdown("<div class='field-label'>Question</div>", unsafe_allow_html=True)
         st.markdown(active_question)
-        with st.expander("✏️ Correct Question LaTeX", expanded=False, key="exp_q", on_change="rerun"):
-            new_q = st.text_area("Question LaTeX", value=active_question, height=120, key=f"edit_q_{row_idx}")
-            if new_q != active_question:
-                active_question = new_q
-            st.markdown("<div style='font-size: 0.75rem; font-weight: 700; color: #1976d2; margin-top: 0.6rem; text-transform: uppercase;'>Live KaTeX Preview:</div>", unsafe_allow_html=True)
-            with st.container(border=True):
-                st.markdown(new_q)
-            if st.button("💾 Save Question LaTeX Only", key=f"save_btn_q_{row_idx}", type="secondary"):
-                df.loc[df["Question_ID"] == qid, "Edited_Question"] = new_q
-                try:
-                    df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
-                    st.session_state.df = df
-                    st.toast(f"Saved Question LaTeX for {qid} (all responses)!", icon="✅")
-                    st.rerun()
-                except Exception as err:
-                    st.error(f"Error saving to CSV: {err}")
+        if allow_latex_edit:
+            with st.expander("✏️ Correct Question LaTeX", expanded=False, key="exp_q", on_change="rerun"):
+                new_q = st.text_area("Question LaTeX", value=active_question, height=120, key=f"edit_q_{row_idx}")
+                if new_q != active_question:
+                    active_question = new_q
+                st.markdown("<div style='font-size: 0.75rem; font-weight: 700; color: #1976d2; margin-top: 0.6rem; text-transform: uppercase;'>Live KaTeX Preview:</div>", unsafe_allow_html=True)
+                with st.container(border=True):
+                    st.markdown(new_q)
+                if st.button("💾 Save Question LaTeX Only", key=f"save_btn_q_{row_idx}", type="secondary"):
+                    df.loc[df["Question_ID"] == qid, "Edited_Question"] = new_q
+                    try:
+                        df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+                        st.session_state.df = df
+                        st.toast(f"Saved Question LaTeX for {qid} (all responses)!", icon="✅")
+                        st.rerun()
+                    except Exception as err:
+                        st.error(f"Error saving to CSV: {err}")
 
     # 5. Reference Answer Card (Rendered + LaTeX correction expander with Live Preview)
     with st.container(border=True):
         st.markdown("<div class='field-label'>Reference Answer</div>", unsafe_allow_html=True)
         st.markdown(active_ref)
-        with st.expander("✏️ Correct Reference LaTeX", expanded=False, key="exp_ref", on_change="rerun"):
-            new_ref = st.text_area("Reference Answer LaTeX", value=active_ref, height=130, key=f"edit_ref_{row_idx}")
-            if new_ref != active_ref:
-                active_ref = new_ref
-            st.markdown("<div style='font-size: 0.75rem; font-weight: 700; color: #1976d2; margin-top: 0.6rem; text-transform: uppercase;'>Live KaTeX Preview:</div>", unsafe_allow_html=True)
-            with st.container(border=True):
-                st.markdown(new_ref)
-            if st.button("💾 Save Reference LaTeX Only", key=f"save_btn_ref_{row_idx}", type="secondary"):
-                df.loc[df["Question_ID"] == qid, "Edited_Reference"] = new_ref
-                try:
-                    df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
-                    st.session_state.df = df
-                    st.toast(f"Saved Reference LaTeX for {qid} (all responses)!", icon="✅")
-                    st.rerun()
-                except Exception as err:
-                    st.error(f"Error saving to CSV: {err}")
+        if allow_latex_edit:
+            with st.expander("✏️ Correct Reference LaTeX", expanded=False, key="exp_ref", on_change="rerun"):
+                new_ref = st.text_area("Reference Answer LaTeX", value=active_ref, height=130, key=f"edit_ref_{row_idx}")
+                if new_ref != active_ref:
+                    active_ref = new_ref
+                st.markdown("<div style='font-size: 0.75rem; font-weight: 700; color: #1976d2; margin-top: 0.6rem; text-transform: uppercase;'>Live KaTeX Preview:</div>", unsafe_allow_html=True)
+                with st.container(border=True):
+                    st.markdown(new_ref)
+                if st.button("💾 Save Reference LaTeX Only", key=f"save_btn_ref_{row_idx}", type="secondary"):
+                    df.loc[df["Question_ID"] == qid, "Edited_Reference"] = new_ref
+                    try:
+                        df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+                        st.session_state.df = df
+                        st.toast(f"Saved Reference LaTeX for {qid} (all responses)!", icon="✅")
+                        st.rerun()
+                    except Exception as err:
+                        st.error(f"Error saving to CSV: {err}")
 
     # 6. Model Answer Card (Rendered + LaTeX correction expander; Model Name is strictly hidden)
     with st.container(border=True):
         st.markdown("<div class='field-label'>Model Answer</div>", unsafe_allow_html=True)
         st.markdown(active_model)
-        with st.expander("✏️ Correct Model Answer LaTeX", expanded=False, key="exp_model", on_change="rerun"):
-            new_model = st.text_area("Model Answer LaTeX", value=active_model, height=150, key=f"edit_model_{row_idx}")
-            if new_model != active_model:
-                active_model = new_model
-            st.markdown("<div style='font-size: 0.75rem; font-weight: 700; color: #1976d2; margin-top: 0.6rem; text-transform: uppercase;'>Live KaTeX Preview:</div>", unsafe_allow_html=True)
-            with st.container(border=True):
-                st.markdown(new_model)
-            if st.button("💾 Save Model Answer LaTeX Only", key=f"save_btn_model_{row_idx}", type="secondary"):
-                df.at[row_idx, "Edited_Model_Answer"] = new_model
-                try:
-                    df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
-                    st.session_state.df = df
-                    st.toast(f"Saved Model Answer LaTeX for {qid}!", icon="✅")
-                    st.rerun()
-                except Exception as err:
-                    st.error(f"Error saving to CSV: {err}")
+        if allow_latex_edit:
+            with st.expander("✏️ Correct Model Answer LaTeX", expanded=False, key="exp_model", on_change="rerun"):
+                new_model = st.text_area("Model Answer LaTeX", value=active_model, height=150, key=f"edit_model_{row_idx}")
+                if new_model != active_model:
+                    active_model = new_model
+                st.markdown("<div style='font-size: 0.75rem; font-weight: 700; color: #1976d2; margin-top: 0.6rem; text-transform: uppercase;'>Live KaTeX Preview:</div>", unsafe_allow_html=True)
+                with st.container(border=True):
+                    st.markdown(new_model)
+                if st.button("💾 Save Model Answer LaTeX Only", key=f"save_btn_model_{row_idx}", type="secondary"):
+                    df.at[row_idx, "Edited_Model_Answer"] = new_model
+                    try:
+                        df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+                        st.session_state.df = df
+                        st.toast(f"Saved Model Answer LaTeX for {qid}!", icon="✅")
+                        st.rerun()
+                    except Exception as err:
+                        st.error(f"Error saving to CSV: {err}")
 
 with col_score:
     with st.container(border=True):
@@ -731,7 +745,7 @@ with col_score:
 # --- Browser-level Unsaved Changes Warning (window.onbeforeunload) ---
 is_dirty = bool(get_dirty_fields(st.session_state.active_row_idx)) if "active_row_idx" in st.session_state else False
 if is_dirty:
-    components.html(
+    st.iframe(
         """
         <script>
         try {
@@ -746,11 +760,11 @@ if is_dirty:
         } catch(e) {}
         </script>
         """,
-        height=0,
-        width=0
+        height=1,
+        width=1
     )
 else:
-    components.html(
+    st.iframe(
         """
         <script>
         try {
@@ -760,6 +774,6 @@ else:
         } catch(e) {}
         </script>
         """,
-        height=0,
-        width=0
+        height=1,
+        width=1
     )
