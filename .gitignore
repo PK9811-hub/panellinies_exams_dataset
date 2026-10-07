@@ -147,3 +147,4 @@ results/
 data/
 
 src/hf_viewer_test_copy_new.py
+scripts/human_evaluation_protipa_subset.csv

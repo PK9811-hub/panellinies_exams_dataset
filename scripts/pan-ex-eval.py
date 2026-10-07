@@ -291,13 +291,11 @@ if "df" not in st.session_state:
 
 df = st.session_state.df
 
-def reset_expanders():
-    for k in ["exp_q", "exp_ref", "exp_model", "exp_figs"]:
-        st.session_state[k] = False
+if "nav_count" not in st.session_state:
+    st.session_state.nav_count = 0
 
-for k in ["exp_q", "exp_ref", "exp_model", "exp_figs"]:
-    if k not in st.session_state:
-        st.session_state[k] = False
+def reset_expanders():
+    st.session_state.nav_count = st.session_state.get("nav_count", 0) + 1
 
 def get_dirty_fields(check_row_idx):
     if check_row_idx not in df.index:
@@ -363,7 +361,6 @@ def confirm_leave_dialog(target_idx, dirty_fields):
                 st.session_state.pop(k, None)
             st.session_state.active_row_idx = target_idx
             st.session_state.last_row_idx = target_idx
-            st.session_state.nav_count += 1
             reset_expanders()
             st.rerun()
     with col_s:
@@ -382,7 +379,6 @@ def try_navigate(target_idx, reset_input_key=False):
     else:
         st.session_state.active_row_idx = target_idx
         st.session_state.last_row_idx = target_idx
-        st.session_state.nav_count += 1
         reset_expanders()
         st.rerun()
 
@@ -573,7 +569,7 @@ with col_content:
                     with st.popover(f"🔍 Enlarge Fig. {i+1}", width="stretch"):
                         st.image(img, width="stretch", caption=f"{qid} — Figure {i+1}")
 
-            with st.expander("🖼️ View All Figures Full-Width", expanded=False, key="exp_figs", on_change="rerun"):
+            with st.expander("🖼️ View All Figures Full-Width", expanded=False, key=f"exp_figs_{st.session_state.nav_count}"):
                 for i, img in enumerate(images):
                     st.image(img, width="stretch", caption=f"Figure {i+1}")
 
@@ -582,7 +578,7 @@ with col_content:
         st.markdown("<div class='field-label'>Question</div>", unsafe_allow_html=True)
         st.markdown(active_question)
         if allow_latex_edit:
-            with st.expander("✏️ Correct Question LaTeX", expanded=False, key="exp_q", on_change="rerun"):
+            with st.expander("✏️ Correct Question LaTeX", expanded=False, key=f"exp_q_{st.session_state.nav_count}"):
                 new_q = st.text_area("Question LaTeX", value=active_question, height=120, key=f"edit_q_{row_idx}")
                 if new_q != active_question:
                     active_question = new_q
@@ -604,7 +600,7 @@ with col_content:
         st.markdown("<div class='field-label'>Reference Answer</div>", unsafe_allow_html=True)
         st.markdown(active_ref)
         if allow_latex_edit:
-            with st.expander("✏️ Correct Reference LaTeX", expanded=False, key="exp_ref", on_change="rerun"):
+            with st.expander("✏️ Correct Reference LaTeX", expanded=False, key=f"exp_ref_{st.session_state.nav_count}"):
                 new_ref = st.text_area("Reference Answer LaTeX", value=active_ref, height=130, key=f"edit_ref_{row_idx}")
                 if new_ref != active_ref:
                     active_ref = new_ref
@@ -626,7 +622,7 @@ with col_content:
         st.markdown("<div class='field-label'>Model Answer</div>", unsafe_allow_html=True)
         st.markdown(active_model)
         if allow_latex_edit:
-            with st.expander("✏️ Correct Model Answer LaTeX", expanded=False, key="exp_model", on_change="rerun"):
+            with st.expander("✏️ Correct Model Answer LaTeX", expanded=False, key=f"exp_model_{st.session_state.nav_count}"):
                 new_model = st.text_area("Model Answer LaTeX", value=active_model, height=150, key=f"edit_model_{row_idx}")
                 if new_model != active_model:
                     active_model = new_model
@@ -728,7 +724,6 @@ with col_score:
                         next_row = filtered_row_indices[pos + 1]
                         st.session_state.active_row_idx = next_row
                         st.session_state.last_row_idx = next_row
-                        st.session_state.nav_count += 1
                     reset_expanders()
                     st.rerun()
                 except Exception as err:
@@ -742,38 +737,17 @@ with col_score:
         st.caption(f"**Submitted:** {seen_total} / {total_items} ({pct:.1f}%)")
         st.progress(seen_total / total_items if total_items > 0 else 0)
 
-# --- Browser-level Unsaved Changes Warning (window.onbeforeunload) ---
-is_dirty = bool(get_dirty_fields(st.session_state.active_row_idx)) if "active_row_idx" in st.session_state else False
-if is_dirty:
-    st.iframe(
-        """
-        <script>
-        try {
-            const handler = function(e) {
-                e.preventDefault();
-                e.returnValue = '';
-                return '';
-            };
-            window.onbeforeunload = handler;
-            if (window.parent) window.parent.onbeforeunload = handler;
-            if (window.top) window.top.onbeforeunload = handler;
-        } catch(e) {}
-        </script>
-        """,
-        height=1,
-        width=1
-    )
-else:
-    st.iframe(
-        """
-        <script>
-        try {
-            window.onbeforeunload = null;
-            if (window.parent) window.parent.onbeforeunload = null;
-            if (window.top) window.top.onbeforeunload = null;
-        } catch(e) {}
-        </script>
-        """,
-        height=1,
-        width=1
-    )
+# Clear any legacy onbeforeunload handler on the window/parent
+st.components.v1.html(
+    """
+    <script>
+    try {
+        window.onbeforeunload = null;
+        if (window.parent) window.parent.onbeforeunload = null;
+        if (window.top) window.top.onbeforeunload = null;
+    } catch(e) {}
+    </script>
+    """,
+    height=0,
+    width=0
+)
