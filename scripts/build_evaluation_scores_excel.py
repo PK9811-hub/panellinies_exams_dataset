@@ -27,10 +27,19 @@ REPO_ROOT = BASE_DIR.parent
 ARGILLA_DATASET_HUM = os.getenv("ARGILLA_DATASET_HUM", "pass-or-fail-hum")
 ARGILLA_DATASET_PROT_EX = os.getenv("ARGILLA_DATASET_PROT_EX", "pass-or-fail-prot_ex")
 
+def resolve_path_or_url(val):
+    """Return URL as string or resolve local file path."""
+    if val is None:
+        return val
+    s = str(val).strip()
+    if s.startswith(("http://", "https://")):
+        return s
+    return Path(s).resolve()
+
 # File Paths (Configurable via .env, fallback to repository relative paths)
-HUM_CSV_PATH = Path(os.getenv("EVAL_HUM_CSV_PATH", BASE_DIR / "human_evaluation_panellinies_hum_subset.csv")).resolve()
-SCI_CSV_PATH = Path(os.getenv("EVAL_SCI_CSV_PATH", BASE_DIR / "human_evaluation_panellinies_science_subset.csv")).resolve()
-PROT_CSV_PATH = Path(os.getenv("EVAL_PROT_CSV_PATH", BASE_DIR / "human_evaluation_protipa_subset.csv")).resolve()
+HUM_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_HUM_CSV_PATH", BASE_DIR / "human_evaluation_panellinies_hum_subset.csv"))
+SCI_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_SCI_CSV_PATH", BASE_DIR / "human_evaluation_panellinies_science_subset.csv"))
+PROT_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_PROT_CSV_PATH", BASE_DIR / "human_evaluation_protipa_subset.csv"))
 
 EXCEL_OUT_PATH = Path(os.getenv("EVAL_EXCEL_OUT_PATH", BASE_DIR / "evaluation_scores_master.xlsx")).resolve()
 CSV_OUT_PATH = Path(os.getenv("EVAL_CSV_OUT_PATH", BASE_DIR / "evaluation_scores_master.csv")).resolve()
@@ -161,9 +170,16 @@ def main():
     prot_argilla = extract_argilla_dataset(client, ARGILLA_DATASET_PROT_EX, workspace_name)
 
     # 2. Read base CSVs
-    df_hum = pd.read_csv(HUM_CSV_PATH)
-    df_sci = pd.read_csv(SCI_CSV_PATH)
-    df_prot = pd.read_csv(PROT_CSV_PATH)
+    hum_csv = resolve_path_or_url(os.getenv("EVAL_HUM_CSV_PATH", HUM_CSV_PATH))
+    sci_csv = resolve_path_or_url(os.getenv("EVAL_SCI_CSV_PATH", SCI_CSV_PATH))
+    prot_csv = resolve_path_or_url(os.getenv("EVAL_PROT_CSV_PATH", PROT_CSV_PATH))
+
+    logging.info(f"Loading Humanities base dataset from: {hum_csv}")
+    df_hum = pd.read_csv(hum_csv)
+    logging.info(f"Loading Science evaluation dataset from: {sci_csv}")
+    df_sci = pd.read_csv(sci_csv)
+    logging.info(f"Loading Protipa base dataset from: {prot_csv}")
+    df_prot = pd.read_csv(prot_csv)
 
     # 3. Enrich df_hum
     df_hum["Dataset"] = "Panellinies Humanities"
@@ -200,6 +216,8 @@ def main():
     df_sci["Source"] = "Local Evaluation App"
     if "Annotator_ID" not in df_sci.columns:
         df_sci["Annotator_ID"] = "local_reviewer"
+    sci_evaluated = df_sci["Human_Grade"].notna().sum()
+    logging.info(f"'Panellinies Sciences': Processed {len(df_sci)} records from '{sci_csv}' ({sci_evaluated} evaluated).")
 
     # Canonical columns order
     common_cols = [
