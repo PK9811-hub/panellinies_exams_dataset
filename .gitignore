@@ -148,3 +148,6 @@ data/
 
 src/hf_viewer_test_copy_new.py
 scripts/human_evaluation_protipa_subset.csv
+scripts/evaluation_scores_master.xlsx
+scripts/evaluation_scores_master.csv
+scripts/human_evaluation_panellinies_science_subset.lock

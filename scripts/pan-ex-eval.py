@@ -1,6 +1,7 @@
 import os
 import ast
 import re
+import fcntl
 import logging
 from pathlib import Path
 import pandas as pd
@@ -259,10 +260,9 @@ def get_hf_index():
 
 hf_index = get_hf_index()
 
-# --- Data Loading & Initialization ---
-@st.cache_data(show_spinner=False)
-def load_data(path: str):
-    df = pd.read_csv(path)
+# --- Data Loading, Synchronization & Persistence ---
+def load_data(path: Path | str) -> pd.DataFrame:
+    df = pd.read_csv(path, encoding="utf-8-sig")
     for col, default in [
         ("Human_Grade", None),
         ("Explanation", ""),
@@ -282,12 +282,111 @@ def load_data(path: str):
     df = df.sort_values(by="Question_ID", kind="mergesort").reset_index(drop=True)
     return df
 
+def sync_from_disk(session_df: pd.DataFrame, csv_path: Path) -> pd.DataFrame:
+    """
+    Safely merges completed evaluations and LaTeX edits from disk into the session DataFrame
+    without changing row order or disturbing active session widgets.
+    """
+    if not csv_path.exists():
+        return session_df
+    try:
+        disk_df = pd.read_csv(csv_path, encoding="utf-8-sig")
+        if "Question_ID" not in disk_df.columns or "Model" not in disk_df.columns:
+            return session_df
+
+        disk_map = {}
+        for _, r in disk_df.iterrows():
+            k = (str(r.get("Question_ID", "")), str(r.get("Model", "")))
+            disk_map[k] = r
+
+        cols_to_sync = ["Status", "Human_Grade", "Explanation", "Edited_Question", "Edited_Reference", "Edited_Model_Answer"]
+        for idx, row in session_df.iterrows():
+            k = (str(row.get("Question_ID", "")), str(row.get("Model", "")))
+            if k in disk_map:
+                dr = disk_map[k]
+                if dr.get("Status") == "seen":
+                    for c in cols_to_sync:
+                        if c in dr and pd.notna(dr[c]):
+                            session_df.at[idx, c] = dr[c]
+                else:
+                    for c in ["Edited_Question", "Edited_Reference", "Edited_Model_Answer"]:
+                        if c in dr and pd.notna(dr[c]) and str(dr[c]).strip():
+                            session_df.at[idx, c] = dr[c]
+        return session_df
+    except Exception as e:
+        logging.warning(f"Could not sync from disk: {e}")
+        return session_df
+
+def update_row_on_disk(
+    csv_path: Path,
+    qid: str,
+    model_name: str,
+    grade: float | None = None,
+    explanation: str | None = None,
+    status: str | None = None,
+    edited_q: str | None = None,
+    edited_ref: str | None = None,
+    edited_model: str | None = None,
+) -> pd.DataFrame:
+    """
+    Reloads the latest CSV from disk and updates ONLY the specified row / question
+    under an exclusive file lock, then writes back to disk.
+    This guarantees that concurrent evaluators never overwrite each other's submissions.
+    """
+    lock_path = csv_path.with_suffix(".lock")
+    with open(lock_path, "w") as lock_file:
+        fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
+        try:
+            disk_df = pd.read_csv(csv_path, encoding="utf-8-sig")
+            for col, default in [
+                ("Human_Grade", None),
+                ("Explanation", ""),
+                ("Status", "unseen"),
+                ("Edited_Question", ""),
+                ("Edited_Reference", ""),
+                ("Edited_Model_Answer", ""),
+            ]:
+                if col not in disk_df.columns:
+                    disk_df[col] = default
+                elif col in ["Explanation", "Edited_Question", "Edited_Reference", "Edited_Model_Answer"]:
+                    disk_df[col] = disk_df[col].fillna("")
+
+            # Find matching record on disk by Question_ID and Model
+            row_mask = (disk_df["Question_ID"].astype(str) == str(qid)) & (
+                disk_df["Model"].astype(str) == str(model_name)
+            )
+
+            if row_mask.any():
+                if grade is not None:
+                    disk_df.loc[row_mask, "Human_Grade"] = grade
+                if explanation is not None:
+                    disk_df.loc[row_mask, "Explanation"] = explanation
+                if status is not None:
+                    disk_df.loc[row_mask, "Status"] = status
+                if edited_model is not None:
+                    disk_df.loc[row_mask, "Edited_Model_Answer"] = edited_model
+
+            # Question-level LaTeX corrections apply to all rows for this Question_ID
+            q_mask = disk_df["Question_ID"].astype(str) == str(qid)
+            if q_mask.any():
+                if edited_q is not None:
+                    disk_df.loc[q_mask, "Edited_Question"] = edited_q
+                if edited_ref is not None:
+                    disk_df.loc[q_mask, "Edited_Reference"] = edited_ref
+
+            disk_df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+            return disk_df
+        finally:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+
 if not CSV_PATH.exists():
     st.error(f"CSV file not found at: {CSV_PATH}")
     st.stop()
 
 if "df" not in st.session_state:
-    st.session_state.df = load_data(str(CSV_PATH))
+    st.session_state.df = load_data(CSV_PATH)
+else:
+    st.session_state.df = sync_from_disk(st.session_state.df, CSV_PATH)
 
 df = st.session_state.df
 
@@ -515,6 +614,7 @@ with st.container(border=True):
 row_idx = st.session_state.active_row_idx
 row = df.loc[row_idx]
 qid = str(row["Question_ID"])
+model_name = str(row["Model"])
 hf_item = hf_index.get(qid, {})
 
 input_q_dict = parse_dict_field(row.get("Input_Question"))
@@ -588,7 +688,7 @@ with col_content:
                 if st.button("💾 Save Question LaTeX Only", key=f"save_btn_q_{row_idx}", type="secondary"):
                     df.loc[df["Question_ID"] == qid, "Edited_Question"] = new_q
                     try:
-                        df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+                        update_row_on_disk(CSV_PATH, qid=qid, model_name=model_name, edited_q=new_q)
                         st.session_state.df = df
                         st.toast(f"Saved Question LaTeX for {qid} (all responses)!", icon="✅")
                         st.rerun()
@@ -610,7 +710,7 @@ with col_content:
                 if st.button("💾 Save Reference LaTeX Only", key=f"save_btn_ref_{row_idx}", type="secondary"):
                     df.loc[df["Question_ID"] == qid, "Edited_Reference"] = new_ref
                     try:
-                        df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+                        update_row_on_disk(CSV_PATH, qid=qid, model_name=model_name, edited_ref=new_ref)
                         st.session_state.df = df
                         st.toast(f"Saved Reference LaTeX for {qid} (all responses)!", icon="✅")
                         st.rerun()
@@ -632,7 +732,7 @@ with col_content:
                 if st.button("💾 Save Model Answer LaTeX Only", key=f"save_btn_model_{row_idx}", type="secondary"):
                     df.at[row_idx, "Edited_Model_Answer"] = new_model
                     try:
-                        df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
+                        update_row_on_disk(CSV_PATH, qid=qid, model_name=model_name, edited_model=new_model)
                         st.session_state.df = df
                         st.toast(f"Saved Model Answer LaTeX for {qid}!", icon="✅")
                         st.rerun()
@@ -710,8 +810,18 @@ with col_score:
                 df.at[row_idx, "Edited_Model_Answer"] = active_model
 
                 try:
-                    df.to_csv(CSV_PATH, index=False, encoding="utf-8-sig")
-                    st.session_state.df = df
+                    update_row_on_disk(
+                        CSV_PATH,
+                        qid=qid,
+                        model_name=model_name,
+                        grade=selected_grade,
+                        explanation=explanation_val,
+                        status="seen",
+                        edited_q=active_question,
+                        edited_ref=active_ref,
+                        edited_model=active_model,
+                    )
+                    st.session_state.df = sync_from_disk(df, CSV_PATH)
                     st.toast(f"Saved {qid} with Grade {selected_grade:.2f}!", icon="✅")
 
                     cur = row_idx
