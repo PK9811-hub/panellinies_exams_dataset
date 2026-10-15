@@ -2,6 +2,7 @@ import os
 import random
 import logging
 from pathlib import Path
+from inspect_ai.log import read_eval_log
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -39,10 +40,136 @@ def resolve_path_or_url(val):
 # File Paths (Configurable via .env, fallback to repository relative paths)
 HUM_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_HUM_CSV_PATH", BASE_DIR / "human_evaluation_panellinies_hum_subset.csv"))
 SCI_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_SCI_CSV_PATH", BASE_DIR / "human_evaluation_panellinies_science_subset.csv"))
-PROT_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_PROT_CSV_PATH", BASE_DIR / "human_evaluation_protipa_subset.csv"))
+#PROT_CSV_PATH = resolve_path_or_url(os.getenv("EVAL_PROT_CSV_PATH", BASE_DIR / "human_evaluation_protipa_subset.csv"))
+MISTRAL_SCORES_DIR = Path(os.getenv("MISTRAL_SCORES_DIR", "/home/shared/acl_2027/inspect-ai/")).resolve()
 
 EXCEL_OUT_PATH = Path(os.getenv("EVAL_EXCEL_OUT_PATH", BASE_DIR / "evaluation_scores_master.xlsx")).resolve()
 CSV_OUT_PATH = Path(os.getenv("EVAL_CSV_OUT_PATH", BASE_DIR / "evaluation_scores_master.csv")).resolve()
+
+
+def load_judge_logs(mistral_dir):
+    import re
+    import json
+    judge_data = {}
+    
+    MODEL_NAME_MAP = {
+        "gemma_4_26b": "gemma-4-26b-it-zero-shot",
+        "llama_krikri_8b": "krikri-8b-instruct-zero-shot",
+        "meta_llama_8b": "llama-3.1-8b-instruct-zero-shot",
+        "qwen_3_32b": "qwen3-32b-zero-shot",
+        "gemma-4-26b-it-zero-shot": "gemma-4-26b-it-zero-shot",
+        "krikri-8b-instruct-zero-shot": "krikri-8b-instruct-zero-shot",
+        "llama-3.1-8b-instruct-zero-shot": "llama-3.1-8b-instruct-zero-shot",
+        "qwen3-32b-zero-shot": "qwen3-32b-zero-shot"
+    }
+    
+    def extract_clean_explanation(raw_text):
+        if not raw_text:
+            return raw_text
+        text = str(raw_text).strip()
+        
+        # 1. Καθαρίζουμε το markdown wrapper αν υπάρχει
+        text = re.sub(r'^```(?:json)?\s*', '', text)
+        text = re.sub(r'\s*```$', '', text)
+        text = text.strip()
+        
+        # Αν μοιάζει με JSON block
+        if text.startswith('{') and '"explanation"' in text:
+            
+            try:
+                data = json.loads(text)
+                if "explanation" in data:
+                    return str(data["explanation"]).strip()
+            except Exception:
+                pass
+                
+            # Παίρνουμε τα πάντα μετά το "explanation": "
+            match = re.search(r'"explanation"\s*:\s*"?([\s\S]*)', text)
+            if match:
+                exp = match.group(1)
+                exp = re.sub(r'}\s*$', '', exp).strip()
+                
+                # Καθαρίζουμε τα "σπασμένα" εισαγωγικά της κατάληξης (π.χ. ". ή ." αντί για .)
+                exp = re.sub(r'"\s*\.\s*$', '.', exp)  # ". -> .
+                exp = re.sub(r'\.\s*"$', '.', exp)     # ." -> .
+                exp = re.sub(r'"\s*$', '', exp)        # Σκέτο " στο τέλος
+                
+                # Καθαρίζουμε τα escape characters που μπορεί να έμειναν
+                exp = exp.replace('\\"', '"').replace('\\n', '\n')
+                return exp.strip()
+                
+        return text
+
+    if not mistral_dir.exists():
+        logging.warning(f"Mistral directory not found at: {mistral_dir}")
+        return judge_data
+
+    logging.info(f"Scanning for .eval logs in: {mistral_dir}")
+    
+    for log_file in mistral_dir.rglob("*.eval"):
+        try:
+            from inspect_ai.log import read_eval_log
+            eval_log = read_eval_log(str(log_file))
+            
+            parts = log_file.parts
+            model_name = "unknown"
+            for part in parts:
+                if part in MODEL_NAME_MAP:
+                    model_name = MODEL_NAME_MAP[part]
+                    break
+
+            for sample in eval_log.samples:
+                q_id = str(sample.id).strip()
+                if sample.metadata:
+                    meta_id = str(sample.metadata.get("id", sample.metadata.get("question_id", ""))).strip()
+                    if meta_id:
+                        q_id = meta_id
+                
+                mistral_score = None
+                gemma_exp = None
+                mistral_exp = None
+                
+                if sample.scores:
+                    for metric_name, score_obj in sample.scores.items():
+                        if isinstance(score_obj, dict):
+                            val = score_obj.get("value")
+                            exp = score_obj.get("explanation")
+                            meta = score_obj.get("metadata", {})
+                        else:
+                            val = getattr(score_obj, "value", None)
+                            exp = getattr(score_obj, "explanation", None)
+                            meta = getattr(score_obj, "metadata", {}) or {}
+                            
+                        judge_model = str(meta.get("model", "")).lower()
+                        
+                        # Gemma Logic
+                        if metric_name == "generic_judge_scorer":
+                            gemma_exp = extract_clean_explanation(exp)
+                            
+                        # Mistral Logic
+                        if "mistral" in judge_model or "generic_judge_scorer1" in metric_name:
+                            if val is None and exp:
+                                score_match = re.search(r'"grade"\s*:\s*([\d\.]+)', str(exp))
+                                if score_match:
+                                    val = float(score_match.group(1))
+                                    
+                            if val is not None:
+                                mistral_score = float(val)
+                            mistral_exp = extract_clean_explanation(exp)
+                
+                if q_id and model_name != "unknown":
+                    judge_data[(q_id, model_name)] = {
+                        "mistral_score": mistral_score,
+                        "gemma_explanation": gemma_exp,
+                        "mistral_explanation": mistral_exp
+                    }
+                    
+        except Exception as e:
+            logging.error(f"Error processing log {log_file.name}: {e}")
+            
+    logging.info(f"Loaded logs for {len(judge_data)} evaluated samples.")
+    return judge_data
+
 
 def extract_argilla_dataset(client, dataset_name, workspace_name):
     """Extract annotations from an Argilla dataset and resolve multiple responses with seed."""
@@ -90,7 +217,7 @@ def extract_argilla_dataset(client, dataset_name, workspace_name):
 
         records_map[(q_id, model_name)] = {
             "Human_Grade": human_grade,
-            "Explanation": human_explanation,
+            "Human_Explanation": human_explanation,
             "Annotator_ID": user_id,
             "Subject_Argilla": subject,
         }
@@ -98,28 +225,27 @@ def extract_argilla_dataset(client, dataset_name, workspace_name):
     logging.info(f"'{dataset_name}': Extracted {len(records_map)} records ({multi_response_count} had multiple responses resolved with seed={SEED}).")
     return records_map
 
-def compute_correlation_stats(df, group_col=None):
-    """Compute Spearman, Pearson, and MAE correlation metrics on evaluated records."""
+def compute_correlation_stats(df, group_col=None, judge_col="Gemma_Judge_Score"):
     records = []
     
     def calc_metrics(sub_df, name):
-        valid = sub_df.dropna(subset=["Human_Grade", "LLM_Judge_Score"]).copy()
+        sub_df = sub_df.copy()
+        sub_df["Human_Grade"] = pd.to_numeric(sub_df["Human_Grade"], errors="coerce")
+        sub_df[judge_col] = pd.to_numeric(sub_df[judge_col], errors="coerce")
+        
+        valid = sub_df.dropna(subset=["Human_Grade", judge_col])
         n = len(valid)
         if n < 3:
             return {
-                "Subset": name,
-                "Sample_Count": n,
-                "Spearman_r": np.nan,
-                "Spearman_p": np.nan,
-                "Pearson_r": np.nan,
-                "Pearson_p": np.nan,
-                "MAE": np.nan,
+                "Judge": judge_col, "Subset": name, "Sample_Count": n,
+                "Spearman_r": np.nan, "Spearman_p": np.nan,
+                "Pearson_r": np.nan, "Pearson_p": np.nan, "MAE": np.nan,
                 "Mean_Human_Grade": valid["Human_Grade"].mean() if n > 0 else np.nan,
-                "Mean_LLM_Score": valid["LLM_Judge_Score"].mean() if n > 0 else np.nan,
+                "Mean_LLM_Score": valid[judge_col].mean() if n > 0 else np.nan,
             }
         
-        h = valid["Human_Grade"].astype(float).values
-        m = valid["LLM_Judge_Score"].astype(float).values
+        h = valid["Human_Grade"].values
+        m = valid[judge_col].values
 
         if np.std(h) == 0 or np.std(m) == 0:
             spearman_r, spearman_p = np.nan, np.nan
@@ -133,8 +259,7 @@ def compute_correlation_stats(df, group_col=None):
         mae = float(np.mean(np.abs(h - m)))
 
         return {
-            "Subset": name,
-            "Sample_Count": n,
+            "Judge": judge_col.replace("_Score", ""), "Subset": name, "Sample_Count": n,
             "Spearman_r": round(float(spearman_r), 4) if pd.notna(spearman_r) else np.nan,
             "Spearman_p": round(float(spearman_p), 5) if pd.notna(spearman_p) else np.nan,
             "Pearson_r": round(float(pearson_r), 4) if pd.notna(pearson_r) else np.nan,
@@ -144,10 +269,7 @@ def compute_correlation_stats(df, group_col=None):
             "Mean_LLM_Score": round(float(np.mean(m)), 4),
         }
 
-    # Overall metrics
     records.append(calc_metrics(df, "ALL COMBINED"))
-
-    # Grouped metrics
     if group_col and group_col in df.columns:
         for val, group in df.groupby(group_col):
             records.append(calc_metrics(group, f"{group_col}: {val}"))
@@ -165,57 +287,77 @@ def main():
 
     client = rg.Argilla(api_url=api_url, api_key=api_key)
 
-    # 1. Fetch Argilla datasets
+    # 1. Fetch Argilla datasets & Inspect Judge Logs
     hum_argilla = extract_argilla_dataset(client, ARGILLA_DATASET_HUM, workspace_name)
     prot_argilla = extract_argilla_dataset(client, ARGILLA_DATASET_PROT_EX, workspace_name)
+    judge_logs_data = load_judge_logs(MISTRAL_SCORES_DIR)
 
     # 2. Read base CSVs
     hum_csv = resolve_path_or_url(os.getenv("EVAL_HUM_CSV_PATH", HUM_CSV_PATH))
     sci_csv = resolve_path_or_url(os.getenv("EVAL_SCI_CSV_PATH", SCI_CSV_PATH))
-    prot_csv = resolve_path_or_url(os.getenv("EVAL_PROT_CSV_PATH", PROT_CSV_PATH))
+    #prot_csv = resolve_path_or_url(os.getenv("EVAL_PROT_CSV_PATH", PROT_CSV_PATH))
 
     logging.info(f"Loading Humanities base dataset from: {hum_csv}")
     df_hum = pd.read_csv(hum_csv)
     logging.info(f"Loading Science evaluation dataset from: {sci_csv}")
     df_sci = pd.read_csv(sci_csv)
-    logging.info(f"Loading Protipa base dataset from: {prot_csv}")
-    df_prot = pd.read_csv(prot_csv)
+    #logging.info(f"Loading Protipa base dataset from: {prot_csv}")
+    #df_prot = pd.read_csv(prot_csv)
+
+    # Rename LLM_Judge_Score to Gemma_Judge_Score in all DataFrames
+    for df in [df_hum, df_sci]:  # Removed df_prot from the list
+        if "LLM_Judge_Score" in df.columns:
+            df.rename(columns={"LLM_Judge_Score": "Gemma_Judge_Score"}, inplace=True)
+
+    # Helper function to enrich dataframes
+    def enrich_dataframe(df, dataset_name, source_name, argilla_data=None):
+        df["Dataset"] = dataset_name
+        df["Source"] = source_name
+        
+        if "Human_Grade" not in df.columns:
+            df["Human_Grade"] = None
+        if "Human_Explanation" not in df.columns:
+            df["Human_Explanation"] = None
+        
+        df["Gemma_Explanation"] = None
+        df["Mistral_Explanation"] = None
+        df["Mistral_Judge_Score"] = None
+        if "Annotator_ID" not in df.columns:
+            df["Annotator_ID"] = "local_reviewer" if source_name == "Local Evaluation App" else None
+
+        for idx, row in df.iterrows():
+            key = (str(row.get("Question_ID", "")).strip(), str(row.get("Model", "")).strip())
+        
+            # Merge Argilla Human Data if provided
+            if argilla_data and key in argilla_data:
+                info = argilla_data[key]
+                if pd.notna(info.get("Human_Grade")):
+                    df.at[idx, "Human_Grade"] = info["Human_Grade"]
+                if pd.notna(info.get("Human_Explanation")):
+                    df.at[idx, "Human_Explanation"] = info["Human_Explanation"]
+                df.at[idx, "Annotator_ID"] = info["Annotator_ID"]
+            
+            # Merge Judge Data
+            if key in judge_logs_data:
+                j_data = judge_logs_data[key]
+                if j_data["mistral_score"] is not None:
+                    df.at[idx, "Mistral_Judge_Score"] = j_data["mistral_score"]
+                if j_data["gemma_explanation"]:
+                    df.at[idx, "Gemma_Explanation"] = str(j_data["gemma_explanation"])
+                if j_data["mistral_explanation"]:
+                    df.at[idx, "Mistral_Explanation"] = str(j_data["mistral_explanation"])
+                
+        return df
 
     # 3. Enrich df_hum
-    df_hum["Dataset"] = "Panellinies Humanities"
-    df_hum["Source"] = "Argilla (pass-or-fail-hum)"
-    df_hum["Human_Grade"] = None
-    df_hum["Explanation"] = None
-    df_hum["Annotator_ID"] = None
-
-    for idx, row in df_hum.iterrows():
-        key = (str(row["Question_ID"]).strip(), str(row["Model"]).strip())
-        if key in hum_argilla:
-            info = hum_argilla[key]
-            df_hum.at[idx, "Human_Grade"] = info["Human_Grade"]
-            df_hum.at[idx, "Explanation"] = info["Explanation"]
-            df_hum.at[idx, "Annotator_ID"] = info["Annotator_ID"]
+    df_hum = enrich_dataframe(df_hum, "Panellinies Humanities", "Argilla (pass-or-fail-hum)", hum_argilla)
 
     # 4. Enrich df_prot
-    df_prot["Dataset"] = "Protipa Exams"
-    df_prot["Source"] = "Argilla (pass-or-fail-prot_ex)"
-    df_prot["Human_Grade"] = None
-    df_prot["Explanation"] = None
-    df_prot["Annotator_ID"] = None
-
-    for idx, row in df_prot.iterrows():
-        key = (str(row["Question_ID"]).strip(), str(row["Model"]).strip())
-        if key in prot_argilla:
-            info = prot_argilla[key]
-            df_prot.at[idx, "Human_Grade"] = info["Human_Grade"]
-            df_prot.at[idx, "Explanation"] = info["Explanation"]
-            df_prot.at[idx, "Annotator_ID"] = info["Annotator_ID"]
+    #df_prot = enrich_dataframe(df_prot, "Protipa Exams", "Argilla (pass-or-fail-prot_ex)", prot_argilla)
 
     # 5. Enrich df_sci (from local annotations)
-    df_sci["Dataset"] = "Panellinies Sciences"
-    df_sci["Source"] = "Local Evaluation App"
-    if "Annotator_ID" not in df_sci.columns:
-        df_sci["Annotator_ID"] = "local_reviewer"
+    # Note: Science uses local CSV for human grades, so we pass None for argilla_data to keep existing grades
+    df_sci = enrich_dataframe(df_sci, "Panellinies Sciences", "Local Evaluation App", None)
     sci_evaluated = df_sci["Human_Grade"].notna().sum()
     logging.info(f"'Panellinies Sciences': Processed {len(df_sci)} records from '{sci_csv}' ({sci_evaluated} evaluated).")
 
@@ -228,26 +370,37 @@ def main():
         "Input_Question",
         "Reference_Target",
         "Model_Answer",
-        "LLM_Judge_Score",
-        "BERTScore",
+        "Gemma_Judge_Score",
+        "Gemma_Explanation",
+        "Mistral_Judge_Score",
+        "Mistral_Explanation",
         "Human_Grade",
-        "Explanation",
+        "Human_Explanation",
+        "BERTScore",
         "Source",
         "Annotator_ID",
     ]
 
-    df_hum_out = df_hum[common_cols].copy()
+    df_hum_out = df_hum[[c for c in common_cols if c in df_hum.columns]].copy()
     df_sci_out = df_sci[[c for c in common_cols if c in df_sci.columns]].copy()
-    df_prot_out = df_prot[common_cols].copy()
+    #df_prot_out = df_prot[[c for c in common_cols if c in df_prot.columns]].copy()
 
     # Master combined dataframe
-    df_all = pd.concat([df_hum_out, df_sci_out, df_prot_out], ignore_index=True)
+    df_all = pd.concat([df_hum_out, df_sci_out], ignore_index=True)
 
-    # 6. Compute correlation tables
-    corr_by_dataset = compute_correlation_stats(df_all, group_col="Dataset")
-    corr_by_subject = compute_correlation_stats(df_all, group_col="Subject")
-    corr_by_model = compute_correlation_stats(df_all, group_col="Model")
-    corr_summary = pd.concat([corr_by_dataset, corr_by_subject[1:], corr_by_model[1:]], ignore_index=True)
+    # 6. Compute correlation tables (for both Judges)
+    corr_by_dataset_g = compute_correlation_stats(df_all, group_col="Dataset", judge_col="Gemma_Judge_Score")
+    corr_by_subject_g = compute_correlation_stats(df_all, group_col="Subject", judge_col="Gemma_Judge_Score")
+    corr_by_model_g = compute_correlation_stats(df_all, group_col="Model", judge_col="Gemma_Judge_Score")
+    
+    corr_by_dataset_m = compute_correlation_stats(df_all, group_col="Dataset", judge_col="Mistral_Judge_Score")
+    corr_by_subject_m = compute_correlation_stats(df_all, group_col="Subject", judge_col="Mistral_Judge_Score")
+    corr_by_model_m = compute_correlation_stats(df_all, group_col="Model", judge_col="Mistral_Judge_Score")
+
+    corr_summary = pd.concat([
+        corr_by_dataset_g, corr_by_subject_g[1:], corr_by_model_g[1:],
+        corr_by_dataset_m, corr_by_subject_m[1:], corr_by_model_m[1:]
+    ], ignore_index=True)
 
     # 7. Write to CSV
     df_all.to_csv(CSV_OUT_PATH, index=False, encoding="utf-8-sig")
@@ -255,16 +408,25 @@ def main():
 
     # 8. Write to Excel Workbook with multiple sheets (clip strings to 32,000 chars for Excel limit)
     def clip_for_excel(df, max_len=32000):
+        import re
+        ILLEGAL_CHARACTERS_RE = re.compile(r'[\000-\010]|[\013-\014]|[\016-\037]')
+        
         df_c = df.copy()
         for col in df_c.select_dtypes(include=["object", "str"]).columns:
-            df_c[col] = df_c[col].map(lambda x: str(x)[:max_len] if pd.notna(x) and len(str(x)) > max_len else x)
+            def sanitize_for_excel(x):
+                if pd.isna(x):
+                    return x
+                clean_str = ILLEGAL_CHARACTERS_RE.sub("", str(x))
+                return clean_str[:max_len]
+                
+            df_c[col] = df_c[col].map(sanitize_for_excel)
         return df_c
 
     with pd.ExcelWriter(EXCEL_OUT_PATH, engine="openpyxl") as writer:
         clip_for_excel(df_all).to_excel(writer, sheet_name="All_Scores", index=False)
         clip_for_excel(df_hum_out).to_excel(writer, sheet_name="Panellinies_Humanities", index=False)
         clip_for_excel(df_sci_out).to_excel(writer, sheet_name="Panellinies_Sciences", index=False)
-        clip_for_excel(df_prot_out).to_excel(writer, sheet_name="Protipa_Exams", index=False)
+        #clip_for_excel(df_prot_out).to_excel(writer, sheet_name="Protipa_Exams", index=False)
         corr_summary.to_excel(writer, sheet_name="Correlations", index=False)
 
     logging.info(f"Wrote Excel Workbook: {EXCEL_OUT_PATH}")
@@ -274,7 +436,7 @@ def main():
     print(f"Total Records: {len(df_all)}")
     print(f"  - Panellinies Humanities: {len(df_hum_out)} (Evaluated: {df_hum_out['Human_Grade'].notna().sum()})")
     print(f"  - Panellinies Sciences:   {len(df_sci_out)} (Evaluated: {df_sci_out['Human_Grade'].notna().sum()})")
-    print(f"  - Protipa Exams:          {len(df_prot_out)} (Evaluated: {df_prot_out['Human_Grade'].notna().sum()})")
+    #print(f"  - Protipa Exams:          {len(df_prot_out)} (Evaluated: {df_prot_out['Human_Grade'].notna().sum()})")
     print(f"Total Evaluated Items:     {df_all['Human_Grade'].notna().sum()} / {len(df_all)}")
     print("\n=== CORRELATION ANALYSIS (HUMAN GRADE vs LLM JUDGE) ===")
     print(corr_summary.to_string(index=False))
